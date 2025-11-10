@@ -1,0 +1,7 @@
+instance_create(x,y,fadeout_obj)
+audio_play_sound(selectstone1_snd,1,false)
+image_yscale=0.98
+image_xscale=0.98
+__view_set( e__VW.YView, 0, 640 )
+__view_set( e__VW.XView, 0, 1088 )
+

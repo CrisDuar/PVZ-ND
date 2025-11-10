@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"zombie_electro",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"zombie_electro",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

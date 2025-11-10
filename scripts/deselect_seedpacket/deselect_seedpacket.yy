@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"deselect_seedpacket",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"deselect_seedpacket",
+  "parent":{
+    "name":"Seedpackets",
+    "path":"folders/Scripts/Seedpackets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

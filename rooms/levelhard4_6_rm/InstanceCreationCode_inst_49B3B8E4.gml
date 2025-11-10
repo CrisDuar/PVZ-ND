@@ -1,0 +1,2 @@
+idlesong=clairehard_sng
+hordesong=clairehard_final_sng

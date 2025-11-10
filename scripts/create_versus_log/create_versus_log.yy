@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_versus_log",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_versus_log",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

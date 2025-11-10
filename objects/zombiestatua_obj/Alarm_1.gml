@@ -1,0 +1,2 @@
+destroyself=true
+

@@ -1,0 +1,2 @@
+global.selectionRoom=configvs_rm
+

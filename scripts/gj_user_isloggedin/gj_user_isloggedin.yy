@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gj_user_isloggedin",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gj_user_isloggedin",
+  "parent":{
+    "name":"Gamejolt Login",
+    "path":"folders/Scripts/Gamejolt Login.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

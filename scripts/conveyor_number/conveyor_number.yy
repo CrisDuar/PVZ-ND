@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"conveyor_number",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"conveyor_number",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

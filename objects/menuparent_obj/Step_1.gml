@@ -1,0 +1,10 @@
+if place_meeting(x,y,pastoinv_obj){
+    with(pastoinv_obj){
+        if collision_rectangle(other.bbox_left,other.bbox_top,other.bbox_right,other.bbox_bottom, self, true, false){
+            if point_in_rectangle(mouse_x,mouse_y,other.bbox_left,other.bbox_top,other.bbox_right,other.bbox_bottom){
+                canplant=false
+            }
+        }
+    }
+}
+

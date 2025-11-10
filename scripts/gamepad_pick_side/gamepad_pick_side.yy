@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gamepad_pick_side",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gamepad_pick_side",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

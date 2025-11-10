@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"multi_movement",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"multi_movement",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

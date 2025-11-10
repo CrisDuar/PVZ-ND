@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"load_almanac",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"load_almanac",
+  "parent":{
+    "name":"Almanac",
+    "path":"folders/Scripts/Almanac.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

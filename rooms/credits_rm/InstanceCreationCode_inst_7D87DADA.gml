@@ -1,0 +1,2 @@
+sprite_index=podadora3_spr
+image_speed=0

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"set_difficulty_changes",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_difficulty_changes",
+  "parent":{
+    "name":"Survival",
+    "path":"folders/Scripts/Survival.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_zombie_diff",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_zombie_diff",
+  "parent":{
+    "name":"Survival",
+    "path":"folders/Scripts/Survival.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

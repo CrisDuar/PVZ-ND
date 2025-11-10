@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"tile_shovel",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"tile_shovel",
+  "parent":{
+    "name":"Casillas",
+    "path":"folders/Scripts/Casillas.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

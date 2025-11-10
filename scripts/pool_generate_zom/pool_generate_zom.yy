@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"pool_generate_zom",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"pool_generate_zom",
+  "parent":{
+    "name":"Survival",
+    "path":"folders/Scripts/Survival.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

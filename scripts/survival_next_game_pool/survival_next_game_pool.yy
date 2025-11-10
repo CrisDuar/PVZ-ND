@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"survival_next_game_pool",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"survival_next_game_pool",
+  "parent":{
+    "name":"Survival",
+    "path":"folders/Scripts/Survival.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

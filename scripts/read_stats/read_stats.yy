@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"read_stats",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"read_stats",
+  "parent":{
+    "name":"Almanac",
+    "path":"folders/Scripts/Almanac.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

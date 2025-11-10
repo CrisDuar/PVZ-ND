@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"electric_dmg",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"electric_dmg",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

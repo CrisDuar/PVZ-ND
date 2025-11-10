@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dialog_set_timeline",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dialog_set_timeline",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

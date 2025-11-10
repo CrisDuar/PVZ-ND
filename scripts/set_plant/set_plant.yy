@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"set_plant",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_plant",
+  "parent":{
+    "name":"Casillas",
+    "path":"folders/Scripts/Casillas.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

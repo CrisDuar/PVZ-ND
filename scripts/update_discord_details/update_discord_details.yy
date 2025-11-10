@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"update_discord_details",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"update_discord_details",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
