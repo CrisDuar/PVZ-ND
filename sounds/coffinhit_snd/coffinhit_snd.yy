@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"coffinhit_snd",
+  "audioGroupId":{
+    "name":"SFX",
+    "path":"audiogroups/SFX",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":2,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"coffinhit_snd",
+  "parent":{
+    "name":"zombie",
+    "path":"folders/Sounds/zombie.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"coffinhit_snd",
+  "volume":0.7,
+}

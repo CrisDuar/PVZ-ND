@@ -1,0 +1,2 @@
+estext = "Movimiento"
+entext = "Movement"

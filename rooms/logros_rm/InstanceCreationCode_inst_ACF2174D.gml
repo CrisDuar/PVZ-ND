@@ -1,0 +1,2 @@
+tes="Logros"
+ten="Achievements"

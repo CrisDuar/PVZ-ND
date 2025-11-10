@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"able_to_plant",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"able_to_plant",
+  "parent":{
+    "name":"Casillas",
+    "path":"folders/Scripts/Casillas.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

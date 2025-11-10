@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"music_newplant_snd",
+  "audioGroupId":{
+    "name":"Music",
+    "path":"audiogroups/Music",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":2,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":60.10485,
+  "exportDir":"",
+  "name":"music_newplant_snd",
+  "parent":{
+    "name":"musica",
+    "path":"folders/Sounds/musica.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"music_newplant_snd",
+  "volume":1.0,
+}

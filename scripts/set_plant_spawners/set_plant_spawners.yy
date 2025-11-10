@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"set_plant_spawners",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_plant_spawners",
+  "parent":{
+    "name":"Casillas",
+    "path":"folders/Scripts/Casillas.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"wetbrains_snd",
+  "audioGroupId":{
+    "name":"SFX",
+    "path":"audiogroups/SFX",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"wetbrains_snd",
+  "parent":{
+    "name":"Wet brains",
+    "path":"folders/Sounds/Wet brains.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"wetbrains_snd",
+  "volume":1.0,
+}

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"evil_laught_snd",
+  "audioGroupId":{
+    "name":"SFX",
+    "path":"audiogroups/SFX",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":2,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"evil_laught_snd",
+  "parent":{
+    "name":"alerts",
+    "path":"folders/Sounds/alerts.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"evil_laught_snd",
+  "volume":1.0,
+}

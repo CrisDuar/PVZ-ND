@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"zombieambient6_snd",
+  "audioGroupId":{
+    "name":"SFX",
+    "path":"audiogroups/SFX",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":2,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"zombieambient6_snd",
+  "parent":{
+    "name":"ambiente zombie",
+    "path":"folders/Sounds/ambiente zombie.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"zombieambient6_snd",
+  "volume":1.0,
+}

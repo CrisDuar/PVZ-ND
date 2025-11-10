@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"check_water",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"check_water",
+  "parent":{
+    "name":"Casillas",
+    "path":"folders/Scripts/Casillas.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

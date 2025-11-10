@@ -1,0 +1,1 @@
+sprite_index=deco2_spr

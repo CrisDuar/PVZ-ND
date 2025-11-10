@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"skeletarius_snd",
+  "audioGroupId":{
+    "name":"SFX",
+    "path":"audiogroups/SFX",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":2,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"skeletarius_snd",
+  "parent":{
+    "name":"Skeletarius",
+    "path":"folders/Sounds/Skeletarius.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"skeletarius_snd",
+  "volume":1.0,
+}

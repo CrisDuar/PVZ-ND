@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_text_multi_color",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_text_multi_color",
+  "parent":{
+    "name":"Almanac",
+    "path":"folders/Scripts/Almanac.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

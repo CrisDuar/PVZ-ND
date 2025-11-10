@@ -1,0 +1,1 @@
+sprite_index=nut1_spr

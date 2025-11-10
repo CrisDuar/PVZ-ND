@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"poolhorde_sng",
+  "audioGroupId":{
+    "name":"Music",
+    "path":"audiogroups/Music",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":2,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"poolhorde_sng",
+  "parent":{
+    "name":"musica",
+    "path":"folders/Sounds/musica.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"poolhorde_sng",
+  "volume":1.0,
+}

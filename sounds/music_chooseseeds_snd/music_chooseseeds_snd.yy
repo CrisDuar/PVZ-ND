@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"music_chooseseeds_snd",
+  "audioGroupId":{
+    "name":"Music",
+    "path":"audiogroups/Music",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":35.999638,
+  "exportDir":"",
+  "name":"music_chooseseeds_snd",
+  "parent":{
+    "name":"musica",
+    "path":"folders/Sounds/musica.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"music_chooseseeds_snd.wav",
+  "volume":1.0,
+}

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"electricded_snd",
+  "audioGroupId":{
+    "name":"SFX",
+    "path":"audiogroups/SFX",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"electricded_snd",
+  "parent":{
+    "name":"zombie",
+    "path":"folders/Sounds/zombie.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"electricded_snd",
+  "volume":1.0,
+}

@@ -1,0 +1,2 @@
+sprite_index=charco1_spr
+image_speed=0

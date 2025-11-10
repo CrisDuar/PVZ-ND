@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"text_set_tag",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"text_set_tag",
+  "parent":{
+    "name":"Almanac",
+    "path":"folders/Scripts/Almanac.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

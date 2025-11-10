@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"zombie_eat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"zombie_eat",
+  "parent":{
+    "name":"zombies",
+    "path":"folders/Scripts/zombies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

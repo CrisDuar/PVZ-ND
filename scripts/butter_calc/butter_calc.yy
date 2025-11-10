@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"butter_calc",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"butter_calc",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

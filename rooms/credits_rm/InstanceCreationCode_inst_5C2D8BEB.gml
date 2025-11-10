@@ -1,0 +1,1 @@
+sprite_index=sunflower_spr

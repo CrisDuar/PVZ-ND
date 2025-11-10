@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"survival_load_record",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"survival_load_record",
+  "parent":{
+    "name":"Survival",
+    "path":"folders/Scripts/Survival.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

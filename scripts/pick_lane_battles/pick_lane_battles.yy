@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"pick_lane_battles",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"pick_lane_battles",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

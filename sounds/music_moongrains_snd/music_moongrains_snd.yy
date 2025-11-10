@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"music_moongrains_snd",
+  "audioGroupId":{
+    "name":"Music",
+    "path":"audiogroups/Music",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":2,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"music_moongrains_snd",
+  "parent":{
+    "name":"musica",
+    "path":"folders/Sounds/musica.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"music_moongrains_snd",
+  "volume":1.0,
+}

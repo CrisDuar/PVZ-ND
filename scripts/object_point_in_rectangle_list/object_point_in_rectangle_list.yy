@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"object_point_in_rectangle_list",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"object_point_in_rectangle_list",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

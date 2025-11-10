@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"seedpacket_is_free",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seedpacket_is_free",
+  "parent":{
+    "name":"Seedpackets",
+    "path":"folders/Scripts/Seedpackets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

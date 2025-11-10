@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"plant_return_sun",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"plant_return_sun",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

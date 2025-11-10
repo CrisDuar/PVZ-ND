@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"finalprize_snd",
+  "audioGroupId":{
+    "name":"Music",
+    "path":"audiogroups/Music",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"finalprize_snd",
+  "parent":{
+    "name":"alerts",
+    "path":"folders/Sounds/alerts.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"finalprize_snd",
+  "volume":1.0,
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_zombie_points",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_zombie_points",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

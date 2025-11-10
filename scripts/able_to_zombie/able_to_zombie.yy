@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"able_to_zombie",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"able_to_zombie",
+  "parent":{
+    "name":"Casillas",
+    "path":"folders/Scripts/Casillas.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
