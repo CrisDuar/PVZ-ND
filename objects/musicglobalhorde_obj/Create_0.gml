@@ -8,8 +8,8 @@ if (!audio_is_playing(music_chooseseeds_snd) and !instance_exists(dialogctrl_obj
 loop = false;
 finalwave=false
 
-idlesong=music_grasswalk_snd
-hordesong=music_finalwaveday_snd
+idlesong=grasswalk_sng
+hordesong=grasswalk_fw_sng
 
 if (room != generic_level_rm){
 	if __background_get( e__BG.Index, 0 )=claire2_bg

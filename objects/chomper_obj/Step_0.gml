@@ -36,16 +36,16 @@ switch(state){
             obj = collision_line_first(x,y-10,x+170,y-10,eatfather_obj,true,false)
             
             if obj!=noone{
-                if obj.object_index==beachballdrop_obj or obj.object_index==trashcan_obj or obj.object_index==zomboni_obj or obj.object_index==caja_obj or obj.object_index==signclaire_obj{s=0}//Zombis que no puede comer
-                else if obj.object_index==imp_obj{s=2; timer=room_speed*5}//Zombidito
+                if obj.object_index==beachballdrop_obj or obj.object_index==trashcan_obj or obj.object_index==z_zomboni_obj or obj.object_index==caja_obj or obj.object_index==signclaire_obj{s=0}//Zombis que no puede comer
+                else if obj.object_index==z_imp_obj{s=2; timer=room_speed*5}//Zombidito
                 else{s=2; timer=room_speed*15}//Otros zombis
                 
                 with(obj){
-                    if object_index!=zomboni_obj and object_index!=caja_obj and (object_index!=zombiecoffin_obj or vida<=100){
+                    if object_index!=z_zomboni_obj and object_index!=caja_obj and (object_index!=z_coffin_obj or vida<=100){
                         instance_create(x,y-60,destroygrave_obj);
                         zombiedrop(money);
                         instance_destroy();
-                    }else if object_index==zombiecoffin_obj and vida>100{
+                    }else if object_index==z_coffin_obj and vida>100{
                         vida=100
                     }else{
                         vida-=250; image_alpha=0.5

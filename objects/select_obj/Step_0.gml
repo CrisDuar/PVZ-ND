@@ -1,6 +1,8 @@
 if done==true{
     if spawntarget==false{
 		
+		create_packet_ingame(x2 + xz*type, y, type, seed, costume)
+		/*
 		if (type == 0){
 			
 			var _unit = global.plants_packets[seed];
@@ -34,13 +36,13 @@ if done==true{
 					sprite_index = _cstm.packet_sprite;
 					sprite = _cstm.sprite;
 				}
-	        }	
+	        }
 		}else{
 			with(instance_create(x2+xz*type,y,menuzombi_obj)){
 	            costume_packet=other.costume
 	        }	
 		}
-
+*/
         spawntarget=true
     }else{
         vspeed -= 0.5

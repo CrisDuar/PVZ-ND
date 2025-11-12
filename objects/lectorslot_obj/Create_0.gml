@@ -1,7 +1,7 @@
 event_inherited();
 select=13
 sprite=lectorquiet_spr
-zombie=zombielector_obj
+zombie=z_newspaper_obj
 cost=150
 timer=20
 

@@ -1,4 +1,4 @@
-if other.object_index!=zombieglobo_obj 
+if other.object_index!=z_balloon_obj 
 and ds_list_find_index(hit_zom,other.id)==-1
 and image_alpha>=0.9{
     audio_play_sound(bulbopimact_snd,0.8,false)

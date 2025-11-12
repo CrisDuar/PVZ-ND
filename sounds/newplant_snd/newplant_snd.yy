@@ -10,7 +10,7 @@
   "compression":2,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":4.5855556,
   "exportDir":"",
   "name":"newplant_snd",
   "parent":{

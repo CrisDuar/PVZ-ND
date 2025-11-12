@@ -28,9 +28,9 @@ function create_level() {
 	var flag_type;
 
 	if argument[3]{
-	    flag_type = zabanderadohard_obj;
+	    flag_type = z_rally_obj;
 	}else{
-	    flag_type = zabanderado_obj
+	    flag_type = z_flag_obj
 	}
 
 	var data = argument[4]
@@ -146,11 +146,11 @@ function create_level() {
             
 	            if (surv_type==1){
                 
-	                if (i < 3 or zombies[| j] == zomboni_obj or zombies[| j] == zompanel_obj) and (zombies[| j] != zombiebuzo_obj){
+	                if (i < 3 or zombies[| j] == z_zomboni_obj or zombies[| j] == z_solarpanel_obj) and (zombies[| j] != z_snorkel_obj){
                 
 	                    rows = g
                     
-	                }else if (zombies[| j] == zombiebuzo_obj){
+	                }else if (zombies[| j] == z_snorkel_obj){
                     
 	                    rows = w
                     

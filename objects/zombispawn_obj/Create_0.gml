@@ -22,7 +22,7 @@ prizevar="niveles"//prize variable to modify
 lvl=1//level number
 money=100//player gets money for passing the level
 snd=newplant_snd//reward song
-plantroom=level1_sl_rm_//what room go to after passing the level
+plantroom=level1_sl_rm//what room go to after passing the level
 
 //---------------------------------------------
 wf=array_create(fn)//Huge wave of zombies alert (0=No alert, 1=Common; 2=Final wave)
@@ -61,7 +61,7 @@ a=array(f1,f2,f3,f4,f5)
 
 
 //for bushes
-bush_zombies = array(imp_obj,zombie1_obj,zombieheadbox_obj,zombiecarecono_obj,zombiedoor_obj)
+bush_zombies = array(z_imp_obj,z_zombie_obj,z_headbox_obj,z_conehead_obj,z_screendoor_obj)
 
 /*Example
 wf[fn-1]=2

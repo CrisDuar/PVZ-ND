@@ -10,7 +10,7 @@ if image_alpha<1 image_alpha+=0.05
 
 if vida <=0{
     repeat(n_imps){
-        with(instance_create(x + random_range(-40, 40),y ,imp_obj)){
+        with(instance_create(x + random_range(-40, 40),y ,z_imp_obj)){
             image_alpha = 0
         }    
     }

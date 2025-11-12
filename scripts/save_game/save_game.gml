@@ -11,8 +11,9 @@ function save_game() {
 
 	save_achievements();
 
-	ini_write_real("Progress","niveles",global.niveles)
-	ini_write_real("Progress","vasebreaker",global.vasebreaker)
+	ini_write_real("Progress","niveles",global.progress[? "niveles"])
+	ini_write_real("Progress","vasebreaker",global.progress[? "vasebreaker"])
+	
 	ini_write_real("Progress","levelhard1",global.levelhard1)
 	ini_write_real("Progress","levelhard2",global.levelhard2)
 	ini_write_real("Progress","levelhard3",global.levelhard3)

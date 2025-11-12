@@ -1,7 +1,7 @@
 depth=-y-10;
 sprite_index=object_get_sprite(obj);
 
-if (obj==ghost_obj){
+if (obj==z_ghost_obj){
     water = false
 }
 

@@ -1,7 +1,7 @@
 event_inherited();
 select=4
 sprite=papsho1_spr
-zombie=zombiepapsho_obj
+zombie=z_paperthrower_obj
 cost=75
 timer=45
 /*

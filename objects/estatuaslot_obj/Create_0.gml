@@ -1,7 +1,7 @@
 event_inherited();
 select=10
 sprite=estatua1_spr
-zombie=zombiestatua_obj
+zombie=z_statue_obj
 cost=50
 timer=40
 

@@ -21,7 +21,6 @@ function init_costumes() {
 	*/
 
 	//Set the plants with costumes (object_index of the seedpacket)
-
 	global.costumes[# 0, 0] = menupea_obj
 	global.costumes[# 0, 1] = garlicdroneslot_obj
 	global.costumes[# 0, 2] = menugravebuster_obj

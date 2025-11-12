@@ -24,7 +24,7 @@ if instance_exists(eatfather_obj){
                 
                     if object_index!=beachballdrop_obj
                     and object_index!=trashcan_obj
-                    and object_index!=zombieglobo_obj
+                    and object_index!=z_balloon_obj
                     and object_index!=caja_obj
                     and kelp==false
                     and water==true

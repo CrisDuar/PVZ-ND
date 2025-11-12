@@ -95,7 +95,7 @@ isdoor=false
 xmod = 1
 dpth = 10;
 
-if object_index!=ghost_obj{
+if object_index!=z_ghost_obj{
     if (point_in_rectangle(x,y,305,284,1100,423) and __background_get( e__BG.Index, 0 )=poolday_bg)
     or (collision_rectangle(x-40,y-10,x-10,y+30,charco_obj,false,false)){
         y_wtr=30

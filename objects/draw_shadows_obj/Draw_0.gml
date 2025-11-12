@@ -35,7 +35,7 @@ if instance_exists(eatfather_obj){
         //draw shadow
         if object_index==beachballdrop_obj{
             draw_sprite_ext(shadow_spr,0,x,point+40,sprite_width/83,(sprite_width*(30/83))/30,0,c_white,image_alpha)
-        }else if object_index==zombiepole_obj{
+        }else if object_index==z_polevaulter_obj{
             if state==1 and image_index>8{ 
                 if image_index>8 and image_index<=18{
                 draw_sprite_ext(shadow_spr,0,x-(image_index-8)*16,y+2,(119*(83/119))/83,(119*(30/119))/30,0,c_white,image_alpha)

@@ -22,7 +22,7 @@ if instance_exists(eatfather_obj){
     with(eatfather_obj){ //Checar si alguna planta pasa el filtro para que pueda disparar
         if collision_rectangle(other.bbox_left,other.y-20,other.x+132,other.y+15,self, true, false)//point_in_rectangle(x,y,other.x,other.y-20,other.x+132,other.y+15)
         and object_index!=beachballdrop_obj
-        and object_index!=zombieglobo_obj{
+        and object_index!=z_balloon_obj{
             proceed = true;
             break;
         }

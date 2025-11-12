@@ -1,7 +1,7 @@
 event_inherited();
 select=11
 sprite=polequiet_spr
-zombie=zombiepole_obj
+zombie=z_polevaulter_obj
 cost=100
 timer=30
 /*iniciado=false

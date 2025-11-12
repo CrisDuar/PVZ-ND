@@ -387,19 +387,19 @@ if comiendo==false and state!=4 and die==false{
                 repeat(num){
                     switch(dark_fase){
                         case 0:
-                            var zom=choose(imp_obj,zombie1_obj,zombiecarecono_obj,zombiedoor_obj)
+                            var zom=choose(z_imp_obj,z_zombie_obj,z_conehead_obj,z_screendoor_obj)
                         break;
                         
                         case 1:
-                            var zom=choose(zombie1_obj,zombidoctor_obj,zombiecarecono_obj,zombiecarecubo_obj,zombiecajita_obj,zombielector_obj)
+                            var zom=choose(z_zombie_obj,z_doctor_obj,z_conehead_obj,z_buckethead_obj,z_jackinthebox_obj,z_newspaper_obj)
                         break;
                         
                         case 2:
-                            var zom=choose(zombiecarecubo_obj,zombielector_obj,zombieheadbox_obj,zombiecarecono_obj,skeleton_obj)
+                            var zom=choose(z_buckethead_obj,z_newspaper_obj,z_headbox_obj,z_conehead_obj,z_skeleton_obj)
                         break;
                         
                         case 3:
-                            var zom=choose(zombiecarecubo_obj,zombidoctor_obj,zombiecarecono_obj,skeleton_obj, zomtorch_obj, zombiecajita_obj, zombielector_obj, zombie1_obj)
+                            var zom=choose(z_buckethead_obj,z_doctor_obj,z_conehead_obj,z_skeleton_obj, z_torch_obj, z_jackinthebox_obj, z_newspaper_obj, z_zombie_obj)
                         break;
                     }
                     
@@ -484,7 +484,7 @@ if comiendo==false and state!=4 and die==false{
                 repeat(n){
                     with(instance_create(max(x-80-irandom(20),500),get_closest_row(yy_temp),rayo_anim_obj)){
                         sfx=false
-                        obj=choose(imp_obj, zombie1_obj,zombieheadbox_obj,zombiecarecono_obj)
+                        obj=choose(z_imp_obj, z_zombie_obj,z_headbox_obj,z_conehead_obj)
                     }
                     
                     if yy_temp==f1{yy_temp=choose(f2,f3,f4,f5)}

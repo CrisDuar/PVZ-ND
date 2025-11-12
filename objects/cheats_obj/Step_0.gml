@@ -26,13 +26,13 @@ if toggle==true{
     if keyboard_check_pressed(ord("Z")){
         global.vasebreaker = get_integer("Vasebreaker level progress", 5)
     }
+	
+	if keyboard_check_pressed(ord("Z")){
+        global.vasebreaker = get_integer("Vasebreaker level progress", 5)
+    }
     
-    if keyboard_check_pressed(ord("J")){
-        var obj_str = get_string("Create any objetct on (X, Y) mouse", "")
-        var xx = mouse_x
-        var yy = mouse_y
-        
-        if (obj_str != "") instance_create(xx,yy,asset_get_index(obj_str))
+    if keyboard_check_pressed(ord("O")){
+        room_goto_next();
     }
     
     if keyboard_check_pressed(ord("P")){
@@ -95,7 +95,7 @@ if toggle==true{
     }
     
     if keyboard_check_pressed(vk_f6){
-        global.selectionRoom=level1_sl_rm_
+        global.selectionRoom=level1_sl_rm
         audio_stop_all();
         room_goto(generic_level_rm)
     }

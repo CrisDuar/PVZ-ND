@@ -22,45 +22,45 @@ wf[11]=1
 wf[15]=1
 wf[fn-1]=2
 */
-f[0,0] = array(imp_obj,a,3)
+f[0,0] = array(z_imp_obj,a,3)
 
-f[1,0] = array(zombie1_obj,a,1)
-f[1,1] = array(imp_obj,a,2)
+f[1,0] = array(z_zombie_obj,a,1)
+f[1,1] = array(z_imp_obj,a,2)
 
-f[2,0] = array(zombie1_obj,a,2)
-f[2,1] = array(zombiecarecono_obj,a,1)
+f[2,0] = array(z_zombie_obj,a,2)
+f[2,1] = array(z_conehead_obj,a,1)
 
-f[3,0] = array(zombiecarecono_obj,a,1)
-f[3,1] = array(zombie1_obj,a,2)
+f[3,0] = array(z_conehead_obj,a,1)
+f[3,1] = array(z_zombie_obj,a,2)
 
-f[4,0] = array(zombieheadbox_obj,a,2)
-f[4,1] = array(zombiecarecubo_obj,a,1)
+f[4,0] = array(z_headbox_obj,a,2)
+f[4,1] = array(z_buckethead_obj,a,1)
 
-f[5,0] = array(zombiecajita_obj,a,2)
-f[5,1] = array(imp_obj,a,2)
-f[5,2] = array(icezombie_obj,a,2)
+f[5,0] = array(z_jackinthebox_obj,a,2)
+f[5,1] = array(z_imp_obj,a,2)
+f[5,2] = array(z_icehead_obj,a,2)
 
-f[6,0] = array(zombiecarecubo_obj,a,2)
-f[6,1] = array(icezombie_obj,a,2)
-f[6,2] = array(zombiecarecono_obj,a,2)
+f[6,0] = array(z_buckethead_obj,a,2)
+f[6,1] = array(z_icehead_obj,a,2)
+f[6,2] = array(z_conehead_obj,a,2)
 
-f[7,0] = array(zombiedoor_obj,a,2)
-f[7,1] = array(zombie1_obj,a,4)
-f[7,2] = array(zombiepole_obj,a,1)
+f[7,0] = array(z_screendoor_obj,a,2)
+f[7,1] = array(z_zombie_obj,a,4)
+f[7,2] = array(z_polevaulter_obj,a,1)
 
-f[8,0] = array(zombiecarecono_obj,a,2)
-f[8,1] = array(zombiemago_obj,a,2)
+f[8,0] = array(z_conehead_obj,a,2)
+f[8,1] = array(z_magician_obj,a,2)
 
-f[9,0] = array(skeleton_obj,a,2)
-f[9,1] = array(zombieheadbox_obj,a,2)
-f[9,2] = array(icezombie_obj,a,2)
+f[9,0] = array(z_skeleton_obj,a,2)
+f[9,1] = array(z_headbox_obj,a,2)
+f[9,2] = array(z_icehead_obj,a,2)
 
-f[10,0] = array(zombiecoffin_obj,a,1)
-f[10,1] = array(zombie1_obj,a,2)
+f[10,0] = array(z_coffin_obj,a,1)
+f[10,1] = array(z_zombie_obj,a,2)
 
-f[11,0] = array(zombiepole_obj,a,2)
-f[11,1] = array(zombiecarecono_obj,a,3)
-f[11,2] = array(zombiecajita_obj,a,2)
+f[11,0] = array(z_polevaulter_obj,a,2)
+f[11,1] = array(z_conehead_obj,a,3)
+f[11,2] = array(z_jackinthebox_obj,a,2)
 
-f[12,0] = array(zombiecoffin_obj,a,1)
-f[12,1] = array(zombiecarecubo_obj,a,2)
+f[12,0] = array(z_coffin_obj,a,1)
+f[12,1] = array(z_buckethead_obj,a,2)

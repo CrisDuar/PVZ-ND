@@ -26,7 +26,7 @@ if instance_exists(eatfather_obj){
                 
                     if object_index!=beachballdrop_obj
                     and object_index!=trashcan_obj
-                    and object_index!=zombieglobo_obj
+                    and object_index!=z_balloon_obj
                     and sprite_index!=zombiepole1_spr
                     and sprite_index!=zombiepole2_spr
                     and sprite_index!=zombiepolejump1_spr

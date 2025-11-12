@@ -9,7 +9,7 @@ function zombie_surprise_attack() {
 	        repeat(3){
 	            with(instance_create(irandom_range(800,1000),yy_temp,zombiegrave_obj)){
 	                water=true 
-	                obj=choose(zombie1_obj,zombieheadbox_obj,zombiecarecono_obj,zombiecarecubo_obj)
+	                obj=choose(z_zombie_obj,z_headbox_obj,z_conehead_obj,z_buckethead_obj)
 	            }
 	            if yy_temp==f3 yy_temp=f4 else yy_temp=f3
 	        }
@@ -24,7 +24,7 @@ function zombie_surprise_attack() {
 	            var xx_temp=irandom_range(750,1050)
 	            with(instance_create(xx_temp,yy_temp,rayo_anim_obj)){
 	                sfx=false
-	                obj=choose(zombie1_obj,zombieheadbox_obj,zombiecarecono_obj,zombiecarecubo_obj)
+	                obj=choose(z_zombie_obj,z_headbox_obj,z_conehead_obj,z_buckethead_obj)
 	            }
 	            if yy_temp==f1{yy_temp=choose(f2,f3,f4,f5)}
 	            else if yy_temp==f2{yy_temp=choose(f1,f3,f4,f5)}

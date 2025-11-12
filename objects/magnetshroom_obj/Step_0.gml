@@ -26,15 +26,15 @@ switch(state){
         }else{
             magnet_t=60
             if collision_circle(x,y-30,area,eatfather_obj,false,false) and global.gameover=false{
-                do_magnet(zombiecarecubo_obj,0,cubo_spr)
-                do_magnet(futbolzombi_obj,0,futbolhelmet1_spr)
-                do_magnet(zombierocket_obj,0,rocket_spr)
+                do_magnet(z_buckethead_obj,0,cubo_spr)
+                do_magnet(z_allstar_oj,0,futbolhelmet1_spr)
+                do_magnet(z_rocket_obj,0,rocket_spr)
                 
-                do_magnet(zombiecajita_obj,3,musicbox_spr)
-                do_magnet(protestantzombie_obj,3,megafono_spr)
+                do_magnet(z_jackinthebox_obj,3,musicbox_spr)
+                do_magnet(z_protesterleader_obj,3,megafono_spr)
                 
-                do_magnet(trashcanzombie_obj,1,trashcan_spr)
-                do_magnet(zombiedoor_obj,1,screendoor_spr)
+                do_magnet(z_trashcan_obj,1,trashcan_spr)
+                do_magnet(z_screendoor_obj,1,screendoor_spr)
                 
                 do_magnet(trashcan_obj,2,trashcan_spr)
             }

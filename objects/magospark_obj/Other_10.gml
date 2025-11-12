@@ -19,7 +19,7 @@ if (proceed == true and global.gameover == false){
             
             var _mago_maxhp = 200
             
-            with(instance_create(x,get_closest_row(y),zombiemago_obj)){
+            with(instance_create(x,get_closest_row(y),z_magician_obj)){
                 atackcall = 300
                 horde_id = _hrd_id;
                 vida = _hp
@@ -40,7 +40,7 @@ if (proceed == true and global.gameover == false){
                     var xx = random(20)
                     instance_create(x+xx,get_closest_row(y)-60,destroygrave_obj)
                     
-                    with(instance_create(x+xx,get_closest_row(y),imp_obj)){
+                    with(instance_create(x+xx,get_closest_row(y),z_imp_obj)){
                         image_alpha=0
                         //walkspeed=-0.25
                         //imagespeed2=0.25//walk

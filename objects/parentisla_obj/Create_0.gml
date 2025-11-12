@@ -6,7 +6,7 @@ up=0
 yy=0
 
 switch(room){
-    case level1_sl_rm_:
+    case level1_sl_rm:
         image_index=0
     break
     

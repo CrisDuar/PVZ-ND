@@ -13,63 +13,63 @@ money=100//player gets money for passing the level
 snd=newplant_snd//reward song
 plantroom=price_rm//what room go to after passing the level
 
-zombie_preview(zombie1_obj,1)
-zombie_preview(imp_obj,2)
-zombie_preview(zombiecarecono_obj,2)
-zombie_preview(zombielector_obj,2)
-zombie_preview(zombiedoor_obj,2)
-zombie_preview(zombiestatua_obj,2) 
-zombie_preview(zomtorch_obj,2) 
+zombie_preview(z_zombie_obj,1)
+zombie_preview(z_imp_obj,2)
+zombie_preview(z_conehead_obj,2)
+zombie_preview(z_newspaper_obj,2)
+zombie_preview(z_screendoor_obj,2)
+zombie_preview(z_statue_obj,2) 
+zombie_preview(z_torch_obj,2) 
 
 wf[8]=1
 wf[fn-1]=2
 
 
-f[0,0] = array(zombie1_obj,a,1)
+f[0,0] = array(z_zombie_obj,a,1)
 
-f[1,0] = array(zombie1_obj,a,1)
+f[1,0] = array(z_zombie_obj,a,1)
 
-f[2,0] = array(imp_obj,a,1)
+f[2,0] = array(z_imp_obj,a,1)
 
-f[3,0] = array(zombiecarecono_obj,a,1)
+f[3,0] = array(z_conehead_obj,a,1)
 
-f[4,0] = array(zombiestatua_obj,a,1)
-f[4,1] = array(zombie1_obj,a,1)
+f[4,0] = array(z_statue_obj,a,1)
+f[4,1] = array(z_zombie_obj,a,1)
 
-f[5,0] = array(zombie1_obj,a,1)
+f[5,0] = array(z_zombie_obj,a,1)
 
-f[6,0] = array(zomtorch_obj,a,1)
+f[6,0] = array(z_torch_obj,a,1)
 
-f[7,0] = array(zombiecarecono_obj,a,1)
+f[7,0] = array(z_conehead_obj,a,1)
 
 //wave 1
-f[8,0] = array(zombiedoor_obj,a,1)
-f[8,1] = array(zabanderado_obj,array(f3),1)
-f[8,2] = array(zombiestatua_obj,a,3)
-f[8,3] = array(zombiecarecono_obj,a,2)
-f[8,4] = array(zombie1_obj,a,2)
-f[8,5] = array(zomtorch_obj,a,1)
+f[8,0] = array(z_screendoor_obj,a,1)
+f[8,1] = array(z_flag_obj,array(f3),1)
+f[8,2] = array(z_statue_obj,a,3)
+f[8,3] = array(z_conehead_obj,a,2)
+f[8,4] = array(z_zombie_obj,a,2)
+f[8,5] = array(z_torch_obj,a,1)
 
-f[9,0] = array(zombielector_obj,a,1)
+f[9,0] = array(z_newspaper_obj,a,1)
 
-f[10,0] = array(zomtorch_obj,a,1)
-f[10,1] = array(zombielector_obj,a,1)
-f[10,2] = array(zombie1_obj,a,2)
+f[10,0] = array(z_torch_obj,a,1)
+f[10,1] = array(z_newspaper_obj,a,1)
+f[10,2] = array(z_zombie_obj,a,2)
 
-f[11,0] = array(zombiestatua_obj,a,2)
-f[11,1] = array(zombiedoor_obj,a,1)
-f[11,2] = array(zombiecarecono_obj,a,1)
+f[11,0] = array(z_statue_obj,a,2)
+f[11,1] = array(z_screendoor_obj,a,1)
+f[11,2] = array(z_conehead_obj,a,1)
 
-f[12,0] = array(imp_obj,a,2)
-f[12,1] = array(zombielector_obj,a,2)
+f[12,0] = array(z_imp_obj,a,2)
+f[12,1] = array(z_newspaper_obj,a,2)
 
-f[13,0] = array(zombie1_obj,a,3)
-f[13,1] = array(zombiecarecono_obj,a,2)
+f[13,0] = array(z_zombie_obj,a,3)
+f[13,1] = array(z_conehead_obj,a,2)
 
 //final wave
-f[14,0] = array(zombielector_obj,a,2)
-f[14,1] = array(zabanderado_obj,array(f3),1)
-f[14,2] = array(zombiestatua_obj,a,3)
-f[14,3] = array(zombiecarecono_obj,a,2)
-f[14,4] = array(zomtorch_obj,a,2)
-f[14,5] = array(zombiedoor_obj,a,3)
+f[14,0] = array(z_newspaper_obj,a,2)
+f[14,1] = array(z_flag_obj,array(f3),1)
+f[14,2] = array(z_statue_obj,a,3)
+f[14,3] = array(z_conehead_obj,a,2)
+f[14,4] = array(z_torch_obj,a,2)
+f[14,5] = array(z_screendoor_obj,a,3)

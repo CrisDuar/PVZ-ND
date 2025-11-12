@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"grasswalk_sng",
+  "audioGroupId":{
+    "name":"Music",
+    "path":"audiogroups/Music",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":6,
+  "conversionMode":0,
+  "duration":198.26068,
+  "exportDir":"",
+  "name":"grasswalk_sng",
+  "parent":{
+    "name":"musica",
+    "path":"folders/Sounds/musica.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"grasswalk_sng.wav",
+  "volume":1.0,
+}

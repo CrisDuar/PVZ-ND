@@ -187,8 +187,8 @@ if (state==2 or state==4 or state==5) and image_index>=atack_frame and atackdone
     switch(atacktype){
         case 1://Generar zombis
             //zombis del patio
-            var zom_ground=choose(imp_obj,icezombie_obj,zombie1_obj,zombiecarecono_obj,zombieheadbox_obj)
-            var zom_water=choose(imp_obj,zombie1_obj,zombieheadbox_obj)
+            var zom_ground=choose(z_imp_obj,z_icehead_obj,z_zombie_obj,z_conehead_obj,z_headbox_obj)
+            var zom_water=choose(z_imp_obj,z_zombie_obj,z_headbox_obj)
             var num1=2
             var num2=1
             
@@ -206,9 +206,9 @@ if (state==2 or state==4 or state==5) and image_index>=atack_frame and atackdone
             //ZOMBIS EN TIERRA
             repeat(num1){
                 if fase==1{
-                    zom_ground=choose(zombiedoor_obj,zombierocket_obj,icezombie_obj,zombie1_obj,zombiecarecono_obj)
+                    zom_ground=choose(z_screendoor_obj,z_rocket_obj,z_icehead_obj,z_zombie_obj,z_conehead_obj)
                 }else if fase==2{
-                    zom_ground=choose(zombiecarecubo_obj,zombierocket_obj,icezombie_obj,zombiecarecono_obj,zombiepole_obj,zombie1_obj)
+                    zom_ground=choose(z_buckethead_obj,z_rocket_obj,z_icehead_obj,z_conehead_obj,z_polevaulter_obj,z_zombie_obj)
                 }
             
                 var yy = get_closest_row(irandom_range(100,640))
@@ -220,9 +220,9 @@ if (state==2 or state==4 or state==5) and image_index>=atack_frame and atackdone
             var yy_temp=choose(zombispawn_obj.f3,zombispawn_obj.f4)
             repeat(num2){
                 if fase==1{
-                    zom_water=choose(zombieheadbox_obj,zombie1_obj,zombiecarecono_obj,zombiecarecubo_obj,zombiebuzo_obj)
+                    zom_water=choose(z_headbox_obj,z_zombie_obj,z_conehead_obj,z_buckethead_obj,z_snorkel_obj)
                 }else if fase==2{
-                    zom_water=choose(zombiebuzo_obj,duckzombie_obj,zombiecarecono_obj,zombiecarecubo_obj,zombiedoor_obj)
+                    zom_water=choose(z_snorkel_obj,z_duckytube_obj,z_conehead_obj,z_buckethead_obj,z_screendoor_obj)
                 }
             
                 with(instance_create(irandom_range(800,1000),yy_temp,zombiegrave_obj)){
@@ -260,7 +260,7 @@ if (state==2 or state==4 or state==5) and image_index>=atack_frame and atackdone
         
             var yy = y
             repeat(4){
-                with(instance_create(1190,yy,zombiestatua_obj)){
+                with(instance_create(1190,yy,z_statue_obj)){
                     warn=true
                     warn_rush=true
                     hspeed=irandom_range(-14,-15)

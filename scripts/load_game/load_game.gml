@@ -6,13 +6,15 @@ function load_game(argument0) {
 
 	if file_exists(save){
 	    ini_open(save)
-    
-	    global.niveles = ini_read_real("Progress", "niveles", 0);
+		
+		
+	    global.progress[? "niveles"] = ini_read_real("Progress", "niveles", 0);
 	    global.vasebreaker = ini_read_real("Progress", "vasebreaker", 0);
 	    global.levelhard1 = ini_read_real("Progress", "levelhard1", 0);
 	    global.levelhard2 = ini_read_real("Progress", "levelhard2", 0);
 	    global.levelhard3 = ini_read_real("Progress", "levelhard3", 0);
 	    global.levelhard4 = ini_read_real("Progress", "levelhard4", 0);
+		
 	    global.dinero = ini_read_real("Progress", "dinero", 0 );
 	    global.game_time = ini_read_real("Progress", "hours_played", 0 );
     

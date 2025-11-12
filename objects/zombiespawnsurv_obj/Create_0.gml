@@ -25,21 +25,21 @@ timer=60*3
 timercheck=false
 
 //zombi básico
-basic1=imp_obj
-basic2=zombie1_obj
-basic3=zombieheadbox_obj
+basic1=z_imp_obj
+basic2=z_zombie_obj
+basic3=z_headbox_obj
 
 //zombi armadura
-armor1=zombieheadbox_obj
-armor2=zombiecarecono_obj
-armor3=zombiecarecono_obj
+armor1=z_headbox_obj
+armor2=z_conehead_obj
+armor3=z_conehead_obj
 
 //zombi truco
-trick1=zombiepapsho_obj
-trick2=zombiestatua_obj
-trick3=zombiestatua_obj
+trick1=z_paperthrower_obj
+trick2=z_statue_obj
+trick3=z_statue_obj
 //bandera
-flag=zabanderado_obj
+flag=z_flag_obj
 
 //-------------------------------------
 pt=12//Grace time

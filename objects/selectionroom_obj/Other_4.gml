@@ -1,6 +1,6 @@
 switch(room){
-    case level1_sl_rm_:
-    global.selectionRoom=level1_sl_rm_
+    case level1_sl_rm:
+    global.selectionRoom=level1_sl_rm
     break
     
     case level2_sl_rm:

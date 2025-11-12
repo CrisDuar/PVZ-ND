@@ -14,18 +14,18 @@ money=10//player gets money for passing the level
 snd=newplant_snd//reward song
 plantroom=price_rm//what room go to after passing the level
 
-zombie_preview(zombie1_obj,3)
+zombie_preview(z_zombie_obj,3)
 
 wf[fn-1]=2
 
 a=array(f3)
 
-f[0,0] = array(zombie1_obj,a,1)
+f[0,0] = array(z_zombie_obj,a,1)
 
-f[1,0] = array(zombie1_obj,a,1)
+f[1,0] = array(z_zombie_obj,a,1)
 
-f[2,0] = array(zombie1_obj,a,2)
+f[2,0] = array(z_zombie_obj,a,2)
 
 //final wave
-f[3,0] = array(zombie1_obj,a,2)
-f[3,1] = array(zabanderado_obj,array(f3),1)
+f[3,0] = array(z_zombie_obj,a,2)
+f[3,1] = array(z_flag_obj,array(f3),1)

@@ -5,8 +5,8 @@ function save_level_struct(){
 	var _smog = -1;
 	
 	var _loop = false;
-	var _idle_sng = music_grasswalk_snd;
-	var _horde_sng = music_finalwaveday_snd;
+	var _idle_sng = audio_get_name(grasswalk_sng);
+	var _horde_sng = audio_get_name(grasswalk_fw_sng);
 	
 	var _t1 = 0;
 	var _t2 = 0;
@@ -26,11 +26,11 @@ function save_level_struct(){
 	
 	//Get the music
 	if (instance_exists(musicloop_obj)){
-		_idle_sng = musicloop_obj.snd;
+		_idle_sng = audio_get_name(musicloop_obj.snd);
 		_loop = true;
 	}else{
-		_idle_sng =musicglobalhorde_obj.idlesong;
-		_horde_sng = musicglobalhorde_obj.hordesong
+		_idle_sng = audio_get_name(musicglobalhorde_obj.idlesong);
+		_horde_sng = audio_get_name(musicglobalhorde_obj.hordesong);
 	}
 	
 	//Get if it is a conveyor belt level.
@@ -56,7 +56,7 @@ function save_level_struct(){
 			windy: control_obj.windy,
 			limit: _limit
 		},
-	
+		
 		//fog
 		fog: _fog,
 		smog: _smog,
@@ -79,6 +79,9 @@ function save_level_struct(){
 	
 		//surprise attack is enabled
 		surprise_enabled: zombispawn_obj.surprise_enabled,
+		
+		//%50 rule
+		horde_prcnt: zombispawn_obj.horde_prcnt,
 		
 		//grace time
 		pt: zombispawn_obj.pt,
@@ -116,12 +119,12 @@ function save_level_struct(){
 		//PRIZE
 	
 		//sprite, level type, number, money, reward song, load level
-		sprite: zombispawn_obj.sprite,
+		sprite: sprite_get_name(zombispawn_obj.sprite),
 		prizevar: zombispawn_obj.prizevar,
 		lvl: zombispawn_obj.lvl,
 		money: zombispawn_obj.money,
-		snd: zombispawn_obj.snd,
-		plantroom: zombispawn_obj.plantroom,
+		snd: audio_get_name(zombispawn_obj.snd),
+		plantroom: room_get_name(zombispawn_obj.plantroom),
 	
 		waves: array_create(zombispawn_obj.fn),
 	
@@ -149,7 +152,7 @@ function save_level_struct(){
 		for (var j = 0; j < array_length(zombispawn_obj.f[i]); j++){
 		
 			_arr_z[j] = {
-				typ: zombispawn_obj.f[i][j][0],
+				typ: object_get_name(zombispawn_obj.f[i][j][0]),
 				row: 0,
 				num: zombispawn_obj.f[i][j][2]
 			}

@@ -39,7 +39,7 @@ for (var i = 0; i<tls_x; i++){
 instance_glow(glow_destroyed_obj, 0, 0)
 instance_glow(plantern_obj, 0, -35)
 instance_glow(plantorcha_obj, 0, -35)
-instance_glow(zomtorch_obj, -60, -90)
+instance_glow(z_torch_obj, -60, -90)
 instance_glow(molotov_obj, 0, 0)
 instance_glow(glow_obj, 0, 0)
 
@@ -56,8 +56,8 @@ if instance_exists(jumpingplant_obj){
     }   
 }
 
-if instance_exists(zombiemolotov_obj){
-    with(zombiemolotov_obj){
+if instance_exists(z_molotov_obj){
+    with(z_molotov_obj){
         if (fire) do_glow(-60+mlv_xx ,-30+mlv_yy)
     }
 }

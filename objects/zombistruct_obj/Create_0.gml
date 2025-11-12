@@ -19,8 +19,8 @@ level = {
 	
 	//Music
 	loop: false,
-	idle_sng: music_grasswalk_snd,
-	horde_sng: music_finalwaveday_snd,
+	idle_sng: grasswalk_sng,
+	horde_sng: grasswalk_fw_sng,
 	
 	//can you choose your seeds?
 	cys: true,
@@ -76,7 +76,7 @@ level = {
 	lvl: 1,
 	money: 100,
 	snd: newplant_snd,
-	plantroom: level1_sl_rm_,
+	plantroom: level1_sl_rm,
 	
 	/*
 		to add the zombies to the preview, while loading them, typ will be stored
@@ -102,18 +102,19 @@ level = {
 	
 	//Actual level
 	waves: [
-		[{typ: zombie1_obj, row: 0, num: 1}],
-		[{typ: zombie1_obj, row: 0, num: 1}],
-		[{typ: zombie1_obj, row: 0, num: 1}, {typ: zombiecarecono_obj, row: 0, num: 1}],
-		[{typ: zombie1_obj, row: 0, num: 1}, {typ: zombiecarecono_obj, row: 0, num: 1}],
-		[{typ: zombie1_obj, row: 0, num: 1}, {typ: zabanderado_obj, row: 0, num: 1}],
+		[{typ: z_zombie_obj, row: 0, num: 1}],
+		[{typ: z_zombie_obj, row: 0, num: 1}],
+		[{typ: z_zombie_obj, row: 0, num: 1}, {typ: z_conehead_obj, row: 0, num: 1}],
+		[{typ: z_zombie_obj, row: 0, num: 1}, {typ: z_conehead_obj, row: 0, num: 1}],
+		[{typ: z_zombie_obj, row: 0, num: 1}, {typ: z_flag_obj, row: 0, num: 1}],
 	]
 }
 
 level.arr_row[0] = [level.rw[0], level.rw[1], level.rw[2], level.rw[3], level.rw[4]] //a
 level.wf[0] = [level.fn - 1, 2]
 
-var _ruta = get_open_filename("", "");
+//var _ruta = get_open_filename("", "");
+/*var _ruta = "levels/" + global.load_route + "/" + global.load_level + ".json"
 var _txt = "";
 
 var _file = file_text_open_read(_ruta);
@@ -206,7 +207,7 @@ for (var i = 0; i < array_length(_obj_keys); i++) {
 	});
 	
 	
-	Cada nivel debería contar con tres archivos
+	Cada nivel debería contar con dos archivos
 	
 	//Contains waves
 	level_n.json

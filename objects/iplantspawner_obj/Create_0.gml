@@ -50,73 +50,73 @@ b = array(f1,f2,f3,f4,f5)
 switch(global.battle_map){
     default:
         //niveles de día
-        basic1=zombie1_obj
-        basic2=zombie1_obj
+        basic1=z_zombie_obj
+        basic2=z_zombie_obj
         //zombi armadura
-        armor1=zombieheadbox_obj
-        armor2=zombiecarecono_obj
+        armor1=z_headbox_obj
+        armor2=z_conehead_obj
         //zombi truco
-        trick1=choose(zombiepapsho_obj,zombiepole_obj)
-        trick2=choose(zombiestatua_obj,zombiejardinero_obj)
+        trick1=choose(z_paperthrower_obj,z_polevaulter_obj)
+        trick2=choose(z_statue_obj,z_gardener_obj)
         
         if global.battle_diff==1{
-            armor1=zombiecarecono_obj
-            armor2=zombiedoor_obj
+            armor1=z_conehead_obj
+            armor2=z_screendoor_obj
         }else if global.battle_diff==2{
-            basic1=zombie1_obj
-            basic2=zombieheadbox_obj
+            basic1=z_zombie_obj
+            basic2=z_headbox_obj
             
-            armor1=zombiecarecono_obj
-            armor2=zombiecarecubo_obj
+            armor1=z_conehead_obj
+            armor2=z_buckethead_obj
         }
     break
 
     case 2://niveles de noche
         //zombi básico
-        basic1=zombie1_obj
-        basic2=zombie1_obj
+        basic1=z_zombie_obj
+        basic2=z_zombie_obj
         //zombi armadura
-        armor1=zombieheadbox_obj
-        armor2=zombiecarecono_obj
+        armor1=z_headbox_obj
+        armor2=z_conehead_obj
         //zombi truco
-        trick1=choose(zombiepapsho_obj, zombiepole_obj, zomtorch_obj)
-        trick2=choose(zombiepapsho_obj,zombielector_obj,skeleton_obj)
+        trick1=choose(z_paperthrower_obj, z_polevaulter_obj, z_torch_obj)
+        trick2=choose(z_paperthrower_obj,z_newspaper_obj,z_skeleton_obj)
     
         if global.battle_diff==1{
-            armor1=zombiecarecono_obj
-            armor2=zombiedoor_obj
+            armor1=z_conehead_obj
+            armor2=z_screendoor_obj
         }else if global.battle_diff==2{
-            basic1=zombie1_obj
-            basic2=zombieheadbox_obj
+            basic1=z_zombie_obj
+            basic2=z_headbox_obj
             
-            armor1=zombiecarecono_obj
-            armor2=zombiecarecubo_obj
-            trick2=choose(zombiesecta1_obj,futbolzombi_obj)
+            armor1=z_conehead_obj
+            armor2=z_buckethead_obj
+            trick2=choose(z_necromancer_obj,z_allstar_oj)
         }
     break
     
     case 3://niveles de la piscina
-        basic1=zombie1_obj
-        basic2=zombie1_obj
+        basic1=z_zombie_obj
+        basic2=z_zombie_obj
         //zombi armadura
-        armor1=zombieheadbox_obj
-        armor2=zombiecarecono_obj
+        armor1=z_headbox_obj
+        armor2=z_conehead_obj
         //zombi truco
-        trick1=choose(trashcanzombie_obj,zompanel_obj, beachball_obj,zombierocket_obj)
-        trick2=choose(zomtorch_obj,skeleton_obj,icezombie_obj,zombielector_obj)
+        trick1=choose(z_trashcan_obj,z_solarpanel_obj, beachball_obj,z_rocket_obj)
+        trick2=choose(z_torch_obj,z_skeleton_obj,z_icehead_obj,z_newspaper_obj)
         
         if global.battle_diff==1{
-            armor1=zombiecarecono_obj
-            armor2=zombiedoor_obj
+            armor1=z_conehead_obj
+            armor2=z_screendoor_obj
         }else if global.battle_diff==2{
-            basic1=zombie1_obj
-            basic2=zombieheadbox_obj
+            basic1=z_zombie_obj
+            basic2=z_headbox_obj
             
-            armor1=zombiecarecono_obj
-            armor2=zombiecarecubo_obj
+            armor1=z_conehead_obj
+            armor2=z_buckethead_obj
             
-            trick1=choose(trashcanzombie_obj,zompanel_obj, zombiesecta1_obj)
-            trick2=choose(icezombie_obj,skeleton_obj,zomboni_obj)
+            trick1=choose(z_trashcan_obj,z_solarpanel_obj, z_necromancer_obj)
+            trick2=choose(z_icehead_obj,z_skeleton_obj,z_zomboni_obj)
         }
         //Rows
         f1=152
@@ -130,52 +130,52 @@ switch(global.battle_map){
     break
     
     case 4://RAIN
-        basic1=zombie1_obj
-        basic2=zombie1_obj
+        basic1=z_zombie_obj
+        basic2=z_zombie_obj
         //zombi armadura
-        armor1=zombieheadbox_obj
-        armor2=zombiecarecono_obj
+        armor1=z_headbox_obj
+        armor2=z_conehead_obj
         //zombi truco
-        trick1=choose(zombiemago_obj, zombiesecta1_obj, cajaspawn_obj)
-        trick2=choose(icezombie_obj,skeleton_obj,ghost_obj)
+        trick1=choose(z_magician_obj, z_necromancer_obj, cajaspawn_obj)
+        trick2=choose(z_icehead_obj,z_skeleton_obj,z_ghost_obj)
         
         if global.battle_diff==1{
-            armor1=zombiecarecono_obj
-            armor2=zombiedoor_obj
+            armor1=z_conehead_obj
+            armor2=z_screendoor_obj
         }else if global.battle_diff==2{
-            basic1=zombie1_obj
-            basic2=zombieheadbox_obj
+            basic1=z_zombie_obj
+            basic2=z_headbox_obj
             
-            armor2=zombiecarecono_obj
-            armor1=zombiecarecubo_obj
+            armor2=z_conehead_obj
+            armor1=z_buckethead_obj
             
-            trick1=choose(zombiecajita_obj,zombiemago_obj, zombiesecta1_obj)
-            trick2=choose(skeleton_obj,ghost_obj, zombiecoffin_obj)
+            trick1=choose(z_jackinthebox_obj,z_magician_obj, z_necromancer_obj)
+            trick2=choose(z_skeleton_obj,z_ghost_obj, z_coffin_obj)
         }
     break
     
     case 5://FOG
-        basic1=zombie1_obj
-        basic2=zombie1_obj
+        basic1=z_zombie_obj
+        basic2=z_zombie_obj
         //zombi armadura
-        armor1=zombieheadbox_obj
-        armor2=zombiecarecono_obj
+        armor1=z_headbox_obj
+        armor2=z_conehead_obj
         //zombi truco
-        trick1=choose(zomtorch_obj,zombiemago_obj, zombiesecta1_obj, cajaspawn_obj)
-        trick2=choose(icezombie_obj,skeleton_obj,ghost_obj)
+        trick1=choose(z_torch_obj,z_magician_obj, z_necromancer_obj, cajaspawn_obj)
+        trick2=choose(z_icehead_obj,z_skeleton_obj,z_ghost_obj)
         
         if global.battle_diff==1{
-            armor1=zombiecarecono_obj
-            armor2=zombiedoor_obj
+            armor1=z_conehead_obj
+            armor2=z_screendoor_obj
         }else if global.battle_diff==2{
-            basic1=zombie1_obj
-            basic2=zombieheadbox_obj
+            basic1=z_zombie_obj
+            basic2=z_headbox_obj
             
-            armor1=zombiecarecono_obj
-            armor2=zombiecarecubo_obj
+            armor1=z_conehead_obj
+            armor2=z_buckethead_obj
             
-            trick1=choose(zombiecajita_obj,zombiemago_obj, zombiesecta1_obj)
-            trick2=choose(zombiemolotov_obj,skeleton_obj,ghost_obj, zombiecoffin_obj)
+            trick1=choose(z_jackinthebox_obj,z_magician_obj, z_necromancer_obj)
+            trick2=choose(z_molotov_obj,z_skeleton_obj,z_ghost_obj, z_coffin_obj)
         }
     break
 }
@@ -198,10 +198,10 @@ zombie_preview(trick2,1+global.battle_diff)
 
 //var lvl_diff;
 
-flag = zabanderado_obj
+flag = z_flag_obj
 
 if global.battle_diff==2{
-    flag = zabanderadohard_obj
+    flag = z_rally_obj
 }
 
 

@@ -5,7 +5,7 @@
 }*/
 //key=virtual_key_add(x,y,133,66,vk_delete)
 switch(room){
-    case level1_sl_rm_://Día
+    case level1_sl_rm://Día
         if global.niveles<=15{
             image_alpha=0
         }else{

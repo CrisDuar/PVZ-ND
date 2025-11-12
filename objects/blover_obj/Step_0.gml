@@ -12,7 +12,7 @@ if image_index>=5 and image_index<=14 and global.gameover==false{
     
     if instance_exists(eatfather_obj){
         with(eatfather_obj){
-            if object_index==zombieglobo_obj{
+            if object_index==z_balloon_obj{
                 stop=true
                 timestop=1
                 x+=25

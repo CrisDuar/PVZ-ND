@@ -1,7 +1,7 @@
 event_inherited();
 select=7
 sprite=cubo1_spr
-zombie=zombiecarecubo_obj
+zombie=z_buckethead_obj
 cost=100
 timer=30
 /*iniciado=false

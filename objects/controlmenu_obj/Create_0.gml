@@ -54,6 +54,9 @@ directory_create(game_save_id + "\\screenshots")
 
 //Progress
 global.progress = ds_map_create();
+global.load_level = "";
+global.load_route = "";
+
 ds_map_add(global.progress, "niveles", 0);
 ds_map_add(global.progress, "vasebreaker", 0);
 

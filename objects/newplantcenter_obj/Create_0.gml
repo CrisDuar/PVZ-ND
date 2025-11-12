@@ -9,6 +9,5 @@ addEscala=0.001
 
 transparencia1=0
 
-alarm[0]=room_speed*10
+alarm[0]=60*10
 force=false
-

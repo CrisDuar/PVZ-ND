@@ -10,10 +10,10 @@ function prob_card(argument0) {
 	if global.nivelterminado=false{
 	    switch(t){
 	        default://nivel 4 o por defecto
-	            conveyor(false, menupea_obj, 100, 60)
-	            conveyor(false, menunut_obj, 60, 40)
-	            conveyor(false, potatommenu_obj, 40, 10)
-	            conveyor(false, menusingcherry_obj, 10, 0)
+	            conveyor(false, plants_id.PEASHOOTER, -1, 100, 60)
+	            conveyor(false, plants_id.WALLNUT, -1, 60, 40)
+	            conveyor(false, plants_id.POTATOMINE, -1, 40, 10)
+	            conveyor(false, plants_id.SINGLECHERRY, -1, 10, 0)
 	        break
 
 	        case 1://La bolera

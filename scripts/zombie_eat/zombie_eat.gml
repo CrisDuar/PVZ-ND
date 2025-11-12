@@ -77,7 +77,7 @@ function zombie_eat() {
 	            if colobj.object_index==plantern_obj vida-=200
             
 	            with(colobj){
-	                event_perform(ev_collision,zombiestatua_obj)
+	                event_perform(ev_collision,z_statue_obj)
 	            }
 	        }
 	    }else{
@@ -152,7 +152,7 @@ function zombie_eat() {
 	            audio_play_sound(choose(zombiebite1_snd,zombiebite2_snd),0.5,false)   
 	        }
 	    }
-	    if object_index==ghost_obj{
+	    if object_index==z_ghost_obj{
 	        if ((image_index>=1 and image_index<=5) or image_index>=8) bite=false
 	    }else{
 	        if ((image_index>=1 and image_index<=5) or image_index>=10) bite=false

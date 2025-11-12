@@ -77,8 +77,8 @@ if state=2{
             vida-=0.3
             image_alpha=random_range(0.5,1)
             if vida<=0 other.state=0
-            if object_index!=zomboni_obj
-            and object_index!=imp_obj
+            if object_index!=z_zomboni_obj
+            and object_index!=z_imp_obj
             /*and sprite_index!=zompanelidle1_spr
             and sprite_index!=zompanelidle2_spr
             and sprite_index!=zompanelidle3_spr
@@ -86,7 +86,7 @@ if state=2{
             and sprite_index!=zompanelwalk2_spr
             and sprite_index!=zompanelwalk3_spr*/
             {part_particles_create(control_obj.part, x+random_range(-16,16)-20, y+random_range(-90,-100)+(30*water), control_obj.p13, 1)}
-            else if object_index=imp_obj
+            else if object_index=z_imp_obj
             {part_particles_create(control_obj.part, x+random_range(-16,16)-20, y+random_range(-90,-100)+40+(30*water), control_obj.p13, 1)}
         }
     }else{

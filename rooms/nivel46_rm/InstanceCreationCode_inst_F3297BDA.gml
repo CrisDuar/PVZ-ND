@@ -27,45 +27,45 @@ w=array(f3,f4)
 b=array(f1,f2,f5,f6)
 
 //poner al zombi antorcha, que hace mil niveles que no sale. Gracias Chris del futuro.
-zombie_preview(imp_obj,3)
-zombie_preview(zombiecarecono_obj,3)
-zombie_preview(zombiecarecubo_obj,3)
+zombie_preview(z_imp_obj,3)
+zombie_preview(z_conehead_obj,3)
+zombie_preview(z_buckethead_obj,3)
 
-zombie_preview(zomtorch_obj,2)
-zombie_preview(zombieglobo_obj,2)
-zombie_preview(zomboni_obj,1)
+zombie_preview(z_torch_obj,2)
+zombie_preview(z_balloon_obj,2)
+zombie_preview(z_zomboni_obj,1)
 
 wf[fn-1]=2
 
-f[0,0] = array(imp_obj,b,1)
+f[0,0] = array(z_imp_obj,b,1)
 
-f[1,0] = array(imp_obj,b,1)
+f[1,0] = array(z_imp_obj,b,1)
 
-f[2,0] = array(zombiecarecono_obj,b,1)
-f[2,1] = array(imp_obj,b,1)
+f[2,0] = array(z_conehead_obj,b,1)
+f[2,1] = array(z_imp_obj,b,1)
 
-f[3,0] = array(zomtorch_obj,b,1)
-f[3,1] = array(imp_obj,b,1)
+f[3,0] = array(z_torch_obj,b,1)
+f[3,1] = array(z_imp_obj,b,1)
 
-f[4,0] = array(zombiecarecono_obj,a,2)
+f[4,0] = array(z_conehead_obj,a,2)
 
-f[5,0] = array(zomtorch_obj,b,1)
-f[5,1] = array(zombiecarecono_obj,a,1)
+f[5,0] = array(z_torch_obj,b,1)
+f[5,1] = array(z_conehead_obj,a,1)
 
-f[6,0] = array(zombieglobo_obj,a,2)
-f[6,1] = array(zombiecarecono_obj,a,1)
+f[6,0] = array(z_balloon_obj,a,2)
+f[6,1] = array(z_conehead_obj,a,1)
 
-f[7,0] = array(zomboni_obj,b,1)
+f[7,0] = array(z_zomboni_obj,b,1)
 
-f[8,0] = array(zomtorch_obj,b,2)
-f[8,1] = array(zombiecarecubo_obj,b,1)
-f[8,2] = array(zombiecarecono_obj,a,2)
+f[8,0] = array(z_torch_obj,b,2)
+f[8,1] = array(z_buckethead_obj,b,1)
+f[8,2] = array(z_conehead_obj,a,2)
 
 //wave 3
-f[9,0] = array(zabanderado_obj,array(f3,f4),1)
-f[9,1] = array(zombiecarecono_obj,a,2)
-f[9,2] = array(zombiecarecubo_obj,a,2)
-f[9,3] = array(imp_obj,a,3)
-f[9,4] = array(zomtorch_obj,b,2)
-f[9,5] = array(zomboni_obj,b,1)
-f[9,6] = array(zombieglobo_obj,a,2)
+f[9,0] = array(z_flag_obj,array(f3,f4),1)
+f[9,1] = array(z_conehead_obj,a,2)
+f[9,2] = array(z_buckethead_obj,a,2)
+f[9,3] = array(z_imp_obj,a,3)
+f[9,4] = array(z_torch_obj,b,2)
+f[9,5] = array(z_zomboni_obj,b,1)
+f[9,6] = array(z_balloon_obj,a,2)
