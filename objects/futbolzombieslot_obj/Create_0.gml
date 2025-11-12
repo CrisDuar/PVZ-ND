@@ -1,7 +1,7 @@
 event_inherited();
 select=16
 sprite=futbolzombi_spr
-zombie=futbolzombi_obj
+zombie=z_allstar_oj
 cost=150
 timer=45
 /*iniciado=false

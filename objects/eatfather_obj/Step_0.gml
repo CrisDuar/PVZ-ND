@@ -59,7 +59,7 @@ if control_obj.invisible==false{
 
 if canwater=true{
     if (point_in_rectangle(x,y,290,300,1075,427) and __background_get( e__BG.Index, 0 )=poolday_bg)
-    or (collision_rectangle(x-40*water,y-10,x,y+30,charco_obj,false,false) and object_index!=zomboni_obj){
+    or (collision_rectangle(x-40*water,y-10,x,y+30,charco_obj,false,false) and object_index!=z_zomboni_obj){
         if water=false{
             water=true
         }
@@ -103,7 +103,7 @@ and global.zombieswin=true{
 if global.gameover=false
 and control_obj.wind==true
 and !check_zombie_eat(tallnut_obj){
-    if object_index==zombieglobo_obj{
+    if object_index==z_balloon_obj{
         x -= 0.15
     }else{
         x -= clamp(0.5-(peso/10),0,10)
@@ -112,7 +112,7 @@ and !check_zombie_eat(tallnut_obj){
 }
 
 //motivación
-if (instance_exists(zabanderadohard_obj) or room==nivel11_rm) and object_index!=zabanderadohard_obj and object_index!=zombiestatua_obj{
+if (instance_exists(z_rally_obj) or room==nivel11_rm) and object_index!=z_rally_obj and object_index!=z_statue_obj{
     motivated=true
 }else{
     motivated=false

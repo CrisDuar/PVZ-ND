@@ -9,7 +9,7 @@ function update_discord_status() {
 	            global.real_state_dc = "Playing Vasebreaker"
 	        break
         
-	        case level1_sl_rm_:
+	        case level1_sl_rm:
 	            global.real_state_dc = "Playing Day levels"
 	        break
         

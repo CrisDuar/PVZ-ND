@@ -1,4 +1,4 @@
-zominventory = array(imp_obj,zombie1_obj,zombieheadbox_obj,zombiecarecono_obj,zombiecarecubo_obj)
+zominventory = array(z_imp_obj,z_zombie_obj,z_headbox_obj,z_conehead_obj,z_buckethead_obj)
 image_speed=0
 vida=700
 image_speed=0

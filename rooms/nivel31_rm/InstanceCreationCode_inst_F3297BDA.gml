@@ -27,28 +27,28 @@ w=array(f3,f4)
 b=array(f1,f2,f5,f6)
 
 
-zombie_preview(zombie1_obj,2)
-zombie_preview(zombiecarecono_obj,2)
-zombie_preview(zombiedoor_obj,3)
+zombie_preview(z_zombie_obj,2)
+zombie_preview(z_conehead_obj,2)
+zombie_preview(z_screendoor_obj,3)
 
 wf[fn-1]=2
 
-f[0,0] = array(zombie1_obj,b,1)
+f[0,0] = array(z_zombie_obj,b,1)
 
-f[1,0] = array(zombie1_obj,b,1)
+f[1,0] = array(z_zombie_obj,b,1)
 
-f[2,0] = array(zombiecarecono_obj,b,1)
+f[2,0] = array(z_conehead_obj,b,1)
 
-f[3,0] = array(zombiecarecono_obj,a,1)
-f[3,1] = array(zombie1_obj,a,1)
+f[3,0] = array(z_conehead_obj,a,1)
+f[3,1] = array(z_zombie_obj,a,1)
 
-f[4,0] = array(zombiecarecono_obj,a,2)
-f[4,1] = array(zombie1_obj,a,1)
+f[4,0] = array(z_conehead_obj,a,2)
+f[4,1] = array(z_zombie_obj,a,1)
 
-f[5,0] = array(zombiedoor_obj,a,1)
+f[5,0] = array(z_screendoor_obj,a,1)
 
 //wave 1
-f[6,0] = array(zabanderado_obj,array(f3,f4),1)
-f[6,1] = array(zombie1_obj,a,3)
-f[6,2] = array(zombiecarecono_obj,a,2)
-f[6,3] = array(zombiedoor_obj,a,1)
+f[6,0] = array(z_flag_obj,array(f3,f4),1)
+f[6,1] = array(z_zombie_obj,a,3)
+f[6,2] = array(z_conehead_obj,a,2)
+f[6,3] = array(z_screendoor_obj,a,1)

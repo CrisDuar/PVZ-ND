@@ -12,7 +12,7 @@ function create_upgraded_puffshroom() {
 	        and distance_to_object(animgrave_obj)>0
 	        and distance_to_object(crater1_obj)>0
 	        and distance_to_object(ice_obj)>0
-	        and distance_to_object(zombiestatua_obj)>0
+	        and distance_to_object(z_statue_obj)>0
 	        and distance_to_object(caja_obj)>0
 	        and distance_to_object(trashcan_obj)>0{
         

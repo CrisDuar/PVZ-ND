@@ -1,7 +1,7 @@
 event_inherited();
 select=5
 sprite=conoquiet1_spr
-zombie=zombiecarecono_obj
+zombie=z_conehead_obj
 cost=75
 timer=15
 /*

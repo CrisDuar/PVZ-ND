@@ -6,7 +6,7 @@ titleEN="ERROR"
 textEN="Hey there, this is an error message, so if you're seeing this, report it!"
 textES="Hola, este es un mensaje de error, así que si lo ves, reportalo!"
 sprite_index=randomlocked_spr
-siguientenivel_obj.rm=level1_sl_rm_
+siguientenivel_obj.rm=level1_sl_rm
 
 //ERROR MESSAGE
 if global.lang="en"{

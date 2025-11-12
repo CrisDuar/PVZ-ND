@@ -9,4 +9,3 @@ y3 = y+360
 
 image_alpha=0
 costo=50
-

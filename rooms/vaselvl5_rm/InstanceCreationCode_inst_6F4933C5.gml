@@ -10,30 +10,30 @@ x_start[3]=1050
 
 h[0] = vases_create(
 repearevslot_obj,repearevslot_obj,repearevslot_obj,repearevslot_obj,repearevslot_obj,
-repearevslot_obj,repearevslot_obj,zombie1_obj,zombie1_obj,zombie1_obj,
-zombie1_obj,zombie1_obj,zombie1_obj,zombiecarecubo_obj,zombiecarecubo_obj,
+repearevslot_obj,repearevslot_obj,z_zombie_obj,z_zombie_obj,z_zombie_obj,
+z_zombie_obj,z_zombie_obj,z_zombie_obj,z_buckethead_obj,z_buckethead_obj,
 menunut_obj,menunut_obj,menunut_obj,planternslot_obj,planternslot_obj
 )
 
 h[1] = vases_create(
 repearevslot_obj,repearevslot_obj,repearevslot_obj,repearevslot_obj,repearevslot_obj,
-garlicslot_obj,garlicslot_obj,repearevslot_obj,repearevslot_obj,zombie1_obj,
-zombie1_obj,zombie1_obj,zombie1_obj,zombie1_obj,zombiecarecubo_obj,
-imp_obj,imp_obj,imp_obj,planternslot_obj,planternslot_obj
+garlicslot_obj,garlicslot_obj,repearevslot_obj,repearevslot_obj,z_zombie_obj,
+z_zombie_obj,z_zombie_obj,z_zombie_obj,z_zombie_obj,z_buckethead_obj,
+z_imp_obj,z_imp_obj,z_imp_obj,planternslot_obj,planternslot_obj
 )
 
 h[2] = vases_create(
 repearevslot_obj,repearevslot_obj,repearevslot_obj,repearevslot_obj,repearevslot_obj,
 repearevslot_obj,repearevslot_obj,repearevslot_obj,menupuff_obj,menupuff_obj,
-menupuff_obj,menupuff_obj,menupuff_obj,menupuff_obj,zombiemago_obj,
-zombiemago_obj, zombiemago_obj, zombiesecta1_obj, zombiesecta1_obj, zombiesecta1_obj
+menupuff_obj,menupuff_obj,menupuff_obj,menupuff_obj,z_magician_obj,
+z_magician_obj, z_magician_obj, z_necromancer_obj, z_necromancer_obj, z_necromancer_obj
 )
 
 h[3] = vases_create(
 repearevslot_obj,repearevslot_obj,repearevslot_obj,repearevslot_obj,repearevslot_obj,
-planternslot_obj,planternslot_obj,zombiepole_obj,zombiepole_obj,zombiepole_obj,
-zombiepole_obj,zombiepole_obj,planternslot_obj,zombie1_obj,zombie1_obj,
-zombie1_obj, zombie1_obj, zombie1_obj, zombie1_obj, zombie1_obj,
+planternslot_obj,planternslot_obj,z_polevaulter_obj,z_polevaulter_obj,z_polevaulter_obj,
+z_polevaulter_obj,z_polevaulter_obj,planternslot_obj,z_zombie_obj,z_zombie_obj,
+z_zombie_obj, z_zombie_obj, z_zombie_obj, z_zombie_obj, z_zombie_obj,
 menurepea_obj, menurepea_obj, menurepea_obj, menurepea_obj, menurepea_obj,
 )
 /*

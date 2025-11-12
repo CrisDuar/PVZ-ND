@@ -2,44 +2,44 @@ function pool_generate_zom() {
 	if dificultad>=0
 	and dificultad<4{
 	//zombi básico
-	basic1=choose(imp_obj,duckzombie_obj)
-	basic2=zombie1_obj
-	basic3=choose(zombie1_obj,zombieheadbox_obj)
+	basic1=choose(z_imp_obj,z_duckytube_obj)
+	basic2=z_zombie_obj
+	basic3=choose(z_zombie_obj,z_headbox_obj)
 
 	//zombi armadura
-	armor1=zombieheadbox_obj
-	armor2=zombiecarecono_obj
-	armor3=choose(zombiedoor_obj,zombiecarecubo_obj)
+	armor1=z_headbox_obj
+	armor2=z_conehead_obj
+	armor3=choose(z_screendoor_obj,z_buckethead_obj)
 
 	//zombi truco
-	trick1=zombiepapsho_obj
-	trick2=choose(zombiejardinero_obj,beachball_obj)
-	trick3=choose(zombiebuzo_obj,trashcanzombie_obj)
+	trick1=z_paperthrower_obj
+	trick2=choose(z_gardener_obj,beachball_obj)
+	trick3=choose(z_snorkel_obj,z_trashcan_obj)
 
 	//bandera
-	flag=zabanderado_obj
+	flag=z_flag_obj
 	pt=12
 	}
 
 	if dificultad>=2
 	and dificultad<5{
 	//zombi básico
-	basic1=choose(zombie1_obj,duckzombie_obj)
-	basic2=choose(zombie1_obj,zombieheadbox_obj)
-	basic3=zombieheadbox_obj
+	basic1=choose(z_zombie_obj,z_duckytube_obj)
+	basic2=choose(z_zombie_obj,z_headbox_obj)
+	basic3=z_headbox_obj
 
 	//zombi armadura
-	armor1=choose(zombiecarecono_obj,zombieheadbox_obj)
-	armor2=zombiecarecono_obj
-	armor3=zombiecarecubo_obj
+	armor1=choose(z_conehead_obj,z_headbox_obj)
+	armor2=z_conehead_obj
+	armor3=z_buckethead_obj
 
 	//zombi truco
-	trick1=choose(zombiejardinero_obj,zombiepapsho_obj,zombieglobo_obj)
-	trick2=choose(zomtorch_obj,zombiepole_obj)
-	trick3=choose(icezombie_obj,zombiepapsho_obj,beachball_obj)
+	trick1=choose(z_gardener_obj,z_paperthrower_obj,z_balloon_obj)
+	trick2=choose(z_torch_obj,z_polevaulter_obj)
+	trick3=choose(z_icehead_obj,z_paperthrower_obj,beachball_obj)
 
 	//bandera
-	flag=zabanderado_obj
+	flag=z_flag_obj
 	pt=10
 	//tumbas
 	spawngraves_par_obj.maxgraves=5;
@@ -49,22 +49,22 @@ function pool_generate_zom() {
 	if dificultad>=5
 	and dificultad<10{
 	//zombi básico
-	basic1=choose(zombiecarecono_obj,duckzombie_obj)
-	basic2=choose(zombiecarecono_obj,zombieheadbox_obj)
-	basic3=zombiecarecono_obj
+	basic1=choose(z_conehead_obj,z_duckytube_obj)
+	basic2=choose(z_conehead_obj,z_headbox_obj)
+	basic3=z_conehead_obj
 
 	//zombi armadura
-	armor1=choose(zombiecarecono_obj,zombiedoor_obj)
-	armor2=zombiedoor_obj
-	armor3=zombiecarecubo_obj
+	armor1=choose(z_conehead_obj,z_screendoor_obj)
+	armor2=z_screendoor_obj
+	armor3=z_buckethead_obj
 
 	//zombi truco
-	trick1=choose(zombieglobo_obj,zombiestatua_obj,zombierocket_obj)
-	trick2=choose(zomtorch_obj,zombiepole_obj,zombiebuzo_obj,beachball_obj)
-	trick3=choose(zombiesecta1_obj,futbolzombi_obj,trashcanzombie_obj)
+	trick1=choose(z_balloon_obj,z_statue_obj,z_rocket_obj)
+	trick2=choose(z_torch_obj,z_polevaulter_obj,z_snorkel_obj,beachball_obj)
+	trick3=choose(z_necromancer_obj,z_allstar_oj,z_trashcan_obj)
 
 	//bandera
-	flag=zabanderado_obj
+	flag=z_flag_obj
 	pt=8
 	//tumbas
 	spawngraves_par_obj.maxgraves=7;
@@ -74,23 +74,23 @@ function pool_generate_zom() {
 	if dificultad>=10
 	and dificultad<15{
 	//zombi básico
-	basic1=duckzombie_obj
-	basic2=choose(zombiecarecono_obj,zombiedoor_obj)
-	basic3=zombiedoor_obj
+	basic1=z_duckytube_obj
+	basic2=choose(z_conehead_obj,z_screendoor_obj)
+	basic3=z_screendoor_obj
 
 	//zombi armadura
-	armor1=choose(zombiedoor_obj,zombiecarecubo_obj)
-	armor2=zombiecarecubo_obj
-	armor3=futbolzombi_obj
+	armor1=choose(z_screendoor_obj,z_buckethead_obj)
+	armor2=z_buckethead_obj
+	armor3=z_allstar_oj
 
 	//zombi truco
-	trick1=choose(zombiejardinero_obj,zombiepapsho_obj,zombiestatua_obj,zomboni_obj,zompanel_obj)
-	trick2=choose(zombierocket_obj,zombiepole_obj,zombiestatua_obj,protestantzombie_obj,zomboni_obj)
-	trick3=choose(zombiesecta1_obj,skeleton_obj,futbolzombi_obj,beachball_obj)
+	trick1=choose(z_gardener_obj,z_paperthrower_obj,z_statue_obj,z_zomboni_obj,z_solarpanel_obj)
+	trick2=choose(z_rocket_obj,z_polevaulter_obj,z_statue_obj,z_protesterleader_obj,z_zomboni_obj)
+	trick3=choose(z_necromancer_obj,z_skeleton_obj,z_allstar_oj,beachball_obj)
 
 	//bandera
 	flagnum=2
-	flag=zabanderadohard_obj
+	flag=z_rally_obj
 	pt=6
 	//trick
 	spawnzomes=true
@@ -101,22 +101,22 @@ function pool_generate_zom() {
 
 	if dificultad>=15{
 	//zombi básico
-	basic1=zombieheadbox_obj
-	basic2=choose(zombiecarecono_obj,zombiedoor_obj)
-	basic3=zombiecarecubo_obj
+	basic1=z_headbox_obj
+	basic2=choose(z_conehead_obj,z_screendoor_obj)
+	basic3=z_buckethead_obj
 
 	//zombi armadura
-	armor1=choose(zombiecarecubo_obj,futbolzombi_obj)
-	armor2=skeleton_obj
-	armor3=zombiecarecubo_obj
+	armor1=choose(z_buckethead_obj,z_allstar_oj)
+	armor2=z_skeleton_obj
+	armor3=z_buckethead_obj
 
 	//zombi truco
-	trick1=choose(icezombie_obj,zomtorch_obj,zombiepole_obj,zombiesecta1_obj,zompanel_obj,zombiejardinero_obj,protestantzombie_obj,zombiestatua_obj,beachball_obj)
-	trick2=choose(zombiepapsho_obj,zombieglobo_obj,zombiepole_obj,trashcanzombie_obj,skeleton_obj,zombiejardinero_obj,zombielector_obj,zombiestatua_obj,zomboni_obj)
-	trick3=choose(zombiepapsho_obj,zomtorch_obj,zombierocket_obj,zombiesecta1_obj,skeleton_obj,zombiejardinero_obj,zombielector_obj,zomboni_obj,beachball_obj)
+	trick1=choose(z_icehead_obj,z_torch_obj,z_polevaulter_obj,z_necromancer_obj,z_solarpanel_obj,z_gardener_obj,z_protesterleader_obj,z_statue_obj,beachball_obj)
+	trick2=choose(z_paperthrower_obj,z_balloon_obj,z_polevaulter_obj,z_trashcan_obj,z_skeleton_obj,z_gardener_obj,z_newspaper_obj,z_statue_obj,z_zomboni_obj)
+	trick3=choose(z_paperthrower_obj,z_torch_obj,z_rocket_obj,z_necromancer_obj,z_skeleton_obj,z_gardener_obj,z_newspaper_obj,z_zomboni_obj,beachball_obj)
 
 	//bandera
-	flag=zabanderadohard_obj
+	flag=z_rally_obj
 	pt=4
 	//trick
 	spawnzomes=true

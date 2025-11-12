@@ -16,7 +16,7 @@ if ds_list_find_index(hit_zom,other.id)==-1{
             }
         }
         
-        if (object_index==zombiestatua_obj or object_index == trashcan_obj) is_shield = true
+        if (object_index==z_statue_obj or object_index == trashcan_obj) is_shield = true
         
         if (is_shield == false){
             if (frozenstop<room_speed*other.stun_zom) frozenstop=room_speed*other.stun_zom

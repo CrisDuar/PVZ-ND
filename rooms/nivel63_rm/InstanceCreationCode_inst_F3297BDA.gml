@@ -16,7 +16,7 @@ plantroom=price_rm//what room go to after passing the level
 
 horde_canfifty=false
 
-zombie_preview(zombie1_obj,2)
+zombie_preview(z_zombie_obj,2)
 
 wf[15]=1
 wf[fn-1]=1

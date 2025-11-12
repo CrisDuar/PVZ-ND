@@ -48,12 +48,12 @@ function set_zombie() {
 	                        }until(z_yy_temp != z_yy)
                         
 	                        z_yy=z_yy_temp
-	                        var z_unit = zombie1_obj
+	                        var z_unit = z_zombie_obj
                         
 	                        if i>5{
-	                            z_unit = zombiecarecubo_obj
+	                            z_unit = z_buckethead_obj
 	                        }else if i>3{
-	                            z_unit = zombiecarecono_obj
+	                            z_unit = z_conehead_obj
 	                        }
                         
 	                        if __background_get( e__BG.Index, 0 )==poolday_bg{

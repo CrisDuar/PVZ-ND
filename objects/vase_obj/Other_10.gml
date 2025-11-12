@@ -4,15 +4,15 @@ instance_create(x+10,y-50,destroygrave_obj)
 if loottype=0{
     with(instance_create(x,get_closest_row(y),loot)){
         image_alpha=0
-        if object_index = zombiecajita_obj{
+        if object_index = z_jackinthebox_obj{
             t=random(10)
-        }else if object_index = zombiestatua_obj{
+        }else if object_index = z_statue_obj{
             spawnzombie=1
             localkami=true
             warn=true
             warn_rush=true
             hspeed=-10
-        }else if object_index = protestantzombie_obj{
+        }else if object_index = z_protesterleader_obj{
             alarm[0]=1
         }
     }

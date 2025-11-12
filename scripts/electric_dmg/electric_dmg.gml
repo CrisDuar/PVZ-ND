@@ -8,7 +8,7 @@ function electric_dmg(argument0, argument1) {
 
 	audio_play_sound(choose(pea_impact_snd,pea_impact2_snd),1,false)
 
-	if (object_get_parent(_obj.object_index) != eatfather_obj and object_get_parent(_obj.object_index) != eatfather_shield_obj) or _obj.object_index==zombieglobo_obj{
+	if (object_get_parent(_obj.object_index) != eatfather_obj and object_get_parent(_obj.object_index) != eatfather_shield_obj) or _obj.object_index==z_balloon_obj{
 	    if control_obj.invisible==false _obj.image_alpha=0.5
 	    _obj.vida-=dmg
     

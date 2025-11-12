@@ -1,5 +1,5 @@
 if (a)
-and other.object_index!=zombieglobo_obj
+and other.object_index!=z_balloon_obj
 and other.object_index!=zombiediana_obj
 and ds_list_find_index(hit_zom,other.id)==-1{
     

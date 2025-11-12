@@ -8,15 +8,16 @@ slotsprite=0
 x2=129
 
 done=false
-costume=0
+costume = -1;
+
 if control_obj.multijugador=true{
-//x2=132
-x2=197
+	//x2=132
+	x2=197
 }
 
 xz=960
 
 if room==izombie_rm{
-xz=0
+	xz=0
 }
 

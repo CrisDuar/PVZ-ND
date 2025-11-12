@@ -6,7 +6,7 @@ if attack_done==false{
     if instance_exists(boss2_obj){
         if boss2_obj.fase==2 and x>450{
             with(instance_create(x+100,get_closest_row(y),rayo_anim_obj)){
-                obj=imp_obj
+                obj=z_imp_obj
             }
         }
     }

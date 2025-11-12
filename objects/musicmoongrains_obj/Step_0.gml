@@ -14,7 +14,7 @@ global.iniciomusica=false
 
 
 if global.hordafinal=true
-and !audio_is_playing(music_finalwaveday_snd)
+and !audio_is_playing(grasswalk_fw_sng)
 and finalwave=false{
 finalwave=true
 audio_sound_gain(music_moongrains_snd,0,500)

@@ -60,7 +60,7 @@ if global.gameover==false{
                         }
                         
                         ///LOGRO
-                        if (object_index == ghost_obj){
+                        if (object_index == z_ghost_obj){
                             if (vida <= 0 and inv == true){
                                 with(logros_obj){haunted_ghost = true}
                             }

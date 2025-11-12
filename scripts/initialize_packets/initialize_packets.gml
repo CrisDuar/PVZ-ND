@@ -17,6 +17,11 @@ function initialize_packets(){
 		SINGLECHERRY	
 	}
 	
+	enum zombies_id
+	{
+		ZOMBIE
+	}
+	
 	global.plants_packets = [
 		/*DEFAULT VALUES
 		{
@@ -247,6 +252,38 @@ function initialize_packets(){
 					packet_sprite: menurepea2_spr
 				}
 			]
+		}
+	]
+	
+	global.zombies_packets = [
+		/*DEFAULT VALUES
+		{
+			packet_sprite: basiczombie1_spr,
+
+			zombie: zombie1_obj, //zombie object
+			sprite: zombie1_spr, //zombie sprite
+			cost: 0,
+			timer: 1, //Recharge time in seconds
+			recargstart: true, //Does it recharge when the level starts?
+
+			vs_cost: 0,
+			vs_recharge: 1,
+			vs_recargstart: true,
+			sd_recharge: true
+			
+			ignore: false //Does it show up in plant selection? (true for special plants)
+		}
+		*/
+	
+		{ //Basic
+			packet_sprite: basiczombie1_spr,
+			
+			sprite: zombie1_spr,
+			zombie: z_zombie_obj,
+			cost: 25,
+			timer: 8,
+			
+			vs_recargstart: false,
 		}
 	]
 }

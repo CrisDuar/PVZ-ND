@@ -110,7 +110,7 @@ function zombie_create(argument0, argument1, argument2) {
             
 	            var xx = 1165 + irandom(96) + size
             
-	            if obj==zombiestatua_obj then xx=1180
+	            if obj==z_statue_obj then xx=1180
 	            with(instance_create(xx,freal,obj)){
 	                horde_id=other.h
 	            }
@@ -121,8 +121,8 @@ function zombie_create(argument0, argument1, argument2) {
 	            instance_create(1200,freal,obj)
 	        break
         
-	        case zabanderado_obj:
-	        case zabanderadohard_obj:
+	        case z_flag_obj:
+	        case z_rally_obj:
 	            with(instance_create(1150,freal,obj)){
 	                horde_id=other.h
 	            }

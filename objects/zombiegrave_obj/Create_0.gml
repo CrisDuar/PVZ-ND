@@ -1,7 +1,7 @@
 image_speed=0
 image_index=random_range(0,9)
 h=172
-obj=zombie1_obj
+obj=z_zombie_obj
 sprite_index=object_get_sprite(obj)
 
 w=0

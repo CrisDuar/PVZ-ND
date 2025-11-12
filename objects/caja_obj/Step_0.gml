@@ -25,8 +25,8 @@ if loot==noone{
                 
                 loottype=0
                 var b = irandom(100)
-                if b<=100 and b>=25{loot=choose(zombie1_obj, zombiepapsho_obj,imp_obj)}
-                if b<25 and b>0{loot=choose(zombielector_obj,skeleton_obj,zombiejardinero_obj)}
+                if b<=100 and b>=25{loot=choose(z_zombie_obj, z_paperthrower_obj,z_imp_obj)}
+                if b<25 and b>0{loot=choose(z_newspaper_obj,z_skeleton_obj,z_gardener_obj)}
             }else{
                 loottype=1
                 
@@ -40,8 +40,8 @@ if loot==noone{
             loottype=0
         
             var b = irandom(100)
-            if b<=100 and b>25{loot=choose(zombieheadbox_obj,zombiepapsho_obj,imp_obj)}
-            if b<=25 and b>0{loot=choose(zombielector_obj,skeleton_obj,zombiejardinero_obj)}
+            if b<=100 and b>25{loot=choose(z_headbox_obj,z_paperthrower_obj,z_imp_obj)}
+            if b<=25 and b>0{loot=choose(z_newspaper_obj,z_skeleton_obj,z_gardener_obj)}
         }
         
         if a<=55 and a>10{

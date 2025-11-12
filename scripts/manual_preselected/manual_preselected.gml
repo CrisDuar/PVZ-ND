@@ -7,6 +7,7 @@ function manual_preselected(_is_zombie, _packets) {
 	
 	for (var i=0; i < array_length(_packets); i++){
 		
-	    instance_create_layer(xx + 960*_is_zombie, 101+(63*i), "GUI",_packets[i])
+		create_packet_ingame(xx + 960*_is_zombie, 101+(63*i), _is_zombie, _packets[i], -1)
+	    //instance_create_layer(xx + 960*_is_zombie, 101+(63*i), "GUI", _packets[i])
 	}
 }

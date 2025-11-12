@@ -1,4 +1,4 @@
-if other.object_index!=zombieglobo_obj and ds_list_find_index(hit_zom,other.id)==-1{
+if other.object_index!=z_balloon_obj and ds_list_find_index(hit_zom,other.id)==-1{
     ds_list_add(hit_zom,other.id)
     
     with(other){

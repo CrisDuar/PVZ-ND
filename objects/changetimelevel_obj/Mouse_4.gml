@@ -4,7 +4,7 @@ image_yscale=0.98
 if image_alpha>=1{
     switch(image_index){
         case 0:
-            room_goto(level1_sl_rm_)
+            room_goto(level1_sl_rm)
         break
     
         case 1:

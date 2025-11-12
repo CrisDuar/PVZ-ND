@@ -139,10 +139,10 @@ if state==2 and image_index>=8 and atackdone=false{
             
             with(soulgrave_obj){
             
-                var zombies = choose(zombie1_obj,zombiecarecono_obj,zombieheadbox_obj,imp_obj)
+                var zombies = choose(z_zombie_obj,z_conehead_obj,z_headbox_obj,z_imp_obj)
             
-                if other.fase==1 zombies = choose(zombiecarecono_obj,zombieheadbox_obj,zombielector_obj,zombiedoor_obj,zombiepapsho_obj)
-                if other.fase==2 zombies = choose(zombieheadbox_obj,zombie1_obj,zombiesecta1_obj,skeleton_obj,zomtorch_obj)
+                if other.fase==1 zombies = choose(z_conehead_obj,z_headbox_obj,z_newspaper_obj,z_screendoor_obj,z_paperthrower_obj)
+                if other.fase==2 zombies = choose(z_headbox_obj,z_zombie_obj,z_necromancer_obj,z_skeleton_obj,z_torch_obj)
             
                 with(instance_create(x,get_closest_row(y+28),zombiegrave_obj)){
                     water=other.water
