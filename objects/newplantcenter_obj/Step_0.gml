@@ -12,7 +12,7 @@ escala+=addEscala*dlt
 image_xscale=escala
 image_yscale=escala
 
-if ((!audio_is_playing(newplant_snd) and !audio_is_playing(finalprize_snd)) or force==true){
+if (force){
 	
 	image_alpha-=0.06*dlt
 	logros_obj.levelpassed = true;

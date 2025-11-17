@@ -1,4 +1,14 @@
 {
+  "rw":[
+    166.0,
+    267.0,
+    370.0,
+    472.0,
+    578.0,
+    578.0
+  ],
+  "sprite":"garlicdroneslot1_spr",
+  "lvl":8.0,
   "control":{
     "mowers":[
       0.0,
@@ -9,36 +19,23 @@
     ],
     "limit":1600.0,
     "windy":false,
-    "rain":true,
-    "stage":2.0,
+    "rain":false,
+    "stage":0.0,
     "daytime":0.0
   },
-  "sprite":"@ref sprite(garlicdroneslot1_spr)",
-  "horde_prcnt":0.4,
   "fog":-1.0,
   "smog":-1.0,
   "is_conveyor":false,
   "cys":true,
   "conv_code":0.0,
   "conv_t1":0.0,
+  "pt":12.0,
+  "fn":15.0,
   "conv_t2":0.0,
   "preplants":[
   ],
   "loop":false,
-  "idle_sng":"@ref sound(music_grasswalk_snd)",
-  "horde_sng":"@ref sound(music_finalwaveday_snd)",
-  "surprise_enabled":true,
-  "pt":12.0,
-  "infinite":false,
-  "fn":15.0,
-  "infinite_loop":3.0,
-  "progressbar":true,
-  "onlyname":false,
-  "lvl_en":"Level 7",
-  "lvl_es":"Nivel 7",
-  "lvl_zh":"关卡7",
-  "prizevar":"niveles",
-  "money":100.0,
+  "idle_sng":"grasswalk_sng",
   "wf":[
     [
       8.0,
@@ -49,8 +46,20 @@
       2.0
     ]
   ],
-  "snd":"@ref sound(newplant_snd)",
-  "plantroom":"@ref room(price_rm)",
+  "horde_sng":"grasswalk_fw_sng",
+  "horde_prcnt":0.40000000000000002,
+  "surprise_enabled":true,
+  "infinite":false,
+  "infinite_loop":3.0,
+  "progressbar":true,
+  "onlyname":false,
+  "lvl_en":"Level 7",
+  "lvl_es":"Nivel 7",
+  "lvl_zh":"关卡",
+  "prizevar":"niveles",
+  "money":100.0,
+  "snd":"newplant_snd",
+  "plantroom":"price_rm",
   "arr_row":[
     [
       0.0,
@@ -63,232 +72,223 @@
   "waves":[
     [
       {
-        "typ":"@ref object(zombie1_obj)",
         "row":0.0,
+        "typ":"z_zombie_obj",
         "num":1.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombie1_obj)",
         "row":0.0,
+        "typ":"z_zombie_obj",
         "num":1.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombie1_obj)",
         "row":0.0,
+        "typ":"z_zombie_obj",
         "num":1.0
       },
       {
-        "typ":"@ref object(zombieheadbox_obj)",
         "row":0.0,
+        "typ":"z_headbox_obj",
         "num":1.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombiepapsho_obj)",
         "row":0.0,
+        "typ":"z_paperthrower_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zombieheadbox_obj)",
         "row":0.0,
+        "typ":"z_headbox_obj",
         "num":1.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombieheadbox_obj)",
         "row":0.0,
+        "typ":"z_headbox_obj",
         "num":1.0
       },
       {
-        "typ":"@ref object(zombiestatua_obj)",
         "row":0.0,
+        "typ":"z_statue_obj",
         "num":1.0
       },
       {
-        "typ":"@ref object(zombiecarecono_obj)",
         "row":0.0,
-        "num":1.0
-      }
-    ],
-    [
-      {
-        "typ":"@ref object(zombie1_obj)",
-        "row":0.0,
-        "num":2.0
-      },
-      {
-        "typ":"@ref object(zombiecarecono_obj)",
-        "row":0.0,
+        "typ":"z_conehead_obj",
         "num":1.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombieheadbox_obj)",
         "row":0.0,
+        "typ":"z_zombie_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zombiecarecono_obj)",
         "row":0.0,
-        "num":2.0
+        "typ":"z_conehead_obj",
+        "num":1.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombiecarecono_obj)",
         "row":0.0,
+        "typ":"z_headbox_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zombiepapsho_obj)",
         "row":0.0,
+        "typ":"z_conehead_obj",
         "num":2.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombieheadbox_obj)",
         "row":0.0,
+        "typ":"z_conehead_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zabanderado_obj)",
         "row":0.0,
+        "typ":"z_paperthrower_obj",
+        "num":2.0
+      }
+    ],
+    [
+      {
+        "row":0.0,
+        "typ":"z_headbox_obj",
+        "num":2.0
+      },
+      {
+        "row":0.0,
+        "typ":"z_flag_obj",
         "num":1.0
       },
       {
-        "typ":"@ref object(zombiecarecono_obj)",
         "row":0.0,
+        "typ":"z_conehead_obj",
         "num":3.0
       },
       {
-        "typ":"@ref object(zombie1_obj)",
         "row":0.0,
+        "typ":"z_zombie_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zombiestatua_obj)",
         "row":0.0,
+        "typ":"z_statue_obj",
         "num":3.0
       },
       {
-        "typ":"@ref object(zombiepapsho_obj)",
         "row":0.0,
+        "typ":"z_paperthrower_obj",
         "num":2.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombiecarecono_obj)",
         "row":0.0,
+        "typ":"z_conehead_obj",
         "num":2.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombie1_obj)",
         "row":0.0,
+        "typ":"z_zombie_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zombiepapsho_obj)",
         "row":0.0,
+        "typ":"z_paperthrower_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zombiecarecono_obj)",
         "row":0.0,
+        "typ":"z_conehead_obj",
         "num":2.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombiecarecono_obj)",
         "row":0.0,
+        "typ":"z_conehead_obj",
         "num":1.0
       },
       {
-        "typ":"@ref object(zombiepapsho_obj)",
         "row":0.0,
+        "typ":"z_paperthrower_obj",
         "num":2.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombiestatua_obj)",
         "row":0.0,
+        "typ":"z_statue_obj",
         "num":3.0
       },
       {
-        "typ":"@ref object(zombiepapsho_obj)",
         "row":0.0,
+        "typ":"z_paperthrower_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zombie1_obj)",
         "row":0.0,
+        "typ":"z_zombie_obj",
         "num":1.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombiecarecono_obj)",
         "row":0.0,
+        "typ":"z_conehead_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zombieheadbox_obj)",
         "row":0.0,
+        "typ":"z_headbox_obj",
         "num":1.0
       }
     ],
     [
       {
-        "typ":"@ref object(zombieheadbox_obj)",
         "row":0.0,
+        "typ":"z_headbox_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zabanderado_obj)",
         "row":0.0,
+        "typ":"z_flag_obj",
         "num":1.0
       },
       {
-        "typ":"@ref object(zombiepapsho_obj)",
         "row":0.0,
+        "typ":"z_paperthrower_obj",
         "num":2.0
       },
       {
-        "typ":"@ref object(zombiecarecono_obj)",
         "row":0.0,
+        "typ":"z_conehead_obj",
         "num":3.0
       },
       {
-        "typ":"@ref object(zombie1_obj)",
         "row":0.0,
+        "typ":"z_zombie_obj",
         "num":1.0
       },
       {
-        "typ":"@ref object(zombiestatua_obj)",
         "row":0.0,
+        "typ":"z_statue_obj",
         "num":4.0
       }
     ]
-  ],
-  "rw":[
-    166.0,
-    267.0,
-    370.0,
-    472.0,
-    578.0,
-    578.0
-  ],
-  "lvl":8.0
+  ]
 }

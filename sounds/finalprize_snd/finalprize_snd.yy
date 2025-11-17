@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":6.331338,
   "exportDir":"",
   "name":"finalprize_snd",
   "parent":{
