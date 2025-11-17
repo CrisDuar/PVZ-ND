@@ -18,21 +18,20 @@ function prob_card(argument0) {
 
 	        case 1://La bolera
 	            limit_num = 7
-	            conveyor(false, menubulbnormal_obj, 100, 40)
-	            conveyor(false, menubulbice_obj, 40, 15)
-	            conveyor(false, menubulbfire_obj, 15, 0)
-	            conveyor(false, menusingcherry_obj, 10, 0)
+	            conveyor(false, plants_id.BULB_COMMON, -1, 100, 40)
+	            conveyor(false, plants_id.BULB_ICE, -1, 40, 15)
+	            conveyor(false, plants_id.BULB_FIRE, -1, 15, 0)
 	        break
     
 	        case 2://Nivel 15 y multijugador
-	            conveyor(false, menupea_obj, 100, 70)
-	            conveyor(false, menunut_obj, 70, 60)
-	            conveyor(false, potatommenu_obj, 60, 50)
-	            conveyor(false, menusnpea_obj, 50, 35)
-	            conveyor(false, menurepea_obj, 35, 25)
-	            conveyor(false, menubulb_obj, 25, 15)
-	            conveyor(false, garlicdroneslot_obj, 15, 5)
-	            conveyor(false, menusingcherry_obj, 5, 0)
+	            conveyor(false, plants_id.PEASHOOTER, -1, 100, 70)
+	            conveyor(false, plants_id.WALLNUT, -1, 70, 60)
+	            conveyor(false, plants_id.POTATOMINE, -1, 60, 50)
+	            conveyor(false, plants_id.SNOWPEA, -1, 50, 35)
+	            conveyor(false, plants_id.REPEATER, -1, 35, 25)
+	            conveyor(false, plants_id.BOWLINGBULB, -1, 25, 15)
+	            conveyor(false, plants_id.GARLICDRONE, -1, 15, 5)
+	            conveyor(false, plants_id.SINGLECHERRY, -1, 5, 0)
 	    break
 
 

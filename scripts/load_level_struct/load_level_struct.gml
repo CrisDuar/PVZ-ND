@@ -41,13 +41,14 @@ function load_level_struct(_struct){
 		}
 		
 		if (instance_exists(menusol_obj)) instance_destroy(menusol_obj);
+	}else{
+		manual_preselected(0, _struct.preplants)
 	}
 	
 	//Choose your seeds
+
 	if (!_struct.cys){
 		camaractrl_obj.levelallowed = false;
-		
-		if (!_struct.is_conveyor) manual_preselected(0, _struct.preplants)
 	}
 	
 	//Music
@@ -121,11 +122,14 @@ function load_level_struct(_struct){
 				
 				//Preview add zombies
 				
-				if !ds_map_exists(_zombie_prev, _data.typ){
-				    ds_map_add(_zombie_prev, _data.typ, _data.num);
+				if (_zombie_prev != "z_flag_obj" and _zombie_prev != "z_rally_obj"){
+				
+					if !ds_map_exists(_zombie_prev, _data.typ){
+					    ds_map_add(_zombie_prev, _data.typ, _data.num);
 					
-				}else{
-					_zombie_prev[? _data.typ] += _data.num;
+					}else{
+						_zombie_prev[? _data.typ] += _data.num;
+					}
 				}
 				_z_total += _data.num;
 				
@@ -139,9 +143,7 @@ function load_level_struct(_struct){
 	
 	for (var i = 0; i < size; i++;){
 		
-		show_debug_message(string(key) + ": " + string(floor((_zombie_prev[? key] * 5)/_z_total)))
-		
-		zombie_preview(asset_get_index(key), floor((_zombie_prev[? key] * 5)/_z_total))
+		zombie_preview(asset_get_index(key), round((_zombie_prev[? key] * 6)/_z_total))
 	   
 		key = ds_map_find_next(_zombie_prev, key);
 	}
