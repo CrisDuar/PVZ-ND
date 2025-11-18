@@ -18,10 +18,9 @@ if !instance_exists(dialogctrl_obj){
 }
 
 if hspeed=0 
-and global.niveles>6 
 and reverse=2 
 and !instance_exists(menuselectplan_obj)
-and levelallowed==true{
+and spawnselect==true{
     if control_obj.multijugador=false{
         if room==izombie_rm{
             instance_create(954,896,menuselectzomb_obj)

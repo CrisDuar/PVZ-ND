@@ -143,7 +143,7 @@ function load_level_struct(_struct){
 	
 	for (var i = 0; i < size; i++;){
 		
-		zombie_preview(asset_get_index(key), round((_zombie_prev[? key] * 6)/_z_total))
+		zombie_preview(asset_get_index(key), min(5, round((_zombie_prev[? key] * 15)/_z_total)))
 	   
 		key = ds_map_find_next(_zombie_prev, key);
 	}
