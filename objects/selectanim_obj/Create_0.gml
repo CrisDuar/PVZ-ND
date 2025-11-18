@@ -6,7 +6,7 @@ seed=menupea_obj
 seedsprite=menupea1_spr
 desaparecer=false
 
-costume=0
+costume = -1;
 lock = false
 
 if control_obj.multijugador==true{

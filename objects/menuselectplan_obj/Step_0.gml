@@ -25,11 +25,14 @@ if vspeed>=0 and spawngui==false{
     }else{
         if room!=iplant_rm and room!=izombie_rm{
             slots=5
-            if (global.niveles>10) slots++
+            //if (global.niveles>10)
+			if (global.progress[? "niveles"] > 10) slots++
             
             if control_obj.multijugador==false{
-                if (global.niveles>61) slots++
-                if (global.upgrade2==true) slots++
+                //if (global.niveles>61) 
+				if (global.progress[? "niveles"] > 61) slots++
+                //if (global.upgrade2==true) 
+				if (global.progress[? "upgrade2"] > 13) slots++
             }
         }else{
             slots=8-global.battle_diff
@@ -50,9 +53,11 @@ if vspeed>=0 and spawngui==false{
         instance_create_layer(x-163,y+160,"GUI",reselect_obj);
         instance_create_layer(x-163,y+110,"GUI",disfraz_obj);
         
-        if (global.niveles>13) instance_create_layer(x+163,y+210,"GUI",almanacshortcut_obj);
+        //if (global.niveles>13) 
+		if (global.progress[? "niveles"] > 13) instance_create_layer(x+163,y+210,"GUI",almanacshortcut_obj);
         
-        if (global.niveles>19) instance_create_layer(x+163,y+160,"GUI",shopshortcut_obj);
+        //if (global.niveles>19)
+		if (global.progress[? "niveles"] > 19) instance_create_layer(x+163,y+160,"GUI",shopshortcut_obj);
         
     }else if sprite_index=menuselectzomb_spr{//ZOMBIS
         with(instance_create_layer(x-300,35,"GUI",menuzom_obj)){gui=true}
@@ -64,7 +69,8 @@ if vspeed>=0 and spawngui==false{
     
         instance_create_layer(x-163,y+210,"GUI",deleteselect_obj);
         
-        if (global.niveles>13) instance_create_layer(x+163,y+210,"GUI",almanacshortcut_obj);
+       // if (global.niveles>13) 
+	   if (global.progress[? "niveles"] > 13) instance_create_layer(x+163,y+210,"GUI",almanacshortcut_obj);
         
     }else{//MULTIJUGADOR
         with(instance_create_layer(x+626,35,"GUI",menuzom_obj)){gui=true}
