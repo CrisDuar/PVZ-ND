@@ -2,6 +2,7 @@ event_inherited();
 peso = 30
 vida = 300
 maxhp = 300
+soltarproteccion = true;
 
 shake=0
 destroyself=false

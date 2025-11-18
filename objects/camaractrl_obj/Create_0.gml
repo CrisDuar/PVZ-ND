@@ -69,7 +69,8 @@ create_preselected()
 if control_obj.multijugador=true{
 if global.vsgamemode=1{levelallowed=true}}
 
-if global.niveles>=6 and levelallowed==true{
-spawnselect=true
-}
+show_debug_message(string(levelallowed) + " | lvl: " + string(global.progress[? "niveles"]))
 
+if (global.progress[? "niveles"] > 6 and levelallowed){
+	spawnselect = true;
+}
