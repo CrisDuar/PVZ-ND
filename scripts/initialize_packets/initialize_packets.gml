@@ -39,7 +39,11 @@ function initialize_packets(){
 			vs_cost: 0,
 			vs_recharge: 1,
 			vs_recargstart: true,
-			sd_recharge: true
+			sd_recharge: true,
+			
+			// These two are for the script able_to_plant
+			place_type: 0, //To know where can be placed in the able_to_plant script (not used in the seedpacket object)
+			wall_heal: false, //To know if it is repairable with wallnut first aid (not used in the seedpacket object)
 			
 			costume: [
 				{
@@ -121,6 +125,8 @@ function initialize_packets(){
 			
 			sd_recharge: false,
 			
+			wall_heal: true,
+			
 			costume: [
 				{
 					cost: 75,
@@ -174,6 +180,8 @@ function initialize_packets(){
 			
 			vs_cost: 25,
 			vs_recargstart: true,
+			
+			place_type: 1,
 			
 			costume: [
 				{

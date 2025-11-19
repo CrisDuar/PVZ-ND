@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"newplant_snd",
+  "soundFile":"newplant_snd.wav",
   "volume":1.0,
 }
