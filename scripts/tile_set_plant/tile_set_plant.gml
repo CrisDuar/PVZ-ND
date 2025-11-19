@@ -17,7 +17,4 @@ function tile_set_plant() {
 	        wallnut_first_aid(instance_nearest(x,y,pumpkin_obj));
 	    break
 	}
-
-
-
 }

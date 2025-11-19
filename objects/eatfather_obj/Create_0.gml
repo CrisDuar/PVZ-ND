@@ -52,8 +52,8 @@ soltarproteccion=false
 caneat=true
 eat_dmg = 15
 
-hurtsnd = pointer_null
-hurt2snd = pointer_null
+hurtsnd = nada_snd
+hurt2snd = nada_snd
 
 //blover & cotton
 peso=0

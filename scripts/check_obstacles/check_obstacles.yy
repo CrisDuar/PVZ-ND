@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"check_obstacles",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"check_obstacles",
+  "parent":{
+    "name":"Casillas",
+    "path":"folders/Scripts/Casillas.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -8,6 +8,3 @@ if control_obj.multijugador=false or room==izombie_rm /*or global.vstouch=true*/
         tile_set_plant();
     }
 }
-
-/* */
-/*  */
