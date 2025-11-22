@@ -164,9 +164,6 @@ if os_type==os_android{
     global.vs_mtouch[1] = true
 }
 
-//disfraces
-init_costumes();
-
 //Battle mode
 global.battle_diff=0
 global.battle_map=0
@@ -182,6 +179,11 @@ global.sv_cnfg_user = true;
 ///LOAD ALMANAC & DIALOGS
 global.almanac_data = 0//csv_to_grid("almanac.csv", true)
 global.dialog_data = 0//csv_to_grid("dialog.csv", true)
+
+//Initialize the tables of costumes
+global.costumes = 0;
+global.costumelist = 0;
+global.costume_unlock = 0;
 
 //saving and loading data
 if file_exists("savedata.nd") and !file_exists("savedata.ini"){

@@ -3,3 +3,4 @@ if image_alpha==1{
     set_costume();
 }
 
+show_debug_message(string(get_costume(menuselectplan_obj.plant)) + " " + string(menuselectplan_obj.islock))

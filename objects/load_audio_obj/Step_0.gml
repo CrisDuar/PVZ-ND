@@ -14,6 +14,8 @@ if (!load_data and load>=50){
     global.almanac_data = csv_to_grid("almanac.csv", true)
     global.dialog_data = csv_to_grid("dialog.csv", true)
     
+	//disfraces
+	init_costumes();
     load_data = true;
 }
 

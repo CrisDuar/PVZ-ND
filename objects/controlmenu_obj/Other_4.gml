@@ -34,7 +34,7 @@ if room==menu_rm_ and splash==false{
 update_discord_status()
 
 //Costumes
-update_costumes()
+if (room != loading_rm) update_costumes();
 
 instance_create(x,y,fadeout_obj)
 

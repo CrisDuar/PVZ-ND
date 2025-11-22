@@ -14,10 +14,16 @@ function save_game() {
 	ini_write_real("Progress","niveles",global.progress[? "niveles"])
 	ini_write_real("Progress","vasebreaker",global.progress[? "vasebreaker"])
 	
+	for (var i = 1; i <= array_length(global.progress[? "levelhard"]); i++){
+		
+		ini_write_real("Progress","levelhard" + string(i),global.progress[? "levelhard"][i - 1])
+	}
+	/*
 	ini_write_real("Progress","levelhard1",global.levelhard1)
 	ini_write_real("Progress","levelhard2",global.levelhard2)
 	ini_write_real("Progress","levelhard3",global.levelhard3)
 	ini_write_real("Progress","levelhard4",global.levelhard4)
+	*/
 	ini_write_real("Progress","dinero",global.dinero)
 	ini_write_real("Progress","hours_played",global.game_time)
 
@@ -33,8 +39,20 @@ function save_game() {
 	ini_write_real("Game_config","fullscreen",window_get_fullscreen())
 	ini_write_real("Game_config","vs_log",global.vs_log)
 	ini_write_real("Game_config","videoq",global.videoq)
+	
+	for (var i = 0; i < array_length(global.progress[? "plant"]); i++){
+		ini_write_real("Shop","plant" + string(i),global.progress[? "plant"][i])
+	}
+	
+	for (var i = 0; i < array_length(global.progress[? "costume"]); i++){
+		ini_write_real("Shop","costume" + string(i),global.progress[? "costume"][i])
+	}
+	
+	for (var i = 0; i < array_length(global.progress[? "upgrade"]); i++){
+		ini_write_real("Shop","upgrade" + string(i),global.progress[? "upgrade"][i])
+	}
 
-	ini_write_real("Shop","plant0",global.plant0)
+/*	ini_write_real("Shop","plant0",global.plant0)
 	ini_write_real("Shop","plant1",global.plant1)
 	ini_write_real("Shop","plant2",global.plant2)
 	ini_write_real("Shop","plant3",global.plant3)
@@ -55,7 +73,7 @@ function save_game() {
 	ini_write_real("Shop","upgrade3",global.upgrade3)
 	ini_write_real("Shop","upgrade4",global.upgrade4)
 	ini_write_real("Shop","upgrade5",global.upgrade5)
-
+*/
 	//VERSUS MODE KEYBOARD
 	ini_write_real("Multi_control","z_up",global.z_up)
 	ini_write_real("Multi_control","z_down",global.z_down)
@@ -92,7 +110,4 @@ function save_game() {
 
 	ini_write_string("WYD","sussy_baka","Are you gonna edit the save file? unskilled boy")
 	ini_close();
-
-
-
 }

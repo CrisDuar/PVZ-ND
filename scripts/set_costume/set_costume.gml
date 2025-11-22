@@ -1,44 +1,55 @@
 function set_costume() {
-	var _yy = -1
+	
+	/*
+	This function increases the selected costume by one.
+	*/
+	
+	var p_id = menuselectplan_obj.plant;
+	
+	//Check if the selected plant is on the first column, which has the ID
+	if (ds_map_exists(global.costumes, p_id)){
+		
+		// If there are any costumes unlocked
+		if (get_costume(p_id)){
+			
+			var _list = global.costumes[? p_id];
+			
+			//selects the first costume in the table
+			var con = _list[| 0] + 1;
+			
+			if (con >= ds_list_size(_list)){
+				con = 0;
+				
+			}else{
+				
+				//Selects the first costume available (the current one may not be unlocked)
+				while(_list[| con] == 0){
+					con++
+				
+					if (con >= ds_list_size(_list)){
+						con = 0
+						break;
+					}
+				}
+			}
+			
+			//Sets the current costume to the first available.
+			_list[| 0] = con;
+			
+			show_debug_message("CURRENT COSTUME: " + string(con));
+			
+			//Updates the CYS
+			with(globalselect_obj){
+			    if packet == menuselectplan_obj.plant{
+			        update_info()
+			    }
+			}
 
-	if ds_grid_value_exists(global.costumes, 0, 0, 0, ds_grid_height(global.costumes)-1, menuselectplan_obj.plant){
-	    _yy = ds_grid_value_y(global.costumes, 0, 0, 0, ds_grid_height(global.costumes)-1, menuselectplan_obj.plant);    
+			with(selectanim_obj){
+			    set_costume_sprites();
+			}
+
+		}
+		
 	}
-
-	if ds_grid_get_max(global.costumes, 4, _yy, ds_grid_width(global.costumes)-1, _yy) > 0{
-	    //al contador se le agrega uno mientras dicha posición sea igual a cero
-	    global.costumes[# 2, _yy]+=1
-    
-	    //Empieza en 0 + 3
-	    var _con = global.costumes[# 2, _yy]
-    
-	    //Buscar otro disfraz, y si no encuentra, vuelve a cero
-	    while((global.costumes[# _con+3, _yy])!=1 and _con!=0){
-	        global.costumes[# 2, _yy]+=1
-	        _con = global.costumes[# 2, _yy]
-        
-	        //Si n empieza desde 3; n>=5, entonces el contador es cero
-	        if _con+3>=ds_grid_width(global.costumes){
-	            global.costumes[# 2, _yy]=0
-	            _con = 0
-	            break;
-	        }
-	    }
-    
-	    //el disfraz actual es igual al disfraz en la posición [_yy, 3||default, 4, 5... width-1]
-	    global.costumes[# 1, _yy]=global.costumes[# _con+3, _yy]
-	}
-
-	with(globalselect_obj){
-	    if packet==menuselectplan_obj.plant{
-	        update_info()
-	    }
-	}
-
-	with(selectanim_obj){
-	    set_costume_sprites();
-	}
-
-
-
 }
