@@ -6,55 +6,59 @@ function update_info() {
 	menuselectplan_obj.unitname_es=name_es
 	menuselectplan_obj.unitname_en=name_en
 	menuselectplan_obj.islock = lock
+	
+	
+	var p_id = menuselectplan_obj.plant;
+	var p_data = global.plants_packets[p_id]
+	
+	if (variable_struct_exists(p_data, "costume")){
+		
+		//costume data
+		var pc_data = p_data.costume;
+		
+		//Current costume selected
+		var p_costume = ds_list_find_value(global.costumes[? p_id], 0)
+		
+		if (p_costume > 0){
+			show_debug_message("ARRAY LENGTH: " + string(array_length(pc_data)));
+			show_debug_message("COSTUME to check: " + string(p_costume - 1));
 
-	//Planta global
-	switch(menuselectplan_obj.plant){
-	    case menupea_obj:
-	        info_sprites(150,peadis1_spr, 175,peadis2_spr)
-	    break
-
-	    case garlicdroneslot_obj:
-	        info_sprites(150,garlicds_spr)
-	    break
-    
-	    case menugravebuster_obj:
-	        info_sprites(25,comepiedras0_spr)
-	    break
-    
-	    case menunut_obj:
-	        info_sprites(75,nutcosprev_spr)
-	    break
-    
-	    case menurepea_obj:
-	        info_sprites(250,repeadis1_spr)
-	    break
-    
-	    case jalapenoslot_obj:
-	        info_sprites(125,jalapeno2_spr)
-	    break
-    
-	    case menupuff_obj:
-	        info_sprites(0,marseta1_spr)
-	    break
-    
-	    case menusnpea_obj:
-	        info_sprites(325,snowpea2_spr)
-	    break
-    
-	    case menuhealer_obj:
-	        info_sprites(75,healershroom4_spr)
-	    break
-    
-	    case magnetslot_obj:
-	        info_sprites(150,gmagnet1_spr)
-	    break
-    
-	    case levicottonslot_obj:
-	        info_sprites(125, levicottonc1_spr)
-	    break
+			menuselectplan_obj.unitcost = struct_get_default(pc_data[p_costume - 1], "cost", p_data.cost);
+			
+			//Getting the unit sprite (the one to display in CYS) from the almanac
+			var init_y = 0;
+			
+			for (var i = 1; i < ds_grid_height(global.almanac_data); i++){ 
+	
+			    if (global.almanac_data[# 0, i] == "-1"){
+			        init_y = i + 1;
+			        break;
+			    }
+			}
+	
+			//Current costume
+			var _cos_c = 0;
+	
+			for (var i = init_y; i < ds_grid_height(global.almanac_data); i++){ 
+		
+			    if (global.almanac_data[# 0, i] != "-2"){
+				
+					if (global.almanac_data[# almanac_data.UNIT_ID, i] == string(p_id)){
+						
+						if (_cos_c == p_costume - 1){
+							menuselectplan_obj.unitsprite = asset_get_index(global.almanac_data[# almanac_data.UNIT_SPR, i])
+							break;
+						}else{
+							
+							_cos_c++;
+						}
+					}
+					
+				}
+				
+			}
+			
+			//menuselectplan_obj.unitsprite = struct_get_default(pc_data[p_costume - 1], "sprite", p_data.sprite);
+		}
 	}
-
-
-
-
 }
