@@ -1,5 +1,26 @@
 function initialize_packets(){
-
+	
+	enum almanac_data
+	{
+		NAME_ES,
+		NAME_EN,
+		LEVEL,
+		COND,
+		UNIT_ID,
+		LOCKED_SPR,
+		UNIT_SPR,
+		BG,
+		DESC_EN,
+		STATS_EN,
+		EXTRA_EN,
+		FLAVOR_EN,
+		DESC_ES,
+		STATS_ES,
+		EXTRA_ES,
+		FLAVOR_ES
+		
+	}
+	
 	enum plants_id
 	{
 		PEASHOOTER,
@@ -8,12 +29,12 @@ function initialize_packets(){
 		WALLNUT,
 		CHERRYBOMB,
 		SNOWPEA,
-		REPEATER,
+		GARLICDRONE,
 		BULB_COMMON,
 		BULB_ICE,
 		BULB_FIRE,
 		BOWLINGBULB,
-		GARLICDRONE,
+		REPEATER,
 		SINGLECHERRY	
 	}
 	
@@ -85,7 +106,7 @@ function initialize_packets(){
 				    timer: 15,
 				    packet_sprite: menupea3_spr,
 				    sprite: peadispreview2_spr
-				},
+				}
 			]
 		},
 		{ //Sunflower

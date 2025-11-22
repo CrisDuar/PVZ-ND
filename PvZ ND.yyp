@@ -89,6 +89,7 @@
     {"$GMFolder":"","%Name":"Seedpackets","folderPath":"folders/Scripts/Seedpackets.yy","name":"Seedpackets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Selector de semillas","folderPath":"folders/Scripts/Selector de semillas.yy","name":"Selector de semillas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Costumes","folderPath":"folders/Scripts/Selector de semillas/Costumes.yy","name":"Costumes","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"deprecated costume funcs","folderPath":"folders/Scripts/Selector de semillas/Costumes/deprecated costume funcs.yy","name":"deprecated costume funcs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Survival","folderPath":"folders/Scripts/Survival.yy","name":"Survival","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Zombie spawning","folderPath":"folders/Scripts/Zombie spawning.yy","name":"Zombie spawning","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"zombies","folderPath":"folders/Scripts/zombies.yy","name":"zombies","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -221,7 +222,7 @@
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"achievements.csv","CopyToMask":9223372036854775807,"filePath":"datafiles","name":"achievements.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"almanac.csv","CopyToMask":9223372036854775807,"filePath":"datafiles","name":"almanac.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"almanac.csv","CopyToMask":-1,"filePath":"datafiles","name":"almanac.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"dialog.csv","CopyToMask":9223372036854775807,"filePath":"datafiles","name":"dialog.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Level1.json","CopyToMask":-1,"filePath":"datafiles/levels/stage1","name":"Level1.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Level10.json","CopyToMask":-1,"filePath":"datafiles/levels/stage1","name":"Level10.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -238,7 +239,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.0.207",
+    "IDEVersion":"2024.14.1.210",
   },
   "name":"PvZ ND",
   "resources":[

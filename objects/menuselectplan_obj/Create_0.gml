@@ -48,8 +48,8 @@ unitname_es=""
 unitname_en=""
 unitsprite=0
 islock = false;
-plant=0
-zomplant=0
+plant = -1
+zomplant = 0
 
 opacidad=0
 xx=326
@@ -85,15 +85,15 @@ for (var i = 0; i < array_length(global.plants_packets); i++){
 	if (struct_get_default(global.plants_packets[i], "ignore", false) == false){
 	
 		p[_index - 1] = [
-			global.almanac_data[# 2, _index],//lvl
-			global.almanac_data[# 3, _index],//cond
+			global.almanac_data[# almanac_data.LEVEL, _index],//lvl
+			global.almanac_data[# almanac_data.COND, _index],//cond
 			i,//packet_id
-			asset_get_index(global.almanac_data[# 5, _index]),//locked
-			global.almanac_data[# 0, _index],//name_es
-			global.almanac_data[# 1, _index],//name_en
+			asset_get_index(global.almanac_data[# almanac_data.LOCKED_SPR, _index]),//locked
+			global.almanac_data[# almanac_data.NAME_ES, _index],//name_es
+			global.almanac_data[# almanac_data.NAME_EN, _index],//name_en
 			maxpag,//page
-			real(global.almanac_data[# 8, _index]),//bg
-			asset_get_index(global.almanac_data[# 7, _index]),//plantsprite
+			real(global.almanac_data[# almanac_data.BG, _index]),//bg
+			asset_get_index(global.almanac_data[# almanac_data.UNIT_SPR, _index]),//plantsprite
 			0//type
 		]
 		

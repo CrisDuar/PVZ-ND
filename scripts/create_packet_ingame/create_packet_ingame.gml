@@ -37,12 +37,14 @@ function create_packet_ingame(_x, _y, _type, _unit_id, _costume){
 		if (variable_struct_exists(_unit, "costume") and _costume >= 0){
 					
 			var _costumes = _unit.costume;
-			var _cstm = _costumes[other.costume]
+			var _cstm = _costumes[_costume]
 					
 			cost = _cstm.cost;
 			timer = _cstm.timer;
 			sprite_index = _cstm.packet_sprite;
 			sprite = _cstm.sprite;
+			
+			costume_packet = _costume + 1;
 		}
 	}
 	
