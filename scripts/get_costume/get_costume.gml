@@ -1,14 +1,22 @@
 /// @description get_costume(check if there are costumes available)
 /// @param check if there are costumes available
-function get_costume() {
-	var _yy = -1
+function get_costume(p_id) {
 
-	if ds_grid_value_exists(global.costumes, 0, 0, 0, ds_grid_height(global.costumes)-1, menuselectplan_obj.plant){
-	    _yy = ds_grid_value_y(global.costumes, 0, 0, 0, ds_grid_height(global.costumes)-1, menuselectplan_obj.plant);    
+	// If there are any costumes unlocked
+	var _arecos = false;
+	///List of costumes
+	
+	if (ds_map_exists(global.costumes, p_id)){
+		
+		var _list = global.costumes[? p_id];
+		for (var i = 1; i < ds_list_size(_list); i++){
+			
+			if (_list[| i] > 0){
+				_arecos	= true;
+				break;
+			}
+		}
 	}
-
-	return ds_grid_get_max(global.costumes, 4, _yy, ds_grid_width(global.costumes)-1, _yy);
-
-
+	return _arecos
 
 }

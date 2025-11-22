@@ -1,6 +1,6 @@
 if toggle==true{
     if keyboard_check_pressed(ord("M")){
-        global.niveles = get_integer("Adventure mode level progress", 74)
+        global.progress[? "niveles"] = get_integer("Adventure mode level progress", 74)
     }
     
     if keyboard_check_pressed(ord("K")){

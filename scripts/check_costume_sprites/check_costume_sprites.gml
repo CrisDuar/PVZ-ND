@@ -1,4 +1,6 @@
 function check_costume_sprites() {
+	
+	//THIS FUNCTION IS DEPRECATED
 	var _indx = get_costume_yy()
 	var case_check = 1
 

@@ -32,6 +32,7 @@ function able_to_plant(plant_id) {
 			}
 	    }
 		
+		//This probably has to be changed because of the Sea-Shroom costume changing the place_type variable
 		switch(struct_get_default(plant_data, "place_type", 0)){
 			
 			default: //Common plants

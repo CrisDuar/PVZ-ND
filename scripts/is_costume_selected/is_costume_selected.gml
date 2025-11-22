@@ -1,10 +1,9 @@
 /// @description is_costume_selected(Seedpacket, costume to test)
 /// @param Seedpacket
 /// @param  costume to test
-function is_costume_selected(argument0, argument1) {
-	var _indx = argument0
-	var _cos = argument1
-
+function is_costume_selected(_indx, _cos) {
+	//indx is the key in the costumes map
+	
 	var _yy = -1
 	var _ret = 0
 
@@ -22,7 +21,4 @@ function is_costume_selected(argument0, argument1) {
 
 
 	return _ret;
-
-
-
 }
