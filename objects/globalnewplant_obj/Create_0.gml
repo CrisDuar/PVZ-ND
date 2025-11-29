@@ -8,5 +8,5 @@ titleES=""
 titleEN=""
 textES=""
 textEN=""
+wave = false;
 clima=0
-

@@ -25,12 +25,12 @@ reverse=0
 
 if control_obj.multijugador==true cont=true
 spawnselect=false
-levelallowed=false
+levelallowed = true
 global.camexists=0
 global.gameready=false
 global.iniciogame=false
 global.iniciomusica=false
-
+/*
 if room != nivel1_rm
 and room != nivel2_rm
 and room != nivel4_rm_
@@ -63,14 +63,9 @@ and room != levelhard3_6_rm
 //and room != levelhard4_5_rm
 and room != levelhard4_6_rm
 and !instance_exists(vasectrl_obj)
-{levelallowed=true}
-create_preselected()
+{levelallowed=true}*/
 
 if control_obj.multijugador=true{
-if global.vsgamemode=1{levelallowed=true}}
+if global.vsgamemode!=1{levelallowed=false}}
 
-show_debug_message(string(levelallowed) + " | lvl: " + string(global.progress[? "niveles"]))
-
-if (global.progress[? "niveles"] > 6 and levelallowed){
-	spawnselect = true;
-}
+create_preselected()

@@ -1,6 +1,7 @@
 //A editar
 sprite_index=tumba3_sl_spr
-cond = "levelhard1"
 num=0
 numdisplay=1
-lvl=levelhard1_1_rm
+lvl = "Hard_level1-1";
+route = "hardmode/hard_stage1";
+cond = "levelhard0"

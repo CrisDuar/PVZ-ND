@@ -7,20 +7,29 @@ function load_game(argument0) {
 	if file_exists(save){
 	    ini_open(save)
 		
+		var save_version = ini_read_real("Game_config","save_version", 0);
 		
 	    global.progress[? "niveles"] = ini_read_real("Progress", "niveles", 0);
 	    global.vasebreaker = ini_read_real("Progress", "vasebreaker", 0);
 		
-		for (var i = 1; i <= array_length(global.progress[? "levelhard"]); i++){
-			global.progress[? "levelhard"][i - 1] = ini_read_real("Progress", "levelhard" + string(i), 0);
+		//To avoid losing data
+		if (save_version < 1){
+			//OLD VERSION
+			for (var i = 1; i <= array_length(global.progress[? "levelhard"]); i++){
+				global.progress[? "levelhard"][i - 1] = ini_read_real("Progress", "levelhard" + string(i), 0);
+			}
+		}else{
+			//NEW VERSION
+			for (var i = 0; i < array_length(global.progress[? "levelhard"]); i++){
+				global.progress[? "levelhard"][i] = ini_read_real("Progress", "levelhard" + string(i), 0);
+			}	
 		}
-
-		
+		/*
 	    global.levelhard1 = ini_read_real("Progress", "levelhard1", 0);
 	    global.levelhard2 = ini_read_real("Progress", "levelhard2", 0);
 	    global.levelhard3 = ini_read_real("Progress", "levelhard3", 0);
 	    global.levelhard4 = ini_read_real("Progress", "levelhard4", 0);
-		
+		*/
 	    global.dinero = ini_read_real("Progress", "dinero", 0 );
 	    global.game_time = ini_read_real("Progress", "hours_played", 0 );
     
@@ -35,7 +44,7 @@ function load_game(argument0) {
 	    global.interpolation = ini_read_real("Game_config", "interpolation", 1 );
 	    global.vs_log = ini_read_real("Game_config", "vs_log", 0 );
 	    global.videoq = ini_read_real("Game_config", "videoq", 2 );
-		/*
+		
 		for (var i = 0; i < array_length(global.progress[? "plant"]); i++){	
 			global.progress[? "plant"][i] = ini_read_real("Shop", "plant" + string(i), 0 );
 		}
@@ -47,7 +56,7 @@ function load_game(argument0) {
 		for (var i = 0; i < array_length(global.progress[? "upgrade"]); i++){
 			global.progress[? "upgrade"][i] = ini_read_real("Shop", "upgrade" + string(i), 0 );
 		}
-		*/
+		/*
 	    global.plant0 = ini_read_real("Shop", "plant0", 0 );
 	    global.plant1 = ini_read_real("Shop", "plant1", 0 );
 	    global.plant2 = ini_read_real("Shop", "plant2", 0 );
@@ -69,7 +78,7 @@ function load_game(argument0) {
 	    global.upgrade3 = ini_read_real("Shop", "upgrade3", 0 );
 	    global.upgrade4 = ini_read_real("Shop", "upgrade4", 0 );
 	    global.upgrade5 = ini_read_real("Shop", "upgrade5", 0 );
-    
+    */
 	    //VERSUS MODE KEYBOARD
     
 	    global.z_up = ini_read_real("Multi_control", "z_up", vk_up);

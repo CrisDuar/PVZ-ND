@@ -1,4 +1,4 @@
-if locked=false{
+if (!locked){
     audio_stop_all();
     audio_play_sound(selectstone1_snd,1,false)
     image_yscale=0.98

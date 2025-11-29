@@ -10,13 +10,15 @@ function save_game() {
 	ini_open("savedata.ini")
 
 	save_achievements();
-
+	
+	ini_write_real("Game_config","save_version", 1);
+	
 	ini_write_real("Progress","niveles",global.progress[? "niveles"])
 	ini_write_real("Progress","vasebreaker",global.progress[? "vasebreaker"])
 	
-	for (var i = 1; i <= array_length(global.progress[? "levelhard"]); i++){
+	for (var i = 0; i < array_length(global.progress[? "levelhard"]); i++){
 		
-		ini_write_real("Progress","levelhard" + string(i),global.progress[? "levelhard"][i - 1])
+		ini_write_real("Progress","levelhard" + string(i),global.progress[? "levelhard"][i])
 	}
 	/*
 	ini_write_real("Progress","levelhard1",global.levelhard1)

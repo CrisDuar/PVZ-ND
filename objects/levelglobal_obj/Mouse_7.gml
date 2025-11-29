@@ -1,6 +1,6 @@
 if !instance_exists(fadeout_obj) and drag_t>0{
 	
-    if (global.progress[? cond] >= num){
+    if (read_progress(cond) >= num){
 		
         audio_play_sound(aceptoption_snd,1,false)
 		

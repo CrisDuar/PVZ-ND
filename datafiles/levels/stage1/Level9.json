@@ -47,7 +47,7 @@
     ]
   ],
   "horde_sng":"grasswalk_fw_sng",
-  "horde_prcnt":0.20000000000000001,
+  "horde_prcnt":0.35,
   "surprise_enabled":true,
   "infinite":false,
   "infinite_loop":3.0,

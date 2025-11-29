@@ -8,10 +8,16 @@ function delete_game() {
 
 	ini_write_real("Progress","niveles",0)
 	ini_write_real("Progress","vasebreaker",0)
+	
+	for (var i = 0; i < array_length(global.progress[? "levelhard"]); i++){
+		ini_write_real("Progress","levelhard" + string(i), 0)
+	}
+	/*
 	ini_write_real("Progress","levelhard1",0)
 	ini_write_real("Progress","levelhard2",0)
 	ini_write_real("Progress","levelhard3",0)
 	ini_write_real("Progress","levelhard4",0)
+	*/
 	ini_write_real("Progress","dinero",0)
 	ini_write_real("Progress","hours_played",0)
 
@@ -26,7 +32,19 @@ function delete_game() {
 	ini_write_real("Game_config","interpolation",1)
 	ini_write_real("Game_config","fullscreen",0)
 	ini_write_real("Game_config","vs_log",0)
-
+	
+	for (var i = 0; i < array_length(global.progress[? "plant"]); i++){
+		ini_write_real("Shop","plant" + string(i), 0)
+	}
+	
+	for (var i = 0; i < array_length(global.progress[? "costume"]); i++){
+		ini_write_real("Shop","costume" + string(i), 0)
+	}
+	
+	for (var i = 0; i < array_length(global.progress[? "upgrade"]); i++){
+		ini_write_real("Shop","upgrade" + string(i), 0)
+	}
+	/*
 	ini_write_real("Shop","plant0",0)
 	ini_write_real("Shop","plant1",0)
 	ini_write_real("Shop","plant2",0)
@@ -45,24 +63,24 @@ function delete_game() {
 	ini_write_real("Shop","upgrade3",0)
 	ini_write_real("Shop","upgrade4",0)
 	ini_write_real("Shop","upgrade5",0)
-
+*/
 	//VERSUS MODE KEYBOARD
     
-	    global.p_up = ini_read_real("Multi_control", "p_up", ord("W"));
-	    global.p_down = ini_read_real("Multi_control", "p_down", ord("S"));
-	    global.p_left = ini_read_real("Multi_control", "p_left", ord("A"));
-	    global.p_right = ini_read_real("Multi_control", "p_right", ord("D"));
-	    global.p_ch1 = ini_read_real("Multi_control", "p_ch1", ord("Q"));
-	    global.p_ch2 = ini_read_real("Multi_control", "p_ch2", ord("E"));
-	    global.p_place = ini_read_real("Multi_control", "p_place", ord("F"));
-	    global.p_remove = ini_read_real("Multi_control", "p_remove", ord("R"));
-	    global.p_action = ini_read_real("Multi_control", "p_action", vk_shift);
+	global.p_up = ini_read_real("Multi_control", "p_up", ord("W"));
+	global.p_down = ini_read_real("Multi_control", "p_down", ord("S"));
+	global.p_left = ini_read_real("Multi_control", "p_left", ord("A"));
+	global.p_right = ini_read_real("Multi_control", "p_right", ord("D"));
+	global.p_ch1 = ini_read_real("Multi_control", "p_ch1", ord("Q"));
+	global.p_ch2 = ini_read_real("Multi_control", "p_ch2", ord("E"));
+	global.p_place = ini_read_real("Multi_control", "p_place", ord("F"));
+	global.p_remove = ini_read_real("Multi_control", "p_remove", ord("R"));
+	global.p_action = ini_read_real("Multi_control", "p_action", vk_shift);
     
-	    var default_touch = 0
-	    if (os_type == os_android) default_touch = 1
+	var default_touch = 0
+	if (os_type == os_android) default_touch = 1
     
-	    global.vs_mtouch[0] = ini_read_real("Multi_control", "vs_mtouch_0", default_touch);
-	    global.vs_mtouch[1] = ini_read_real("Multi_control", "vs_mtouch_1", default_touch);
+	global.vs_mtouch[0] = ini_read_real("Multi_control", "vs_mtouch_0", default_touch);
+	global.vs_mtouch[1] = ini_read_real("Multi_control", "vs_mtouch_1", default_touch);
     
 	    //GAMEJOLT
 
@@ -85,7 +103,7 @@ function delete_game() {
 	ini_write_real("Multi_control","p_remove",ord("R"))
 	ini_write_real("Multi_control","p_action",vk_shift)
 
-	var default_touch = 0
+	default_touch = 0
 	if (os_type == os_android) default_touch = 1
 
 	ini_write_real("Multi_control","vs_mtouch_0",default_touch)

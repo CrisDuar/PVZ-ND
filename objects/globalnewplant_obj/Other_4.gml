@@ -19,8 +19,10 @@ t="Hola, este es un mensaje de error, así que si lo ves, reportalo!"
 f="Atentamente.#El desarrollador"
 }
 
+var _prg = read_progress(global.price)
 
 if global.price=="niveles"{
+
     switch(global.niveles){
         case 2:
             titleES="Girasol"

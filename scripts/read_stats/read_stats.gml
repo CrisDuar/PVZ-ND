@@ -8,12 +8,23 @@ function read_stats(argument0) {
 	stat1:text|stat2:text
 
 	*/
-
+	
+	var _rechar = "";
+	
+	if (global.lang = "es"){
+		_rechar = "Recarga:"
+	}else{
+		_rechar = "Recharge:"
+	}
 
 	var str = argument0
 	var new_str = ""
 	var tmp_str = "";
+	
+	_r = "16";
 
+	str = string_insert(r, str, string_pos("recarga:", str) + string_length("recarga:"));
+	
 	for(var i = 1; i <= string_length(str); i++){
     
 	    switch(string_char_at(str, i)){
@@ -39,7 +50,7 @@ function read_stats(argument0) {
 	    }
 
 	}
-
+	
 	return new_str;
 
 
