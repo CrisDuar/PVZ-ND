@@ -56,12 +56,14 @@ function load_almanac() {
 	            bg = real(global.almanac_data[# almanac_data.BG, i])
 				
 				var _plant_id = real(global.almanac_data[# almanac_data.UNIT_ID, i])
+				var _recharge = 0;
 				
 				if (_plant_id != -1){
 					switch(rsrc_load){
 						case 0:
 							sprite = global.plants_packets[_plant_id].packet_sprite;
 							cost = global.plants_packets[_plant_id].cost;
+							_recharge = global.plants_packets[_plant_id].recharge;
 						break
 					
 						case -1:
@@ -78,7 +80,9 @@ function load_almanac() {
 						
 							if (_cos_c < array_length(_cos_data)){
 								sprite = _cos_data[_cos_c].packet_sprite;
-								cost = _cos_data[_cos_c].cost;
+								
+								cost = struct_get_default(_cos_data[_cos_c], "cost", global.plants_packets[_plant_id].cost);
+								_recharge = struct_get_default(_cos_data[_cos_c], "recharge", global.plants_packets[_plant_id].recharge);
 							}else{
 								sprite = menupea1_spr;
 								cost = 888;
@@ -88,16 +92,13 @@ function load_almanac() {
 						case -2:
 							sprite = global.zombies_packets[_plant_id].packet_sprite;
 							cost = global.zombies_packets[_plant_id].cost;
+							_recharge = global.zombies_packets[_plant_id].recharge;
 						break
 					}
 				}else{
 					sprite = menupea1_spr;
 					cost = 888;
 				}
-	            //sprite = //asset_get_index(global.almanac_data[# 4, i])
-	            
-				
-	            //cost = //real(global.almanac_data[# 6, i])
 	            
             
 	            desc_en[0] = replace_quotations("<c4>" + global.almanac_data[# almanac_data.DESC_EN, i] + "<as><sl>" + read_stats(global.almanac_data[# almanac_data.STATS_EN, i]) + "<as><sl><c3>" + global.almanac_data[# almanac_data.EXTRA_EN, i])

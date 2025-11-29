@@ -35,12 +35,24 @@ function initialize_packets(){
 		BULB_FIRE,
 		BOWLINGBULB,
 		REPEATER,
-		SINGLECHERRY	
+		SINGLECHERRY,
+		TWINSUNFLOWER,
+		EXPLODEONUT,
+		PUFFSHROOM
 	}
 	
 	enum zombies_id
 	{
-		ZOMBIE
+		ZOMBIE,
+		ZOMBIE_FLAG,
+		ZOMBIE_HEADBOX,
+		ZOMBIE_PAPERTHROWER,
+		ZOMBIE_CONEHEAD,
+		ZOMBIE_STATUE,
+		ZOMBIE_SCREENDOR,
+		ZOMBIE_GARDENER,
+		ZOMBIE_BUCKETHEAD,
+		ZOMBIE_POLEVAULTER
 	}
 	
 	global.plants_packets = [
@@ -279,6 +291,63 @@ function initialize_packets(){
 					timer: 25,
 					sprite: repeadis1_spr,
 					packet_sprite: menurepea2_spr
+				}
+			]
+		},
+		{ //Single Cherry bomb
+			packet_sprite: menusingcherry1_spr,
+			
+			yy: -10,
+
+			plant: singlecherry_obj, //Plant object
+			sprite: singlecherry1_spr, //Plant sprite
+			cost: 75,
+			timer: 30, //Recharge time
+			
+			ignore: true
+		},
+		{ //Twin sunflower
+			packet_sprite: menubirasol1_spr,
+			
+			yy: 30,
+
+			plant: birasol_obj, //Plant object
+			sprite: birasol1_spr, //Plant sprite
+			cost: 125,
+			timer: 10, //Recharge time
+			recargstart: false //Does it recharge when the level starts?
+			
+		},
+		{ //Explode o nut
+			packet_sprite: menuexplonut1_spr,
+			
+			yy: 30,
+
+			plant: explodenut_obj, //Plant object
+			sprite: explodenut1_spr, //Plant sprite
+			cost: 150,
+			timer: 60 //Recharge time
+		},
+		{ //Puff shroom
+			packet_sprite: menupuff1_spr,
+			
+			yy: 30,
+
+			plant: puffshroom_obj, //Plant object
+			sprite: puffshroom1_spr, //Plant sprite
+			cost: 0,
+			timer: 7, //Recharge time
+			
+			recargstart: false, //Does it recharge when the level starts?
+			sd_recharge: false,
+			
+			costume: [
+				{
+					cost: 0,
+					timer: 10,
+					sprite: marseta1_spr,
+					packet_sprite: menupuff2_spr,
+					place_type: 2
 				}
 			]
 		}

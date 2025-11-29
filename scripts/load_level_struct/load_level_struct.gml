@@ -49,6 +49,7 @@ function load_level_struct(_struct){
 
 	if (!_struct.cys){
 		camaractrl_obj.levelallowed = false;
+		
 	}
 	
 	//Music
@@ -122,7 +123,7 @@ function load_level_struct(_struct){
 				
 				//Preview add zombies
 				
-				if (_zombie_prev != "z_flag_obj" and _zombie_prev != "z_rally_obj"){
+				if (_data.typ != "z_flag_obj" and _data.typ != "z_rally_obj"){
 				
 					if !ds_map_exists(_zombie_prev, _data.typ){
 					    ds_map_add(_zombie_prev, _data.typ, _data.num);
@@ -143,7 +144,9 @@ function load_level_struct(_struct){
 	
 	for (var i = 0; i < size; i++;){
 		
-		zombie_preview(asset_get_index(key), min(5, round((_zombie_prev[? key] * 15)/_z_total)))
+		//show_message("KEY: " + key)
+		
+		zombie_preview(asset_get_index(key), clamp(round((_zombie_prev[? key] * 15)/_z_total), 1, 5))
 	   
 		key = ds_map_find_next(_zombie_prev, key);
 	}

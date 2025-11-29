@@ -112,7 +112,7 @@ and !check_zombie_eat(tallnut_obj){
 }
 
 //motivación
-if (instance_exists(z_rally_obj) or room==nivel11_rm) and object_index!=z_rally_obj and object_index!=z_statue_obj{
+if (instance_exists(z_rally_obj) or control_obj.z_motivated) and object_index!=z_rally_obj and object_index!=z_statue_obj{
     motivated=true
 }else{
     motivated=false
