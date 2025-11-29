@@ -47,8 +47,9 @@ init_stage = false;
 ambient = false;
 
 //Zombies
-kamistatues=false
-invisible=false
+z_motivated = false; //Motivation for level 11.
+kamistatues = false;
+invisible = false;
 
 terminado=false
 

@@ -1,3 +1,4 @@
-if global.lang="en" name=name_en
-if global.lang="es" name=name_es
+if global.lang="en" name = name_en
+if global.lang="es" name = name_es
 
+if (read_progress(cond) > lvl) locked = false;

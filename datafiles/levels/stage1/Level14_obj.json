@@ -1,0 +1,79 @@
+{
+  "sunflower": {
+      "obj_index": "@ref object(spawnmultgraves_obj)",
+      "obj_layer": "Instances",
+      
+      "pos": [
+        {"x": 856, "y": 176},
+        {"x": 944, "y": 176},
+        {"x": 1024, "y": 176},
+
+        {"x": 856, "y": 286},
+        {"x": 944, "y": 286},
+        {"x": 1024, "y": 286},
+
+        {"x": 856, "y": 386},
+        {"x": 944, "y": 386},
+        {"x": 1024, "y": 386},
+        
+        {"x": 856, "y": 485},
+        {"x": 944, "y": 485},
+        {"x": 1024, "y": 485},
+
+        {"x": 856, "y": 598},
+        {"x": 944, "y": 598},
+        {"x": 1024, "y": 598}
+      ],
+
+      "vars": {
+
+      }
+	},
+
+  "target": {
+      "obj_index": "@ref object(zombiediana_obj)",
+      "obj_layer": "Instances",
+      
+      "pos": [
+        {"x": 1120, "y": 168},
+        
+        {"x": 1120, "y": 269},
+
+        {"x": 1120, "y": 369},
+        
+        {"x": 1120, "y": 473},
+
+        {"x": 1120, "y": 588}
+      ],
+
+      "vars": {
+
+      }
+	},
+
+  "ctrlbarra2p": {
+      "obj_index": "@ref object(ctrlbarra2p_obj)",
+      "obj_layer": "Control",
+      
+      "pos": [
+        {"x": 0, "y": 0}
+      ],
+
+      "vars": {
+
+      }
+	},
+
+  "control2p": {
+      "obj_index": "@ref object(control2p_obj)",
+      "obj_layer": "Control",
+      
+      "pos": [
+        {"x": 0, "y": 0}
+      ],
+
+      "vars": {
+
+      }
+	}
+}

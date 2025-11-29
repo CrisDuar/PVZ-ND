@@ -1,5 +1,4 @@
 event_inherited();
-valor=15
+valor=20
 sprite=goldencoin_spr
 snd=podadora2_snd
-

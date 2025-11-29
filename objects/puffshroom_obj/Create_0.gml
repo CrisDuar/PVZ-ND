@@ -10,10 +10,10 @@ disfraz=0
 cancoffee=true
 sleep=false
 
-explotando=room_speed*10
-explotime=room_speed*110
+explotando=60*10
+explotime=60*110
 
-if control_obj.night=false{sleep=true}
+if (control_obj.daytime != 2) sleep = true;
 
 maxdistance=x+320
 if maxdistance>1115 maxdistance=1115

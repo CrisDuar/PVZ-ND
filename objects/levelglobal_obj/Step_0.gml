@@ -24,7 +24,7 @@ if distance_to_object(parentisla_obj)<1{
 y=ystart+yy
 
 //if (variable_global_get(cond)<num){
-if (global.progress[? cond] < num){
+if (read_progress(cond) < num){
 	image_blend=c_gray
 }else{
 	image_blend=c_white

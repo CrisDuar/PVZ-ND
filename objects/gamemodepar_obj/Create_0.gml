@@ -6,4 +6,5 @@ name=""
 _room=configvs_rm
 name_es="Duelo"
 name_en="Versus"
-
+cond = "niveles"
+lvl = 14
