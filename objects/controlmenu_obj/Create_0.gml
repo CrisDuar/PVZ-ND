@@ -88,6 +88,7 @@ global.upgrade1=false
 global.upgrade2=false
 global.upgrade3=false
 global.upgrade4=false
+global.upgrade5=false
 
 
 //variables importantes

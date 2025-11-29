@@ -1,8 +1,9 @@
 depth = -y;
 image_speed=random_range(0.20,0.16)
 image_index=random_range(0,9)
-if room=nivel11_rm{
-image_speed+=0.08
+
+if (control_obj.z_motivated){
+	image_speed+=0.08
 }
 
 drawname=false

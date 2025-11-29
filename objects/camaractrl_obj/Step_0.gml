@@ -2,6 +2,10 @@ if !instance_exists(dialogctrl_obj){
     switch(reverse){
         case 0:
             hspeed+=0.02
+			
+			if (global.progress[? "niveles"] > 6 and levelallowed){
+				spawnselect = true;
+			}
         break;
         
         case 1:

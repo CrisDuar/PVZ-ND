@@ -2,4 +2,4 @@
 sprite_index=tumba5_sl_spr
 num=15
 numdisplay=num
-lvl=nivel15_rm
+lvl = "Level15";

@@ -1,24 +1,21 @@
 /// @description is_costume_selected(Seedpacket, costume to test)
 /// @param Seedpacket
 /// @param  costume to test
-function is_costume_selected(_indx, _cos) {
-	//indx is the key in the costumes map
+function is_costume_selected(_p_id, _cos) {
 	
-	var _yy = -1
-	var _ret = 0
-
-	if ds_grid_value_exists(global.costumes, 0, 0, 0, ds_grid_height(global.costumes)-1, _indx){
-	    _yy = ds_grid_value_y(global.costumes, 0, 0, 0, ds_grid_height(global.costumes)-1, _indx);
-    
-	    if global.costumes[# 1, _yy] = 1 and global.costumes[# 2, _yy]==_cos{
-	        _ret = 1
-	    }else{
-	        _ret = 0
-	    }    
+	
+	if (ds_map_exists(global.costumes, _p_id)){
+		
+		if (global.costumes[? _p_id][| 0] == _cos){
+			
+			return true;
+		}else{
+			
+			return false;
+		}
+		
 	}else{
-	    _ret = -1
+		
+		return false;
 	}
-
-
-	return _ret;
 }

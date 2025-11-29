@@ -1,7 +1,6 @@
 event_inherited();
-valor=50
+valor=150
 sprite=billete_spr
-=choose(127,224,326,434,539);
 
 lanes = array_create(6)
 obj_z = array_create(6)
