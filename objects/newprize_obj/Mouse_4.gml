@@ -18,6 +18,11 @@ if (sprite_index != bolsa_monedas_spr){
 with(instance_create_depth(x, y, -9100, newplantcenter_obj)){
     sprite_index=other.sprite_index
     plantroom=other.plantroom
+	
+	switch(other.snd){
+		default: time = 5 break;
+		case finalprize_snd: time = 7 break;
+	}
 }
 
 instance_destroy();

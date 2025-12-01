@@ -3,9 +3,9 @@ cadencia=0.7
 cancoffee=true
 sleep=false
 
-if control_obj.night=false{
-sprite_index=morfoseta3_spr
-sleep=true
+if control_obj.daytime != 2{
+	sprite_index=morfoseta3_spr
+	sleep=true
 }
 
 imgshot=morfoseta2_spr

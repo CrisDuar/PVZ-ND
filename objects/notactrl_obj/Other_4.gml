@@ -1,14 +1,41 @@
-//ERROR MESSAGE
-if global.lang="en"{
-t="Hey there, this is an error message, so if you're seeing this, report it!"
-f="Sincerely.#The developer"
+var _prg = string(read_progress(global.price))
+var _key = _prg + global.price;
+
+if (ds_map_exists(global.notes, _key)){
+
+	var _data = global.notes[? _key];
+	show_debug_message(string(_data))
+
+	t_en = _data[notes_data.TEXT_EN];
+	f_en = _data[notes_data.SIGN_EN];
+	
+	t_es = _data[notes_data.TEXT_ES];
+	f_es = _data[notes_data.SIGN_ES];
+
+	bg = _data[notes_data.BG];
+
+	if (_data[notes_data.LVL_ROUTE] != "<room>"){
+		global.load_level = _data[notes_data.LVL_ID];
+		global.load_route = _data[notes_data.LVL_ROUTE];
+	    siguientenivel_obj.rm = generic_level_rm;
+	}else{
+		siguientenivel_obj.rm = asset_get_index(_data[notes_data.LVL_ID]);
+	}
 }
 
-if global.lang="es"{
-t="Hola, este es un mensaje de error, así que si lo ves, reportalo!"
-f="Atentamente.#El desarrollador"
-}
+var lay_id = layer_get_id("Background_sky");
+var back_id = layer_background_get_id(lay_id);
 
+switch(bg){
+	default:
+		layer_background_sprite(back_id, pastonotadia_bg);
+	break;
+	
+	case 1:
+		layer_background_sprite(back_id, pastonotanoche_bg);
+	break;
+}
+/*
 if global.price=="niveles"{
     switch(global.nota){
         case 15:
@@ -18,7 +45,7 @@ if global.price=="niveles"{
             }
 
             if global.lang="es"{
-                t="Estimado sesudo, vamos a asaltar su kasa esta tarde. Disculpe las molestiaz"
+                t="Estimado sesudo, vamos a asaltar su kasa esta tarde. Disculpe las molestiaz."
                 f="Atentamente.#Los Zombis"
             }
             siguientenivel_obj.rm=nivel15_rm
@@ -26,12 +53,12 @@ if global.price=="niveles"{
 
         case 22:
             if global.lang="en"{
-                t="Good nigth, Is Dave around? Boss asks for his braiz. Thank you"
+                t="Good nigth, Is Dave around? Boss asks for his braiz. Thank you."
                 f="Sincerely.#the Zombies"
             }
         
             if global.lang="es"{
-                t="Buena noche, Esta un tal Dave? El jefe pregunta por su sesera. Grasias"
+                t="Buena noche, Esta un tal Dave? El jefe pregunta por su sesera. Grasias."
                 f="Atentamente.#Los Zombis"
             }
             __background_set( e__BG.Index, 0, pastonotanoche_bg )
@@ -129,12 +156,12 @@ if global.price=="niveles"{
         case 72:
             font=letter4_fnt
             if global.lang="en"{
-                t="The Darkness is close. Do you by any chance like the theater?."
+                t="The Darkness is close. Do you by any chance like the theater?"
                 f="Sincerely.#---"
             }
         
             if global.lang="es"{
-                t="La Oscuridad se acerca. ¿De casualidad te gusta el teatro?."
+                t="La Oscuridad se acerca. ¿De casualidad te gusta el teatro?"
                 f="Atentamente.#---"
             }
             __background_set( e__BG.Index, 0, pastonotanoche_bg )
