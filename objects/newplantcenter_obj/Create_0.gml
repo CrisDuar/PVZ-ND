@@ -9,5 +9,5 @@ addEscala=0.001
 
 transparencia1=0
 
-alarm[0]=60*7
+time = 5;
 force=false

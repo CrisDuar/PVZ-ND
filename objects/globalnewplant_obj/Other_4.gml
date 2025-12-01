@@ -8,18 +8,36 @@ textES="Hola, este es un mensaje de error, así que si lo ves, reportalo!"
 sprite_index=randomlocked_spr
 siguientenivel_obj.rm=level1_sl_rm
 
-//ERROR MESSAGE
-if global.lang="en"{
-t="Hey there, this is an error message, so if you're seeing this, report it!"
-f="Sincerely.#The developer"
-}
+var _prg = string(read_progress(global.price))
+var _key = _prg + global.price;
 
-if global.lang="es"{
-t="Hola, este es un mensaje de error, así que si lo ves, reportalo!"
-f="Atentamente.#El desarrollador"
-}
+if (ds_map_exists(global.rewards, _key)){
+	var _data = global.rewards[? _key];
 
-var _prg = read_progress(global.price)
+	if (_data[rewards_data.TITLE_EN] != ""){
+		prizeES = _data[rewards_data.TITLE_ES];
+		prizeEN = _data[rewards_data.TITLE_EN];
+	}
+
+	titleES = _data[rewards_data.NAME_ES];
+	titleEN = _data[rewards_data.NAME_EN];
+	textES = _data[rewards_data.DESC_ES];
+	textEN = _data[rewards_data.DESC_EN];
+
+	wave = _data[rewards_data.WAVE];
+	clima = _data[rewards_data.BG];
+
+	sprite_index = asset_get_index(_data[rewards_data.SPR]);
+
+	if (_data[rewards_data.LVL_ROUTE] != "<room>"){
+		global.load_level = _data[rewards_data.LVL_ID];
+		global.load_route = _data[rewards_data.LVL_ROUTE];
+	    siguientenivel_obj.rm = generic_level_rm;
+	}else{
+		siguientenivel_obj.rm = asset_get_index(_data[rewards_data.LVL_ID]);
+	}
+}
+/*
 
 if global.price=="niveles"{
 
@@ -624,7 +642,7 @@ if global.price=="vasebreaker"{
         break
     }
 }
-
+*/
 ///FONDOS
 switch(clima){
     default://DÍA
