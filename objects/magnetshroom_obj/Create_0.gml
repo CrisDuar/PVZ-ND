@@ -1,9 +1,7 @@
 event_inherited();
 cancoffee=true
 sleep=false
-if control_obj.night=false{
-    sleep=true
-}
+if (control_obj.daytime != 2) sleep = true;
 
 state=0
 t=0

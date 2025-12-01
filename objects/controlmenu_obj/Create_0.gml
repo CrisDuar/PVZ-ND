@@ -186,6 +186,10 @@ global.costumes = 0;
 global.costumelist = 0;
 global.costume_unlock = 0;
 
+//Rewards table
+global.rewards = 0;
+global.notes = 0;
+
 //saving and loading data
 if file_exists("savedata.nd") and !file_exists("savedata.ini"){
     load_old_data();

@@ -7,10 +7,10 @@
   },
   "bitDepth":1,
   "channelFormat":0,
-  "compression":2,
+  "compression":1,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":99.99963,
   "exportDir":"",
   "name":"music_hardbattle_snd",
   "parent":{

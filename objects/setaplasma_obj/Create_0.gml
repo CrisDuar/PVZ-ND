@@ -10,5 +10,4 @@ imgidle=setaplasma1_spr
 _alpha=0
 shake = 0;
 
-if control_obj.night=false{sleep=true}
-
+if (control_obj.daytime != 2) sleep = true;

@@ -10,3 +10,6 @@ textES=""
 textEN=""
 wave = false;
 clima=0
+
+up = 0;
+sine_yy = 0;

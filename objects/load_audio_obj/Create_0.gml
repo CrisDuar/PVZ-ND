@@ -1,9 +1,7 @@
 randomize()
 halo = 0
 load_data = false;
-if audio_group_is_loaded(Music) and audio_group_is_loaded(SFX) and alarm[0]=-1{
-    alarm[0]=60
-}
+load = 0;
 
 var full = 0
 
