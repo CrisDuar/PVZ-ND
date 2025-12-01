@@ -1,7 +1,9 @@
+if (alarm[0] == -1) alarm[0] = 60*time
+
 direction = point_direction(x,y,x_final,y_final);
 speed = (point_distance(x,y,x_final,y_final)/50)*dlt;
 
-transparencia1 +=0.004*dlt
+transparencia1 += 0.004*dlt
 
 if (speed == 0){
 	addEscala-=0.0002

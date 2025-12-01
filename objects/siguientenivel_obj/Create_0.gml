@@ -1,2 +1,1 @@
-rm=room
-
+rm = room;

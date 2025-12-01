@@ -1,27 +1,25 @@
-draw_sprite(sprite_index,image_index,326,464)
+draw_sprite(sprite_index,image_index,326,464 + sine_yy)
 
 //You got a prize!
 draw_set_font(yougotaprize_fnt)
 draw_set_valign(fa_top)
 draw_set_halign(fa_center)
 
-if global.lang="en"{
-draw_text_ext_colour(544,64,string_hash_to_newline(prizeEN),100,500,c_black,c_black,c_black,c_black,image_alpha)
-draw_text_ext_colour(542,62,string_hash_to_newline(prizeEN),100,500,c_white,c_white,c_white,c_white,image_alpha)
-}
+var _prize = prizeEN;
+var _title = titleEN;
+var _text = textEN
 
 if global.lang="es"{
-draw_text_ext_colour(544,64,string_hash_to_newline(prizeES),100,500,c_black,c_black,c_black,c_black,image_alpha)
-draw_text_ext_colour(542,62,string_hash_to_newline(prizeES),100,500,c_white,c_white,c_white,c_white,image_alpha)
+	_prize = prizeES;
+	_title = titleES;
+	_text = textES;
 }
 
-//título
+draw_text_ext_colour(544,64,string_hash_to_newline(_prize),100,500,c_black,c_black,c_black,c_black,image_alpha)
+draw_text_ext_colour(542,62,string_hash_to_newline(_prize),100,500,c_white,c_white,c_white,c_white,image_alpha)
+
 draw_set_font(plants_fnt)
-if global.lang="en" draw_text_ext_colour(544,215,string_hash_to_newline(titleEN),100,500,c_white,c_white,c_white,c_white,image_alpha)
-if global.lang="es" draw_text_ext_colour(544,215,string_hash_to_newline(titleES),100,500,c_white,c_white,c_white,c_white,image_alpha)
+draw_text_ext_colour(544,215,string_hash_to_newline(_title),100,500,c_white,c_white,c_white,c_white,image_alpha)
 
-//descripción
 draw_set_halign(fa_left)
-if global.lang="en" draw_text_ext_colour(425,288,string_hash_to_newline(textEN),32,390,color,color,color,color,image_alpha)
-if global.lang="es" draw_text_ext_colour(425,288,string_hash_to_newline(textES),32,390,color,color,color,color,image_alpha)
-
+draw_text_ext_colour(425,288,string_hash_to_newline(_text),32,390,color,color,color,color,image_alpha)

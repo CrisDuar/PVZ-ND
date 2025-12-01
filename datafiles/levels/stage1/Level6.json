@@ -33,6 +33,7 @@
   "fn":12.0,
   "conv_t2":0.0,
   "preplants":[
+    1, 0, 2, 3, 4
   ],
   "loop":false,
   "idle_sng":"grasswalk_sng",
@@ -47,7 +48,7 @@
     ]
   ],
   "horde_sng":"grasswalk_fw_sng",
-  "horde_prcnt":0.40000000000000002,
+  "horde_prcnt":0.4,
   "surprise_enabled":true,
   "infinite":false,
   "infinite_loop":3.0,

@@ -44,7 +44,11 @@ if toggle==true{
     }
     
     if keyboard_check_pressed(vk_enter){
-        instance_activate_all();
+        if instance_exists(zombispawn_obj){
+            with(zombispawn_obj){
+				create_prize(xx, yy);
+            }
+        }
     }
     
     if keyboard_check_pressed(ord("X")){

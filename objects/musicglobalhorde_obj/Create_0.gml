@@ -30,7 +30,7 @@ if (room != generic_level_rm){
 	}
 
 	if __background_get( e__BG.Index, 0 )=night_bg{
-	idlesong=music_moongrains_snd
+	idlesong=moongrains_sng
 	hordesong=music_finalwavenight_snd
 	}
 
