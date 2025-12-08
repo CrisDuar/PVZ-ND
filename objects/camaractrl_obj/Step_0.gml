@@ -27,12 +27,12 @@ and !instance_exists(menuselectplan_obj)
 and spawnselect==true{
     if control_obj.multijugador=false{
         if room==izombie_rm{
-            instance_create(954,896,menuselectzomb_obj)
+            instance_create_depth(954,896, -997 ,menuselectzomb_obj)
         }else{
-            instance_create(954,896,menuselectplan_obj)
+            instance_create_depth(954,896, -997,menuselectplan_obj)
         }
     }else{
-        instance_create(__view_get( e__VW.XView, 0 )+544-163,906,menuselectmult_obj)
+        instance_create_depth(__view_get( e__VW.XView, 0 )+544-163,906, -997,menuselectmult_obj)
     }
 }
 

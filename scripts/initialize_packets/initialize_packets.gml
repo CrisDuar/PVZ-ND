@@ -41,20 +41,6 @@ function initialize_packets(){
 		PUFFSHROOM
 	}
 	
-	enum zombies_id
-	{
-		ZOMBIE,
-		ZOMBIE_FLAG,
-		ZOMBIE_HEADBOX,
-		ZOMBIE_PAPERTHROWER,
-		ZOMBIE_CONEHEAD,
-		ZOMBIE_STATUE,
-		ZOMBIE_SCREENDOR,
-		ZOMBIE_GARDENER,
-		ZOMBIE_BUCKETHEAD,
-		ZOMBIE_POLEVAULTER
-	}
-	
 	global.plants_packets = [
 		/*DEFAULT VALUES
 		{
@@ -353,9 +339,28 @@ function initialize_packets(){
 		}
 	]
 	
+	enum zombies_id
+	{
+		OBST_ZOMGRAVE,
+		ZOMBIE,
+		ZOMBIE_FLAG,
+		ZOMBIE_HEADBOX,
+		ZOMBIE_PAPERTHROWER,
+		ZOMBIE_CONEHEAD,
+		ZOMBIE_STATUE,
+		ZOMBIE_SCREENDOR,
+		ZOMBIE_GARDENER,
+		ZOMBIE_BUCKETHEAD,
+		ZOMBIE_POLEVAULTER,
+		ZOMBIE_RALLY
+	}
+	
 	global.zombies_packets = [
 		/*DEFAULT VALUES
 		{
+			xx: 0,
+			yy: 0,
+			
 			packet_sprite: basiczombie1_spr,
 
 			zombie: zombie1_obj, //zombie object
@@ -372,7 +377,19 @@ function initialize_packets(){
 			ignore: false //Does it show up in plant selection? (true for special plants)
 		}
 		*/
-	
+		{ //Zom-gravestone
+			xx: -10,
+			yy: 30,
+			
+			packet_sprite: zomgraveslot1_spr,
+			
+			sprite: tumbamulti1_spr,
+			zombie: zomgrave_obj,
+			cost: 50,
+			timer: 7,
+			
+			recargstart: false
+		},
 		{ //Basic
 			packet_sprite: basiczombie1_spr,
 			
@@ -381,7 +398,91 @@ function initialize_packets(){
 			cost: 25,
 			timer: 8,
 			
-			vs_recargstart: false,
+			vs_recargstart: false
+		},
+		{ //Flag
+			packet_sprite: flagslot1_spr,
+			
+			sprite: abanderado_spr,
+			zombie: z_flag_obj,
+			cost: 300,
+			timer: 90
+		},
+		{ //Boxhead
+			packet_sprite: cajaslot1_spr,
+			
+			sprite: carecajaquieto_spr,
+			zombie: z_headbox_obj,
+			cost: 50,
+			timer: 15
+		},
+		{ //paper thrower
+			packet_sprite: papshoslot1_spr,
+			
+			sprite: papsho1_spr,
+			zombie: z_paperthrower_obj,
+			cost: 75,
+			timer: 30
+		},
+		{ //Conehead
+			packet_sprite: conoslot1_spr,
+			
+			sprite: conoquiet1_spr,
+			zombie: z_conehead_obj,
+			cost: 75,
+			timer: 15
+		},
+		{ //statue
+			packet_sprite: estatuaslot1_spr,
+			
+			sprite: estatua1_spr,
+			zombie: z_statue_obj,
+			cost: 50,
+			timer: 40,
+			
+			sd_recharge: false
+		},
+		{ //screendoor
+			packet_sprite: doorslot1_spr,
+			
+			sprite: zombiedoor1_spr,
+			zombie: z_screendoor_obj,
+			cost: 100,
+			timer: 30
+		},
+		{ //gardener
+			packet_sprite: gardenerslot1_spr,
+			
+			sprite: gardenerquiet1_spr,
+			zombie: z_gardener_obj,
+			cost: 75,
+			timer: 15
+		},
+		{ //buckethead
+			packet_sprite: bucketslot1_spr,
+			
+			sprite: cuboquiet1_spr,
+			zombie: z_buckethead_obj,
+			cost: 100,
+			timer: 30
+		},
+		{ //pole vaulter
+			packet_sprite: pertigaslot1_spr,
+			
+			sprite: polequiet_spr,
+			zombie: z_polevaulter_obj,
+			cost: 100,
+			timer: 30
+		},
+		{ //rally
+			packet_sprite: bucketflagslot1_spr,
+			
+			sprite: rallyeat1_spr,
+			zombie: z_rally_obj,
+			cost: 200,
+			timer: 60
 		}
+		
+		
 	]
 }

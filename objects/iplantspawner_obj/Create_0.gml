@@ -226,6 +226,9 @@ infinite=true//Is an infinite level?
 progressbar=false//show progress bar?
 lvl_es="Batallas (Plantas)"
 lvl_en="Battles (Plants)"
+sprite = plantswin2p_spr;
+update_progress = false;
+plantroom = morewaysplay_rm;
 
 //create_level(pt, 12, 0, false, generate_zombies(), a, lvl_diff)
 

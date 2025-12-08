@@ -20,10 +20,8 @@ function load_almanac() {
 
 	        for (var i = 1; i < ds_grid_height(global.almanac_data); i++){ 
 	            if (global.almanac_data[# 0, i] == string(argument[1])){
+					
 	                init_y = i + 1;
-                
-	                //show_debug_message("I found it in " + string(i) + " total" + string(ds_grid_height(almanac_data)))
-                
 	                break;
 	            }
 	        }
@@ -60,12 +58,15 @@ function load_almanac() {
 				
 				if (_plant_id != -1){
 					switch(rsrc_load){
+						
+						//Plants
 						case 0:
 							sprite = global.plants_packets[_plant_id].packet_sprite;
 							cost = global.plants_packets[_plant_id].cost;
-							_recharge = global.plants_packets[_plant_id].recharge;
+							_recharge = global.plants_packets[_plant_id].timer;
 						break
-					
+						
+						//Costumes
 						case -1:
 						
 							_cos_c++;
@@ -82,17 +83,18 @@ function load_almanac() {
 								sprite = _cos_data[_cos_c].packet_sprite;
 								
 								cost = struct_get_default(_cos_data[_cos_c], "cost", global.plants_packets[_plant_id].cost);
-								_recharge = struct_get_default(_cos_data[_cos_c], "recharge", global.plants_packets[_plant_id].recharge);
+								_recharge = struct_get_default(_cos_data[_cos_c], "timer", global.plants_packets[_plant_id].timer);
 							}else{
 								sprite = menupea1_spr;
 								cost = 888;
-							}
+							}		
 						break
-					
+						
+						//Zombies
 						case -2:
 							sprite = global.zombies_packets[_plant_id].packet_sprite;
 							cost = global.zombies_packets[_plant_id].cost;
-							_recharge = global.zombies_packets[_plant_id].recharge;
+							_recharge = global.zombies_packets[_plant_id].timer;
 						break
 					}
 				}else{
@@ -101,13 +103,13 @@ function load_almanac() {
 				}
 	            
             
-	            desc_en[0] = replace_quotations("<c4>" + global.almanac_data[# almanac_data.DESC_EN, i] + "<as><sl>" + read_stats(global.almanac_data[# almanac_data.STATS_EN, i]) + "<as><sl><c3>" + global.almanac_data[# almanac_data.EXTRA_EN, i])
+	            desc_en[0] = replace_quotations("<c4>" + global.almanac_data[# almanac_data.DESC_EN, i] + "<as><sl>" + read_stats(global.almanac_data[# almanac_data.STATS_EN, i], _recharge) + "<as><sl><c3>" + global.almanac_data[# almanac_data.EXTRA_EN, i])
             
-	            if (global.almanac_data[# 12, i]=="") desc_en[1] = "[Description not found.]" else desc_en[1] = replace_quotations(global.almanac_data[# almanac_data.FLAVOR_EN, i])
+	            if (global.almanac_data[# almanac_data.FLAVOR_EN, i]=="") desc_en[1] = "[Description not found.]" else desc_en[1] = replace_quotations(global.almanac_data[# almanac_data.FLAVOR_EN, i])
 
-	            desc_es[0] = replace_quotations("<c4>" + global.almanac_data[# almanac_data.DESC_ES, i] + "<as><sl>" + read_stats(global.almanac_data[# almanac_data.STATS_ES, i]) + "<as><sl><c3>" + global.almanac_data[# almanac_data.EXTRA_ES, i])
+	            desc_es[0] = replace_quotations("<c4>" + global.almanac_data[# almanac_data.DESC_ES, i] + "<as><sl>" + read_stats(global.almanac_data[# almanac_data.STATS_ES, i], _recharge) + "<as><sl><c3>" + global.almanac_data[# almanac_data.EXTRA_ES, i])
             
-	            if (global.almanac_data[# 16, i]=="") desc_es[1] = "[Descripción no encontrada.]" else desc_es[1] = replace_quotations(global.almanac_data[# almanac_data.FLAVOR_EN, i])
+	            if (global.almanac_data[# almanac_data.FLAVOR_ES, i]=="") desc_es[1] = "[Descripción no encontrada.]" else desc_es[1] = replace_quotations(global.almanac_data[# almanac_data.FLAVOR_EN, i])
             
 	        }
         
@@ -118,21 +120,35 @@ function load_almanac() {
 	            yy++
 	        }
         
-        
-	        //show_debug_message("loaded: " + almanac_data[# 0, i])
-        
-        
 	    }else{
     
-	        //show_debug_message("RIP: " + string(almanac_data[# 0, i]))
-	        //typeyy += 640;
-	        //xx = 0;
-	        //yy = 0;
-        
 	        break;
 	    }
 	}
+}
 
-
-
+function create_almanac_map(){
+	
+	global.almanac_map = ds_map_create();
+	var _key = "p"
+	
+	for (var i = 1; i < ds_grid_height(global.almanac_data); i++){
+		
+		var _type = global.almanac_data[# 0, i];
+		
+		if (_type == "-1"){
+			
+			_key = "c";
+			continue;
+			
+		}else if (_type == "-2"){
+			_key = "z";
+			continue;
+		}
+		
+		var _plant_id = global.almanac_data[# almanac_data.UNIT_ID, i];
+		if (_plant_id == "-1") continue;
+		
+		ds_map_add(global.almanac_map, _key + _plant_id, i)
+	}
 }

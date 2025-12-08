@@ -77,33 +77,80 @@ if instance_exists(menuzom_obj) instance_destroy(menuzom_obj)
 
 var vscost = 0
 
-var _index = 1;
+//Positions in the Array
+var _index = 0;
+
+//Page num
 var _pnum = 0;
 
+//Load plants
 for (var i = 0; i < array_length(global.plants_packets); i++){
+	
+	if (_pnum >= 6){
+		maxpag++;
+		_pnum = 0;
+	}
 	
 	if (struct_get_default(global.plants_packets[i], "ignore", false) == false){
 	
-		p[_index - 1] = [
-			global.almanac_data[# almanac_data.LEVEL, _index],//lvl
-			global.almanac_data[# almanac_data.COND, _index],//cond
+		var alm_ind = global.almanac_map[? "p" + string(i)];
+		
+		p[_index] = [
+			global.almanac_data[# almanac_data.LEVEL, alm_ind],//lvl
+			global.almanac_data[# almanac_data.COND, alm_ind],//cond
 			i,//packet_id
-			asset_get_index(global.almanac_data[# almanac_data.LOCKED_SPR, _index]),//locked
-			global.almanac_data[# almanac_data.NAME_ES, _index],//name_es
-			global.almanac_data[# almanac_data.NAME_EN, _index],//name_en
+			asset_get_index(global.almanac_data[# almanac_data.LOCKED_SPR, alm_ind]),//locked
+			global.almanac_data[# almanac_data.NAME_ES, alm_ind],//name_es
+			global.almanac_data[# almanac_data.NAME_EN, alm_ind],//name_en
 			maxpag,//page
-			real(global.almanac_data[# almanac_data.BG, _index]),//bg
-			asset_get_index(global.almanac_data[# almanac_data.UNIT_SPR, _index]),//plantsprite
+			real(global.almanac_data[# almanac_data.BG, alm_ind]),//bg
+			asset_get_index(global.almanac_data[# almanac_data.UNIT_SPR, alm_ind]),//plantsprite
 			0//type
 		]
 		
 		_pnum++;
 		_index++;
 	}
+}
+
+//Find zombie's index in the almanac.
+_pnum = 0;
+_index = 0;
+/*
+for (var i = 50; i < ds_grid_height(global.almanac_data); i++){ 
+	if (global.almanac_data[# 0, i] == "-2"){
+	    _index = i + 1;
+ 
+	    break;
+	}
+}*/
+//Load zombies
+for (var i = 0; i < array_length(global.zombies_packets); i++){
 	
 	if (_pnum >= 6){
-		maxpag++;
+		zommaxpag++;
 		_pnum = 0;
+	}
+	
+	if (struct_get_default(global.zombies_packets[i], "ignore", false) == false){
+		
+		var alm_ind = global.almanac_map[? "z" + string(i)];
+		
+		z[_index] = [
+			global.almanac_data[# almanac_data.LEVEL, alm_ind],//lvl
+			global.almanac_data[# almanac_data.COND, alm_ind],//cond
+			i,//packet_id
+			asset_get_index(global.almanac_data[# almanac_data.LOCKED_SPR, alm_ind]),//locked
+			global.almanac_data[# almanac_data.NAME_ES, alm_ind],//name_es
+			global.almanac_data[# almanac_data.NAME_EN, alm_ind],//name_en
+			zommaxpag,//page
+			real(global.almanac_data[# almanac_data.BG, alm_ind]),//bg
+			asset_get_index(global.almanac_data[# almanac_data.UNIT_SPR, alm_ind]),//plantsprite
+			1//type
+		]
+		
+		_pnum++;
+		_index++;
 	}
 }
 
