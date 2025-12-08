@@ -21,7 +21,7 @@ function set_plant() {
 	    if select=control_obj.seleccionado and localselect!=0{
 	        audio_play_sound(choose(other.snd1,other.snd2),1,false)
     
-	        with(instance_create(floor(other.x+xx),floor(other.y+yy-other.offset),plant)){
+	        with(instance_create_layer(floor(other.x+xx),floor(other.y+yy-other.offset), "Instances",plant)){
 	            disfraz=other.costume_packet
 	            event_user(0)
             

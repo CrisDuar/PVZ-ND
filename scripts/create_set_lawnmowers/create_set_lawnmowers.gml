@@ -1,6 +1,9 @@
 /// @description create_set_lawnmowers()
 function create_set_lawnmowers() {
-
+	
+	
+/*
+	DEPRECATED
 	switch(room){
 	    case nivel10_rm:
 	    case nivel25_rm:
@@ -77,5 +80,5 @@ function create_set_lawnmowers() {
 
 
 
-
+*/
 }

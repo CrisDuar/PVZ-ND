@@ -36,30 +36,30 @@ switch(type){
     
     case 2://Suelto
         cost=0
-        if timer<room_speed*15{
+        if timer<60*15{
             if localselect!=select timer++
         }else{
             instance_destroy();
         }
         
-        if timer>room_speed*10 alpha=0.5  
+        if timer>60*10 alpha=0.5  
     break
     
     case 3://Lluvia
         cost=0
-        if timer<room_speed*15{
+        if timer<60*15{
             timer++
         }else if select!=localselect{
             instance_destroy();
         }
         
-        if timer>room_speed*10{
+        if timer>60*10{
             alpha=0.5
         }else{
             if alpha>0 alpha-=0.05
         }
         
-        if timer<room_speed*5 y+=0.5
+        if timer<60*5 y+=0.5
     break
 }
 

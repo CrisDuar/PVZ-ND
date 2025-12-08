@@ -99,7 +99,7 @@ if global.vs_mtouch[type] = false or (connected){
         }*/
     }
     
-    var _ang = arctan((yprevious-y)/(xprevious-x));
+    var _ang = arctan2((yprevious-y), (xprevious-x));
     
     if xmove==0{
         x += (tile_x-x)/10
@@ -153,6 +153,3 @@ if global.vs_mtouch[type] = false or (connected){
         multi_movement(mt_move, mouse_x, mouse_y)
     }
 }
-
-/* */
-/*  */

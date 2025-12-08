@@ -3,15 +3,11 @@
 /// @param y1
 /// @param x2
 /// @param y2
-function get_objetive(argument0, argument1, argument2, argument3) {
-	x1=argument0
-	y1=argument1
-	x2=argument2
-	y2=argument3
+function get_objetive(x1, y1, x2, y2) {
 
 	var _list = ds_list_create();
 	//var _num = collision_rectangle_list(select_obj.x,640,select_obj.x,0,select_obj,true,true,_list,false)
-	var _num = collision_rectangle_list(x1,y1,x2,y2,select_obj,true,true,_list,false)
+	var _num = collision_rectangle_list(x1,y1,x2,y2,select_obj,true,true,_list,true)
 	objetive=0
 
 	if _num > 0{

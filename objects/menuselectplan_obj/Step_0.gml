@@ -79,8 +79,8 @@ if vspeed>=0 and spawngui==false{
         spawngui_scr(); 
         spawnguizom_scr(326);
         instance_create_layer(x,y+262,"GUI",letsgo_obj);
-        instance_create_layer(x,y,"GUI",chooseseeds1_obj); 
-        instance_create_layer(x,y,"GUI",choosezombies1_obj)
+        instance_create_layer(x,y,"Control",chooseseeds1_obj); 
+        instance_create_layer(x,y,"Control",choosezombies1_obj)
         
         if global.vs_mtouch[0] = true{
             //instance_create(x,y+240,buttonpages_obj); with(instance_create(x,y+240,buttonpages_obj)){image_xscale=-1}
@@ -142,10 +142,8 @@ with(globalselect_obj){
     }
 }
 
-if vspeed>=25{
+if vspeed>=30{
     instance_destroy()
-    p=0
-    z=0
 }
 
 if vspeed=0{
@@ -185,7 +183,7 @@ if sprite_index==menuselectplant_spr{
     }
 }
 //pages for zombies
-if sprite_index==menuselectzomb_spr{
+else if sprite_index==menuselectzomb_spr{
     if zompag >= hz5 and hz5<zommaxpag{
         hz5=zompag+1
         if hz5>zommaxpag hz5=zommaxpag

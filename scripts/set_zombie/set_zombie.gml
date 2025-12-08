@@ -7,28 +7,28 @@ function set_zombie() {
 	        with(menuzombi_obj){
 	            if select=control_obj.zomseleccionado and localselect!=0{
 	                audio_play_sound(choose(other.snd1,other.snd2),1,false)
-	                switch(control_obj.zomseleccionado){
+	                switch(control_obj.zomseleccionado - 1){
                 
 	                    default://Zombi normal
-	                        with(instance_create(other.x+xx,get_closest_row(other.y+yy-other.offset),zombiegrave_obj)){
+	                        with(instance_create_layer(other.x+xx,get_closest_row(other.y+yy-other.offset),"Instances",zombiegrave_obj)){
 	                            obj=other.zombie
 	                        }
 	                    break
                     
-	                    case 3://Zomgrave
-	                        with(instance_create(other.x+xx,get_closest_row(other.y+yy-other.offset),animgrave_obj)){gravetype=zomgrave_obj}
+	                    case zombies_id.OBST_ZOMGRAVE://Zomgrave
+	                        with(instance_create_layer(other.x+xx,get_closest_row(other.y+yy-other.offset),"Instances",animgrave_obj)){gravetype=zomgrave_obj}
 	                    break
                     
-	                    case 10://Estatua
+	                    case zombies_id.ZOMBIE_STATUE://Estatua
 	                    //Rows
-	                        with(instance_create(other.x+xx+random_range(-15,15),get_closest_row(other.y+yy-other.offset),zombiegrave_obj)){
+	                        with(instance_create_layer(other.x+xx+random_range(-30,-15),get_closest_row(other.y+yy-other.offset),"Instances",zombiegrave_obj)){
 	                            obj=other.zombie
 	                        }
 	                    break
                     
-	                    case 6://FLAG
+	                    case zombies_id.ZOMBIE_FLAG://FLAG
 	                    instance_create(x,y,hugeofzombies_obj)
-	                    with(instance_create(1180,get_closest_row(other.y+yy-other.offset),zombiegrave_obj)){
+	                    with(instance_create_layer(1180,get_closest_row(other.y+yy-other.offset), "Instances",zombiegrave_obj)){
 	                        obj=other.zombie
 	                    }
 	                    var z_yy_list = ds_list_create();
@@ -60,7 +60,7 @@ function set_zombie() {
 	                            z_yy = choose(152, 236, 339, 422, 527, 615)
 	                        }
                         
-	                        with(instance_create(1180+random_range(80,160),z_yy,zombiegrave_obj)){
+	                        with(instance_create_layer(1180+random_range(80,160),z_yy,"Instances",zombiegrave_obj)){
 	                            obj=z_unit
 	                        }
 	                    }

@@ -41,4 +41,6 @@ vs_recargstart = true;
 vs_cost = 0;
 vs_recharge = 0;
 
+vs_set = false;
+
 xmod = 1;

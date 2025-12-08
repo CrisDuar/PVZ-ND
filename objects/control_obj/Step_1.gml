@@ -11,11 +11,13 @@ if (!init_stage){
 		file_text_close(_file);
 	}else{
 		
-		load_level();
+		if (do_load_level) load_level();
 		
 		instance_create_layer(limit, 80, "Instances", trazo_obj)
 		set_lawnmowers(mowers);
-	
+		
+		show_debug_message("stage: " + string(stage) + " daytime: " + string(daytime))
+		
 		//Set the background
 		var _bg = bgs_lvl[stage][daytime<array_length(bgs_lvl[stage]) ? daytime : (array_length(bgs_lvl[stage]) - 1)]
 		layer_background_sprite(layer_background_get_id(layer_get_id("BG_stage")), _bg)	

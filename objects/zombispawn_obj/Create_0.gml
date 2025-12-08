@@ -23,6 +23,7 @@ lvl=1//level number
 money=100//player gets money for passing the level
 snd=newplant_snd//reward song
 plantroom=level1_sl_rm//what room go to after passing the level
+update_progress = true;
 
 //---------------------------------------------
 wf=array_create(fn)//Huge wave of zombies alert (0=No alert, 1=Common; 2=Final wave)
@@ -48,16 +49,23 @@ horde_canfifty = true
 zom_amt = 0
 
 //Rows
+
+
 f1=166
 f2=267
 f3=370
 f4=472
 f5=578
-f6=578//choose(f1,f2,f3,f4,f5)
+f6=578
+
+rows_arr = [f1,f2,f3,f4,f5];
+
 lf=0 //last row?
+
 f_list = ds_list_create(); //last row list?
-ref_list = array(f1,f2,f3,f4,f5)
-a=array(f1,f2,f3,f4,f5)
+ref_list =[f1,f2,f3,f4,f5]
+
+a=[f1,f2,f3,f4,f5]
 
 
 //for bushes

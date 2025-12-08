@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"collision_rectangle_list",
+  "%Name":"write_progress",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"collision_rectangle_list",
+  "name":"write_progress",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
