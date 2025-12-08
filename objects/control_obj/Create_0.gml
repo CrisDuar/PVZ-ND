@@ -7,6 +7,7 @@ if (!layer_exists("Control")) layer_create(-9099, "Control")
 
 if (global.videoq > 0) instance_create_layer(x,y,"Control", draw_shadows_obj)
 save_struct = true;
+do_load_level = true;
 
 //Level type
 stage = 0;

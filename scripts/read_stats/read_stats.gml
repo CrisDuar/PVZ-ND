@@ -1,6 +1,6 @@
 /// @description read_stats(string)
 /// @param string
-function read_stats(argument0) {
+function read_stats(str, _r) {
 
 	/*
 	format:
@@ -17,13 +17,10 @@ function read_stats(argument0) {
 		_rechar = "Recharge:"
 	}
 
-	var str = argument0
 	var new_str = ""
 	var tmp_str = "";
-	
-	_r = "16";
 
-	str = string_insert(r, str, string_pos("recarga:", str) + string_length("recarga:"));
+	str = string_insert(string(_r), str, string_pos(_rechar, str) + string_length(_rechar));
 	
 	for(var i = 1; i <= string_length(str); i++){
     

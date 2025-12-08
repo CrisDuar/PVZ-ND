@@ -56,29 +56,26 @@ function prob_card(argument0) {
         
 	    break
 
-
 	    case 5://multijugador día y tarde
-    
-	    conveyor(false, menupea_obj, 100, 70)
-	    conveyor(false, menunut_obj, 70, 60)
-	    conveyor(false, potatommenu_obj, 60, 50)
-	    conveyor(false, menusnpea_obj, 50, 35)
-	    conveyor(false, menurepea_obj, 35, 25)
-	    conveyor(false, menubulb_obj, 25, 20)
-	    conveyor(false, garlicdroneslot_obj, 20, 5)
-	    conveyor(false, cherrymenu_obj, 5, 0)
-    
-	    spawn=false
-	    //zombies
-	    conveyor(true, zombiebasicslot_obj, 100, 90)
-	    conveyor(true, zomgravestoneslot_obj, 90, 60)
-	    conveyor(true, papshoslot_obj, 60, 55)
-	    conveyor(true, pertigaslot_obj, 55, 45)
-	    conveyor(true, conoslot_obj, 45, 35)
-	    conveyor(true, bucketslot_obj, 35, 25)
-	    conveyor(true, cajaslot_obj, 25, 20)
-	    conveyor(true, estatuaslot_obj, 20, 10)
-	    conveyor(true, flagslot_obj, 10, 0)
+		conveyor(false, plants_id.PEASHOOTER, -1, 100, 70)
+	    conveyor(false, plants_id.WALLNUT, -1, 70, 60)
+	    conveyor(false, plants_id.POTATOMINE, -1, 60, 50)
+	    conveyor(false, plants_id.SNOWPEA, -1, 50, 35)
+	    conveyor(false, plants_id.REPEATER, -1, 35, 25)
+	    conveyor(false, plants_id.BOWLINGBULB, -1, 25, 15)
+	    conveyor(false, plants_id.GARLICDRONE, -1, 15, 5)
+	    conveyor(false, plants_id.SINGLECHERRY, -1, 5, 0)
+		
+		spawn = false;
+		conveyor(true, zombies_id.ZOMBIE, -1, 100, 90)
+	    conveyor(true, zombies_id.OBST_ZOMGRAVE, -1, 90, 65)
+		conveyor(true, zombies_id.ZOMBIE_STATUE, -1, 65, 55)
+	    conveyor(true, zombies_id.ZOMBIE_PAPERTHROWER, -1, 55, 45)
+		conveyor(true, zombies_id.ZOMBIE_GARDENER, -1, 45, 40)
+	    conveyor(true, zombies_id.ZOMBIE_POLEVAULTER, -1, 40, 35)
+	    conveyor(true, zombies_id.ZOMBIE_CONEHEAD, -1, 35, 25)
+	    conveyor(true, zombies_id.ZOMBIE_BUCKETHEAD, -1, 25, 10)
+	    conveyor(true, zombies_id.ZOMBIE_FLAG, -1, 10, 0)
     
 	    break
 

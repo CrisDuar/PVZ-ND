@@ -1,5 +1,5 @@
 //if variable_global_get(cond)>lvl{
-if (global.progress[? cond] > lvl){
+if (read_progress(cond) > lvl){
     sprite_index=sprite
     if (control_obj.cansun==false and (sprite=menusun1_spr or sprite=menusetasolar1_spr or sprite=menubirasol1_spr or sprite=menugoldbloom1_spr))
     or (control_obj.multijugador==true and (sprite=menugoldbloom1_spr or sprite=menubirasol1_spr or sprite==oculartreeslot_spr))

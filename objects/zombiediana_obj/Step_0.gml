@@ -18,29 +18,17 @@ and global.gameover=false and global.nivelterminado=false{
     _depth = depth-1
     
     if global.dianas>=3{
-        if control_obj.multijugador=true or room==iplant_rm{
-        
-            instance_create(x-35,y-40,plantswin2p_obj)
-            
-        }else if room == izombie_rm{
-            _depth=-10000
+        if (control_obj.multijugador or room==iplant_rm){
 			
-        }else{
-			
+			zombispawn_obj.sprite = plantswin2p_spr;
+			global.zombieswin = false;
+        }
+		
+		if (room != izombie_rm){
 			with(zombispawn_obj){
-				
 				create_prize(other.x - 35, other.y - 50);
 			}
-			/*
-            with(instance_create(x-35,y-50,newprize_obj)){
-                sprite_index=nota_spr;
-                plantroom=nota_rm;
-                lvl=15
-                prizevar="niveles";
-                snd=newplant_snd
-                money=200
-            }*/
-        }
+		}
     }
     
     drop(x-40, y-30+30*water, diana_spr, 0, true, image_blend, y, _depth)
@@ -53,6 +41,7 @@ and global.gameover=false and global.nivelterminado=false{
         image_blend=other.image_blend;
         sprite_index=dianaded_spr
         depth=other.depth
+		
         if global.dianas>=3 depth=-10000
     }
 

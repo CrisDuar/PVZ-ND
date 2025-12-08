@@ -1,7 +1,7 @@
-if global.niveles<14{
-visible=false
+if global.progress[? "niveles"]<14{
+	visible=false
 }
 else{
-visible=true
+	visible=true
 }
 
