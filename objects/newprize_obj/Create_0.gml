@@ -20,3 +20,4 @@ money=0
 snd=newplant_snd
 plantroom=price_rm
 replay=false
+update_progress = true;

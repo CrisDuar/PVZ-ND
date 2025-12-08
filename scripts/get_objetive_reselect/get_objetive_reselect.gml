@@ -4,15 +4,10 @@
 /// @param x2
 /// @param y2
 /// @param num
-function get_objetive_reselect(argument0, argument1, argument2, argument3, argument4) {
-	x1=argument0
-	y1=argument1
-	x2=argument2
-	y2=argument3
-	numcheck=argument4
+function get_objetive_reselect(x1, y1, x2, y2, numcheck) {
 
 	var _list = ds_list_create();
-	var _num = collision_rectangle_list(x1,y1,x2,y2,select_obj,true,true,_list,false)
+	var _num = collision_rectangle_list(x1,y1,x2,y2,select_obj,true,true,_list,true)
 	objetive=0
 
 	if _num > 0{

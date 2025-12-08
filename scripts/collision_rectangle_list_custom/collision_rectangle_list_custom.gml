@@ -8,7 +8,7 @@
 /// @param notme
 /// @param list
 /// @param order
-function collision_rectangle_list(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8) {
+function collision_rectangle_list_custom(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8) {
 	//
 	//  Populates a given list data structure with the ids of instances 
 	//  colliding with a given rectangle. It optionally orders them by

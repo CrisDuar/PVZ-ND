@@ -1,12 +1,14 @@
 /// @description press_globalselect(reselect?)
 /// @param reselect?
-function press_globalselect(argument0) {
-	var resel = argument0//-1
-
+function press_globalselect(resel) {
+	
+	var _x1 = menuselectplan_obj.x - 300 + 300*type;
+	var _x2 = menuselectplan_obj.x + 626*type;
+	
 	if resel<0{
-	    get_objetive(menuselectplan_obj.x,640,xz*type,0);
+	    get_objetive(menuselectplan_obj.x,0,xz*type,640);
 	}else{
-	    get_objetive_reselect(menuselectplan_obj.x,640,xz*type,0,resel);
+	    get_objetive_reselect(menuselectplan_obj.x,0,xz*type,640,resel);
 	}
 
 	if (visible==true or resel>=0){

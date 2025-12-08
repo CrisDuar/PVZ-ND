@@ -8,3 +8,13 @@ if place_meeting(x,y,pastoinv_obj){
     }
 }
 
+if (control_obj.multijugador){
+	
+	if (vs_set == false){
+		
+		vs_set = true;
+		cost = vs_cost;
+		recargstart = vs_recargstart;
+		timer = vs_recharge;
+	}
+}

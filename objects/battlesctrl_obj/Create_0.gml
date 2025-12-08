@@ -12,98 +12,45 @@ switch(global.battle_diff){
     break
 }
 
-if global.battle_map==3{
-    //Rows
-    zombispawn_obj.f1=152
-    zombispawn_obj.f2=236
-    zombispawn_obj.f3=339
-    zombispawn_obj.f4=422
-    zombispawn_obj.f5=527
-    zombispawn_obj.f6=615
-    
-    instance_destroy(pastoinv_obj)
-    spawn_tiles(pastoinv_obj,"","",0.85,"",0,2,70,0.99)
-    spawn_tiles(pastoinv_obj,"","",0.85,true,0,2,252,0.99)
-    spawn_tiles(pastoinv_obj,"","",0.85,"",0,2,448,0.99)
+spawn = false;
+row = 5;
+//Pool
+if (global.battle_map==3) row = 6;
 
-    instance_create(1120,152,zombiediana_obj)
-    instance_create(1120,236,zombiediana_obj)
-    instance_create(1120,339,zombiediana_obj)
-    instance_create(1120,422,zombiediana_obj)
-    instance_create(1120,527,zombiediana_obj)
-    instance_create(1120,615,zombiediana_obj)
-    
-    if room==izombie_rm{
-        instance_create(220,116,brain_obj)
-        instance_create(220,196,brain_obj)
-        instance_create(220,292,brain_obj)
-        instance_create(220,381,brain_obj)
-        instance_create(220,492,brain_obj)
-        instance_create(220,576,brain_obj)
-       
-    }else{
-        instance_create(220,116,podadora_obj)
-        instance_create(220,196,podadora_obj)
-        instance_create(220,292,podadora3_obj)
-        instance_create(220,381,podadora3_obj)
-        instance_create(220,492,podadora_obj)
-        instance_create(220,576,podadora_obj)
-        
-        for(var i=0; i<3; i++){
-            for(var j=0; j<6; j++){
-                instance_create(instance_nearest(856+90*i,get_closest_row(176+100*j),pastoinv_obj).x,get_closest_row(176+90*j),spawnmultgraves_obj)
-            }
-        }
-    }
-    
+if room == izombie_rm{
+	control_obj.mowers = array_create(row, 3);
 }else{
-    instance_create(1120,168,zombiediana_obj)
-    instance_create(1120,272,zombiediana_obj)
-    instance_create(1120,368,zombiediana_obj)
-    instance_create(1120,480,zombiediana_obj)
-    instance_create(1120,591,zombiediana_obj)
-    if room==izombie_rm{
-        instance_create(226,127,brain_obj)
-        instance_create(226,224,brain_obj)
-        instance_create(226,326,brain_obj)
-        instance_create(226,434,brain_obj)
-        instance_create(226,539,brain_obj)
-    }else{
-        instance_create(226,127,podadora_obj)
-        instance_create(226,224,podadora_obj)
-        instance_create(226,326,podadora_obj)
-        instance_create(226,434,podadora_obj)
-        instance_create(226,539,podadora_obj)
-        
-        for(var i=0; i<3; i++){
-            for(var j=0; j<5; j++){
-                instance_create(instance_nearest(856+90*i,get_closest_row(176+100*j),pastoinv_obj).x,get_closest_row(176+100*j),spawnmultgraves_obj)
-            }
-        }
-    }
+	
+	if (global.battle_map==3){
+	
+		control_obj.mowers = [0,0,2,2,0,0];
+	}else{
+		
+		control_obj.mowers = array_create(row, 0);
+	}
 }
 
 switch(global.battle_map){
 default://dia
     if room==izombie_rm{
-        instance_create(1026,280,zomgrave_obj)
-        instance_create(1026,488,zomgrave_obj)
+        instance_create_layer(1026,280,"Instances",zomgrave_obj)
+        instance_create_layer(1026,488,"Instances",zomgrave_obj)
     }
-    __background_set( e__BG.Index, 0, _state3_bg )
+	
+	control_obj.stage = 2;
+	control_obj.daytime = 0;
 break
 
 case 1://tarde
-
+	control_obj.stage = 2;
+	control_obj.daytime = 1;
+	
     if room==izombie_rm{
-        if (global.battle_diff >= 1) control_obj.sunday = true
-        
-        instance_create(1026,172,zomgrave_obj)
-        instance_create(1026,368,zomgrave_obj)
-        instance_create(1026,592,zomgrave_obj)
-    }else{
-        control_obj.sunday = true
+        instance_create_layer(1026,172,"Instances",zomgrave_obj)
+        instance_create_layer(1026,368,"Instances",zomgrave_obj)
+        instance_create_layer(1026,592,"Instances",zomgrave_obj)
     }
-    __background_set( e__BG.Index, 0, afternoon_bg )
+    //__background_set( e__BG.Index, 0, afternoon_bg )
 break
 
 case 2://noche

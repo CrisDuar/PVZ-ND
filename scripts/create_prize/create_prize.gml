@@ -7,5 +7,6 @@ function create_prize(_x, _y){
 	    prizevar=other.prizevar;
 	    snd=other.snd
 	    money=other.money
+		update_progress = other.update_progress
     }
 }

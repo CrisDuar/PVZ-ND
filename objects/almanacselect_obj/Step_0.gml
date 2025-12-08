@@ -1,4 +1,4 @@
-if variable_global_get(cond)>lvl{
+if read_progress(cond)>lvl{
     sprite_index=sprite
 }else{
     sprite_index=locked

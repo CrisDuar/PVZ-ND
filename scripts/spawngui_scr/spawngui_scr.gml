@@ -8,7 +8,8 @@ function spawngui_scr() {
 	                break
 	            }
 	            with(instance_create_layer(((x-75)+142*i)+5,(y+78*j)+36,"GUI",globalselect_obj)){
-	                create_packet(other.p[n]);
+					
+	                create_packet(other.p[n], global.plants_packets);
 	                n++
 	            }
 	        }
