@@ -17,4 +17,3 @@ if global.user!="" and global.token!="" and os_is_network_connected(){
 }else{
     audio_play_sound(errorseed_snd,1,false);
 }
-

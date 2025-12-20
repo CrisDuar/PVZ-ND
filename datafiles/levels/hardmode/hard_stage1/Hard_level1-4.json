@@ -6,6 +6,8 @@
     472.0,
     578.0
   ],
+  "lvl_id": 3,
+  "lvl_type": 1,
   "sprite":"bolsa_monedas_spr",
   "lvl":4.0,
   "control":{

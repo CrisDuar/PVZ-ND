@@ -18,7 +18,11 @@ type=0
 
 xz=room_width
 ban=false
+
+//If is not possible to ban this unit
+cant_ban = false;
 lock = false;
 
-if room==izombie_rm{xz=0}
+init = false;
 
+if room==izombie_rm{xz=0}

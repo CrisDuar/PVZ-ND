@@ -10,7 +10,7 @@
   "compression":2,
   "compressionQuality":6,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.34829932,
   "exportDir":"",
   "name":"selectstone2_snd",
   "parent":{

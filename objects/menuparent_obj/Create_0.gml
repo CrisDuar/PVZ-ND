@@ -43,4 +43,6 @@ vs_recharge = 0;
 
 vs_set = false;
 
+tags = [];
+
 xmod = 1;

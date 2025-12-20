@@ -1,3 +1,7 @@
+if (bans >= 2){
+	xx -= 326
+}
+
 if global.playerReady=true{image_alpha-=0.2}
 if image_alpha<=0{instance_destroy()}
 

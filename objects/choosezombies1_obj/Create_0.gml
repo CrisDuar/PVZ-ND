@@ -7,3 +7,8 @@ y=(yy+78*ycount)+36
 
 if global.vs_mtouch[1]  instance_destroy();
 
+bans = 0;
+
+if (global.vsbanning){
+	xx -= 326	
+}

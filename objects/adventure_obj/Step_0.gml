@@ -13,12 +13,12 @@ if instance_exists(zombieanim_obj){
 
     if !audio_is_playing(gameover_snd) or timer>6*60{ 
         room_goto_next();
+		global.popup_open = 0
     }
 }else{
     timer = 0
 }
 
 if audio_is_playing(gameover_snd){
-    image_speed=0.32*dlt
+    image_speed=0.32
 }
-

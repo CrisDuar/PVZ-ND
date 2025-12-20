@@ -230,6 +230,21 @@ sprite = plantswin2p_spr;
 update_progress = false;
 plantroom = morewaysplay_rm;
 
+lvl_type = 3;
+lvl_id = 1;
+
+/*
+	type
+	-1: No achivements (custom levels)
+	0: Regular or adventure
+	1: Hard mode
+	2: Endless
+	3: Versus or battles
+	4: Vasebreaker
+	5: Minigames
+	
+*/
+
 //create_level(pt, 12, 0, false, generate_zombies(), a, lvl_diff)
 
 wf=array_create(fn)

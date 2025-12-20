@@ -1,3 +1,3 @@
-if line == "" and selected==true{line="|"}else{line=""}
-alarm[0]=room_speed*0.5
+if (line == "" and selected){line="|"}else{line=""}
+alarm[0]=60*0.5
 
