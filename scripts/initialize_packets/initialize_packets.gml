@@ -41,6 +41,10 @@ function initialize_packets(){
 		PUFFSHROOM
 	}
 	
+	enum packet_tags{
+		SD_DISABLED,
+		VS_NOBAN
+	}
 	global.plants_packets = [
 		/*DEFAULT VALUES
 		{
@@ -59,6 +63,7 @@ function initialize_packets(){
 			vs_recharge: 1,
 			vs_recargstart: true,
 			sd_recharge: true,
+			tags: [],
 			
 			// These two are for the script able_to_plant
 			place_type: 0, //To know where can be placed in the able_to_plant script (not used in the seedpacket object)
@@ -119,6 +124,8 @@ function initialize_packets(){
 			recargstart: false, //Does it recharge when the level starts?
 			
 			vs_recargstart: false, //Does it recharge when the level starts?
+			
+			tags: [packet_tags.SD_DISABLED, packet_tags.VS_NOBAN]
 		},
 		{ //Potato mine
 			packet_sprite: potatomslot1_spr,
@@ -368,6 +375,8 @@ function initialize_packets(){
 			cost: 0,
 			timer: 1, //Recharge time in seconds
 			recargstart: true, //Does it recharge when the level starts?
+			
+			tags: [],
 
 			vs_cost: 0,
 			vs_recharge: 1,
@@ -388,7 +397,9 @@ function initialize_packets(){
 			cost: 50,
 			timer: 7,
 			
-			recargstart: false
+			recargstart: false,
+			
+			tags: [packet_tags.SD_DISABLED, packet_tags.VS_NOBAN]
 		},
 		{ //Basic
 			packet_sprite: basiczombie1_spr,

@@ -14,6 +14,8 @@ function create_packet(_list, _data) {
 	
 	sprite = _data[packet].packet_sprite
 	
+	cant_ban = array_contains(struct_get_default(_data[packet], "tags", []), packet_tags.VS_NOBAN)
+	
 	if (control_obj.multijugador){
 		
 		//Use the Vs cost, if the key doesn't exist, use cost instead.

@@ -35,5 +35,5 @@
     "path":"sprites/selected2p_spr/selected2p_spr.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

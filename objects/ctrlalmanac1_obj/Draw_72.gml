@@ -33,24 +33,11 @@ if __view_get( e__VW.YView, 0 )>0{
         draw_text_ext_colour(xx-145, yy-3-scroll, string_hash_to_newline(txt),24,285,c,c,c,c,1)
         
     }
-    
-        //load_almanac
-        //draw_text(mouse_x, mouse_y, txt)
-        /*draw_set_font(soles_fnt);
-        if global.lang="es"{
-            draw_text_ext_colour(xx-165, yy-6-scroll,descrip_es[1],20,280,5196877,5196877,5196877,5196877,1)
-            limit=string_height_ext(descrip_es[global.almanacpage],15,285)-200
-        }
-        else{
-            draw_text_ext_colour(xx-165, yy-6-scroll,descrip_en[1],20,280,5196877,5196877,5196877,5196877,1)
-            limit=string_height_ext(descrip_en[global.almanacpage],15,285)-200
-        }*/
-    
 
     draw_sprite(grass1_spr,grass,xx,yy-130)
     part_system_drawit(part)
-    draw_sprite_ext(unitsprite,floor(subimage),xx,yy-90 + sine_yy,1,1,1,c_white,1)
+	
+	if (unitsprite != 0){
+		draw_sprite_ext(unitsprite,floor(subimage),xx,yy-90 + sine_yy,1,1,1,c_white,1)
+	}
 }
-
-/* */
-/*  */

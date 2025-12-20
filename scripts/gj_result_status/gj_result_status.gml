@@ -27,14 +27,12 @@ function gj_result_status() {
 	                ds_map_clear(gj_infomap)
 	                ds_map_add(gj_infomap,"0data",gj_returnstring)
 	                return true;
-	            break;
 				
 	            case "FAILURE":
 	                gj_returnstring=string_delete(gj_returnstring,1,9)
 	                ds_map_clear(gj_infomap)
 	                ds_map_add(gj_infomap,"error",gj_returnstring)
 	                return false;
-	            break;
 	        }
 	    }
 	    else

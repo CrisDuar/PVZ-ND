@@ -149,6 +149,8 @@ if global.vs_mtouch[type] = false or (connected){
             mt_move=false
             t_plant=0
         }
+		
+		if (global.vs_mtouch[0] + global.vs_mtouch[1] == 1) mt_move = true;
         
         multi_movement(mt_move, mouse_x, mouse_y)
     }

@@ -1,8 +1,6 @@
 /// @description multi_movement
-function multi_movement(argument0, argument1, argument2) {
-	_mov = argument0
-	_xx = argument1
-	_yy = argument2
+function multi_movement(_mov, _xx, _yy) {
+	
 	tile_x=(instance_nearest(x,y,pastoinv_obj)).x
 	tile_y=(instance_nearest(x,y,pastoinv_obj)).y
 
@@ -12,6 +10,14 @@ function multi_movement(argument0, argument1, argument2) {
 	        init_y = _yy;
 	        ref_x = x
 	        ref_y = y
+			
+			if (global.vs_mtouch[0] + global.vs_mtouch[1] == 1){
+				init_x = 0;
+		        init_y = 0;
+		        ref_x = 0
+		        ref_y = 0
+			}
+			
 	        init_upd = false;
 	    }
 

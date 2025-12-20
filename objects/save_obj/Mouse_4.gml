@@ -1,9 +1,4 @@
-if !instance_exists(spacebearlogo_obj)
-and !instance_exists(optionsmenu_obj)
-and !instance_exists(quitwindow_obj)
-and !instance_exists(cursorwindow_obj)
-and !instance_exists(deletewindow_obj)
-and !audio_is_playing(gameover_snd){
+if (global.popup_open == 0){
     save_game();
     audio_play_sound(aceptoption_snd,1,false);
     audio_play_sound(coffee_snd,1,false);   

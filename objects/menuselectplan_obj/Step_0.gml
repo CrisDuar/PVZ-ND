@@ -60,6 +60,7 @@ if vspeed>=0 and spawngui==false{
 		if (global.progress[? "niveles"] > 19) instance_create_layer(x+163,y+160,"GUI",shopshortcut_obj);
         
     }else if sprite_index=menuselectzomb_spr{//ZOMBIS
+		
         with(instance_create_layer(x-300,35,"GUI",menuzom_obj)){gui=true}
         instance_create_layer(x+300,35,"GUI",enemies_obj)
         spawnguizom_scr(0);
@@ -79,15 +80,16 @@ if vspeed>=0 and spawngui==false{
         spawngui_scr(); 
         spawnguizom_scr(326);
         instance_create_layer(x,y+262,"GUI",letsgo_obj);
-        instance_create_layer(x,y,"Control",chooseseeds1_obj); 
-        instance_create_layer(x,y,"Control",choosezombies1_obj)
+        instance_create_layer(x,y,"Control",pickunits_obj); 
+        with(instance_create_layer(x,y,"Control",pickunits_obj)){type = 1}
         
-        if global.vs_mtouch[0] = true{
+		
+        if (global.vs_mtouch[(unit_ban == false) ? 0 : 1]){
             //instance_create(x,y+240,buttonpages_obj); with(instance_create(x,y+240,buttonpages_obj)){image_xscale=-1}
             instance_create_layer(x+100,y-36,"GUI",buttonpages_obj); with(instance_create_layer(x-100,y-36,"GUI",buttonpages_obj)){image_xscale=-1}
         }
         
-        if global.vs_mtouch[1] = true{
+        if (global.vs_mtouch[(unit_ban == false) ? 1 : 0]){
             //instance_create(x+326,y+240,buttonzompages_obj); with(instance_create(x+326,y+240,buttonzompages_obj)){image_xscale=-1}
             instance_create_layer(x+100+326,y-36,"GUI",buttonzompages_obj); with(instance_create_layer(x-100+326,y-36,"GUI",buttonzompages_obj)){image_xscale=-1}
         }
@@ -148,21 +150,44 @@ if vspeed>=30{
 
 if vspeed=0{
     if (unitsprite==plantorcha1_spr or unitsprite==peadis2_spr){
+		
         part_particles_create(part, x-random_range(-10,12), y-140, p1, irandom_range(1,2));
         yy=0; up=0
+		
     }else if unitsprite==ghostpepper1_spr 
     or unitsprite==rotinabo1_spr
     or unitsprite==nenufar_spr 
     or unitsprite==garlicdrone_spr 
     or unitsprite==garlicds_spr 
     or unitsprite==tanglekelp_spr{
+		
         if up<360 up+=2 else up=0
         yy = 5*sin(degtorad(up))
     }else{
+		
         yy=0; up=0
     }
 }
 //pages for plants
+if (sprite_index != menuselectmult_spr){
+	
+	var _pag = pag;
+	var _maxpag = maxpag;
+	
+	if (sprite_index==menuselectzomb_spr){
+		_pag = zompag;
+		_maxpag = zommaxpag;	
+	}
+	
+	if (_pag == 5 + (2 * num_pag) and _pag < _maxpag){
+		num_pag++;	
+		
+	}else if (_pag == 1 + (2 * num_pag) and _pag > 1){
+		
+		num_pag--;
+	}
+}
+/*
 if sprite_index==menuselectplant_spr{
     if pag >= hp5 and hp5<maxpag{
         hp5=pag+2
@@ -202,6 +227,18 @@ else if sprite_index==menuselectzomb_spr{
         hz5=hz1+4
     }
 }
-
-/* */
-/*  */
+*/
+//Banning;
+if (bans >= 4 and unit_ban){
+	unit_ban = false;
+	
+	if global.vs_mtouch[0]{
+		with(buttonzompages_obj){instance_destroy()}
+	    instance_create_layer(x+100,y-36,"GUI",buttonpages_obj); with(instance_create_layer(x-100,y-36,"GUI",buttonpages_obj)){image_xscale=-1}
+	}
+        
+	if global.vs_mtouch[1]{
+		with(buttonpages_obj){instance_destroy()}
+	    instance_create_layer(x+100+326,y-36,"GUI",buttonzompages_obj); with(instance_create_layer(x-100+326,y-36,"GUI",buttonzompages_obj)){image_xscale=-1}
+	}
+}

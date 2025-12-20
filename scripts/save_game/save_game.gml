@@ -1,14 +1,19 @@
 /// @description save_game()
 function save_game() {
 	controlmenu_obj.save_lph=3*60
-
-	if file_exists("savedata.ini"){
-	    if file_exists("savedata_backup.ini") file_delete("savedata_backup.ini")
-	    file_rename("savedata.ini", "savedata_backup.ini")
+	
+	var _rt = "";
+	
+	if (ds_map_size(global.acc_ls) > 0) _rt = "ac" + string(global.acc_id) + "/";
+	
+	if file_exists(_rt + "savedata.ini"){
+	    if file_exists(_rt + "savedata_backup.ini") file_delete(_rt + "savedata_backup.ini")
+	    file_rename(_rt + "savedata.ini", _rt + "savedata_backup.ini")
 	}
-
-	ini_open("savedata.ini")
-
+	save_accounts();
+	
+	ini_open(_rt + "savedata.ini")
+	
 	save_achievements();
 	
 	ini_write_real("Game_config","save_version", 1);

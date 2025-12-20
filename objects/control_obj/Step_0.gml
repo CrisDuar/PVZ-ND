@@ -23,7 +23,8 @@ if (global.iniciogame and !start_sun and !instance_exists(ctrlcinta1_obj)){
 	alarm[2]=60*30;
 }
 
-if audio_is_playing(newplant_snd){terminado=true}
+if audio_is_playing(newplant_snd)
+or audio_is_playing(finalprize_snd){terminado=true}
 
 if global.gameover=true or terminado=true{
 	seleccionado=0
@@ -81,17 +82,11 @@ if !instance_exists(camaractrl_obj){
 		var _vx = camera_get_view_x(view_camera[0]);
 		var _vy = camera_get_view_x(view_camera[0]);
 		
-		 //sets the view to a random x position
 		camera_set_view_pos(view_camera[0], vx+random_range(-4,4), vy)
-		
-		//__view_set( e__VW.XView, 0, vx+random_range(-4,4) )
-		//__view_set( e__VW.YView, 0, vy+random_range(-0.5,0.5) ) //set's the view to a random y position
 	}
 
 	if (shake == 0){
 		camera_set_view_pos(view_camera[0], vx, vy)
-	//__view_set( e__VW.XView, 0, vx )
-	//__view_set( e__VW.YView, 0, vy )
 	}
 }
 
