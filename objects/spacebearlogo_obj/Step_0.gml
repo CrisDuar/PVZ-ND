@@ -8,5 +8,3 @@ and splalpha<1
 
 if back==true backalpha-=0.05
 if backalpha<=0 instance_destroy();
-
-

@@ -22,6 +22,7 @@ function create_packet_ingame(_x, _y, _type, _unit_id, _costume){
 		select = _unit_id + 1;
 		xx = struct_get_default(_unit, "xx", 0);
 		yy = struct_get_default(_unit, "yy", 0);
+		tags = struct_get_default(_unit, "tags", []);
 		
 		if (_type == 0){
 			plant = _unit.plant; //Plant object

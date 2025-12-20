@@ -41,7 +41,9 @@ for(var i = 0; i < global.num_logros; i++){
     var _ct1 = make_colour_rgb(135, 83, 39);
     
     if (_type != 3){
-    
+		
+		draw_set_halign(fa_left)
+		
         if (_type == 2 and _unlock == false){
         
             draw_sprite(logros_marcos_spr, 3, _x + (_w * _col) - scroll, _y + (_h * _row))

@@ -16,6 +16,20 @@ lvl_es="Nivel"
 lvl_en="Level"
 lvl_zh="关卡"
 
+lvl_type = -1;
+lvl_id = -1;
+
+/*
+	type
+	-1: No achivements (custom levels)
+	0: Regular or adventure
+	1: Hard mode
+	2: Endless
+	3: Versus or battles
+	4: Vasebreaker
+	5: Minigames
+	
+*/
 //To edit prize
 sprite=menusun1_spr//prize sprite
 prizevar="niveles"//prize variable to modify

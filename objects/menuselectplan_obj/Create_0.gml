@@ -13,6 +13,8 @@ part_type_speed(p1,0.25,2,0,0);
 part_type_life(p1,20,35);
 part_system_automatic_draw(part,false)
 
+unit_ban = false;
+bans = 0;
 depth = -997
 image_speed=0
 vspeed=-15
@@ -24,12 +26,17 @@ mp=0
 alpg=0
 slots=5
 global.playerReady=false
+
+
+//Pages
+pag=0
+maxpag=0
 zompag=0
 zommaxpag=0
 
-pag=0
-maxpag=0
-
+//This is for the numbers in the CYS
+num_pag = 0;
+/*
 hp1=0
 hp2=1
 hp3=2
@@ -41,7 +48,7 @@ hz2=1
 hz3=2
 hz4=3
 hz5=4
-
+*/
 grass=0
 unitcost=""
 unitname_es=""

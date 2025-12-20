@@ -35,26 +35,55 @@ if (timer > 0){
 
 ///Unlocking achievements
 
+update_logros = false;
+
+/*
+	type
+	-1: No achivements (custom levels)
+	0: Regular or adventure
+	1: Hard mode
+	2: Endless
+	3: Versus or battles
+	4: Vasebreaker
+	5: Minigames
+*/
+
 //controlmenu_obj
+var _lvl_type = -1;
+var _lvl_id = -1;
+
+if (instance_exists(zombispawn_obj)){
+	_lvl_type = lvl_type;
+	_lvl_id = lvl_id;
+}
+
+var _check = true;
+
+if (_lvl_type == 0){
+	if (_lvl_id < 6) _check = false;
+}
+
+/*
 if (room != multiplayer1_rm 
 and room != nivel1_rm 
 and room != nivel2_rm
 and room != nivel3_rm 
 and room != nivel4_rm_
 and room != nivel6_rm
-and update_logros){
+and update_logros)*/
+if (room != multiplayer1_rm and _check and update_logros){
     if (check_logros <= 0){
         //More ways to play available!
-        if (global.niveles > 14) get_achievement(0);
+        if (global.progress[? "niveles"] > 14) get_achievement(0);
         
         //Hard mode and battles unlocked!
-        if (global.niveles > 15) get_achievement(1);
+        if (global.progress[? "niveles"] > 15) get_achievement(1);
         
         //Get achievements!
-        if (global.niveles > 6) get_achievement(30);
+        if (global.progress[? "niveles"] > 6) get_achievement(30);
         
         
-        if (global.niveles > 30){
+        if (global.progress[? "niveles"] > 30){
             //Survival endless unlocked!
             get_achievement(2);
             
@@ -63,7 +92,7 @@ and update_logros){
         }
         
         //Vasebreaker unlocked!
-        if (global.niveles > 67) get_achievement(3);
+        if (global.progress[? "niveles"] > 67) get_achievement(3);
         
         //Strike!
         if (strike) get_achievement(4);
@@ -91,6 +120,15 @@ and update_logros){
             if (_occupied == false and global.nivelterminado == false) get_achievement(5);
         
             //Pool's closed
+			if (control_obj.stage == 3 
+			and global.nivelterminado
+			and _lvl_id != 48
+			and _lvl_id != 39
+			and _lvl_type == 0
+			and pool_closed){
+				get_achievement(8);
+			}
+			/*
             if (__background_get( e__BG.Index, 0 ) == poolday_bg
             or __background_get( e__BG.Index, 0 ) == poolsunset_bg
             or __background_get( e__BG.Index, 0 ) == poolnight_bg) 
@@ -102,12 +140,24 @@ and update_logros){
             and pool_closed{
                 get_achievement(8);
             }
-            
+            */
+			
             //Hydrophobic
             if (hydrophobic and global.nivelterminado and control_obj.rain) get_achievement(12);
             
             //Healthy garden
-            if (healthy_garden and healthy_garden_start and global.nivelterminado and levelpassed and room!=nivel40_rm and room!=nivel24_rm) get_achievement(13);
+            if (healthy_garden
+			and healthy_garden_start
+			and global.nivelterminado
+			and levelpassed
+			and _lvl_id != 23
+			and _lvl_id != 39
+			and _lvl_type == 0)
+			//and room!=nivel40_rm)
+			//and room!=nivel24_rm)
+			{
+				get_achievement(13);
+			}
             
             //Sunny day
             if (!instance_exists(ctrlcinta1_obj) and control_obj.soles >= 9975) get_achievement(14);
@@ -115,10 +165,11 @@ and update_logros){
             //New Home
             if (instance_exists(signclaire_obj) and global.nivelterminado) get_achievement(16);
             
-            if (string_delete(room_get_name(room), 10, 6) == "levelhard" and global.nivelterminado){
+			///HARDMODE ACHIEVEMENTS
+            if (_lvl_type == 1 and global.nivelterminado){
         
                 //Long enough
-                if (__background_get( e__BG.Index, 1 ) == poolnight_bg and long_enough) get_achievement(17);
+                if (control_obj.stage == 3 and long_enough) get_achievement(17);
                 
                 if (!instance_exists(ctrlcinta1_obj)){
                     //No fungus among us
@@ -140,10 +191,10 @@ and update_logros){
         
         
         //Sunken brains
-        if (global.niveles > 51) get_achievement(10);
+        if (global.progress[? "niveles"] > 51) get_achievement(10);
         
         //Let there be light
-        if (global.niveles > 73) get_achievement(11);
+        if (global.progress[? "niveles"] > 73) get_achievement(11);
         
         ////and global.nivelterminado=false
     
@@ -176,7 +227,7 @@ and update_logros){
         if (ruby) get_achievement(26);
         
         //Breaking Vase
-        if (global.vasebreaker >= 6) get_achievement(27);
+        if (global.progress[? "vasebreaker"] >= 6) get_achievement(27);
         
         //Undead Mastermind
         if (zmind) get_achievement(28);

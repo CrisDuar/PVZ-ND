@@ -1,4 +1,1 @@
-/// @description *time=timeobjetive
-
-/* */
-/*  */
+time = timeobjetive
