@@ -267,7 +267,7 @@ alarm[0]=60*3.5
 alarm[1]=60*1.2
 alarm[2]=60*4
 
-txt=spl[irandom_range(0,array_length_1d(spl)-1)]
+txt=spl[irandom_range(0,array_length(spl)-1)]
 
 if current_day==23 and current_month==1{txt="Happy anniversary, PVZ ND!"}
 if current_day==27 and current_month==9{txt="Happy birthday, Cris!"}
@@ -275,4 +275,6 @@ if current_day==1 and current_month==4{txt="HAPPY APRIL FOOLS"}
 if current_day==31 and current_month==10{txt="Spooky scary skeletons#Happy Halloween!"}
 if current_day==25 and current_month==12{txt="Merry X-mas!"}
 if current_day==1 and current_month==1{txt="Happy new year!"}
+
+global.popup_open++;
 

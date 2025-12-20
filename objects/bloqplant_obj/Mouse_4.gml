@@ -1,1 +1,1 @@
-action_sound(errorseed_snd, 0);
+audio_play_sound(errorseed_snd, 0, false);

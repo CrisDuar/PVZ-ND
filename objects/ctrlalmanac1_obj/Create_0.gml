@@ -20,7 +20,7 @@ unitname_en=""
 
 descrip_es=array("","")
 descrip_en=array("","")
-unitsprite=0
+unitsprite=0;
 
 surf=-1
 xx=916
@@ -39,12 +39,5 @@ drag=0
 limit=0
 draggin=false
 global.almanacpage=0
-/*
-load_almanac
-sep=290
-w=15
-cutoff=0
-timer=0
 
-/* */
-/*  */
+cam = view_camera[0];

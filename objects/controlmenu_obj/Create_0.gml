@@ -36,6 +36,10 @@ global.settings_sec = 0
 global.hours = 0
 global.game_time = 0
 
+//GUI
+//So you can't interact with background buttons if there's a popup open
+global.popup_open = 0;
+
 //time_played = 0
 //time_crrnt = get_timer()/3600000000
 
@@ -154,6 +158,7 @@ global.vstouch=false
 global.vsgamemode=1
 global.vsmap=0
 global.vsmaxmap=0
+global.vsbanning = true;
 
 global.vs_log = true
 global.vs_log_plants = ""
@@ -191,6 +196,11 @@ global.rewards = 0;
 global.notes = 0;
 
 //saving and loading data
+global.acc_ls = ds_map_create();
+global.acc_id = -1;
+global.acc_name = "";
+load_game_data();
+/*
 if file_exists("savedata.nd") and !file_exists("savedata.ini"){
     load_old_data();
 }
@@ -202,7 +212,7 @@ if file_exists("savedata.ini"){
         load_game("savedata_backup.ini");
         save_game();
     }
-}
+}*/
 splash=false
 
 global.cursorcolor = clamp(global.cursorcolor,0,1);

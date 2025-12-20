@@ -48,7 +48,4 @@ function zombiedrop() {
 	        {costo=choose(15,25,50) ; scale=1 ; hspeed=-1}
 	    }
 	}
-
-
-
 }

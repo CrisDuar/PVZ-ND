@@ -11,8 +11,9 @@ if (global.lang = "es"){
     _lock = "Beat level 6 to#get achievements";
 }
 
+var _progress = global.progress[? "niveles"]
 
-if (global.niveles > 6){
+if (_progress > 6){
     _txt = string(global.unlock_logros) + "/" + string(global.real_logros);
 }else{
     _txt = _lock;
@@ -22,7 +23,7 @@ if (global.niveles > 6){
 draw_sprite_ext(logrosmenu1_spr, hover + _lang, x, y+10, 1, 1, 0, _c, 1)
 draw_sprite_ext(logrosmenu2_spr, 0, x, y, size, size, 0, _c, 1)
 
-if (global.niveles <= 6) draw_sprite(candado_spr, 0, x - 5, y-45)
+if (_progress <= 6) draw_sprite(candado_spr, 0, x - 5, y-45)
 
 draw_set_font(levelname_fnt)
 draw_set_halign(fa_center)

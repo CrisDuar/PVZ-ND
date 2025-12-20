@@ -1,14 +1,17 @@
-if global.vssudden==true{//IF SUDDEN DEATH IS ENABLED
-    if global.nivelterminado=false and global.iniciogame=true and global.gameover=false{
+if (global.vssudden){//IF SUDDEN DEATH IS ENABLED
+    if (!global.nivelterminado and global.iniciogame and !global.gameover){
         if time<timeobjetive{
             time++
         }else{
-            if suddendeath=false{
+            if (!suddendeath){
+				
+				suddendeath=true
                 global.hordafinal=true
                 with(instance_create(x,y,hugeofzombies_obj)){sprite_index=sudden_spr}
                 audio_play_sound(hugeaproaching_snd,1,false)
-                suddendeath=true
                 
+                /*
+				
                 if instance_exists(menusun_obj){with(menusun_obj){instance_create(x,y,bloqplant_obj); instance_destroy()}}
                 if instance_exists(menubirasol_obj){with(menubirasol_obj){instance_create(x,y,bloqplant_obj); instance_destroy()}}
                 if instance_exists(menugoldbloom_obj){with(menugoldbloom_obj){instance_create(x,y,bloqplant_obj); instance_destroy()}}
@@ -16,8 +19,14 @@ if global.vssudden==true{//IF SUDDEN DEATH IS ENABLED
                 if instance_exists(menusetasolar_obj){with(menusetasolar_obj){instance_create(x,y,bloqplant_obj); instance_destroy()}}
                 if instance_exists(menugravebuster_obj){with(menugravebuster_obj){instance_create(x,y,bloqplant_obj); instance_destroy()}}
                 if instance_exists(zompanelslot_obj){with(zompanelslot_obj){instance_create(x,y,bloqplant_obj); instance_destroy()}}
-                
+                */
                 with(menuparent_obj){
+					
+					if (array_contains(tags, packet_tags.SD_DISABLED)){
+						instance_create_layer(x, y, "GUI",bloqplant_obj);
+						instance_destroy();
+					}
+					
                     if sd_rechar{
                         t_mult=3
                     }

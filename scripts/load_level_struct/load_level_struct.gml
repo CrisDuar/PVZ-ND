@@ -63,7 +63,7 @@ function load_level_struct(_struct){
 	var _zombie_prev = ds_map_create();
 	var _z_total = 0;
 	
-	with(zombispawn_obj){
+	with(zombispawn_obj){	
 		horde_prcnt = _struct.horde_prcnt
 		surprise_enabled = _struct.surprise_enabled;
 		pt = _struct.pt;
@@ -79,6 +79,8 @@ function load_level_struct(_struct){
 		lvl_es = _struct.lvl_es;
 		lvl_zh = _struct.lvl_zh;
 		
+		lvl_id = struct_get_default(_struct, "lvl_id", string(real(string_digits(lvl_en)) - 1));
+		lvl_type = struct_get_default(_struct, "lvl_type", lvl_type);
 		
 		//Prize
 		sprite = asset_get_index(_struct.sprite);
