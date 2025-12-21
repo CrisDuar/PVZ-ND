@@ -195,6 +195,9 @@ global.costume_unlock = 0;
 global.rewards = 0;
 global.notes = 0;
 
+//Is loading a custom level?
+global.is_customlvl = false;
+
 //saving and loading data
 global.acc_ls = ds_map_create();
 global.acc_id = -1;

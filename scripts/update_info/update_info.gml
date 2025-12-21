@@ -11,7 +11,7 @@ function update_info() {
 	var p_id = menuselectplan_obj.plant;
 	var p_data = global.plants_packets[p_id]
 	
-	if (variable_struct_exists(p_data, "costume")){
+	if (struct_exists(p_data, "costume")){
 		
 		//costume data
 		var pc_data = p_data.costume;

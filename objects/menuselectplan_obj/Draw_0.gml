@@ -1,4 +1,4 @@
-draw_text(mouse_x, mouse_y, bans)
+//draw_text(mouse_x, mouse_y, bans)
 
 draw_sprite(grass1_spr,grass,x,y-130)
 if sprite_index==menuselectmult_spr{
@@ -57,7 +57,7 @@ if (sprite_index != menuselectmult_spr){
 		}
 		
 		draw_set_font(pages_fnt);
-		draw_rectangle( x - 80 + (40*i) - 15,y-55, x - 80 + (40*i) + 15, y-20, true)
+		//draw_rectangle( x - 80 + (40*i) - 15,y-55, x - 80 + (40*i) + 15, y-20, true)
 		draw_text_colour(x - 80 + (40*i),y-35, _crt_pag + 1, _c, _c, _c, _c,opacidad)
 	}
 }

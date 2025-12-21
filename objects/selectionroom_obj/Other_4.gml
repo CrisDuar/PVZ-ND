@@ -50,5 +50,9 @@ switch(room){
     case almanacindex_rm:
     global.selectionRoom=almanacindex_rm
     break
+	
+	case customlevels_rm:
+    global.selectionRoom=customlevels_rm
+    break
 }
 

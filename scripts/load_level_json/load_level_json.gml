@@ -1,5 +1,5 @@
-function load_level_json(_file_name){
-	var _ruta = "levels/" + global.load_route + "/" + _file_name + ".json"
+function load_level_json(_file_name, _dir){
+	var _ruta = _dir + _file_name + ".json"
 	var _txt = "";
 
 	var _file = file_text_open_read(_ruta);

@@ -120,17 +120,9 @@ for (var i = 0; i < array_length(global.plants_packets); i++){
 	}
 }
 
-//Find zombie's index in the almanac.
 _pnum = 0;
 _index = 0;
-/*
-for (var i = 50; i < ds_grid_height(global.almanac_data); i++){ 
-	if (global.almanac_data[# 0, i] == "-2"){
-	    _index = i + 1;
- 
-	    break;
-	}
-}*/
+
 //Load zombies
 for (var i = 0; i < array_length(global.zombies_packets); i++){
 	

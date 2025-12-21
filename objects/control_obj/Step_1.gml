@@ -11,7 +11,14 @@ if (!init_stage){
 		file_text_close(_file);
 	}else{
 		
-		if (do_load_level) load_level();
+		if (do_load_level){
+			
+			if (global.is_customlvl){
+				load_custom_level(global.load_level);
+			}else{
+				load_level();	
+			}
+		}
 		
 		instance_create_layer(limit, 80, "Instances", trazo_obj)
 		set_lawnmowers(mowers);
