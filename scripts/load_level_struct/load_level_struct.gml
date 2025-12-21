@@ -84,11 +84,11 @@ function load_level_struct(_struct){
 		
 		//Prize
 		sprite = asset_get_index(_struct.sprite);
-		prizevar = _struct.prizevar;
-		lvl = _struct.lvl;
-		money = _struct.money;
-		snd = asset_get_index(_struct.money);
-		plantroom = asset_get_index(_struct.plantroom);
+		if (struct_exists(_struct, "prizevar")) prizevar = _struct.prizevar;
+		if (struct_exists(_struct, "lvl")) lvl = _struct.lvl;
+		if (struct_exists(_struct, "money")) money = _struct.money;
+		snd = asset_get_index(_struct.snd);
+		if (struct_exists(_struct, "plantroom")) plantroom = asset_get_index(_struct.plantroom);
 		
 		wf=array_create(fn);
 		

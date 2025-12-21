@@ -53,8 +53,8 @@ var _lvl_type = -1;
 var _lvl_id = -1;
 
 if (instance_exists(zombispawn_obj)){
-	_lvl_type = lvl_type;
-	_lvl_id = lvl_id;
+	_lvl_type = zombispawn_obj.lvl_type;
+	_lvl_id = zombispawn_obj.lvl_id;
 }
 
 var _check = true;
