@@ -2,7 +2,7 @@
 draw_set_font(f3_fnt)
 draw_set_valign(fa_top)
 draw_set_halign(fa_left)
-draw_text(x, 50,"ID: " + string(lvl_id) + " | TYPE: "+ string(lvl_type))
+//draw_text(x, 50,"ID: " + string(lvl_id) + " | TYPE: "+ string(lvl_type))
 //draw_text(x,50+20*0,"Current horde:" + string(h))
 //draw_text(x,50+20*1,"Total flags:" + string(fn))
 //draw_text(x,50+20*2,"Grace time:" + string(pt))
