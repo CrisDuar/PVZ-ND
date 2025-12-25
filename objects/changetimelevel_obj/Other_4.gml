@@ -6,7 +6,7 @@
 //key=virtual_key_add(x,y,133,66,vk_delete)
 switch(room){
     case level1_sl_rm://Día
-        if global.niveles<=15{
+        if global.progress[? "niveles"] <=15{
             image_alpha=0
         }else{
             image_alpha=1
@@ -15,7 +15,7 @@ switch(room){
     break
     
     case level2_sl_rm://Noche
-        if global.niveles<=30{
+        if global.progress[? "niveles"] <=30{
             image_index=0
         }else{
             image_index=2
@@ -23,7 +23,7 @@ switch(room){
     break
     
     case level3_sl_rm://Piscina
-        if global.niveles<=51{
+        if global.progress[? "niveles"] <=51{
             image_index=0
         }else{
             image_index=3
@@ -32,7 +32,7 @@ switch(room){
     
     case level4_sl_rm://Clima
         image_index=0
-        /*if global.niveles<=[last level of weather]{
+        /*if global.progress[? "niveles"]<=[last level of weather]{
             image_index=0
         }else{
             image_index=4
