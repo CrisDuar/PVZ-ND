@@ -12,8 +12,8 @@
   "control":{
     "windy":false,
     "rain":false,
-    "stage":0.0,
-    "daytime":0.0,
+    "stage":2.0,
+    "daytime":2.0,
     "mowers":[
       0.0,
       0.0,
@@ -39,11 +39,11 @@
   "surprise_enabled":true,
   "infinite":false,
   "infinite_loop":3.0,
-  "sprite":"menugravebuster1_spr",
+  "sprite":"newshop_spr",
   "progressbar":true,
   "onlyname":false,
-  "lvl_en":"Level 18",
-  "lvl_es":"Nivel 18",
+  "lvl_en":"Level 19",
+  "lvl_es":"Nivel 19",
   "lvl_zh":"关卡",
   "arr_row":[
     [
@@ -72,39 +72,80 @@
     [
       {
         "row":0.0,
-        "num":2.0,
-        "typ":"z_zombie_obj"
+        "num":1.0,
+        "typ":"z_imp_obj"
       }
     ],
     [
       {
         "row":0.0,
         "num":1.0,
-        "typ":"z_zombie_obj"
-      },
-      {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_headbox_obj"
+        "typ":"z_conehead_obj"
       }
     ],
     [
-      {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_newspaper_obj"
-      }
-    ],
-    [
-      {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_zombie_obj"
-      },
       {
         "row":0.0,
         "num":1.0,
         "typ":"z_statue_obj"
+      },
+      {
+        "row":0.0,
+        "num":1.0,
+        "typ":"z_zombie_obj"
+      }
+    ],
+    [
+      {
+        "row":0.0,
+        "num":1.0,
+        "typ":"z_zombie_obj"
+      }
+    ],
+    [
+      {
+        "row":0.0,
+        "num":1.0,
+        "typ":"z_torch_obj"
+      }
+    ],
+    [
+      {
+        "row":0.0,
+        "num":1.0,
+        "typ":"z_conehead_obj"
+      }
+    ],
+    [
+      {
+        "row":0.0,
+        "num":1.0,
+        "typ":"z_screendoor_obj"
+      },
+      {
+        "row":0.0,
+        "num":1.0,
+        "typ":"z_flag_obj"
+      },
+      {
+        "row":0.0,
+        "num":3.0,
+        "typ":"z_statue_obj"
+      },
+      {
+        "row":0.0,
+        "num":2.0,
+        "typ":"z_conehead_obj"
+      },
+      {
+        "row":0.0,
+        "num":2.0,
+        "typ":"z_zombie_obj"
+      },
+      {
+        "row":0.0,
+        "num":1.0,
+        "typ":"z_torch_obj"
       }
     ],
     [
@@ -112,18 +153,18 @@
         "row":0.0,
         "num":1.0,
         "typ":"z_newspaper_obj"
-      },
-      {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_headbox_obj"
       }
     ],
     [
       {
         "row":0.0,
         "num":1.0,
-        "typ":"z_headbox_obj"
+        "typ":"z_torch_obj"
+      },
+      {
+        "row":0.0,
+        "num":1.0,
+        "typ":"z_newspaper_obj"
       },
       {
         "row":0.0,
@@ -134,7 +175,48 @@
     [
       {
         "row":0.0,
+        "num":2.0,
+        "typ":"z_statue_obj"
+      },
+      {
+        "row":0.0,
         "num":1.0,
+        "typ":"z_screendoor_obj"
+      },
+      {
+        "row":0.0,
+        "num":1.0,
+        "typ":"z_conehead_obj"
+      }
+    ],
+    [
+      {
+        "row":0.0,
+        "num":2.0,
+        "typ":"z_imp_obj"
+      },
+      {
+        "row":0.0,
+        "num":2.0,
+        "typ":"z_newspaper_obj"
+      }
+    ],
+    [
+      {
+        "row":0.0,
+        "num":3.0,
+        "typ":"z_zombie_obj"
+      },
+      {
+        "row":0.0,
+        "num":2.0,
+        "typ":"z_conehead_obj"
+      }
+    ],
+    [
+      {
+        "row":0.0,
+        "num":2.0,
         "typ":"z_newspaper_obj"
       },
       {
@@ -150,113 +232,21 @@
       {
         "row":0.0,
         "num":2.0,
-        "typ":"z_headbox_obj"
-      },
-      {
-        "row":0.0,
-        "num":4.0,
-        "typ":"z_zombie_obj"
-      }
-    ],
-    [
-      {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_zombie_obj"
-      }
-    ],
-    [
-      {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_polevaulter_obj"
+        "typ":"z_conehead_obj"
       },
       {
         "row":0.0,
         "num":2.0,
-        "typ":"z_zombie_obj"
-      }
-    ],
-    [
-      {
-        "row":0.0,
-        "num":3.0,
-        "typ":"z_statue_obj"
-      },
-      {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_newspaper_obj"
-      },
-      {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_headbox_obj"
-      }
-    ],
-    [
-      {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_polevaulter_obj"
-      },
-      {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_newspaper_obj"
-      },
-      {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_zombie_obj"
-      }
-    ],
-    [
-      {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_headbox_obj"
-      },
-      {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_polevaulter_obj"
-      }
-    ],
-    [
-      {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_headbox_obj"
-      },
-      {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_flag_obj"
-      },
-      {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_polevaulter_obj"
+        "typ":"z_torch_obj"
       },
       {
         "row":0.0,
         "num":3.0,
-        "typ":"z_statue_obj"
-      },
-      {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_newspaper_obj"
-      },
-      {
-        "row":0.0,
-        "num":3.0,
-        "typ":"z_zombie_obj"
+        "typ":"z_screendoor_obj"
       }
     ]
   ],
-  "lvl":19.0,
+  "lvl":20.0,
   "rw":[
     166.0,
     267.0,
@@ -269,6 +259,6 @@
   "prizevar":"niveles",
   "snd":"newplant_snd",
   "money":100.0,
-  "pt":20.0,
+  "pt":12.0,
   "fn":15.0
 }
