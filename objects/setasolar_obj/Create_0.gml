@@ -10,7 +10,7 @@ spr_sleep=setasolarsleep_spr
 //spr_idle=setasolar2_spr
 //spr_prod=setasolarsun2_spr
 
-if control_obj.night=false sleep=true;
+if control_obj.daytime != 2 sleep=true;
 
 t_grow=60*120
 d_grow=false

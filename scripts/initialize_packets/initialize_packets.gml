@@ -38,7 +38,8 @@ function initialize_packets(){
 		SINGLECHERRY,
 		TWINSUNFLOWER,
 		EXPLODEONUT,
-		PUFFSHROOM
+		PUFFSHROOM,
+		SUNSHROOM
 	}
 	
 	enum packet_tags{
@@ -343,6 +344,18 @@ function initialize_packets(){
 					place_type: 2
 				}
 			]
+		},
+		{ //Sun-Shroom
+			packet_sprite: menusetasolar1_spr,
+			
+			yy: 30,
+
+			plant: setasolar_obj, //Plant object
+			sprite: setasolar1_spr, //Plant sprite
+			cost: 25,
+			timer: 5, //Recharge time
+			recargstart: false,
+			vs_recargstart: false //Does it recharge when the level starts?
 		}
 	]
 	
