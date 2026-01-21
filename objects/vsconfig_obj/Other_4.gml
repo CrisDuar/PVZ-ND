@@ -62,6 +62,7 @@ if (room==configvs_rm){
 				plants_id.CHERRYBOMB,
 				plants_id.SNOWPEA
 			])
+			
 			manual_preselected(1,[
 				zombies_id.OBST_ZOMGRAVE,
 				zombies_id.ZOMBIE,
@@ -94,7 +95,31 @@ if (room==configvs_rm){
             
             instance_destroy(menusol_obj)
             instance_destroy(menuzom_obj)
-            with(instance_create_layer(132,0,"Control",ctrlcinta1_obj)){num=5}
+            with(instance_create_layer(132,0,"Control",ctrlcinta1_obj)){
+				
+				p_packets = [
+					[plants_id.PEASHOOTER, -1, 100],
+					[plants_id.SNOWPEA, -1, 80],
+					[plants_id.GARLICDRONE, -1, 80],
+					[plants_id.REPEATER, -1, 80],
+					[plants_id.WALLNUT, -1, 60],
+					[plants_id.POTATOMINE, -1, 40],
+					[plants_id.BOWLINGBULB, -1, 40],
+					[plants_id.SINGLECHERRY, -1, 20]
+				]
+				
+				z_packets = [
+					[zombies_id.ZOMBIE_CONEHEAD, -1, 100],
+					[zombies_id.OBST_ZOMGRAVE, -1, 90],
+					[zombies_id.ZOMBIE_STATUE, -1, 90],
+					[zombies_id.ZOMBIE_HEADBOX, -1, 80],
+					[zombies_id.ZOMBIE_PAPERTHROWER, -1, 80],
+					[zombies_id.ZOMBIE_BUCKETHEAD, -1, 70],
+					[zombies_id.ZOMBIE_POLEVAULTER, -1, 60],
+					[zombies_id.ZOMBIE_GARDENER, -1, 60],
+					[zombies_id.ZOMBIE_FLAG, -1, 30]
+				]
+			}
         }
 		
 		control_obj.stage = 2;

@@ -33,5 +33,6 @@ can_tired=false
 //vs conveyor
 tvs=irandom_range(45,75)*60
 
+zominventory = [z_zombie_obj,z_headbox_obj,z_conehead_obj]
 /* */
 /*  */
