@@ -259,7 +259,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.212",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"PvZ ND",
   "resources":[
@@ -267,6 +267,7 @@
     {"id":{"name":"Draw_9_Slice_Sprites","path":"extensions/Draw_9_Slice_Sprites/Draw_9_Slice_Sprites.yy",},},
     {"id":{"name":"Essential_Scripts","path":"extensions/Essential_Scripts/Essential_Scripts.yy",},},
     {"id":{"name":"execute_shell_simple_ext","path":"extensions/execute_shell_simple_ext/execute_shell_simple_ext.yy",},},
+    {"id":{"name":"file_dropper","path":"extensions/file_dropper/file_dropper.yy",},},
     {"id":{"name":"gamepad_force_focus","path":"extensions/gamepad_force_focus/gamepad_force_focus.yy",},},
     {"id":{"name":"NekoPresence","path":"extensions/NekoPresence/NekoPresence.yy",},},
     {"id":{"name":"almanac_fnt","path":"fonts/almanac_fnt/almanac_fnt.yy",},},

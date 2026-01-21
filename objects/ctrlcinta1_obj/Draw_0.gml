@@ -1,5 +1,4 @@
-if global.iniciogame==true
-and global.gameover=false{
+if (global.iniciogame and !global.gameover){
     if control_obj.multijugador==false{
         for (var i=0; i<8; i++){
             draw_sprite(cintatranspor_spr,img,31,32+66*i)

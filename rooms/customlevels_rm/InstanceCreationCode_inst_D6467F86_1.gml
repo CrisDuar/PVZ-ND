@@ -1,3 +1,4 @@
 //mode=0
-mode=0//1
+mode=1
 mute = true
+rm = morewaysplay_rm
