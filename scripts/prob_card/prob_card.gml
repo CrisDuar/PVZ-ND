@@ -1,5 +1,31 @@
 /// @description  prob_card(type)
 /// @param type
+function prob_card(_packets, _iszom, _total_odds, _limit) {
+	var _odds_top = 100;
+	var _odds_bottom = 0;
+	var _prob = irandom(99);
+		
+	for (var i = 0; i < array_length(_packets); i++){
+			
+		var _seed = _packets[i][0];
+		var _costume = _packets[i][1];
+		var _real_odds = 100 * (_packets[i][2] / _total_odds)
+		_odds_bottom = _odds_top - _real_odds;
+			
+		show_debug_message("seed: " + string(_seed)
+						+ " prob:" + string(_prob)
+						+ " top: "+ string(_odds_top) + 
+						"bottom: " +string(_odds_bottom))	
+		
+		var _spawned = conveyor(_iszom, _seed, _costume, _prob, _odds_top, _odds_bottom, _limit);
+		_odds_top = _odds_bottom;
+		
+		if (_spawned) break;
+		
+		//conveyor(false, plants_id.PEASHOOTER, -1, 100, 60)
+	}
+}
+/*
 function prob_card(argument0) {
 	var t=argument0
 

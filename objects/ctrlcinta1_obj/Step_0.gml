@@ -1,10 +1,33 @@
-if global.nivelterminado=false and global.iniciogame=true and global.gameover=false{
+if (!init){
+	
+	var _odds = 0;
+	
+	for (var i = 0; i < array_length(p_packets); i++){
+		
+		_odds += p_packets[i][2];
+	}
+	p_odds = _odds
+	
+	_odds = 0;
+	
+	for (var i = 0; i < array_length(z_packets); i++){
+		
+		_odds += z_packets[i][2];
+	}
+	z_odds = _odds
+	
+	init = true;
+}
+
+
+if (!global.nivelterminado and global.iniciogame and !global.gameover){
     if timer>0{
         timer--;
     }else{
         timer=60*random_range(t1,t2)
         
-        prob_card(num)
+		prob_card(p_packets, false, p_odds, limit_num);
+		prob_card(z_packets, true, z_odds, limit_num);
     }
 
     if img<6 img+=0.5 else img=0

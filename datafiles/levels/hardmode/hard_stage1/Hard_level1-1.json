@@ -29,10 +29,7 @@
   "is_conveyor":false,
   "snd":"newplant_snd",
   "cys":true,
-  "conv_code":0.0,
   "money":300.0,
-  "conv_t1":0.0,
-  "conv_t2":0.0,
   "pt":9.0,
   "fn":20.0,
   "preplants":[

@@ -2,41 +2,38 @@
 /// @param zombie/bool
 /// @param  seedpacket/id
 /// @param  costume/int
+/// @param  prob/int
 /// @param  prob_top/int
 /// @param  prob_bottom/int
-function conveyor(type_seed, seed, costume, probtop, probbot) {
+/// @param  limit/int
+function conveyor(type_seed, seed, costume, _prob, probtop, probbot, _limit) {
 	
-	var prob = g
-	var obj_seed = noone
-	var xx
-	var am
-
-	if (spawn==false){
-	    if (type_seed==false){
-	        //plants (type==false)
-	        xx = irandom_range(-150,-98)
-	        am = conveyor_number(menuplants_obj)//instance_number(menuplants_obj)
-	    }else{
-	        //zombies (type==true)
-	        xx = irandom_range(1350,1400)
-	        am = conveyor_number(menuzombi_obj)//instance_number(menuzombi_obj)
-	    }
+	//xx is the x position where the seepacket will spawn, and "am" is the amount of conveyor seedpacket
+	var xx, am;
+	
+	if (type_seed==false){
+	    //plants (type==false)
+	    xx = irandom_range(-150,-98)
+	    am = conveyor_number(menuplants_obj)
+	}else{
+	    //zombies (type==true)
+	    xx = irandom_range(1350,1400)
+	    am = conveyor_number(menuzombi_obj)
+	}
     
-	    if prob<probtop and prob>=probbot and am<8{
+	if (_prob < probtop and _prob >= probbot and am < 8){
 			
-	        if instance_number(seed)<limit_num{
+	    if (packets_number(type_seed, seed) < _limit){
 				
-				var _packet = create_packet_ingame(xx, 510, type_seed, seed, costume)
-				
-	            //with(instance_create_layer(xx, 510, "GUI", seed)){type=1}
-				with(_packet){
-					type = 1;
-				}
-	            spawn=true
-	        }else{
-	            g = probbot-1
-	        }
+			var _packet = create_packet_ingame(xx, 510, type_seed, seed, costume);
+			
+			with(_packet){
+				type = 1;
+			}
+			
+			return true;	
 	    }
 	}
-/* end conveyor */
+	
+	return false;
 }
