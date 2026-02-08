@@ -4,7 +4,6 @@
     267.0,
     370.0,
     472.0,
-    578.0,
     578.0
   ],
   "sprite":"menubulb1_spr",
@@ -27,11 +26,16 @@
   "smog":-1.0,
   "is_conveyor":true,
   "cys":false,
-  "conv_code":1.0,
+  "conv_p_packets":[
+    [7, -1, 100],
+    [8, -1, 50],
+    [9, -1, 20]
+  ],
   "conv_t1":4.0,
+  "conv_t2":6.0,
+  "conv_limit": 7.0,
   "pt":5.0,
   "fn":15.0,
-  "conv_t2":6.0,
   "preplants":[
   ],
   "loop":true,

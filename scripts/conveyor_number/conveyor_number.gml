@@ -8,3 +8,19 @@ function conveyor_number(argument0) {
 
 	return _am
 }
+
+function packets_number(_type, _id){
+	
+	var _am = 0;
+	var _obj = menuplants_obj;
+	
+	if (!_type){
+		_obj = menuzombi_obj;
+	}
+	
+	with(_obj){
+		if (select == _id + 1) _am++;
+	}
+	
+	return _am;
+}

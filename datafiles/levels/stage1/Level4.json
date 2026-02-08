@@ -26,11 +26,8 @@
   "smog":-1.0,
   "is_conveyor":true,
   "cys":false,
-  "conv_code":0.0,
-  "conv_t1":4.0,
   "pt":5.0,
   "fn":7.0,
-  "conv_t2":6.0,
   "preplants":[
     1,
     0,

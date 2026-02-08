@@ -35,9 +35,11 @@ function load_level_struct(_struct){
 		_struct.cys = false;
 		
 		with(instance_create_layer(0, 0, "GUI", ctrlcinta1_obj)){
-			num = _struct.conv_code;
-			t1 = _struct.conv_t1;
-			t2 = _struct.conv_t2;
+			p_packets = struct_get_default(_struct, "conv_p_packets", p_packets);
+			z_packets = struct_get_default(_struct, "conv_z_packets", z_packets);
+			t1 = struct_get_default(_struct, "conv_t1", t1);
+			t2 = struct_get_default(_struct, "conv_t1", t2);
+			limit_num = struct_get_default(_struct, "conv_limit", limit_num);
 		}
 		
 		if (instance_exists(menusol_obj)) instance_destroy(menusol_obj);
@@ -79,7 +81,14 @@ function load_level_struct(_struct){
 		lvl_es = _struct.lvl_es;
 		lvl_zh = _struct.lvl_zh;
 		
-		lvl_id = struct_get_default(_struct, "lvl_id", string(real(string_digits(lvl_en)) - 1));
+		var _id_def = -1;
+		var _digits = string_digits(lvl_en)
+		
+		if (_digits != ""){
+			_id_def = real(_digits) - 1;
+		}
+		
+		lvl_id = struct_get_default(_struct, "lvl_id", _id_def);
 		lvl_type = struct_get_default(_struct, "lvl_type", lvl_type);
 		
 		//Prize
