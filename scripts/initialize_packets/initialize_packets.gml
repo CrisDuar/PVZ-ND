@@ -39,7 +39,9 @@ function initialize_packets(){
 		TWINSUNFLOWER,
 		EXPLODEONUT,
 		PUFFSHROOM,
-		SUNSHROOM
+		SUNSHROOM,
+		SCAREDYSHROOM,
+		GRAVEBUSTER
 	}
 	
 	enum packet_tags{
@@ -356,7 +358,37 @@ function initialize_packets(){
 			timer: 5, //Recharge time
 			recargstart: false,
 			vs_recargstart: false //Does it recharge when the level starts?
+		},
+		{ //Scaredy-Shroom
+			packet_sprite: menumiedica1_spr,
+			
+			yy: 30,
+
+			plant: setamiedica_obj, //Plant object
+			sprite: setamiedica1_spr, //Plant sprite
+			cost: 25,
+			timer: 5, //Recharge time
+		},
+		{ //Grave buster
+			packet_sprite: menugravebuster1_spr,
+			
+			yy: 30,
+
+			plant: gravebuster_obj, //Plant object
+			sprite: comepiedras1_spr, //Plant sprite
+			cost: 50,
+			timer: 20, //Recharge time
+			
+			costume: [
+				{
+					cost: 25,
+					timer: 30,
+					sprite: comepiedras0_spr,
+					packet_sprite: menugravebuster2_spr,
+				}
+			]
 		}
+		
 	]
 	
 	enum zombies_id

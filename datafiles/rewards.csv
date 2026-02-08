@@ -13,3 +13,4 @@ level,cond,plant_id,bg,spr,wave,lvl_route,lvl_id,Title EN,Title ES, Name EN,Name
 ,levelhard0,13,1,,0,hardmode/hard_stage1,Hard_level1-4,,,,,,
 ,levelhard0,14,1,,0,<room>,hardmode_day_rm,,,,,,
 ,niveles,15,1,puffshroomsleep_spr,0,<room>,level2_sl_rm,,,,,,
+,niveles,16,1,,0,stage2,Level16,,,,,,

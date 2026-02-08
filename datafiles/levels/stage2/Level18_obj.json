@@ -52,7 +52,7 @@
     "spawngraves3": {
         "obj_index": "@ref object(spawngraves3_obj)",
         "obj_layer": "Instances",
-        "pos": 
+        "pos": [
             {
                 "x": 1025,
                 "y": 160

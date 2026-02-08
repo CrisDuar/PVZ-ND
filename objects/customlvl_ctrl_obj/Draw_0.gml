@@ -2,7 +2,6 @@ draw_set_font(levelname_fnt)
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-
 for (var i = 0; i < ds_list_size(levels); i++){
 	
 	var _c1 = c_white;

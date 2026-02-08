@@ -1,5 +1,8 @@
 ds_list_clear(levels);
-var _file_name = file_find_first(dir + "/*.json", fa_none);
+var path = game_save_id + ("ac" + string(global.acc_id)) + "/" + "custom_levels"
+var _file_name = file_find_first(path + "/*.json", fa_none);
+show_debug_message(path)
+show_debug_message(_file_name)
 
 while (_file_name != ""){
 	
