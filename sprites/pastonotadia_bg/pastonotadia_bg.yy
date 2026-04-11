@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"pastonotadia_bg",
   "bboxMode":0,
-  "bbox_bottom":63,
+  "bbox_bottom":421,
   "bbox_left":0,
-  "bbox_right":63,
+  "bbox_right":351,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"107a3cdb-500b-46cd-a89e-f1716a483761","name":"107a3cdb-500b-46cd-a89e-f1716a483761","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"55519094-0145-48a7-9a09-658f419dd036","name":"55519094-0145-48a7-9a09-658f419dd036","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":390,
+  "height":422,
   "HTile":true,
   "layers":[
-    {"$GMImageLayer":"","%Name":"e079ab54-8f2d-4eac-9cad-987211ec9098","blendMode":0,"displayName":"default","isLocked":false,"name":"e079ab54-8f2d-4eac-9cad-987211ec9098","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"6aba1d2d-619b-42db-b527-c6bc8cb3f3a6","blendMode":0,"displayName":"default","isLocked":false,"name":"6aba1d2d-619b-42db-b527-c6bc8cb3f3a6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"pastonotadia_bg",
   "nineSlice":null,
@@ -68,7 +68,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"107a3cdb-500b-46cd-a89e-f1716a483761","path":"sprites/pastonotadia_bg/pastonotadia_bg.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"65579cb3-2418-48e4-84cd-1dd6773d6666","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"55519094-0145-48a7-9a09-658f419dd036","path":"sprites/pastonotadia_bg/pastonotadia_bg.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"db8d44f8-669e-48a1-939b-682261475325","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -84,5 +86,5 @@
   },
   "type":0,
   "VTile":true,
-  "width":338,
+  "width":352,
 }

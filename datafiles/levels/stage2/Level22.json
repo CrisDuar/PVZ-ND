@@ -12,8 +12,8 @@
   "control":{
     "windy":false,
     "rain":false,
-    "stage":0.0,
-    "daytime":0.0,
+    "stage":2.0,
+    "daytime":2.0,
     "mowers":[
       0.0,
       0.0,
@@ -35,7 +35,7 @@
   "loop":false,
   "idle_sng":"moongrains_sng",
   "horde_sng":"music_finalwavenight_snd",
-  "horde_prcnt":0.40000000000000002,
+  "horde_prcnt":0.4,
   "surprise_enabled":true,
   "infinite":false,
   "infinite_loop":3.0,
@@ -276,11 +276,7 @@
         "num":3.0,
         "typ":"z_statue_obj"
       },
-      {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_torch_obj"
-      }
+      {"row":0.0,"num":2.0,"typ":"z_torch_obj"}
     ]
   ],
   "lvl":23.0,
@@ -297,5 +293,39 @@
   "snd":"newplant_snd",
   "money":100.0,
   "pt":12.0,
-  "fn":16.0
+  "fn":16.0,
+  "objects":{
+    "spawngraves": {
+        "obj_index": "@ref object(spawngraves_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 766, "y": 280},
+            {"x": 943, "y": 280},
+            {"x": 675, "y": 384},
+            {"x": 1033, "y": 384},
+            {"x": 766, "y": 468},
+            {"x": 943, "y": 468}
+        ],
+        "vars": {}
+    },
+    "spawngraves3": {
+        "obj_index": "@ref object(spawngraves3_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 675, "y": 176},
+            {"x": 1033, "y": 176},
+            {"x": 675, "y": 592},
+            {"x": 1033, "y": 592}
+        ],
+        "vars": {}
+    },
+    "spawngraves4": {
+        "obj_index": "@ref object(spawngraves4_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 858, "y": 384}
+        ],
+        "vars": {}
+    }
+  }
 }

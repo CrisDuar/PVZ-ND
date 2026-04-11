@@ -1,4 +1,4 @@
-var _prg = string(read_progress(global.price))
+var _prg = string(global.nota)//string(read_progress(global.price))
 var _key = _prg + global.price;
 
 if (ds_map_exists(global.notes, _key)){
@@ -13,6 +13,8 @@ if (ds_map_exists(global.notes, _key)){
 	f_es = _data[notes_data.SIGN_ES];
 
 	bg = _data[notes_data.BG];
+	
+	font = asset_get_index(_data[notes_data.FONT]);
 
 	if (_data[notes_data.LVL_ROUTE] != "<room>"){
 		global.load_level = _data[notes_data.LVL_ID];
@@ -23,7 +25,7 @@ if (ds_map_exists(global.notes, _key)){
 	}
 }
 
-var lay_id = layer_get_id("Background_sky");
+var lay_id = layer_get_id("BG_Background");
 var back_id = layer_background_get_id(lay_id);
 
 switch(bg){

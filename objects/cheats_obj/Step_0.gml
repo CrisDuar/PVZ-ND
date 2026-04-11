@@ -8,11 +8,11 @@ if toggle==true{
     }
     
     if keyboard_check_pressed(ord("N")){
-        global.levelhard1 = get_integer("Hardmode day mode level progress", 6)
+        global.progress[? "levelhard"][0] = get_integer("Hardmode day mode level progress", 6)
     }
     
     if keyboard_check_pressed(ord("B")){
-        global.levelhard2 = get_integer("Hardmode night level progress", 6)
+         global.progress[? "levelhard"][1] = get_integer("Hardmode night level progress", 6)
     }
     
     if keyboard_check_pressed(ord("V")){
@@ -101,7 +101,7 @@ if toggle==true{
     if keyboard_check_pressed(vk_f6){
         global.selectionRoom=level1_sl_rm
         audio_stop_all();
-        room_goto(generic_level_rm)
+        room_goto(editor_rm)
     }
     
     if keyboard_check_pressed(vk_f8){

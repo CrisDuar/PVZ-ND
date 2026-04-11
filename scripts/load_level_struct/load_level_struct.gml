@@ -17,20 +17,20 @@ function load_level_struct(_struct){
 		}
 	}
 	
-	if (_struct.fog > 0){
+	if (struct_get_default(_struct, "fog", 0) > 0){
 		with(instance_create_layer(0, 0, "Instances", fogctrl_obj)){
 			xfinal = _struct.fog;
 		}
 	}
 	
-	if (_struct.smog > 0){
+	if (struct_get_default(_struct, "smog", 0) > 0){
 		with(instance_create_layer(0, 0, "Instances", pollutionctrl_obj)){
 			xfinal = _struct.fog;
 		}
 	}
 	
 	//Conveyor belt level
-	if (_struct.is_conveyor){
+	if struct_get_default(_struct, "is_conveyor", false){
 		
 		_struct.cys = false;
 		
@@ -69,7 +69,7 @@ function load_level_struct(_struct){
 		horde_prcnt = _struct.horde_prcnt
 		surprise_enabled = _struct.surprise_enabled;
 		pt = _struct.pt;
-		fn = _struct.fn;
+		fn = array_length(_struct.waves);
 		infinite = _struct.infinite;
 		infinite_loop = _struct.infinite;
 		
@@ -82,14 +82,24 @@ function load_level_struct(_struct){
 		lvl_zh = _struct.lvl_zh;
 		
 		var _id_def = -1;
-		var _digits = string_digits(lvl_en)
+		var _digits = string_digits(global.load_level)
+		
+		show_debug_message("LEVEL ID DIGITS")
+		show_debug_message(_digits)
 		
 		if (_digits != ""){
 			_id_def = real(_digits) - 1;
 		}
 		
-		lvl_id = struct_get_default(_struct, "lvl_id", _id_def);
-		lvl_type = struct_get_default(_struct, "lvl_type", lvl_type);
+		var _type_def = -1
+		if (string_pos("Level", global.load_level) > 0) _type_def = 0;
+		if (string_pos("Hard", global.load_level) > 0) _type_def = 1;
+		
+		lvl_id = _id_def//struct_get_default(_struct, "lvl_id", _id_def);
+		lvl_type = _type_def//struct_get_default(_struct, "lvl_type", _type_def);
+		
+		show_debug_message("LEVEL ID")
+		show_debug_message(string(lvl_id))
 		
 		//Prize
 		sprite = asset_get_index(_struct.sprite);
@@ -120,7 +130,7 @@ function load_level_struct(_struct){
 				var _data = _waves[i][j];
 				var _zombie = asset_get_index(_data.typ);
 				
-				show_debug_message($"{_zombie}: {_data.row}: {_data.num}");
+				//show_debug_message($"{_zombie}: {_data.row}: {_data.num}");
 				
 				//_rows[_data.row] only contains indexes
 				var _z_rows = array_create(array_length(_rows[_data.row]))
@@ -150,17 +160,19 @@ function load_level_struct(_struct){
 		}
 	}
 	
-	var size = ds_map_size(_zombie_prev);
-	var key = ds_map_find_first(_zombie_prev);
+	var _show_zombies = struct_get_default(_struct, "show_zombies", true);
 	
-	for (var i = 0; i < size; i++;){
+	if (_show_zombies){
+		var size = ds_map_size(_zombie_prev);
+		var key = ds_map_find_first(_zombie_prev);
+	
+		for (var i = 0; i < size; i++;){
 		
-		//show_message("KEY: " + key)
+			//show_message("KEY: " + key)
 		
-		zombie_preview(asset_get_index(key), clamp(round((_zombie_prev[? key] * 15)/_z_total), 1, 5))
+			zombie_preview(asset_get_index(key), clamp(round((_zombie_prev[? key] * 15)/_z_total), 1, 5))
 	   
-		key = ds_map_find_next(_zombie_prev, key);
+			key = ds_map_find_next(_zombie_prev, key);
+		}
 	}
-	
-	show_debug_message(instance_number(ctrlcinta1_obj))
 }

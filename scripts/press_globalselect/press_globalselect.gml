@@ -6,9 +6,9 @@ function press_globalselect(resel) {
 	var _x2 = menuselectplan_obj.x + 626*type;
 	
 	if resel<0{
-	    get_objetive(menuselectplan_obj.x,0,xz*type,640);
+	    objetive = get_objetive(menuselectplan_obj.x,0,xz*type,640, type);
 	}else{
-	    get_objetive_reselect(menuselectplan_obj.x,0,xz*type,640,resel);
+	    objetive = get_objetive_reselect(menuselectplan_obj.x,0,xz*type,640, resel, type);
 	}
 
 	if (visible==true or resel>=0){
@@ -17,7 +17,7 @@ function press_globalselect(resel) {
 	        /*and variable_instance_exists(objetive, "ocupied"){*/
 	            if resel<0{
 	                audio_play_sound(seleccionarplantas_snd, 1, false);
-	                audio_play_sound(seedpack_snd, 1, false)
+	                if (!select) audio_play_sound(seedpack_snd, 1, false)
 	            }
 	            update_info()
 	            //crear el objeto que va a ir al select_obj
@@ -29,7 +29,7 @@ function press_globalselect(resel) {
 	                        type=other.type;
 	                        slotsprite=other.sprite;
 	                    }
-                    
+                   
 	                    with(instance_create(x,y,selectanim_obj)){
 	                        sprite_index=other.sprite;
 	                        seed=other.packet;

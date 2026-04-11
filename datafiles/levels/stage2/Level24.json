@@ -12,8 +12,8 @@
   "control":{
     "windy":false,
     "rain":false,
-    "stage":0.0,
-    "daytime":0.0,
+    "stage":2.0,
+    "daytime":2.0,
     "mowers":[
       0.0,
       0.0,
@@ -21,17 +21,14 @@
       0.0,
       0.0
     ],
-    "limit":1600.0
+    "limit":1600.0,
+    "kamistatues": true
   },
   "fog":-1.0,
   "smog":-1.0,
   "is_conveyor":false,
-  "cys":true,
-  "conv_code":0.0,
-  "conv_t1":0.0,
-  "conv_t2":0.0,
-  "preplants":[
-  ],
+  "cys":false,
+  "preplants":[12, 18, 25],
   "loop":true,
   "idle_sng":"music_loonbon_snd",
   "horde_sng":"grasswalk_fw_sng",
@@ -192,5 +189,56 @@
   "snd":"newplant_snd",
   "money":300.0,
   "pt":1.0,
-  "fn":16.0
+  "fn":16.0,
+  "objects":{
+    "spawngraves5": {
+        "obj_index": "@ref object(spawngraves5_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 585, "y": 176},
+            {"x": 675, "y": 176},
+            {"x": 765, "y": 176},
+            {"x": 855, "y": 176},
+            {"x": 943, "y": 176},
+            {"x": 1033, "y": 176},
+
+            {"x": 585, "y": 280},
+            {"x": 675, "y": 280},
+            {"x": 765, "y": 280},
+            {"x": 855, "y": 280},
+            {"x": 943, "y": 280},
+            {"x": 1033, "y": 280},
+
+            {"x": 585, "y": 384},
+            {"x": 675, "y": 384},
+            {"x": 765, "y": 384},
+            {"x": 855, "y": 384},
+            {"x": 943, "y": 384},
+            {"x": 1033, "y": 384},
+
+            {"x": 585, "y": 488},
+            {"x": 675, "y": 488},
+            {"x": 765, "y": 488},
+            {"x": 855, "y": 488},
+            {"x": 943, "y": 488},
+            {"x": 1033, "y": 488},
+            
+            {"x": 585, "y": 592},
+            {"x": 675, "y": 592},
+            {"x": 765, "y": 592},
+            {"x": 855, "y": 592},
+            {"x": 943, "y": 592},
+            {"x": 1033, "y": 592}
+        ],
+        "vars": {}
+    },
+    "mazo": {
+        "obj_index": "@ref object(mazo_obj)",
+        "obj_layer": "Control",
+        "pos": [
+            {"x": 0, "y": 0}
+        ],
+        "vars": {}
+    }
+  }
 }

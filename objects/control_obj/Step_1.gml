@@ -5,7 +5,11 @@ if (!init_stage){
 	if (save_struct){
 		var level_json = json_stringify(save_level_struct(), true);
 
-		var _file = file_text_open_write(working_directory + "levels/stage1/" + string_trim(zombispawn_obj.lvl_en) + ".json");
+		var _file = file_text_open_write("levels/stage1/" + zombispawn_obj.lvl_en + ".json");
+		
+		show_debug_message("LEVEL INFOOO")
+		show_debug_message(level_json)
+		show_debug_message("levels/stage1/" + zombispawn_obj.lvl_en + ".json")
 		file_text_write_string(_file, level_json);
 
 		file_text_close(_file);

@@ -5,7 +5,9 @@ depth=-y-12;
 }
 
 //RUSH
-if (control_obj.multijugador==true or room=nivel24_rm or room==izombie_rm) and warn_rush==false{
+var _lvl_id = string(zombispawn_obj.lvl_type) + "_" + string(zombispawn_obj.lvl_id)
+
+if (control_obj.multijugador==true or _lvl_id = "0_23" or room==izombie_rm) and warn_rush==false{
     warn=true
     warn_rush=true
     if control_obj.multijugador or room==izombie_rm {hspeed=0} else {hspeed=irandom_range(-10,-14)}

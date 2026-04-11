@@ -11,7 +11,7 @@ and locked!=bloqplant5_spr
 and locked!=bloqplant8_spr
 and locked!=bloqplant10_spr
 {
-    if (global.progress[? cond] <= lvl){
+    if (read_progress(cond) <= lvl){
         draw_sprite(bloqplant0_spr, 0, (x + sprite_get_xoffset(sprite_index)) - offset_x, (y + sprite_get_yoffset(sprite_index)) - offset_y);
     }
 }

@@ -1,5 +1,7 @@
 //A editar
 sprite_index=tumba2_sl_spr
+//A editar
 num=26
 numdisplay=num
-lvl=nivel26_rm
+lvl="Level26"
+route="stage2"

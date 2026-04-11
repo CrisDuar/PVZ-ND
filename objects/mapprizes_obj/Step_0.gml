@@ -6,7 +6,7 @@ if distance_to_object(parentisla_obj)<1{
 
 y=ystart+yy
 
-if (global.progress[? cond] > lvl)
+if (read_progress(cond) > lvl)
 {image_speed=0.16; sprite_index=sprite}
 else
 {sprite_index=locked}

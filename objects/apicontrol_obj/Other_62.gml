@@ -1,4 +1,4 @@
-if os_is_network_connected(){
+if os_is_network_connected() and (room == menu_rm_){
     if data_import==0{
         if gj_result_id() = login{
             if gj_result_status() == 1{

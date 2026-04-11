@@ -12,8 +12,8 @@
   "control":{
     "windy":false,
     "rain":false,
-    "stage":0.0,
-    "daytime":0.0,
+    "stage":2.0,
+    "daytime":2.0,
     "mowers":[
       0.0,
       0.0,
@@ -292,5 +292,36 @@
   "snd":"newplant_snd",
   "money":100.0,
   "pt":12.0,
-  "fn":16.0
+  "fn":16.0,
+  "objects":{
+    "spawngraves": {
+        "obj_index": "@ref object(spawngraves_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 675, "y": 168},
+            {"x": 675, "y": 592},
+            {"x": 1033, "y": 384}
+        ],
+        "vars": {}
+    },
+    "spawngraves2": {
+        "obj_index": "@ref object(spawngraves2_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 856, "y": 280},
+            {"x": 856, "y": 488}
+        ],
+        "vars": {}
+    },
+    "craters": {
+        "obj_index": "@ref object(crater1_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 508, "y": 454},
+            {"x": 595, "y": 568},
+            {"x": 952, "y": 160}
+        ],
+        "vars": {}
+    }
+  }
 }

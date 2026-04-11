@@ -116,7 +116,7 @@ function zombie_eat() {
 	                    break
                     
 	                    case garlic_obj:
-	                        if other.timestop<room_speed{other.timestop=room_speed}
+	                        if other.timestop<60{other.timestop=60}
 	                        audio_play_sound(choose(asco1_snd,asco2_snd),1,false)
 	                        if other.y = zombispawn_obj.f6{
 	                            other.garlic_yy = get_closest_row(other.y-90)
@@ -126,14 +126,21 @@ function zombie_eat() {
 	                            other.garlic_yy = get_closest_row(other.y+choose(-90,90))
 	                        }
 	                    break
+						
+						case sunbean_obj:
+							audio_play_sound(sunbean_snd, 1, false);
+							other.sunmode = true;
+							vida = 0;
+							
+						break;
 	                }
                 
 	                if vida<=0{
                 
 	                    if (object_index = setatoxica_obj){
 	                        other.vida-=10
-	                        if (other.gooptime<room_speed*12) other.gooptime=room_speed*12
-	                        if (other.goopstun<room_speed*8) other.goopstun=room_speed*8
+	                        if (other.gooptime<60*12) other.gooptime=60*12
+	                        if (other.goopstun<60*8) other.goopstun=60*8
 	                    }
                 
 	                    if variable_instance_exists(id, "in_danger"){

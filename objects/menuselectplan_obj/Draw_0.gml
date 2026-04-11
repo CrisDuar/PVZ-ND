@@ -6,7 +6,7 @@ if sprite_index==menuselectmult_spr{
 }
 if (unitsprite != 0){
 	part_system_drawit(part)
-	draw_sprite_ext(unitsprite, subimage,floor(x+xx*zomplant),floor(y-90+10*zomplant)+yy,1,1,1,c_white,1)
+	draw_sprite_ext(unitsprite, subimage, floor(x+xx*zomplant),floor(y-90+10*zomplant) + yy,1,1,1,c_white,1)
 }
 
 draw_self();
@@ -30,8 +30,9 @@ if (sprite_index != menuselectmult_spr){
 		var _pag = pag;
 		var _maxpag = maxpag;
 		var _crt_pag = (i) + (2 * num_pag);
-		_cs1 = make_colour_rgb(71, 46, 29);
-		_cs2 = make_colour_rgb(159, 228, 93);
+		_cs1 = make_colour_rgb(159, 228, 93);
+		_cs2 = make_colour_rgb(71, 46, 29);
+		
 		
 		if (sprite_index==menuselectzomb_spr){
 			_pag = zompag;

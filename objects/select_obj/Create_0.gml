@@ -10,6 +10,9 @@ x2=129
 done=false
 costume = -1;
 
+//Is it a zombie select for versus mode?
+zom_side = false;
+
 if control_obj.multijugador=true{
 	//x2=132
 	x2=197
@@ -19,5 +22,6 @@ xz=960
 
 if room==izombie_rm{
 	xz=0
+	zom_side = true
 }
 

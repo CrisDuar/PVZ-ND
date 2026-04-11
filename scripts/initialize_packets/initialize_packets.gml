@@ -1,5 +1,11 @@
 function initialize_packets(){
 	
+	show_debug_message("TIMEZONE DATA")
+	date_set_timezone(timezone_utc)
+	show_debug_message(date_get_hour(date_current_datetime()));
+	date_set_timezone(timezone_local)
+	show_debug_message(date_get_hour(date_current_datetime()));
+	
 	enum almanac_data
 	{
 		NAME_ES,
@@ -41,13 +47,23 @@ function initialize_packets(){
 		PUFFSHROOM,
 		SUNSHROOM,
 		SCAREDYSHROOM,
-		GRAVEBUSTER
+		GRAVEBUSTER,
+		FUMESHROOM,
+		ICEBERG_LETTUCE,
+		PEANUT,
+		HEALER_SHROOM,
+		PLASMA_SHROOM,
+		GOLD_BLOOM,
+		ICE_SHROOM,
+		SUN_BEAN
 	}
 	
 	enum packet_tags{
 		SD_DISABLED,
-		VS_NOBAN
+		VS_NOBAN,
+		VS_BANNED
 	}
+	
 	global.plants_packets = [
 		/*DEFAULT VALUES
 		{
@@ -336,6 +352,7 @@ function initialize_packets(){
 			
 			recargstart: false, //Does it recharge when the level starts?
 			sd_recharge: false,
+			tags: [packet_tags.SD_DISABLED],
 			
 			costume: [
 				{
@@ -378,15 +395,104 @@ function initialize_packets(){
 			sprite: comepiedras1_spr, //Plant sprite
 			cost: 50,
 			timer: 20, //Recharge time
+			tags: [packet_tags.SD_DISABLED],
 			
 			costume: [
 				{
 					cost: 25,
 					timer: 30,
 					sprite: comepiedras0_spr,
-					packet_sprite: menugravebuster2_spr,
+					packet_sprite: menugravebuster2_spr
 				}
 			]
+		},
+		{ //Fume-Shroom
+			packet_sprite: menufume1_spr,
+			
+			yy: 30,
+
+			plant: fumeshroom_obj, //Plant object
+			sprite: fumeshroom1_spr, //Plant sprite
+			cost: 75,
+			timer: 7 //Recharge time
+		},
+		{ //Iceberg Lettuce
+			packet_sprite: menuicelettuce1_spr,
+			
+			yy: 35,
+
+			plant: icelettuce_obj, //Plant object
+			sprite: icelettuce1_spr, //Plant sprite
+			cost: 0,
+			timer: 30, //Recharge time
+			vs_recargstart: false, //Does it recharge when the level starts?
+			sd_recharge: false
+		},
+		{ //Peanut
+			packet_sprite: menupeanut1_spr,
+			
+			yy: 30,
+
+			plant: peanut_obj, //Plant object
+			sprite: peanut1_spr, //Plant sprite
+			cost: 150,
+			timer: 25, //Recharge time
+			sd_recharge: false
+		},
+		{ //Healer Shroom
+			packet_sprite: menuhealer1_spr,
+			
+			yy: 25,
+
+			plant: healershroom_obj, //Plant object
+			sprite: healershroom1_spr, //Plant sprite
+			cost: 100,
+			timer: 20 //Recharge time
+		},
+		{ //Plasma Shroom
+			packet_sprite: menusetaplasma1_spr,
+			
+			yy: 27,
+
+			plant: setaplasma_obj, //Plant object
+			sprite: setaplasma1_spr, //Plant sprite
+			cost: 200,
+			timer: 30 //Recharge time
+		},
+		{ //Gold Bloom
+			packet_sprite: menugoldbloom1_spr,
+			
+			yy: 30,
+
+			plant: goldbloom_obj, //Plant object
+			sprite: goldbloom1_spr, //Plant sprite
+			cost: 0,
+			timer: 90, //Recharge time
+			
+			recargstart: true,
+			tags: [packet_tags.VS_BANNED]
+		},
+		{ //Ice-Shroom
+			packet_sprite: menusetahielo1_spr,
+			
+			yy: 30,
+
+			plant: setahielo_obj, //Plant object
+			sprite: setahielo_spr, //Plant sprite
+			cost: 75,
+			timer: 60, //Recharge time
+			
+			vs_cost: 125
+		},
+		{ //Sun Bean
+			packet_sprite: sunbeanslot_spr,
+			
+			yy: 30,
+
+			plant: sunbean_obj, //Plant object
+			sprite: sunbean_spr, //Plant sprite
+			cost: 0,
+			timer: 30 //Recharge time
 		}
 		
 	]
@@ -540,5 +646,24 @@ function initialize_packets(){
 		}
 		
 		
+	]
+}
+
+function initialize_shop(){
+	
+	global.shopItems = [
+		{//Ice-Shroom
+			spr: global.plants_packets[plants_id.ICE_SHROOM].sprite,
+			
+			name_en:"Ice-Shroom",
+			name_es:"Seta congelada",
+			key: "plant0",
+			cond: "NO_COND",
+			cost: 5000,
+			desc_en: "Ice-Shroom freezes all zombies on the screen.",
+			desc_es: "Seta congelada congela a todos los zombis de la pantalla.",
+			
+			lock_msg: 0
+		}
 	]
 }

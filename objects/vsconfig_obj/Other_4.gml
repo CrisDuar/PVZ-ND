@@ -188,8 +188,9 @@ if (room==configvs_rm){
     break
     
     case 2://noche
-        control_obj.night=true
-        __background_set( e__BG.Index, 0, night_bg )
+        control_obj.stage = 2;
+		control_obj.daytime = 1;
+		
         if global.vsgamemode!=2{
             //manual_preselected(0,menusun_obj,menupuff_obj,potatommenu_obj,menufume_obj,menuicelettuce_obj,menupeanut_obj)
             //manual_preselected(1,zomgravestoneslot_obj,zombiebasicslot_obj,conoslot_obj,estatuaslot_obj,futbolzombieslot_obj,flagslot_obj)

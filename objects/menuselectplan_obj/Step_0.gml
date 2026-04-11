@@ -108,7 +108,10 @@ if vspeed>=0 and spawngui==false{
         }
         
         if sprite_index=menuselectmult_spr{
-            instance_create_layer(x+626,(101+(63*i)),"GUI",select_obj)
+            with(instance_create_layer(x+626,(101+(63*i)),"GUI",select_obj)){
+				slotnum = i
+				zom_side = true
+			}
         }
     }
     

@@ -107,14 +107,17 @@ level = {
 		[{typ: z_zombie_obj, row: 0, num: 1}, {typ: z_conehead_obj, row: 0, num: 1}],
 		[{typ: z_zombie_obj, row: 0, num: 1}, {typ: z_conehead_obj, row: 0, num: 1}],
 		[{typ: z_zombie_obj, row: 0, num: 1}, {typ: z_flag_obj, row: 0, num: 1}],
-	]
+	],
+	
+	ds_text: ds_list_create()
 }
 
 level.arr_row[0] = [level.rw[0], level.rw[1], level.rw[2], level.rw[3], level.rw[4]] //a
 level.wf[0] = [level.fn - 1, 2]
+ds_list_add(level.ds_text, "holi buen dia", "holi buena noche");
 
 //var _ruta = get_open_filename("", "");
-/*var _ruta = "levels/" + global.load_route + "/" + global.load_level + ".json"
+/*var _ruta = "test/"//"levels/" + global.load_route + "/" + global.load_level + ".json"
 var _txt = "";
 
 var _file = file_text_open_read(_ruta);
@@ -129,15 +132,15 @@ file_text_close(_file);
 var _json = json_parse(_txt);
 
 //Read the struct
-load_level_struct(_json)
-/*
+load_level_struct(_json)*/
+
 level_json = json_stringify(level, true);
 
 var _file = file_text_open_write("level1.json");
 file_text_write_string(_file, level_json);
 
 file_text_close(_file);
-*/
+
 objects = {
 	/*obj: {
 		obj_index: gamepadtest_obj,

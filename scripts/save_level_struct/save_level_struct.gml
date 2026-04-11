@@ -165,5 +165,6 @@ function save_level_struct(){
 		_level.waves[i] = _arr_z;
 	}
 	
+	show_debug_message("SAVING LEVEL")
 	return _level;
 }

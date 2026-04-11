@@ -229,7 +229,7 @@ EDITOR = "map_editor"
 current_state = MENU
 
 # Load Background
-map_bg = pygame.image.load("assets/housebg.png")
+map_bg = pygame.image.load("./assets/housebg.png")
 
 
 def get_objects():

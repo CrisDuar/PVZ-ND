@@ -103,7 +103,10 @@ type=2
 break
 
 case 4:
-entext="Sun boost (2)"; estext="Mejora de sol (2)"; cond="upgrade1"; cost=10000
+entext="Sun boost (2)"; 
+estext="Mejora de sol (2)"; 
+cond="upgrade1"; 
+cost=10000
 desc_en="Start with 25 extra sun in the bank!"
 desc_es="¡Comienza con 25 soles extra!"
 if global.upgrade0==false{color2=c_dkgray; image_alpha=0; confirm=false}else{image_alpha=1}

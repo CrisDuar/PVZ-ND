@@ -1,4 +1,5 @@
 //A editar
 num=28
 numdisplay=num
-lvl=nivel28_rm
+lvl="Level28"
+route="stage2"

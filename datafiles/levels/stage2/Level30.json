@@ -1,11 +1,10 @@
 {
-  "wf":[
-  ],
+  "wf":[],
   "control":{
     "windy":false,
     "rain":false,
-    "stage":0.0,
-    "daytime":0.0,
+    "stage":2.0,
+    "daytime":2.0,
     "mowers":[
       0.0,
       0.0,
@@ -220,7 +219,38 @@
   "plantroom":"level1_sl_rm",
   "prizevar":"niveles",
   "snd":"newplant_snd",
-  "money":100.0,
+  "show_zombies": false,
+  "money":300.0,
   "pt":6.0,
-  "fn":15.0
+  "fn":15.0,
+  "objects":{
+    "spawngraves7_obj": {
+        "obj_index": "@ref object(spawngraves7_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 761, "y": 160},
+            {"x": 761, "y": 260},
+            {"x": 761, "y": 360},
+            {"x": 761, "y": 460},
+            {"x": 761, "y": 560}
+        ],
+        "vars": {}
+    },
+    "boss1_obj": {
+        "obj_index": "@ref object(boss1_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 936, "y": 368}
+        ],
+        "vars": {}
+    },
+    "ctrlbarraboss_obj": {
+        "obj_index": "@ref object(ctrlbarraboss_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 0, "y": 0}
+        ],
+        "vars": {}
+    }
+  }
 }
