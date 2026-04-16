@@ -10,8 +10,11 @@ text = "Dropped files:";
 highlight = false;
 has_valid_files = true;
 file_is_valid = function(_path) {
-	// except for ZIP files
-	return string_lower(filename_ext(_path)) != ".zip";
+	// Only accept .json level files. Using a positive allowlist (rather than
+	// excluding a single extension like .zip) prevents other executable or
+	// archive types from being copied into the custom_levels folder where
+	// the game later parses them as levels.
+	return string_lower(filename_ext(_path)) == ".json";
 }
 file_dropper_set_default_allow(false);
 

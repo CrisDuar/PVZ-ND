@@ -2,7 +2,7 @@ function gj_user_login(argument0, argument1) {
 	//gj_user_login(string username,string user_token)
 	//returns: handle
 	//Auth the user. Check for the result in the async event.
-	//var url="http://gamejolt.com/api/game/v1/users/auth/?game_id="+gj_gameid+"&username="+argument0+"&user_token="+argument1;
+	// Always use HTTPS; plaintext HTTP exposes the user_token and signature.
 	var url="https://gamejolt.com/api/game/v1/users/auth?game_id="+gj_gameid+"&username="+argument0+"&user_token="+argument1;
 
 	url+="&signature="+md5_string_utf8(url+gj_privatekey)

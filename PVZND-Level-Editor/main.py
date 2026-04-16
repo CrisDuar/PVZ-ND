@@ -294,9 +294,17 @@ def save_to_json(x2):
 
 
 def set_data(entity):
+    # Restrict which globals callers may assign to. Using globals()[target] = ...
+    # with a raw string lets any caller overwrite arbitrary module-level names
+    # (functions, classes, imports), which is unsafe and hard to reason about.
+    _SET_DATA_ALLOWED_TARGETS = {"level_data", "test"}
+
     target = entity.target
+    if target not in _SET_DATA_ALLOWED_TARGETS:
+        print(f"set_data: refusing to set disallowed target {target!r}")
+        return
+
     targetvalue = entity.arraytext.index(entity.text)
-    # Access the global dictionary of variables using the string name
     globals()[target] = [targetvalue]
     print(f"{target} updated to: {globals()[target]}")
 
