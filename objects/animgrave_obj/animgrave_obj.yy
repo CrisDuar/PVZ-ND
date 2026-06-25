@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"tama_ocasilla2_spr",
-    "path":"sprites/tama_ocasilla2_spr/tama_ocasilla2_spr.yy",
+    "name":"grave1_spr",
+    "path":"sprites/grave1_spr/grave1_spr.yy",
   },
   "spriteMaskId":null,
   "visible":true,

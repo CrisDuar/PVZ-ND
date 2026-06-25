@@ -1,6 +1,7 @@
 //to edit
+
 spawnstart=true
-type=grave1_obj
+type=1
 water=false
 time=0//tiempo real para spawnear una tumba
 breaktime=0//tiempo de descanso por comepiedras
@@ -30,16 +31,17 @@ alert_spawn=false
 spawn=false
 spawnfinal=false
 
-graves=0//cantidad inicial
-maxgraves=0//cantidad máxima
+//graves=0//cantidad inicial
+//maxgraves=0//cantidad máxima
 totalgraves=0//cantidad real
 image_alpha=0.25
 visible=false
 mask_index = grave1_spr
+image_speed = 0;
 setpos=false
 
 horde = 0
-
+/*
 var _lvl_id = string(zombispawn_obj.lvl_type) + "_" + string(zombispawn_obj.lvl_id)
 
 switch(_lvl_id){
@@ -156,4 +158,4 @@ switch(_lvl_id){
     graves=5 ; maxgraves=20//
     break
 }
-
+*/

@@ -6,7 +6,7 @@ for (var i = 0; i < gp_num; i++;){
     }
 }
 
-var n_devices = ds_list_size(global.gamepad_list)
+n_devices = ds_list_size(global.gamepad_list)
 var has_focus
 
 if os_type==os_android{

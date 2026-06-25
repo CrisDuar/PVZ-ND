@@ -16,7 +16,7 @@ if __view_get( e__VW.YView, 0 )>0{
     
 }else{
     grass=0
-    unitcost=""
+    unitcost=0
     unitname_es=""
     unitname_en=""
     unitsprite=0

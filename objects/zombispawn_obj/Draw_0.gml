@@ -42,7 +42,7 @@ if global.gameover==false{
         }
     
         for(var i=0; i<fn;i++){
-            if wf[i]>0 draw_sprite(banderita_spr,0,1064-(i+1)*(241/fn),627)
+            if wf[i]>0 && wf[i] != 3 draw_sprite(banderita_spr,0,1064-(i+1)*(241/fn),627)
         }
         
         draw_sprite(cabecitazombie_spr,0,1064-(bar)*(241/fn),620)

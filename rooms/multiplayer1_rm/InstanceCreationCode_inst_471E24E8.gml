@@ -10,7 +10,7 @@ lvl_id = 0;
 
 /*
 	type
-	-1: No achivements (custom levels)
+	-1: No achievements (custom levels)
 	0: Regular or adventure
 	1: Hard mode
 	2: Endless

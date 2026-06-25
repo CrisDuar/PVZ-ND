@@ -4,7 +4,8 @@ xx_lim=230
 
 spawn=0
 
-hspd_min=-4
+spd_min=4
 
 image_speed=0.16
+direction = 180
 

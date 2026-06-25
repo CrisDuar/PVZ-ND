@@ -23,9 +23,27 @@ if global.iniciogame=true{
             }
         
             if t<=0 or (horde_hp<=horde_ttl_hp*horde_prcnt and horde_canupdate and horde_wait<=0 and horde_canfifty){
-                if h=0 audio_play_sound(zombies_coming_snd,1,false)
-                if wf[h]=1{instance_create(x,y,hugeofzombies_obj); t2=60*4.5; horde_wait=60*5}
-                else if wf[h]=2{with(instance_create(x,y,hugeofzombies_obj)){final=true}; global.hordafinal=true; t2=room_speed*4.5; horde_wait=room_speed*5}
+                if (h == 0) audio_play_sound(zombies_coming_snd,1,false);
+                    
+                
+                if (wf[h]=1){   //Common flag
+                    instance_create(x,y,hugeofzombies_obj);
+                    t2=60*4.5;
+                    horde_wait=60*5
+                    
+                }else if wf[h]=2{   //Final wave
+                    
+                    with(instance_create(x,y,hugeofzombies_obj)){final=true};
+                    global.hordafinal=true;
+                    t2=60*4.5;
+                    horde_wait=60*5
+                }else if (wf[h] == 3){  //Necromancy
+                    
+                    with(instance_create(x,y,finalwave_obj)){sprite_index = necromancy_spr};
+                    t2=60*1.5;
+                    horde_wait=60*2//*5
+                }
+                
                 alarm[0]=t2+1
                 t=35*60
                 horde_canupdate=true

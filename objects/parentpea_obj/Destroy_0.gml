@@ -1,0 +1,1 @@
+if (ds_exists(hit_zom, ds_type_list)) ds_list_destroy(hit_zom);

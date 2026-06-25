@@ -24,7 +24,6 @@
     ]
   },
   "fog":-1.0,
-  "cys":true,
   "preplants":[
   ],
   "show_zombies": false,
@@ -45,7 +44,19 @@
   "lvl_zh":"关卡",
   "smog":-1.0,
   "is_conveyor":true,
-  "conv_code":4.0,
+  "cys":false,
+  "conv_p_packets":[
+    [15, -1, 100],
+    [17, -1, 60],
+    [18, -1, 80],
+    [19, -1, 70],
+    [20, -1, 70],
+    [21, -1, 50],
+    [3, -1, 70],
+    [25, -1, 50]
+  ],
+  "conv_t1":4.0,
+  "conv_t2":6.0,
   "arr_row":[
     [
       0.0,
@@ -55,8 +66,6 @@
       4.0
     ]
   ],
-  "conv_t1":4.0,
-  "conv_t2":6.0,
   "plantroom":"level1_sl_rm",
   "waves":[
     [
@@ -224,56 +233,56 @@
   "snd":"newplant_snd",
   "money":100.0,
   "pt":6.0,
-  "objects":{
-    "spawngraves_obj": {
-        "obj_index": "@ref object(spawngraves_obj)",
-        "obj_layer": "Instances",
+  "objects":[
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {"x": 761, "y": 160},
-            {"x": 761, "y": 260},
-            {"x": 761, "y": 360},
-            {"x": 761, "y": 460},
-            {"x": 761, "y": 560}
+          {"x": 5, "y": 0},
+          {"x": 5, "y": 1},
+          {"x": 5, "y": 2},
+          {"x": 5, "y": 3},
+          {"x": 5, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [2]
     },
-    "spawngraves7_obj": {
-        "obj_index": "@ref object(spawngraves7_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {"x": 862, "y": 160},
-            {"x": 862, "y": 260},
-            {"x": 862, "y": 360},
-            {"x": 862, "y": 460},
-            {"x": 862, "y": 560}
+          {"x": 6, "y": 0},
+          {"x": 6, "y": 1},
+          {"x": 6, "y": 2},
+          {"x": 6, "y": 3},
+          {"x": 6, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [7]
     },
-    "boss1_obj": {
-        "obj_index": "@ref object(boss1_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 0,
+        "obj_type": 1,
+        
         "pos": [
-            {"x": 976, "y": 368}
+          {"x": 1, "y": 1},
+          {"x": 2, "y": 4},
+          {"x": 4, "y": 3}
         ],
-        "vars": {}
+
+        "vars": [null, null]
     },
-    "crater": {
-        "obj_index": "@ref object(crater1_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 18,
+        "obj_type": 2,
+        
         "pos": [
-            {"x": 507, "y": 156},
-            {"x": 507, "y": 568},
-            {"x": 683, "y": 355}
+          {"x": 976, "y": 2}
         ],
-        "vars": {}
-    },
-    "ctrlbarraboss_obj": {
-        "obj_index": "@ref object(ctrlbarraboss_obj)",
-        "obj_layer": "Instances",
-        "pos": [
-            {"x": 0, "y": 0}
-        ],
-        "vars": {}
+
+        "vars": []
     }
-  }
+  ]
 }

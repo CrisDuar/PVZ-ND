@@ -12,7 +12,10 @@
     "name":"bulbo de bolera",
     "path":"folders/Objects/plantas/bulbo de bolera.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"parentpea_obj",
+    "path":"objects/parentpea_obj/parentpea_obj.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

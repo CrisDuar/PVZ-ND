@@ -92,7 +92,7 @@ function able_to_plant(plant_id) {
 			
 			case 4: //Grave buster
 				
-				if distance_to_object(gravedetect_obj)<1
+				if distance_to_object(gravedetect_obj) <= 0
 				and distance_to_object(gravebuster_obj)>0
 				and distance_to_object(signclaire_obj)>0{
 					

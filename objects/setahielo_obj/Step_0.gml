@@ -2,7 +2,7 @@ event_inherited();
 
 if sleep=false{time++}
 
-if time>room_speed*1.5{
+if time>60*1.5{
     audio_play_sound(zombifrost_snd,1,false)
     with(instance_create(0,0,fadeout_obj)){color=c_white}
     if instance_exists(eatfather_obj){

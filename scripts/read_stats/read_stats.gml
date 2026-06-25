@@ -9,6 +9,8 @@ function read_stats(str, _r) {
 
 	*/
 	
+    //Add recharge to stats
+    
 	var _rechar = "";
 	
 	if (global.lang = "es"){
@@ -16,11 +18,13 @@ function read_stats(str, _r) {
 	}else{
 		_rechar = "Recharge:"
 	}
-
+    
+    if (string_pos(_rechar, str) > 0){
+        str = string_insert(string(_r), str, string_pos(_rechar, str) + string_length(_rechar));
+    }
+    
 	var new_str = ""
 	var tmp_str = "";
-
-	str = string_insert(string(_r), str, string_pos(_rechar, str) + string_length(_rechar));
 	
 	for(var i = 1; i <= string_length(str); i++){
     

@@ -1,0 +1,83 @@
+{
+    "setasolar": {
+        "obj_index": "@ref object(setasolar_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {
+                "x": 409,
+                "y": 160
+            },
+            {
+                "x": 409,
+                "y": 260
+            },
+            {
+                "x": 409,
+                "y": 360
+            },
+            {
+                "x": 409,
+                "y": 460
+            },
+            {
+                "x": 409,
+                "y": 560
+            }
+        ],
+        "vars": {}
+    },
+    "spawngraves": {
+        "obj_index": "@ref object(spawngraves_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {
+                "x": 849,
+                "y": 160
+            },
+            {
+                "x": 849,
+                "y": 260
+            },
+            {
+                "x": 849,
+                "y": 460
+            },
+            {
+                "x": 849,
+                "y": 560
+            }
+        ],
+        "vars": {}
+    },
+    "spawngraves3": {
+        "obj_index": "@ref object(spawngraves3_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {
+                "x": 1025,
+                "y": 160
+            },
+            {
+                "x": 937,
+                "y": 260
+            },
+            {
+                "x": 849,
+                "y": 360
+            },
+            {
+                "x": 1025,
+                "y": 360
+            },
+            {
+                "x": 937,
+                "y": 460
+            },
+            {
+                "x": 1025,
+                "y": 560
+            }
+        ],
+        "vars": {}
+    }
+}

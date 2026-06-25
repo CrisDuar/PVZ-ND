@@ -12,13 +12,24 @@
       0.0,
       0.0
     ],
-    "limit":817.0
+    "limit":817.0,
+    "graves": 0,
+    "maxgraves": 24
   },
   "fog":-1.0,
   "smog":-1.0,
   "is_conveyor":true,
-  "cys":true,
-  "conv_code":4.0,
+  "cys":false,
+  "conv_p_packets":[
+    [15, -1, 100],
+    [17, -1, 60],
+    [18, -1, 80],
+    [19, -1, 70],
+    [20, -1, 70],
+    [21, -1, 50],
+    [3, -1, 70],
+    [25, -1, 50]
+  ],
   "conv_t1":4.0,
   "conv_t2":6.0,
   "preplants":[
@@ -223,34 +234,30 @@
   "money":300.0,
   "pt":6.0,
   "fn":15.0,
-  "objects":{
-    "spawngraves7_obj": {
-        "obj_index": "@ref object(spawngraves7_obj)",
-        "obj_layer": "Instances",
+  "objects":[
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {"x": 761, "y": 160},
-            {"x": 761, "y": 260},
-            {"x": 761, "y": 360},
-            {"x": 761, "y": 460},
-            {"x": 761, "y": 560}
+          {"x": 5, "y": 0},
+          {"x": 5, "y": 1},
+          {"x": 5, "y": 2},
+          {"x": 5, "y": 3},
+          {"x": 5, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [7]
     },
-    "boss1_obj": {
-        "obj_index": "@ref object(boss1_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 18,
+        "obj_type": 2,
+        
         "pos": [
-            {"x": 936, "y": 368}
+          {"x": 936, "y": 2}
         ],
-        "vars": {}
-    },
-    "ctrlbarraboss_obj": {
-        "obj_index": "@ref object(ctrlbarraboss_obj)",
-        "obj_layer": "Instances",
-        "pos": [
-            {"x": 0, "y": 0}
-        ],
-        "vars": {}
+
+        "vars": []
     }
-  }
+  ]
 }

@@ -1,11 +1,21 @@
-if setpos==false{
+if (!setpos){
     y=get_closest_row(y)
     x=instance_nearest(x,y,pastoinv_obj).x-10
+    spawnstart = struct_get_default(control_obj.gravesTypes[type], "spawnStart", true);
+    repawntime = struct_get_default(control_obj.gravesTypes[type], "respawnTime", true);
+    
+    var _lvl_id = string(zombispawn_obj.lvl_type) + "_" + string(zombispawn_obj.lvl_id)
+    
+    if (_lvl_id == "0_24" && type == 5){
+        repawntime = 30;
+        maxtime=choose(15, 30, 90, 90, 120) + (irandom(30))*60
+    }
+    
     setpos=true
 }
 
 if spawnstart=true{
-    alarm[0]=random_range(1,3)*room_speed
+    alarm[0]=random_range(1,3)*60
     spawnstart=false
 }
 
@@ -30,7 +40,7 @@ if time>=maxtime{
 if (audio_is_playing(suspenso1_snd) and alert_spawn=false){
 
     if (can_necro){
-        alarm[1]=room_speed*random_range(1,5)
+        alarm[1]=60*random_range(1,5)
     }else{
         can_necro = true
     }
@@ -41,5 +51,5 @@ if (audio_is_playing(suspenso1_snd) and alert_spawn=false){
 if !audio_is_playing(suspenso1_snd) alert_spawn=false
 
 
-totalgraves=instance_number(gravedetect_obj)+instance_number(animgrave_obj)
+totalgraves = instance_number(gravedetect_obj)+instance_number(animgrave_obj)
 

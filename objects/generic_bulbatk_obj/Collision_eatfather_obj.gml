@@ -1,0 +1,29 @@
+if (other.object_index == z_balloon_obj) exit;
+event_inherited();
+
+/*if other.object_index!=z_balloon_obj 
+and ds_list_find_index(hit_zom,other.id)==-1
+and image_alpha>=0.9{
+    audio_play_sound(bulbopimact_snd,0.8,false)
+    ds_list_add(hit_zom,other.id)
+    image_alpha=0.35
+    switch(direction){
+        case 0:
+            direction=choose(45, 330)
+        break
+                
+        case 330:
+            direction=45
+        break
+                
+        case 45:
+            direction=330
+        break
+    }
+    with(other){
+		if (!soltarproteccion) audio_play_sound(choose(hurtsnd,hurt2snd),1,false);
+		if control_obj.invisible==false image_alpha=0.5
+		vida -= 120
+    }
+}
+

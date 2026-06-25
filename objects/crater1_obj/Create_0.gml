@@ -1,7 +1,7 @@
 image_speed=0
 dis=false
 tmax=120*60
-t=tmax
+t = 0;
 w = false
 
 jumpingp=false
@@ -10,3 +10,4 @@ jumpingp=false
 yy=0
 up=0
 
+init = false;

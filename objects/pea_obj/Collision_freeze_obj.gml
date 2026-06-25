@@ -9,4 +9,3 @@ with(instance_create(x,y,icepea_obj)){
     yy=other.yy
 }
 instance_destroy();
-

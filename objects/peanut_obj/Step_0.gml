@@ -6,7 +6,7 @@ if sprite_index==imgshot{
         audio_play_sound(choose(pea_shoot_snd,pea_shoot2_snd), 1, false);
         
         with(instance_create(x,y-50,pea_obj)){yy=25}
-        with(instance_create(x,y-50,pea_obj)){hspd=18}
+        with(instance_create(x,y-50,pea_obj)){spd=18}
         disparando=true
     }
     

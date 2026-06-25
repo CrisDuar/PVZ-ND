@@ -1,5 +1,6 @@
-//draw_text(x,y+30, vida)
-
+//draw_text(x,y+30, sun_t)
+//draw_text(x,y+60, sun_tm)
+//draw_text(x,y+90, sunmode)
 /*var c = (object_get_parent(object_index) == eatfather_obj) or (object_get_parent(object_index) == eatfather_shield_obj)
 
 draw_text(x,y,hipno)

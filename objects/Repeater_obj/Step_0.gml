@@ -7,7 +7,7 @@ if sprite_index=imgshot{
             instance_create(x+25,y-40,pea_obj)
         }else{
             instance_create(x+25,y-40,pea_obj)
-            with(instance_create(x+25,y-40,pea_obj)){hspd=18}
+            with(instance_create(x+25,y-40,pea_obj)){spd=18}
         }
         disparando=true
     }

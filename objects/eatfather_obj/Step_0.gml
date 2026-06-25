@@ -221,6 +221,17 @@ if (goopstun<=0 and timestop<=0 and frozenstop<=0){
     stop=true
 }
 
+//Sun bean
+if (sunmode > 0){
+	sun_tm = max(15, 60 - 15 * sunmode);
+
+	if (sun_t > 0){
+		sun_t--;
+	}else{
+		sun_t = sun_tm;
+		part_particles_create(control_obj.part, random_range(bbox_left, bbox_right), random_range(bbox_bottom, bbox_top - 20), control_obj.p28, sunmode);
+	}
+}
 //Dying
 
 if (!gameover){

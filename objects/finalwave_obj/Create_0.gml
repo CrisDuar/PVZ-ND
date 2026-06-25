@@ -1,4 +1,4 @@
-timer=room_speed*1.5
+timer=60*1.5
 transparencia=0
 size=8
 fase=0

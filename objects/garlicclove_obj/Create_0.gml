@@ -6,3 +6,4 @@ broke=garlicbroke_spr
 particle=garlicparticle_spr
 _angle=360
 
+dmg_zom = 5;

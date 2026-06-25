@@ -7,8 +7,8 @@
   ],
   "name":"dlg_no2_tml",
   "parent":{
-    "name":"DIALOGOS",
-    "path":"folders/Timelines/DIALOGOS.yy",
+    "name":"Timelines",
+    "path":"folders/Timelines.yy",
   },
   "resourceType":"GMTimeline",
   "resourceVersion":"2.0",

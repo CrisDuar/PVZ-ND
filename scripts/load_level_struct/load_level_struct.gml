@@ -28,6 +28,10 @@ function load_level_struct(_struct){
 			xfinal = _struct.fog;
 		}
 	}
+    
+    if (struct_get_default(_struct, "maze", false)){
+        instance_create_layer(0, 0, "Control", mazo_obj);
+    }
 	
 	//Conveyor belt level
 	if struct_get_default(_struct, "is_conveyor", false){
@@ -175,4 +179,18 @@ function load_level_struct(_struct){
 			key = ds_map_find_next(_zombie_prev, key);
 		}
 	}
+    
+    
+    //Multiplayer minigame
+    
+    if (struct_get_default(_struct, "versus_minigame", 0)){
+		for (var i = 0; i < array_length(zombispawn_obj.rows_arr); i++){
+            instance_create_layer(1120, zombispawn_obj.rows_arr[i], "Instances", zombiediana_obj);	
+        }
+        
+        instance_create_layer(0, 0, "Control", control2p_obj)
+        instance_create_layer(0, 0, "Control", ctrlbarra2p_obj)
+	}
+    
+    
 }

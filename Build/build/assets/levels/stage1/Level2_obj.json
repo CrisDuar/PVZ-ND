@@ -1,0 +1,17 @@
+{
+    "sunflower": {
+        "obj_index": "@ref object(sunflower_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {
+                "x": 321,
+                "y": 260
+            },
+            {
+                "x": 321,
+                "y": 460
+            }
+        ],
+        "vars": {}
+    }
+}

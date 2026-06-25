@@ -1,3 +1,16 @@
+if (time < 1){
+    time += timeSpeed;
+}else{
+    
+    with(instance_create(x,y,gravetype)){
+        water=other.water;
+        spawned=other.inispawned
+    }
+    
+    instance_destroy();
+}
+
+/*
 switch(gravetype){
 case grave1_obj:case grave5_obj:sprite_index=animtumba1_spr;break
 case grave2_obj:sprite_index=animtumba2_spr;break
@@ -8,11 +21,10 @@ case soulgrave_obj:sprite_index=animtumba6_spr;break
 case zomgrave_obj:sprite_index=tumbamulti0_spr;break
 case drheals_obj:sprite_index=drhealsanim_spr;break
 }
-
+*/
 
 //WATER
-if (collision_rectangle(305,284,1055,423,self,false,false)
-and __background_get( e__BG.Index, 0 )=poolday_bg)
+if (collision_rectangle(305,284,1055,423,self,false,false) and __background_get( e__BG.Index, 0 )=poolday_bg)
 or (place_meeting(x,y,charco_obj)){
     if water=false{
         image_alpha=0
@@ -34,15 +46,16 @@ else{
 
 depth=-y+60
 image_speed=0.25
+/*
 if image_index>image_number-1{
 with(instance_create(x,y,gravetype)){water=other.water; spawned=other.inispawned}
-instance_destroy();
+    instance_destroy();
 }
 
 if image_alpha<1{
-image_alpha+=0.05
+    image_alpha+=0.05
 }
-
+*/
 if setpos==false{
     y=get_closest_row(y)
     x=instance_nearest(x,y,pastoinv_obj).x-10

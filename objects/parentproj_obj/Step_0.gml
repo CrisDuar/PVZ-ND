@@ -1,6 +1,6 @@
-if global.gameover=true{
-    hspd=0
-    vspd=0
+if (global.gameover){
+    //hspd=0
+    //vspd=0
     spd=0
 }
 
@@ -36,18 +36,18 @@ if rule_outside==false{
 if image_alpha<1{image_alpha+=0.05}
 
 if rule_speed==true and global.gameover==false{
-    if hspd > hspd_max{hspd -= 0.5}
+    /*if hspd > hspd_max{hspd -= 0.5}
     if hspd < hspd_min{hspd += 0.5}
     
     if vspd > vspd_max{vspd -= 0.5}
     if vspd < vspd_min{vspd += 0.5}
-    
-    if spd > spd_max{spd -= 0.5}
-    if spd < spd_min{spd += 0.5}
+    */
+    if spd > spd_max{spd -= frct}
+    if spd < spd_min{spd += acc}
     
 }
 
-x+=hspd
-y+=vspd
-speed=spd
+//x+=hspd
+//y+=vspd
+speed = spd;
 

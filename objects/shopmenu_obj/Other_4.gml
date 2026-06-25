@@ -1,4 +1,4 @@
-if global.niveles<20{
+if (read_progress("niveles")<20){
 visible=false
 }
 else{

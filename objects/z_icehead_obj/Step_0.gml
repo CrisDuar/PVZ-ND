@@ -2,7 +2,7 @@ if vida<=0{
     audio_play_sound(icelettuce_snd,1,false)
     with(typeplant2_obj){
         if collision_rectangle(other.x-100,other.y-140,other.x+100,other.y+120,self,false,false){
-            if (timefreeze<room_speed*15) timefreeze=room_speed*15
+            if (timefreeze<60*15) timefreeze=60*15
             with(instance_create(x,y-60,luzcafe_obj)){sprite_index=luzicelettuce_spr}
             instance_create(x,y-60,destroygrave_obj)
         }

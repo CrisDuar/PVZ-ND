@@ -86,12 +86,14 @@ if vspeed>=0 and spawngui==false{
 		
         if (global.vs_mtouch[(unit_ban == false) ? 0 : 1]){
             //instance_create(x,y+240,buttonpages_obj); with(instance_create(x,y+240,buttonpages_obj)){image_xscale=-1}
-            instance_create_layer(x+100,y-36,"GUI",buttonpages_obj); with(instance_create_layer(x-100,y-36,"GUI",buttonpages_obj)){image_xscale=-1}
+            instance_create_layer(x+100,y-36,"GUI",buttonpages_obj);
+            with(instance_create_layer(x-100,y-36,"GUI",buttonpages_obj)){image_xscale=-1}
         }
         
         if (global.vs_mtouch[(unit_ban == false) ? 1 : 0]){
             //instance_create(x+326,y+240,buttonzompages_obj); with(instance_create(x+326,y+240,buttonzompages_obj)){image_xscale=-1}
-            instance_create_layer(x+100+326,y-36,"GUI",buttonzompages_obj); with(instance_create_layer(x-100+326,y-36,"GUI",buttonzompages_obj)){image_xscale=-1}
+            instance_create_layer(x+100+326,y-36,"GUI",buttonzompages_obj);
+            with(instance_create_layer(x-100+326,y-36,"GUI",buttonzompages_obj)){image_xscale=-1}
         }
     }
     
@@ -235,13 +237,16 @@ else if sprite_index==menuselectzomb_spr{
 if (bans >= 4 and unit_ban){
 	unit_ban = false;
 	
+    if (global.vs_mtouch[0] == global.vs_mtouch[1]) exit;
+    
 	if global.vs_mtouch[0]{
 		with(buttonzompages_obj){instance_destroy()}
-	    instance_create_layer(x+100,y-36,"GUI",buttonpages_obj); with(instance_create_layer(x-100,y-36,"GUI",buttonpages_obj)){image_xscale=-1}
-	}
+	    instance_create_layer(x+100,y-36,"GUI",buttonpages_obj);
+        with(instance_create_layer(x-100,y-36,"GUI",buttonpages_obj)){image_xscale=-1}
         
-	if global.vs_mtouch[1]{
+	}else if global.vs_mtouch[1]{
 		with(buttonpages_obj){instance_destroy()}
-	    instance_create_layer(x+100+326,y-36,"GUI",buttonzompages_obj); with(instance_create_layer(x-100+326,y-36,"GUI",buttonzompages_obj)){image_xscale=-1}
+	    instance_create_layer(x+100+326,y-36,"GUI",buttonzompages_obj);
+        with(instance_create_layer(x-100+326,y-36,"GUI",buttonzompages_obj)){image_xscale=-1}
 	}
 }

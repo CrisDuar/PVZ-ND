@@ -135,6 +135,9 @@ if toggle==true{
 }
 
 if keyboard_check_pressed(vk_f10){
+    
+    
     toggle=!toggle
+    show_debug_overlay(toggle);
 }
 

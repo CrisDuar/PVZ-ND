@@ -20,5 +20,5 @@ if global.nivelterminado=false and global.iniciogame=true and global.gameover=fa
         zom=true
     }
 }
-alarm[1]=room_speed*15
+alarm[1]=60*15
 

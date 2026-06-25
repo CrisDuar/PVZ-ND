@@ -25,7 +25,7 @@ if room=izombie_rm{
 if distance_to_object(gravedetect_obj)>1{
     instance_destroy()
 }
-
+/*
 if distance_to_object(grave4_obj)<0.5{
     if vidaeffect>0{
         vidaeffect-=1
@@ -37,7 +37,7 @@ if distance_to_object(grave4_obj)<0.5{
         repeat(3){with(instance_create(x+random_range(-20,20),y-50,nutparticle_obj)){sprite_index=zomgravepart_spr}}
     }
 }
-
+*/
 if vida<=100{sprite_index=comepiedras1_spr}
 if vida<=70{sprite_index=comepiedras2_spr}
 if vida<=40{sprite_index=comepiedras3_spr}

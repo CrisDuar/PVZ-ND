@@ -21,7 +21,9 @@
       0.0,
       0.0
     ],
-    "limit":1600.0
+    "limit":1600.0,
+    "graves": 10,
+    "maxgraves": 15
   },
   "fog":-1.0,
   "smog":-1.0,
@@ -35,7 +37,7 @@
   "loop":false,
   "idle_sng":"moongrains_sng",
   "horde_sng":"music_finalwavenight_snd",
-  "horde_prcnt":0.40000000000000002,
+  "horde_prcnt":0.4,
   "surprise_enabled":true,
   "infinite":false,
   "infinite_loop":3.0,
@@ -335,134 +337,67 @@
   "money":300.0,
   "pt":12.0,
   "fn":17.0,
-  "objects": {
-    "spawngraves3_obj": {
-        "obj_index": "@ref object(spawngraves3_obj)",
-        "obj_layer": "Instances",
+  "objects": [
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {
-                "x": 673,
-                "y": 160
-            },
-            {
-                "x": 761,
-                "y": 160
-            },
-            {
-                "x": 673,
-                "y": 260
-            },
-            {
-                "x": 1025,
-                "y": 260
-            },
-            {
-                "x": 673,
-                "y": 460
-            },
-            {
-                "x": 849,
-                "y": 460
-            },
-            {
-                "x": 1025,
-                "y": 460
-            },
-            {
-                "x": 673,
-                "y": 560
-            },
-            {
-                "x": 937,
-                "y": 560
-            }
+          {"x": 4, "y": 0},
+          {"x": 5, "y": 0},
+          {"x": 4, "y": 1},
+          {"x": 8, "y": 1},
+          {"x": 4, "y": 3},
+          {"x": 6, "y": 3},
+          {"x": 8, "y": 3},
+          {"x": 4, "y": 4},
+          {"x": 7, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [1]
     },
-    "spawngraves_obj": {
-        "obj_index": "@ref object(spawngraves_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {
-                "x": 849,
-                "y": 160
-            },
-            {
-                "x": 761,
-                "y": 260
-            },
-            {
-                "x": 937,
-                "y": 260
-            },
-            {
-                "x": 761,
-                "y": 360
-            },
-            {
-                "x": 1025,
-                "y": 360
-            },
-            {
-                "x": 937,
-                "y": 460
-            },
-            {
-                "x": 761,
-                "y": 560
-            },
-            {
-                "x": 1025,
-                "y": 560
-            }
+          {"x": 6, "y": 0},
+          {"x": 5, "y": 1},
+          {"x": 7, "y": 1},
+          {"x": 5, "y": 2},
+          {"x": 8, "y": 2},
+          {"x": 7, "y": 3},
+          {"x": 5, "y": 4},
+          {"x": 8, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [2]
     },
-    "spawngraves6_obj": {
-        "obj_index": "@ref object(spawngraves6_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {
-                "x": 937,
-                "y": 160
-            },
-            {
-                "x": 761,
-                "y": 460
-            }
+          {"x": 8, "y": 0},
+          {"x": 6, "y": 1},
+          {"x": 4, "y": 2},
+          {"x": 6, "y": 2},
+          {"x": 7, "y": 2},
+          {"x": 6, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [3]
     },
-    "spawngraves2_obj": {
-        "obj_index": "@ref object(spawngraves2_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {
-                "x": 1025,
-                "y": 160
-            },
-            {
-                "x": 849,
-                "y": 260
-            },
-            {
-                "x": 673,
-                "y": 360
-            },
-            {
-                "x": 849,
-                "y": 360
-            },
-            {
-                "x": 937,
-                "y": 360
-            },
-            {
-                "x": 849,
-                "y": 560
-            }
+          {"x": 7, "y": 0},
+          {"x": 5, "y": 3}
         ],
-        "vars": {}
+
+        "vars": [5]
     }
-  }
+  ]
 }

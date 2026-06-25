@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"soulgrave1_spr",
-    "path":"sprites/soulgrave1_spr/soulgrave1_spr.yy",
+    "name":"soulgrave_spr",
+    "path":"sprites/soulgrave_spr/soulgrave_spr.yy",
   },
   "spriteMaskId":null,
   "visible":true,

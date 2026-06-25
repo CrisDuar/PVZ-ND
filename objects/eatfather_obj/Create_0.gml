@@ -96,6 +96,8 @@ xmod = 1
 dpth = 10;
 
 sunmode = false;
+sun_t = 0;
+sun_tm = 60;
 
 if object_index!=z_ghost_obj{
     if (point_in_rectangle(x,y,305,284,1100,423) and __background_get( e__BG.Index, 0 )=poolday_bg)

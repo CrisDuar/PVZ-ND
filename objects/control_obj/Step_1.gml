@@ -2,6 +2,7 @@ if (!init_stage){
 	init_stage = true;
 	
 	//Save n Load level
+    var _lvl_str, _obj_str;
 	if (save_struct){
 		var level_json = json_stringify(save_level_struct(), true);
 
@@ -14,13 +15,39 @@ if (!init_stage){
 
 		file_text_close(_file);
 	}else{
-		
+        
 		if (do_load_level){
+            
 			
 			if (global.is_customlvl){
-				load_custom_level(global.load_level);
+				//load_custom_level(global.load_level);
+                var _acfolder = "ac" + string(global.acc_id);
+               	var _route = _acfolder + "/custom_levels/";
+               	
+               	_lvl_str = load_level_json(global.load_level, _route);
+               	_obj_str = struct_get_default(_lvl_str, "objects", []);
+               	
+               	load_level_struct(_lvl_str);
+               	
+               	
+               	with(zombispawn_obj){
+               		lvl_type = -1;
+               		lvl_id = -1;
+               	
+               		//Prize
+               		prizevar = ""
+               		lvl = -2
+               		money = 0;
+               		plantroom = customlevels_rm;
+               	}
 			}else{
-				load_level();	
+				//load_level();	
+                var _route = "levels/" + global.load_route + "/";
+	
+                _lvl_str = load_level_json(global.load_level, _route);
+                _obj_str = struct_get_default(_lvl_str, "objects", []);
+                
+                load_level_struct(_lvl_str);
 			}
 		}
 		
@@ -54,6 +81,9 @@ if (!init_stage){
             spawn_tiles(pastoinv_obj,"","",0.85,"",0,2,448,0.99)
         break
     }
+    
+    //Load objects after creating the tiles
+    if (do_load_level) load_objects_id_struct(_obj_str);
 	
 	//Set the scream noise on game over
 	if (stage == 4){

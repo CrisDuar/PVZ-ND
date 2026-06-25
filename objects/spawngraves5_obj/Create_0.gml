@@ -1,4 +1,4 @@
 //to edit
 event_inherited();
-type=grave5_obj
+type=6
 

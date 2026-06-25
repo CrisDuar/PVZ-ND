@@ -33,7 +33,9 @@
       0.0,
       0.0,
       0.0
-    ]
+    ],
+    "graves": 3,
+    "maxgraves": 8
   },
   "lvl_type": 1,
   "fog":-1.0,
@@ -168,40 +170,55 @@
   "snd":"newplant_snd",
   "money":300.0,
   "pt":6.0,
-  "objects":{
-    "spawngraves": {
-        "obj_index": "@ref object(spawngraves_obj)",
-        "obj_layer": "Instances",
+  "objects":[
+    {
+        "obj_id": 0,
+        "obj_type": 1,
+        
         "pos": [
-            {"x": 849, "y": 160},
-            {"x": 849, "y": 360},
-            {"x": 1025, "y": 360},
-            {"x": 849, "y": 560}
+          {"x": 2, "y": 0},
+          {"x": 0, "y": 2},
+          {"x": 2, "y": 2},
+          {"x": 4, "y": 2},
+          {"x": 2, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [null, null]
     },
-    "spawngraves7": {
-        "obj_index": "@ref object(spawngraves7_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {"x": 1025, "y": 160},
-            {"x": 937, "y": 260},
-            {"x": 937, "y": 460},
-            {"x": 1025, "y": 560}
+          {"x": 6, "y": 4},
+          {"x": 8, "y": 2}
         ],
-        "vars": {}
+
+        "vars": [1]
     },
-    "crater": {
-        "obj_index": "@ref object(crater1_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {"x": 508, "y": 152},
-            {"x": 320, "y": 352},
-            {"x": 508, "y": 352},
-            {"x": 687, "y": 352},
-            {"x": 508, "y": 568}
+          {"x": 6, "y": 0},
+          {"x": 6, "y": 2},
+          {"x": 8, "y": 0},
+          {"x": 8, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [2]
+    },
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
+        "pos": [
+          {"x": 7, "y": 1},
+          {"x": 7, "y": 3}
+        ],
+
+        "vars": [11]
     }
-  }
+  ]
 }

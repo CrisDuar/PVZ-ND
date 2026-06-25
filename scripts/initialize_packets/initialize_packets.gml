@@ -1,11 +1,8 @@
 function initialize_packets(){
 	
-	show_debug_message("TIMEZONE DATA")
-	date_set_timezone(timezone_utc)
-	show_debug_message(date_get_hour(date_current_datetime()));
-	date_set_timezone(timezone_local)
-	show_debug_message(date_get_hour(date_current_datetime()));
-	
+    global.plant_variables = ["in_danger"];
+    global.zombie_variables = [];
+    
 	enum almanac_data
 	{
 		NAME_ES,
@@ -395,7 +392,9 @@ function initialize_packets(){
 			sprite: comepiedras1_spr, //Plant sprite
 			cost: 50,
 			timer: 20, //Recharge time
+            place_type: 4,
 			tags: [packet_tags.SD_DISABLED],
+            
 			
 			costume: [
 				{
@@ -506,11 +505,24 @@ function initialize_packets(){
 		ZOMBIE_PAPERTHROWER,
 		ZOMBIE_CONEHEAD,
 		ZOMBIE_STATUE,
-		ZOMBIE_SCREENDOR,
+		ZOMBIE_SCREENDOOR,
 		ZOMBIE_GARDENER,
 		ZOMBIE_BUCKETHEAD,
 		ZOMBIE_POLEVAULTER,
-		ZOMBIE_RALLY
+		ZOMBIE_RALLY,
+        ZOMBIE_IMP,
+        ZOMBIE_NEWSPAPER,
+        ZOMBIE_TORCH,
+        ZOMBIE_NECROMANCER,
+        ZOMBIE_SKELETON,
+        ZOMBIE_ALLSTAR,
+        BOSS_SKELETARIUS,
+        OBST_GRAVE,
+        OBST_GRAVE_ZOMBIE,
+        OBST_GRAVE_SUN,
+        OBST_GRAVE_SHIELD,
+        OBST_GRAVE_EXPLOSION,
+        OBST_GRAVE_SOUL,
 	}
 	
 	global.zombies_packets = [
@@ -643,6 +655,128 @@ function initialize_packets(){
 			zombie: z_rally_obj,
 			cost: 200,
 			timer: 60
+		},
+		{ //imp
+			packet_sprite: impslot1_spr,
+			
+			sprite: imp1_spr,
+			zombie: z_imp_obj,
+			cost: 25,
+			timer: 10
+		},
+		{ //newspaper
+			packet_sprite: lectorslot1_spr,
+			
+			sprite: lectorquiet_spr,
+			zombie: z_newspaper_obj,
+			cost: 150,
+			timer: 20
+		},
+		{ //torch
+			packet_sprite: torchslot1_spr,
+			
+			sprite: zomtorch0_spr,
+			zombie: z_torch_obj,
+			cost: 125,
+			timer: 30
+		},
+		{ //necromancer
+			packet_sprite: graveraiserslot1_spr,
+			
+			sprite: sectario1quiet_spr,
+			zombie: z_necromancer_obj,
+			cost: 200,
+			timer: 20
+		},
+		{ //skeleton
+			packet_sprite: skeletonslot1_spr,
+			
+			sprite: skeleton1_spr,
+			zombie: z_skeleton_obj,
+			cost: 150,
+			timer: 20
+		},
+		{ //allstar
+			packet_sprite: futbolslot1_spr,
+			
+			sprite: futbolzombi_spr,
+			zombie: z_allstar_oj,
+			cost: 150,
+			timer: 45
+		},
+		{ //boss 1
+			packet_sprite: boss1slot_spr,
+			
+			sprite: necromancer1_spr,
+			zombie: boss1_obj,
+			cost: 800,
+			timer: 99999999,
+            ignore: true
+		},
+		{ //grave
+            xx: -10,
+			yy: 30,
+			packet_sprite: grave1slot_spr,
+			
+			sprite: grave3_spr,
+			zombie: grave3_obj,
+			cost: 25,
+			timer: 30,
+            ignore: true
+        },
+		{ //grave zombie
+            xx: -10,
+			yy: 30,
+			packet_sprite: grave2slot_spr,
+			
+			sprite: grave1_spr,
+			zombie: grave1_obj,
+			cost: 50,
+			timer: 30,
+            ignore: true
+		},
+		{ //grave sun
+            xx: -10,
+			yy: 30,
+			packet_sprite: grave3slot_spr,
+			
+			sprite: grave2_spr,
+			zombie: grave2_obj,
+			cost: 0,
+			timer: 30,
+            ignore: true
+		},
+		{ //grave shield
+            xx: -10,
+			yy: 30,
+			packet_sprite: grave4slot_spr,
+			
+			sprite: grave4_spr,
+			zombie: grave4_obj,
+			cost: 200,
+			timer: 30,
+            ignore: true
+		},
+		{ //grave explosion
+            xx: -10,
+			yy: 30,
+			packet_sprite: grave5slot_spr,
+			
+			sprite: grave5_spr,
+			zombie: grave6_obj,
+			cost: 50,
+			timer: 60,
+            ignore: true
+		},
+		{ //grave soul
+            xx: -10,
+			yy: 30,
+			packet_sprite: soulgraveslot1_spr,
+			
+			sprite: soulgrave1_spr,
+			zombie: soulgrave_obj,
+			cost: 50,
+			timer: 30
 		}
 		
 		

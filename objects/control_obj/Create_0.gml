@@ -9,11 +9,11 @@ if (global.videoq > 0) instance_create_layer(x,y,"Control", draw_shadows_obj)
 save_struct = true;
 do_load_level = true;
 
-//Level type
-stage = 0;
-
-//Day: 0, Sunset: 1, Night: 2
-daytime = 0;
+//level limits
+lim_top = 73;
+lim_bottom = 597;
+lim_left = 275;
+lim_right = 1100;
 
 //Stage
 /*
@@ -23,6 +23,41 @@ daytime = 0;
 	claire: 4
 	park: 5
 */
+
+//Level type
+stage = 0;
+
+//Day: 0, Sunset: 1, Night: 2
+daytime = 0;
+
+//Gravestones
+graves = 5; 
+maxgraves = 7;
+gravesTypes = [
+    { grave: zomgrave_obj },
+    { grave: grave3_obj },
+    { grave: grave1_obj },
+    { grave: grave2_obj },
+    {
+        grave: grave4_obj,
+        spawnStart: false,
+        respawnTime: 120
+    },
+    {
+        grave: grave6_obj,
+        respawnTime: 90
+    },
+    { grave: grave5_obj },
+    { grave: soulgrave_obj },
+    { grave: drheals_obj },
+    { grave: grave7_obj },
+    { grave: grave8_obj },
+    { 
+        grave: grave9_obj,
+        spawnStart: false,
+    }
+    
+]
 
 //Backgrounds for levels
 bgs_lvl = [
@@ -501,5 +536,16 @@ part_type_speed(p28, 0.5, 1, 0, 0);
 part_type_direction(p28, 280, 330,0,1);
 part_type_orientation(p28,0,360,2,0.5,0);
 part_type_life(p28,60,60*4);
+
+//Sun bean
+p28=part_type_create();
+
+part_type_shape(p28,pt_shape_square);
+part_type_size(p28, 0.1, 0.2, 0,0);
+part_type_color2(p28,c_yellow, c_white);
+part_type_alpha3(p28, 0.2, 1, 0);
+part_type_direction(p28,70,110,0,1);
+part_type_speed(p28,2,7,0,0);
+part_type_life(p28,30,40);
 
 #endregion

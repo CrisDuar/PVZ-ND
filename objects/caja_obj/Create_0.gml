@@ -4,7 +4,7 @@ vida=100
 maxhp=100
 waitsprite=cajaidle_spr
 
-timer=room_speed*40
+timer=60*40
 sh=0
 snd=false
 

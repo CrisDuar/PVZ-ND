@@ -45,8 +45,8 @@ function load_almanac() {
         
 	            rendery = typeyy
             
-	            name_es = global.almanac_data[# almanac_data.NAME_EN, i]
-	            name_en = global.almanac_data[# almanac_data.NAME_ES, i]
+	            name_es = global.almanac_data[# almanac_data.NAME_ES, i]
+	            name_en = global.almanac_data[# almanac_data.NAME_EN, i]
 	            lvl = real(global.almanac_data[# almanac_data.LEVEL, i])
 	            cond = global.almanac_data[# almanac_data.COND, i]
 				locked= asset_get_index(global.almanac_data[# almanac_data.LOCKED_SPR, i])
@@ -93,7 +93,7 @@ function load_almanac() {
 						//Zombies
 						case -2:
 							sprite = global.zombies_packets[_plant_id].packet_sprite;
-							cost = global.zombies_packets[_plant_id].cost;
+							if (struct_get_default(global.zombies_packets[_plant_id], "ignore", false) == false) cost = global.zombies_packets[_plant_id].cost else cost = -1;
 							_recharge = global.zombies_packets[_plant_id].timer;
 						break
 					}

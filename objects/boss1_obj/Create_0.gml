@@ -32,7 +32,11 @@ imagespeed2=0.22
 caneat=false
 canhand=false
 tradie=false
-alarm[4]=room_speed*irandom_range(12,14)
+alarm[4]=60*irandom_range(12,14)
 
 y=get_closest_row(y)
 
+with(instance_create_layer(0, 0, "Control", ctrlbarraboss_obj)){
+    obj = boss1_obj;
+    spr = bosshead1_spr;
+}

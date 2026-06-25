@@ -21,11 +21,14 @@
     "windy":false,
     "rain":false,
     "stage":2.0,
-    "daytime":0.0
+    "daytime":0.0,
+    "graves": 2,
+    "maxgraves": 7
   },
   "fog":-1.0,
   "smog":-1.0,
   "is_conveyor":false,
+  "versus_minigame":true,
   "cys":true,
   "pt":12.0,
   "fn":15.0,
@@ -258,83 +261,34 @@
       }
     ]
   ],
-  "objects":{
-    "spawnmultgraves_obj": {
-        "obj_index": "@ref object(spawnmultgraves_obj)",
-        "obj_layer": "Instances",
+  "objects":[
+    {
+        "obj_id": 2,
+        "obj_type": 1,
         
         "pos": [
-          {"x": 856, "y": 176},
-          {"x": 944, "y": 176},
-          {"x": 1024, "y": 176},
+          {"x": 6, "y": 0},
+          {"x": 7, "y": 0},
+          {"x": 8, "y": 0},
 
-          {"x": 856, "y": 286},
-          {"x": 944, "y": 286},
-          {"x": 1024, "y": 286},
+          {"x": 6, "y": 1},
+          {"x": 7, "y": 1},
+          {"x": 8, "y": 1},
 
-          {"x": 856, "y": 386},
-          {"x": 944, "y": 386},
-          {"x": 1024, "y": 386},
-          
-          {"x": 856, "y": 485},
-          {"x": 944, "y": 485},
-          {"x": 1024, "y": 485},
+          {"x": 6, "y": 2},
+          {"x": 7, "y": 2},
+          {"x": 8, "y": 2},
 
-          {"x": 856, "y": 598},
-          {"x": 944, "y": 598},
-          {"x": 1024, "y": 598}
+          {"x": 6, "y": 3},
+          {"x": 7, "y": 3},
+          {"x": 8, "y": 3},
+
+          {"x": 6, "y": 4},
+          {"x": 7, "y": 4},
+          {"x": 8, "y": 4}
         ],
 
-        "vars": {
-
-        }
-    },
-
-    "target": {
-        "obj_index": "@ref object(zombiediana_obj)",
-        "obj_layer": "Instances",
-        
-        "pos": [
-          {"x": 1120, "y": 168},
-          
-          {"x": 1120, "y": 269},
-
-          {"x": 1120, "y": 369},
-          
-          {"x": 1120, "y": 473},
-
-          {"x": 1120, "y": 588}
-        ],
-
-        "vars": {
-
-        }
-    },
-
-    "ctrlbarra2p": {
-        "obj_index": "@ref object(ctrlbarra2p_obj)",
-        "obj_layer": "Control",
-        
-        "pos": [
-          {"x": 0, "y": 0}
-        ],
-
-        "vars": {
-
-        }
-    },
-
-    "control2p": {
-        "obj_index": "@ref object(control2p_obj)",
-        "obj_layer": "Control",
-        
-        "pos": [
-          {"x": 0, "y": 0}
-        ],
-
-        "vars": {
-
-        }
+        "vars": [0]
     }
-  }
+  ]
 }

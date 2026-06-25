@@ -6,48 +6,12 @@ if (room==configvs_rm){
     else {global.vsmaxmap=1}
 	
 }else if room=multiplayer1_rm{
-    if global.vsmap==3{
-		
-		zombispawn_obj.rows_arr = [152, 236, 339, 422, 527, 615];
-		
-		for (var i = 0; i < 6; i++){
-			instance_create_layer(1120, get_closest_row(152 + 80*i), "Instances", zombiediana_obj);	
-		}
-		/*
-        instance_create(1120,152,zombiediana_obj)
-        instance_create(1120,236,zombiediana_obj)
-        instance_create(1120,339,zombiediana_obj)
-        instance_create(1120,422,zombiediana_obj)
-        instance_create(1120,527,zombiediana_obj)
-        instance_create(1120,615,zombiediana_obj)
-        
-        //Rows
-		
-        /*zombispawn_obj.f1=152
-        zombispawn_obj.f2=236
-        zombispawn_obj.f3=339
-        zombispawn_obj.f4=422
-        zombispawn_obj.f5=527
-        zombispawn_obj.f6=615*/
-    }else{
-		
-		for (var i = 0; i < 5; i++){
-			instance_create_layer(1120, get_closest_row(152 + 100*i), "Instances", zombiediana_obj);	
-		}
-		/*
-        instance_create(1120,168,zombiediana_obj)
-        instance_create(1120,272,zombiediana_obj)
-        instance_create(1120,368,zombiediana_obj)
-        instance_create(1120,480,zombiediana_obj)
-        instance_create(1120,591,zombiediana_obj)
-        /*
-        instance_create(226,127,podadora_obj)
-        instance_create(226,224,podadora_obj)
-        instance_create(226,326,podadora_obj)
-        instance_create(226,434,podadora_obj)
-        instance_create(226,539,podadora_obj)*/
-    }
+    if (global.vsmap == 3) zombispawn_obj.rows_arr = [152, 236, 339, 422, 527, 615];
     
+    for (var i = 0; i < array_length(zombispawn_obj.rows_arr); i++){
+        instance_create_layer(1120, zombispawn_obj.rows_arr[i], "Instances", zombiediana_obj);	
+    }
+
     switch(global.vsmap){
         default://dia
         if global.vsgamemode!=2{
@@ -146,7 +110,7 @@ if (room==configvs_rm){
 				zombies_id.ZOMBIE,
 				zombies_id.ZOMBIE_CONEHEAD,
 				zombies_id.ZOMBIE_GARDENER,
-				zombies_id.ZOMBIE_SCREENDOR,
+				zombies_id.ZOMBIE_SCREENDOOR,
 				zombies_id.ZOMBIE_FLAG
 			])
 			
@@ -173,8 +137,32 @@ if (room==configvs_rm){
             instance_create_layer(1026,get_closest_row(368),"Instances",zomgrave_obj)
             instance_create_layer(1026,get_closest_row(488),"Instances",zomgrave_obj)
             instance_create_layer(1026,get_closest_row(592),"Instances",zomgrave_obj)
-        
-	        with(instance_create_layer(132,0,"Control",ctrlcinta1_obj)){num=5}
+            
+            with(instance_create_layer(132,0,"Control",ctrlcinta1_obj)){
+				
+				p_packets = [
+					[plants_id.PEASHOOTER, -1, 100],
+					[plants_id.SNOWPEA, -1, 80],
+					[plants_id.GARLICDRONE, -1, 80],
+					[plants_id.REPEATER, -1, 80],
+					[plants_id.WALLNUT, -1, 60],
+					[plants_id.POTATOMINE, -1, 40],
+					[plants_id.BOWLINGBULB, -1, 40],
+					[plants_id.SINGLECHERRY, -1, 20]
+				]
+				
+				z_packets = [
+					[zombies_id.ZOMBIE_CONEHEAD, -1, 100],
+					[zombies_id.OBST_ZOMGRAVE, -1, 90],
+					[zombies_id.ZOMBIE_STATUE, -1, 90],
+					[zombies_id.ZOMBIE_HEADBOX, -1, 80],
+					[zombies_id.ZOMBIE_PAPERTHROWER, -1, 80],
+					[zombies_id.ZOMBIE_BUCKETHEAD, -1, 70],
+					[zombies_id.ZOMBIE_POLEVAULTER, -1, 60],
+					[zombies_id.ZOMBIE_GARDENER, -1, 60],
+					[zombies_id.ZOMBIE_FLAG, -1, 30]
+				]
+			}
 			
 	        instance_destroy(menusol_obj)
 	        instance_destroy(menuzom_obj)
@@ -189,9 +177,28 @@ if (room==configvs_rm){
     
     case 2://noche
         control_obj.stage = 2;
-		control_obj.daytime = 1;
+		control_obj.daytime = 2;
 		
         if global.vsgamemode!=2{
+            
+            
+            manual_preselected(0,[
+				plants_id.SUNFLOWER,
+				plants_id.PUFFSHROOM,
+				plants_id.POTATOMINE,
+				plants_id.FUMESHROOM,
+				plants_id.ICEBERG_LETTUCE,
+				plants_id.PEANUT
+			])
+			manual_preselected(1,[
+				zombies_id.OBST_ZOMGRAVE,
+				zombies_id.ZOMBIE,
+				zombies_id.ZOMBIE_CONEHEAD,
+				zombies_id.ZOMBIE_STATUE,
+				zombies_id.ZOMBIE_ALLSTAR,
+				zombies_id.ZOMBIE_FLAG
+			])
+            
             //manual_preselected(0,menusun_obj,menupuff_obj,potatommenu_obj,menufume_obj,menuicelettuce_obj,menupeanut_obj)
             //manual_preselected(1,zomgravestoneslot_obj,zombiebasicslot_obj,conoslot_obj,estatuaslot_obj,futbolzombieslot_obj,flagslot_obj)
             //instance_create(320,264,setasolar_obj)
@@ -210,10 +217,41 @@ if (room==configvs_rm){
             instance_create(1026,get_closest_row(368),zomgrave_obj)
             instance_create(1026,get_closest_row(488),zomgrave_obj)
             instance_create(1026,get_closest_row(592),zomgrave_obj)
-            with(instance_create(132,0,ctrlcinta1_obj)){num=6}
+            
+            with(instance_create_layer(132,0,"Control",ctrlcinta1_obj)){
+				
+				p_packets = [
+					[plants_id.GRAVEBUSTER, -1, 30],
+					[plants_id.PUFFSHROOM, -1, 80],
+					[plants_id.SCAREDYSHROOM, -1, 100],
+					[plants_id.ICEBERG_LETTUCE, -1, 80],
+					[plants_id.WALLNUT, -1, 60],
+					[plants_id.PEANUT, -1, 40],
+					[plants_id.FUMESHROOM, -1, 40],
+					[plants_id.ICE_SHROOM, -1, 20]
+				]
+				
+				z_packets = [
+					[zombies_id.ZOMBIE, -1, 100],
+                    [zombies_id.ZOMBIE_IMP, -1, 100],
+					[zombies_id.OBST_ZOMGRAVE, -1, 90],
+					[zombies_id.ZOMBIE_SKELETON, -1, 90],
+					[zombies_id.ZOMBIE_TORCH, -1, 80],
+					[zombies_id.ZOMBIE_CONEHEAD, -1, 80],
+					[zombies_id.ZOMBIE_BUCKETHEAD, -1, 70],
+					[zombies_id.ZOMBIE_HEADBOX, -1, 60],
+					[zombies_id.ZOMBIE_ALLSTAR, -1, 60],
+					[zombies_id.ZOMBIE_FLAG, -1, 30]
+				]
+			}
+            
             instance_destroy(menusol_obj)
             instance_destroy(menuzom_obj)
-            instance_create(440,0,musicloop_obj)
+            with(instance_create_layer(440,0,"Control",musicglobalhorde_obj)){
+				
+				loop = true;
+				idlesong=music_ultimatebattlenight_snd
+			}
         }
         
         instance_create(760,172,spawngraves2_obj)

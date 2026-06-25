@@ -6,5 +6,5 @@ toggle = false
 
 global.numdialog = 0
 
-if os_type==os_android instance_destroy();
+instance_destroy();
 

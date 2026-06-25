@@ -294,38 +294,44 @@
   "money":100.0,
   "pt":12.0,
   "fn":16.0,
-  "objects":{
-    "spawngraves": {
-        "obj_index": "@ref object(spawngraves_obj)",
-        "obj_layer": "Instances",
+  "objects":[
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {"x": 766, "y": 280},
-            {"x": 943, "y": 280},
-            {"x": 675, "y": 384},
-            {"x": 1033, "y": 384},
-            {"x": 766, "y": 468},
-            {"x": 943, "y": 468}
+          {"x": 4, "y": 0},
+          {"x": 4, "y": 4},
+          {"x": 8, "y": 0},
+          {"x": 8, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [1]
     },
-    "spawngraves3": {
-        "obj_index": "@ref object(spawngraves3_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {"x": 675, "y": 176},
-            {"x": 1033, "y": 176},
-            {"x": 675, "y": 592},
-            {"x": 1033, "y": 592}
+          {"x": 5, "y": 1},
+          {"x": 7, "y": 1},
+          {"x": 4, "y": 2},
+          {"x": 8, "y": 2},
+          {"x": 5, "y": 3},
+          {"x": 7, "y": 3}
         ],
-        "vars": {}
+
+        "vars": [2]
     },
-    "spawngraves4": {
-        "obj_index": "@ref object(spawngraves4_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {"x": 858, "y": 384}
+          {"x": 6, "y": 2}
         ],
-        "vars": {}
+
+        "vars": [4]
     }
-  }
+  ]
 }

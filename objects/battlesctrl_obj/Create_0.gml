@@ -54,8 +54,8 @@ case 1://tarde
 break
 
 case 2://noche
-    control_obj.night=true
-    __background_set( e__BG.Index, 0, night_bg )
+    control_obj.stage = 2;
+	control_obj.daytime = 2;
     
     if global.battle_diff==0{
         instance_create(760,172,spawngraves2_obj)

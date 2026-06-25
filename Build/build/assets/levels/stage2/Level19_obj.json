@@ -1,0 +1,63 @@
+{
+    "spawngraves": {
+        "obj_index": "@ref object(spawngraves_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {
+                "x": 849,
+                "y": 160
+            },
+            {
+                "x": 1025,
+                "y": 160
+            },
+            {
+                "x": 849,
+                "y": 560
+            },
+            {
+                "x": 1025,
+                "y": 560
+            }
+        ],
+        "vars": {}
+    },
+    "spawngraves3": {
+        "obj_index": "@ref object(spawngraves3_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {
+                "x": 849,
+                "y": 260
+            },
+            {
+                "x": 1025,
+                "y": 360
+            },
+            {
+                "x": 849,
+                "y": 460
+            }
+        ],
+        "vars": {}
+    },
+    "spawngraves2": {
+        "obj_index": "@ref object(spawngraves2_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {
+                "x": 1025,
+                "y": 260
+            },
+            {
+                "x": 849,
+                "y": 360
+            },
+            {
+                "x": 1025,
+                "y": 460
+            }
+        ],
+        "vars": {}
+    }
+}

@@ -1,4 +1,4 @@
 //to edit
 event_inherited();
-type=soulgrave_obj
+type=7
 

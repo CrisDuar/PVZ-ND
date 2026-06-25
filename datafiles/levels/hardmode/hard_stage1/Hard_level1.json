@@ -37,18 +37,9 @@
   "idle_sng":"music_hardbattle_snd",
   "horde_sng":"finalhardbattle_sng",
   "wf":[
-    [
-      6.0,
-      1.0
-    ],
-    [
-      13.0,
-      1.0
-    ],
-    [
-      19.0,
-      2.0
-    ]
+    [6.0, 1.0],
+    [13.0, 1.0],
+    [19.0, 2.0]
   ],
   "horde_prcnt":0.40000000000000002,
   "surprise_enabled":true,

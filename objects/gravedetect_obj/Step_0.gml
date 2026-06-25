@@ -1,34 +1,53 @@
 depth=-y+60
-if setpos==false{
-    y=get_closest_row(y)
-    x=instance_nearest(x,y,pastoinv_obj).x-10
-    setpos=true
-}
 
 if global.gameover=true{
-image_speed=0
+    image_speed=0
 }
 
 if image_alpha<1{
-image_alpha+=0.05
+    image_alpha+=0.05
 }
 
-if object_index!=soulgrave_obj
-and object_index!=zomgrave_obj
-and object_index!=grave4_obj
-and object_index!=drheals_obj{
-    if vida>500{image_index=0}
-    else if vida>200{image_index=1}
-    else{image_index=2}
-}
-if room!=izombie_rm{
-    if instance_exists(finalwave_obj) and canspawn=true and spawned=false{
-    alarm[0]=room_speed*random_range(1,3)
-    spawned=true
+if (useDegradeSprites){
+    
+    if (vida > maxVida * (2/3)){
+        image_index = 0;
+    }else if (vida > maxVida * (1/3)){
+        image_index = 1;
+    } else{
+        image_index = 2;
     }
 }
 
-if !instance_exists(finalwave_obj) spawned=false
+if (room == izombie_rm) canspawn = false;
+
+if (canspawn){
+    if (instance_exists(finalwave_obj)){
+        spawnTime = spawnTimeMax;
+        spawned = true;
+    }
+    
+    if (spawned && !global.nivelterminado){
+        if (spawnTime > 0){
+            
+            spawnTime--;
+            
+        }else{
+            
+            spawnTime = spawnTimeMax;
+            spawned = false;
+    
+            with(instance_create(x,get_closest_row(y),zombiegrave_obj)){
+                water=other.water
+                obj=other.zominventory[irandom_range(0,array_length(other.zominventory)-1)]
+            }
+        }
+    }
+}
+
+
+
+
 
 if vida <=0 and object_index!=signclaire_obj{
     audio_play_sound(choose(piedraded_snd,piedraded2_snd),1,false)

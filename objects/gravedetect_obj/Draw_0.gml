@@ -5,3 +5,4 @@ if water==false{
     draw_sprite(agua2_spr,1,x+5,y)
 }
 
+//draw_text(x, y, spawnTime)

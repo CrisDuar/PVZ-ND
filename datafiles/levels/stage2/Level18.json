@@ -21,7 +21,9 @@
       0.0,
       0.0
     ],
-    "limit":1600.0
+    "limit":1600.0,
+    "graves": 5,
+    "maxgraves": 8
   },
   "fog":-1.0,
   "smog":-1.0,
@@ -42,8 +44,8 @@
   "sprite":"newshop_spr",
   "progressbar":true,
   "onlyname":false,
-  "lvl_en":"Level 19",
-  "lvl_es":"Nivel 19",
+  "lvl_en":"Level 18",
+  "lvl_es":"Nivel 18",
   "lvl_zh":"关卡",
   "arr_row":[
     [
@@ -261,88 +263,48 @@
   "money":100.0,
   "pt":12.0,
   "fn":15.0,
-  "objects":
-  {
-    "setasolar": {
-        "obj_index": "@ref object(setasolar_obj)",
-        "obj_layer": "Instances",
+  "objects":[
+    {
+        "obj_id": 16,
+        "obj_type": 0,
+        
         "pos": [
-            {
-                "x": 409,
-                "y": 160
-            },
-            {
-                "x": 409,
-                "y": 260
-            },
-            {
-                "x": 409,
-                "y": 360
-            },
-            {
-                "x": 409,
-                "y": 460
-            },
-            {
-                "x": 409,
-                "y": 560
-            }
+          {"x": 1, "y": 0},
+          {"x": 1, "y": 1},
+          {"x": 1, "y": 2},
+          {"x": 1, "y": 3},
+          {"x": 1, "y": 4}
         ],
-        "vars": {}
+
+        "vars": []
     },
-    "spawngraves": {
-        "obj_index": "@ref object(spawngraves_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {
-                "x": 849,
-                "y": 160
-            },
-            {
-                "x": 849,
-                "y": 260
-            },
-            {
-                "x": 849,
-                "y": 460
-            },
-            {
-                "x": 849,
-                "y": 560
-            }
+          {"x": 8, "y": 0},
+          {"x": 7, "y": 1},
+          {"x": 6, "y": 2},
+          {"x": 8, "y": 2},
+          {"x": 7, "y": 3},
+          {"x": 8, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [1]
     },
-    "spawngraves3": {
-        "obj_index": "@ref object(spawngraves3_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
         "pos": [
-            {
-                "x": 1025,
-                "y": 160
-            },
-            {
-                "x": 937,
-                "y": 260
-            },
-            {
-                "x": 849,
-                "y": 360
-            },
-            {
-                "x": 1025,
-                "y": 360
-            },
-            {
-                "x": 937,
-                "y": 460
-            },
-            {
-                "x": 1025,
-                "y": 560
-            }
+          {"x": 6, "y": 0},
+          {"x": 6, "y": 1},
+          {"x": 6, "y": 3},
+          {"x": 6, "y": 4}
         ],
-        "vars": {}
+
+        "vars": [2]
     }
-  }
+  ]
 }

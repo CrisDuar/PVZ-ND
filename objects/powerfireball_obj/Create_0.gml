@@ -10,6 +10,8 @@ hspd_max=15
 spr=fireball_spr
 _xscale=1.2
 
+dmg_zom = 80;
+
 part=part_system_create()
 part_system_depth(part, -y-90);
 p1=part_type_create()
@@ -24,3 +26,29 @@ part_type_direction(p1,85,125,0,1);
 part_type_speed(p1,0.25,1.5,0,0);
 part_type_life(p1,5,10);
 
+apply_effect = function(){
+	
+	var _xs1 = 1;
+	var _id = id;
+	var _xx = other.x;
+	var _yy = other.y;
+	
+	if hspd<0 or (direction > 90 and direction < 270){
+	    _xs = 0;
+	}
+	
+	with(parentattack_obj){
+		if (id != _id){
+			if (collision_rectangle(_xx - 50 + 50*_xs, _yy, _xx + 50*_xs, _yy + 20, self, false, false)){
+				if control_obj.invisible==false image_alpha=0.5
+				vida -= 10
+				stop=false;
+				frozenstop=0;
+				congelado=false;
+				timecongelado=0;
+				image_blend=c_white
+			}
+		}
+	}
+	
+}

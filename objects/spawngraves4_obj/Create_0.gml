@@ -1,7 +1,7 @@
 //to edit
 event_inherited();
 spawnstart=false
-type=grave4_obj
+type=4
 
 repawntime = 120
 

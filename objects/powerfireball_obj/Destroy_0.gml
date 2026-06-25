@@ -1,4 +1,6 @@
-if (global.videoq > 0) part_particles_create(control_obj.part, x+random_range(-3,3), y+random_range(-3,3), control_obj.p4, 10);
+event_inherited();
+part_system_destroy(part)
+/*if (global.videoq > 0) part_particles_create(control_obj.part, x+random_range(-3,3), y+random_range(-3,3), control_obj.p4, 10);
 repeat(2){
 
     if hspd<0 or (direction >90 and direction < 270){

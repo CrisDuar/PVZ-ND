@@ -1,0 +1,207 @@
+{
+  "rw":[
+    166.0,
+    267.0,
+    370.0,
+    472.0,
+    578.0,
+    578.0
+  ],
+  "wf":[
+    [
+      7.0,
+      1.0
+    ],
+    [
+      13.0,
+      1.0
+    ],
+    [
+      19.0,
+      2.0
+    ]
+  ],
+  "control":{
+    "limit":1600.0,
+    "windy":false,
+    "rain":false,
+    "stage":2.0,
+    "daytime":2.0,
+    "mowers":[
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "lvl_type": 1,
+  "fog":-1.0,
+  "cys":true,
+  "preplants":[],
+  "sprite":"bolsa_monedas_spr",
+  "loop":false,
+  "idle_sng":"hardbattle2_sng",
+  "horde_sng":"finalhardbattle2_sng",
+  "horde_prcnt":0.4,
+  "surprise_enabled":true,
+  "infinite":false,
+  "lvl":2.0,
+  "infinite_loop":3.0,
+  "progressbar":true,
+  "onlyname":false,
+  "lvl_en":"Hard level 2-2",
+  "lvl_es":"Nivel difícil 2-2",
+  "lvl_zh":"关卡",
+  "smog":-1.0,
+  "is_conveyor":false,
+  "conv_code":0.0,
+  "arr_row":[
+    [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ]
+  ],
+  "conv_t1":0.0,
+  "conv_t2":0.0,
+  "plantroom":"hardmode_night_rm",
+  "waves": [
+    [
+      {"row": 0.0, "typ": "z_zombie_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_zombie_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_imp_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_conehead_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_conehead_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_zombie_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_skeleton_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_conehead_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_zombie_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_imp_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_flag_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_zombie_obj", "num": 3.0},
+      {"row": 0.0, "typ": "z_skeleton_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_conehead_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_buckethead_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_polevaulter_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_skeleton_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_conehead_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_newspaper_obj", "num": 2.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_buckethead_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_paperthrower_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_zombie_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_skeleton_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_conehead_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_imp_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_polevaulter_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_imp_obj", "num": 3.0},
+      {"row": 0.0, "typ": "z_flag_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_zombie_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_skeleton_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_polevaulter_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_conehead_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_paperthrower_obj", "num": 3.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_skeleton_obj", "num": 2.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_paperthrower_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_polevaulter_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_newspaper_obj", "num": 2.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_zombie_obj", "num": 3.0},
+      {"row": 0.0, "typ": "z_conehead_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_skeleton_obj", "num": 2.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_polevaulter_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_buckethead_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_newspaper_obj", "num": 1.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_paperthrower_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_conehead_obj", "num": 2.0}
+    ],
+    [
+      {"row": 0.0, "typ": "z_imp_obj", "num": 3.0},
+      {"row": 0.0, "typ": "z_rally_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_zombie_obj", "num": 3.0},
+      {"row": 0.0, "typ": "z_newspaper_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_polevaulter_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_skeleton_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_conehead_obj", "num": 1.0},
+      {"row": 0.0, "typ": "z_buckethead_obj", "num": 2.0},
+      {"row": 0.0, "typ": "z_paperthrower_obj", "num": 1.0}
+    ]
+  ],
+  "prizevar":"levelhard1",
+  "snd":"newplant_snd",
+  "money":300.0,
+  "pt":6.0,
+  "objects":{
+    "spawngraves": {
+        "obj_index": "@ref object(spawngraves_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 849, "y": 160},
+            {"x": 849, "y": 360},
+            {"x": 1025, "y": 360},
+            {"x": 849, "y": 560}
+        ],
+        "vars": {}
+    },
+    "spawngraves7": {
+        "obj_index": "@ref object(spawngraves7_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 1025, "y": 160},
+            {"x": 937, "y": 260},
+            {"x": 937, "y": 460},
+            {"x": 1025, "y": 560}
+        ],
+        "vars": {}
+    },
+    "crater": {
+        "obj_index": "@ref object(crater1_obj)",
+        "obj_layer": "Instances",
+        "pos": [
+            {"x": 508, "y": 152},
+            {"x": 320, "y": 352},
+            {"x": 508, "y": 352},
+            {"x": 687, "y": 352},
+            {"x": 508, "y": 568}
+        ],
+        "vars": {}
+    }
+  }
+}

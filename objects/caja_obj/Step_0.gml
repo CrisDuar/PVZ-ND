@@ -62,7 +62,7 @@ if loot==noone{
 }
 
 if timer>0{
-    if timer<=room_speed*10{
+    if timer<=60*10{
         sh=1
         if snd==false{
         audio_play_sound(boxshake_snd,1,false)

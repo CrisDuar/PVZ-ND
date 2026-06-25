@@ -34,7 +34,9 @@
       0.0,
       0.0,
       0.0
-    ]
+    ],
+    "graves": 5,
+    "maxgraves": 10
   },
   "fog":-1.0,
   "cys":true,
@@ -385,52 +387,60 @@
   "snd":"newplant_snd",
   "money":100.0,
   "pt":6.0,
-  "objects":{
-    "spawngraves": {
-      "obj_index": "@ref object(spawngraves_obj)",
-      "obj_layer": "Instances",
-      "pos": [
-        {"x": 761, "y": 160},
-        {"x": 1025, "y": 160},
-        {"x": 849, "y": 260},
-        {"x": 849, "y": 360},
-        {"x": 1025, "y": 360},
-        {"x": 937, "y": 560}
-      ],
-      "vars": {}
+  "objects":[
+    {
+        "obj_id": 1,
+        "obj_type": 1,
+        
+        "pos": [
+          {"x": 1, "y": 2}
+        ],
+
+        "vars": []
     },
-    "spawngraves3": {
-      "obj_index": "@ref object(spawngraves3_obj)",
-      "obj_layer": "Instances",
-      "pos": [
-        {"x": 849, "y": 160},
-        {"x": 937, "y": 160},
-        {"x": 1025, "y": 260},
-        {"x": 937, "y": 360},
-        {"x": 849, "y": 460},
-        {"x": 937, "y": 460},
-        {"x": 849, "y": 560},
-        {"x": 1025, "y": 560}
-      ],
-      "vars": {}
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
+        "pos": [
+          {"x": 5, "y": 0},
+          {"x": 8, "y": 0},
+          {"x": 6, "y": 1},
+          {"x": 6, "y": 2},
+          {"x": 8, "y": 2},
+          {"x": 7, "y": 4}
+        ],
+
+        "vars": [2]
     },
-    "spawngraves7": {
-      "obj_index": "@ref object(spawngraves7_obj)",
-      "obj_layer": "Instances",
-      "pos": [
-        {"x": 937, "y": 260},
-        {"x": 1025, "y": 460},
-        {"x": 761, "y": 560}
-      ],
-      "vars": {}
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
+        "pos": [
+          {"x": 6, "y": 0},
+          {"x": 7, "y": 0},
+          {"x": 8, "y": 1},
+          {"x": 7, "y": 2},
+          {"x": 6, "y": 3},
+          {"x": 7, "y": 3},
+          {"x": 6, "y": 4},
+          {"x": 8, "y": 4}
+        ],
+
+        "vars": [1]
     },
-    "sunmachine": {
-      "obj_index": "@ref object(sunmachine_obj)",
-      "obj_layer": "Instances",
-      "pos": [
-        {"x": 416, "y": 368}
-      ],
-      "vars": {}
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
+        "pos": [
+          {"x": 7, "y": 1},
+          {"x": 8, "y": 3},
+          {"x": 5, "y": 4}
+        ],
+
+        "vars": [7]
     }
-  }
+  ]
 }

@@ -17,7 +17,9 @@
       0.0,
       0.0
     ],
-    "limit":1600.0
+    "limit":1600.0,
+    "graves": 2,
+    "maxgraves": 5
   },
   "fog":-1.0,
   "smog":-1.0,
@@ -206,51 +208,43 @@
   "money":100.0,
   "pt":12.0,
   "fn":12.0,
-  "objects":{
-    "spawngraves3": {
-        "obj_index": "@ref object(spawngraves3_obj)",
-        "obj_layer": "Instances",
+  "objects":[
+    {
+        "obj_id": 1,
+        "obj_type": 0,
         
         "pos": [
-          {"x": 856, "y": 176},
-          {"x": 856, "y": 286},
-          {"x": 856, "y": 386},
-          {"x": 856, "y": 485},
-          {"x": 856, "y": 598}
+          {"x": 0, "y": 1},
+          {"x": 0, "y": 3}
         ],
 
-        "vars": {
-
-        }
+        "vars": []
     },
-
-    "sunflower": {
-        "obj_index": "@ref object(sunflower_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
         
         "pos": [
-          {"x": 321, "y": 269},
-          {"x": 321, "y": 473}
+          {"x": 6, "y": 0},
+          {"x": 6, "y": 1},
+          {"x": 6, "y": 2},
+          {"x": 6, "y": 3},
+          {"x": 6, "y": 4}
         ],
 
-        "vars": {
-
-        }
+        "vars": [1]
     },
-
-    "spawngraves": {
-        "obj_index": "@ref object(spawngraves_obj)",
-        "obj_layer": "Instances",
+    {
+        "obj_id": 2,
+        "obj_type": 1,
         
         "pos": [
-          {"x": 1040, "y": 286},
-          {"x": 1040, "y": 386},
-          {"x": 1040, "y": 485}
+          {"x": 8, "y": 1},
+          {"x": 8, "y": 2},
+          {"x": 8, "y": 3}
         ],
 
-        "vars": {
-
-        }
+        "vars": [2]
     }
-  }
+  ]
 }

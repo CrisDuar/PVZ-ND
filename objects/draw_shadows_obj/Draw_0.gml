@@ -112,7 +112,7 @@ if instance_exists(parentproj_obj){
     with(parentproj_obj){
         //draw shadow
         if object_index!=electro_obj{
-            draw_sprite_ext(shadow_spr,0,x,y+50,sprite_width/50,(sprite_width*(30/50))/30,0,c_white,image_alpha)
+            draw_sprite_ext(shadow_spr,0,x,y+shadow_h,sprite_width/50,(sprite_width*(30/50))/30,0,c_white,image_alpha)
         }
     }
 }

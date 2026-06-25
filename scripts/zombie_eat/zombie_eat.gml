@@ -129,7 +129,7 @@ function zombie_eat() {
 						
 						case sunbean_obj:
 							audio_play_sound(sunbean_snd, 1, false);
-							other.sunmode = true;
+							other.sunmode++;;
 							vida = 0;
 							
 						break;

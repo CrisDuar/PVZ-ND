@@ -10,7 +10,9 @@ if (!spawn){
         for(var i = 0; i < 3; i++){
             for(var j = 0; j < row; j++){
 				
-                instance_create_layer(instance_nearest(856+90*i,get_closest_row(176+100*j),pastoinv_obj).x, zombispawn_obj.rows_arr[j],"Instances",spawnmultgraves_obj)
+                with(instance_create_layer(instance_nearest(856+90*i,get_closest_row(176+100*j),pastoinv_obj).x, zombispawn_obj.rows_arr[j],"Instances",spawngraves_par_obj)){
+                    type = 0;
+                }
             }
         }
     }

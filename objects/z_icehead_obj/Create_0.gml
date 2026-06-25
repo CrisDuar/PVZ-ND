@@ -6,7 +6,7 @@ waitsprite=icezombieidle_spr
 walkspeed=-0.2
 imagespeed1=0.1//eat
 
-time=random_range(3,6)*room_speed
+time=random_range(3,6)*60
 shooted=false
 ataque=false
 

@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"e3d73dcb-47c5-4bc8-88f6-9cdad0429e55","name":"e3d73dcb-47c5-4bc8-88f6-9cdad0429e55","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"c07e7923-9fdf-4d84-83ce-ca64e6842ed4","name":"c07e7923-9fdf-4d84-83ce-ca64e6842ed4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"bb44ae67-0b28-4d33-ac4b-cd9a8338a462","name":"bb44ae67-0b28-4d33-ac4b-cd9a8338a462","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"00424ed0-b492-4448-95ca-0b1b743338d9","name":"00424ed0-b492-4448-95ca-0b1b743338d9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7e6ffd5f-2583-4390-b9f4-9f67eb54d72b","name":"7e6ffd5f-2583-4390-b9f4-9f67eb54d72b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9242ee0f-ca7a-40c6-958b-5498a7d97958","name":"9242ee0f-ca7a-40c6-958b-5498a7d97958","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":172,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"c392f0d3-68da-45c1-b2b1-f8dd76753e84","blendMode":0,"displayName":"default","isLocked":false,"name":"c392f0d3-68da-45c1-b2b1-f8dd76753e84","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"0571c34d-d5c7-4361-9e41-1f6cf911d72b","blendMode":0,"displayName":"default","isLocked":false,"name":"0571c34d-d5c7-4361-9e41-1f6cf911d72b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"grave5_spr",
   "nineSlice":null,
@@ -70,9 +70,15 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e3d73dcb-47c5-4bc8-88f6-9cdad0429e55","path":"sprites/grave5_spr/grave5_spr.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"64e404b3-b8ae-4f7b-adb1-9bdd1672419c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c07e7923-9fdf-4d84-83ce-ca64e6842ed4","path":"sprites/grave5_spr/grave5_spr.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"274b33f4-2a2c-4129-bde3-efeb596d4fc4","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bb44ae67-0b28-4d33-ac4b-cd9a8338a462","path":"sprites/grave5_spr/grave5_spr.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ede0bd4f-17f9-4e7d-a482-f7fd8eab357d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"00424ed0-b492-4448-95ca-0b1b743338d9","path":"sprites/grave5_spr/grave5_spr.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a2deb8a9-4191-4e36-b241-a345f9fe4734","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7e6ffd5f-2583-4390-b9f4-9f67eb54d72b","path":"sprites/grave5_spr/grave5_spr.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"57f54104-33d9-46cb-a823-badb1bb85947","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9242ee0f-ca7a-40c6-958b-5498a7d97958","path":"sprites/grave5_spr/grave5_spr.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4f84c63d-0047-4180-a31c-6ee6baf2c52e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
