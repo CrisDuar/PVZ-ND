@@ -1,5 +1,67 @@
 {
-  "wf":[
+  "sprite": "bolsa_monedas_spr",
+  "lvl": 25.0,
+  "prizevar": "niveles",
+  "money": 300.0,
+  "snd": 0,
+  "plantroom": "level2_sl_rm",
+  "limit": 1600.0,
+  "pt": 1.0,
+  "fn": 16.0,
+  "preplants": [
+    12,
+    18,
+    25
+  ],
+  "horde_prcnt": 0.0,
+  "surprise_enabled": true,
+  "infinite": false,
+  "infinite_loop": 3.0,
+  "mowers": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "graves": 8,
+  "maxgraves": 15,
+  "kamistatues": true,
+  "maze": true,
+  "cys": false,
+  "is_conveyor": false,
+  "stage": 2.0,
+  "daytime": 2.0,
+  "windy": false,
+  "rain": false,
+  "fog": -1.0,
+  "smog": -1.0,
+  "idle_sng": 8,
+  "horde_sng": 5,
+  "loop": true,
+  "progressbar": true,
+  "onlyname": false,
+  "lvl_en": "Level 24",
+  "lvl_es": "Nivel 24",
+  "lvl_zh": "关卡",
+  "rw": [
+    166.0,
+    267.0,
+    370.0,
+    472.0,
+    578.0,
+    578.0
+  ],
+  "arr_row": [
+    [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ]
+  ],
+  "wf": [
     [
       8.0,
       1.0
@@ -9,233 +71,259 @@
       2.0
     ]
   ],
-  "control":{
-    "windy":false,
-    "rain":false,
-    "stage":2.0,
-    "daytime":2.0,
-    "mowers":[
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-    ],
-    "limit":1600.0,
-    "kamistatues": true,
-    "graves": 8,
-    "maxgraves": 15
-  },
-  "maze": true,
-  "fog":-1.0,
-  "smog":-1.0,
-  "is_conveyor":false,
-  "cys":false,
-  "preplants":[12, 18, 25],
-  "loop":true,
-  "idle_sng":"music_loonbon_snd",
-  "horde_sng":"grasswalk_fw_sng",
-  "horde_prcnt":0.0,
-  "surprise_enabled":true,
-  "infinite":false,
-  "infinite_loop":3.0,
-  "sprite":"bolsa_monedas_spr",
-  "progressbar":true,
-  "onlyname":false,
-  "lvl_en":"Level 24",
-  "lvl_es":"Nivel 24",
-  "lvl_zh":"关卡",
-  "arr_row":[
-    [
-      0.0,
-      1.0,
-      2.0,
-      3.0,
-      4.0
-    ]
-  ],
-  "waves":[
+  "waves": [
     [
       {
-        "row":0.0,
-        "num":3.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 3.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":4.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 4.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":5.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 5.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":4.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 4.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":3.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 3.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":4.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 4.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":3.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 3.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 2.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_flag_obj"
+        "row": 0.0,
+        "typ": 2,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 2.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":4.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 4.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":4.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 4.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":3.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 3.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":4.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 4.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":5.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 5.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_rally_obj"
+        "row": 0.0,
+        "typ": 11,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "num":6.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 6.0
       }
     ]
   ],
-  "lvl":25.0,
-  "rw":[
-    166.0,
-    267.0,
-    370.0,
-    472.0,
-    578.0,
-    578.0
-  ],
-  "plantroom":"level2_sl_rm",
-  "prizevar":"niveles",
-  "snd":"newplant_snd",
-  "money":300.0,
-  "pt":1.0,
-  "fn":16.0,
-  "objects":[
+  "objects": [
     {
-        "obj_id": 2,
-        "obj_type": 1,
-        
-        "pos": [
-          {"x": 3, "y": 0},
-          {"x": 4, "y": 0},
-          {"x": 5, "y": 0},
-          {"x": 6, "y": 0},
-          {"x": 7, "y": 0},
-          {"x": 8, "y": 0},
-
-          {"x": 3, "y": 1},
-          {"x": 4, "y": 1},
-          {"x": 5, "y": 1},
-          {"x": 6, "y": 1},
-          {"x": 7, "y": 1},
-          {"x": 8, "y": 1},
-
-          {"x": 3, "y": 2},
-          {"x": 4, "y": 2},
-          {"x": 5, "y": 2},
-          {"x": 6, "y": 2},
-          {"x": 7, "y": 2},
-          {"x": 8, "y": 2},
-
-          {"x": 3, "y": 3},
-          {"x": 4, "y": 3},
-          {"x": 5, "y": 3},
-          {"x": 6, "y": 3},
-          {"x": 7, "y": 3},
-          {"x": 8, "y": 3},
-
-          {"x": 3, "y": 4},
-          {"x": 4, "y": 4},
-          {"x": 5, "y": 4},
-          {"x": 6, "y": 4},
-          {"x": 7, "y": 4},
-          {"x": 8, "y": 4}
-        ],
-
-        "vars": [6]
+      "obj_id": 2,
+      "obj_type": 1,
+      "pos": [
+        {
+          "x": 3,
+          "y": 0
+        },
+        {
+          "x": 4,
+          "y": 0
+        },
+        {
+          "x": 5,
+          "y": 0
+        },
+        {
+          "x": 6,
+          "y": 0
+        },
+        {
+          "x": 7,
+          "y": 0
+        },
+        {
+          "x": 8,
+          "y": 0
+        },
+        {
+          "x": 3,
+          "y": 1
+        },
+        {
+          "x": 4,
+          "y": 1
+        },
+        {
+          "x": 5,
+          "y": 1
+        },
+        {
+          "x": 6,
+          "y": 1
+        },
+        {
+          "x": 7,
+          "y": 1
+        },
+        {
+          "x": 8,
+          "y": 1
+        },
+        {
+          "x": 3,
+          "y": 2
+        },
+        {
+          "x": 4,
+          "y": 2
+        },
+        {
+          "x": 5,
+          "y": 2
+        },
+        {
+          "x": 6,
+          "y": 2
+        },
+        {
+          "x": 7,
+          "y": 2
+        },
+        {
+          "x": 8,
+          "y": 2
+        },
+        {
+          "x": 3,
+          "y": 3
+        },
+        {
+          "x": 4,
+          "y": 3
+        },
+        {
+          "x": 5,
+          "y": 3
+        },
+        {
+          "x": 6,
+          "y": 3
+        },
+        {
+          "x": 7,
+          "y": 3
+        },
+        {
+          "x": 8,
+          "y": 3
+        },
+        {
+          "x": 3,
+          "y": 4
+        },
+        {
+          "x": 4,
+          "y": 4
+        },
+        {
+          "x": 5,
+          "y": 4
+        },
+        {
+          "x": 6,
+          "y": 4
+        },
+        {
+          "x": 7,
+          "y": 4
+        },
+        {
+          "x": 8,
+          "y": 4
+        }
+      ],
+      "vars": [
+        6
+      ]
     }
   ]
 }

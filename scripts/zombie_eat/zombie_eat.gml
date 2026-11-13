@@ -77,12 +77,19 @@ function zombie_eat() {
 	            if colobj.object_index==plantern_obj vida-=200
             
 	            with(colobj){
-	                event_perform(ev_collision,z_statue_obj)
+	                event_perform(ev_collision, z_statue_obj)
 	            }
 	        }
 	    }else{
 	        if ((image_index>0 and image_index<1) or (image_index>5 and image_index<6)) and bite=false{
 	            bite=true
+                
+                if (control_obj.gameplay_modifier[8]){
+                    
+                    vida = clamp(vida + 15, 0,maxhp)
+                    part_particles_create(control_obj.part, x-random_range(-20,20), y-random(90), control_obj.p9, 1);
+                }
+                
 	            with(colobj){
 	                vida -= other.eat_dmg
 	                image_alpha=0.5
@@ -129,7 +136,7 @@ function zombie_eat() {
 						
 						case sunbean_obj:
 							audio_play_sound(sunbean_snd, 1, false);
-							other.sunmode++;;
+							other.sunmode++;
 							vida = 0;
 							
 						break;

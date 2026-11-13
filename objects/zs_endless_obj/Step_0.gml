@@ -4,9 +4,9 @@ lvl_en = lvld_en + " - Flags: " + string(survprogress);
 
 if timer<=0{
     survival_next_game()
-    survival_save(filename)
+    //survival_save(filename)
     timercheck=false
-    timer=room_speed*5
+    timer=60*5
 }
 
 event_inherited();

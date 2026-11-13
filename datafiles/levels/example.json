@@ -1,0 +1,159 @@
+{
+    "sprite":"menusun1_spr",
+    "lvl":2.0,
+    "prizevar":"niveles",
+    "money":10.0,
+    "snd": 0,
+    "plantroom":"price_rm",
+
+    "limit":1600.0,
+    "pt":7.0,
+    "fn":4.0,
+    "preplants":[0],
+    "horde_prcnt":0.4,
+    "surprise_enabled":true,
+    "infinite":false,
+    "infinite_loop":3.0,
+    "show_zombies": false,
+    "lvl_type": 1,
+    "mowers":[
+    -1.0,
+    -1.0,
+    0.0
+    ],
+    "versus_minigame": false,
+    "graves": 3,
+    "maxgraves": 10,
+    "challenges": [1, 0, 1],
+
+    "cys":false,
+    "is_conveyor":false,
+    "conv_p_packets":[
+    [7, -1, 100],
+    [8, -1, 50],
+    [9, -1, 20]
+    ],
+    "conv_t1":4.0,
+    "conv_t2":6.0,
+    "conv_limit": 7.0,
+
+    "stage":2.0,
+    "daytime":0.0,
+    "windy":false,
+    "rain":false,
+    "fog":-1.0,
+    "smog":-1.0,
+
+    "idle_sng": 3,
+    "horde_sng": 4,
+    "loop":false,
+
+    "progressbar":true,
+    "onlyname":false,
+    "lvl_en":"Level 1",
+    "lvl_es":"Nivel 1",
+    "lvl_zh":"关卡",
+
+    "rw":[370.0],
+    "arr_row":[
+    [0.0]
+    ],
+    "wf":[
+    [3.0, 2.0]
+    ],
+    "waves":[
+    [
+        {"row":0.0, "typ": 1, "num":1.0}
+    ],
+    [
+        {"row":0.0, "typ": 1, "num":1.0}
+    ],
+    [
+        {"row":0.0, "typ": 1, "num":2.0}
+    ],
+    [
+        {"row":0.0, "typ": 1, "num":2.0},
+        {"row":0.0, "typ": 2, "num":1.0}
+    ]
+    ],
+
+    "objects":[
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
+        "pos": [
+            {"x": 6, "y": 0},
+            {"x": 7, "y": 0},
+            {"x": 8, "y": 0},
+            {"x": 7, "y": 1},
+            {"x": 8, "y": 1},
+            {"x": 6, "y": 2},
+            {"x": 7, "y": 2},
+            {"x": 8, "y": 3},
+            {"x": 5, "y": 4},
+            {"x": 7, "y": 4},
+            {"x": 8, "y": 4}
+        ],
+
+        "vars": [2]
+    },
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
+        "pos": [
+            {"x": 5, "y": 0},
+            {"x": 6, "y": 1},
+            {"x": 5, "y": 2},
+            {"x": 5, "y": 3},
+            {"x": 7, "y": 3},
+            {"x": 6, "y": 4}
+        ],
+
+        "vars": [3]
+    },
+    {
+        "obj_id": 2,
+        "obj_type": 1,
+        
+        "pos": [
+            {"x": 5, "y": 1},
+            {"x": 8, "y": 2},
+            {"x": 6, "y": 3}
+        ],
+
+        "vars": [7]
+    },
+    {
+        "obj_id": 5,
+        "obj_type": 0,
+        
+        "pos": [
+            {"x": 1, "y": 0}
+        ],
+
+        "vars": [true]
+    },
+    {
+        "obj_id": 0,
+        "obj_type": 0,
+        
+        "pos": [
+            {"x": 1, "y": 4}
+        ],
+
+        "vars": [true]
+    },
+    {
+        "obj_id": 21,
+        "obj_type": 0,
+        
+        "pos": [
+            {"x": 2, "y": 2}
+        ],
+
+        "vars": [true]
+    }
+    ]
+}

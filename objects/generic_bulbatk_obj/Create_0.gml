@@ -5,6 +5,7 @@ msk = sprite_index;
 shadow_h = 5;
 image_speed=0
 audio_play_sound(bulborodando_snd,1,false)
+snd = [bulbopimact_snd];
 
 hit_zom = ds_list_create()
 dmg_zom = 120;
@@ -14,8 +15,6 @@ bounce = true;
 
 broke= -1
 particle= -1
-snd1=bulbopimact_snd
-snd2=bulbopimact_snd
 
 get_sunk = function(){
 	audio_sound_pitch(audio_play_sound(aguazom_snd,1,false),random_range(0.85,1.15))

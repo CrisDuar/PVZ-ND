@@ -37,7 +37,7 @@ sunbean = function(_id){
 	var _dmg_m = (dmg_zom / 10)
 	
 	with(_id){
-		var _sun = sunmode * 10;
+		var _sun = sunmode * 10 * _dmg_m;
 		var _am = ceil(_sun / 50);
 		
 		for (var i = 0; i < _am; i++){

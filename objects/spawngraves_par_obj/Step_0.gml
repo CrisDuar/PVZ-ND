@@ -6,13 +6,15 @@ if (!setpos){
     
     var _lvl_id = string(zombispawn_obj.lvl_type) + "_" + string(zombispawn_obj.lvl_id)
     
-    if (_lvl_id == "0_24" && type == 5){
+    if (_lvl_id == "0_27" && type == 5){
         repawntime = 30;
         maxtime=choose(15, 30, 90, 90, 120) + (irandom(30))*60
     }
     
     setpos=true
 }
+
+if (disabled) exit;
 
 if spawnstart=true{
     alarm[0]=random_range(1,3)*60

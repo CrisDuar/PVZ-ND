@@ -1,5 +1,64 @@
 {
-  "wf":[
+  "sprite": "newshop_spr",
+  "lvl": 20.0,
+  "prizevar": "niveles",
+  "money": 100.0,
+  "snd": 0,
+  "plantroom": "price_rm",
+  "limit": 1600.0,
+  "pt": 12.0,
+  "fn": 15.0,
+  "preplants": [],
+  "horde_prcnt": 0.4,
+  "surprise_enabled": true,
+  "infinite": false,
+  "infinite_loop": 3.0,
+  "mowers": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "graves": 4,
+  "maxgraves": 12,
+  "cys": true,
+  "is_conveyor": false,
+  "conv_t1": 0.0,
+  "conv_t2": 0.0,
+  "conv_code": 0.0,
+  "stage": 2.0,
+  "daytime": 2.0,
+  "windy": false,
+  "rain": false,
+  "fog": -1.0,
+  "smog": -1.0,
+  "idle_sng": 12,
+  "horde_sng": 13,
+  "loop": false,
+  "progressbar": true,
+  "onlyname": false,
+  "lvl_en": "Level 19",
+  "lvl_es": "Nivel 19",
+  "lvl_zh": "关卡",
+  "rw": [
+    166.0,
+    267.0,
+    370.0,
+    472.0,
+    578.0,
+    578.0
+  ],
+  "arr_row": [
+    [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ]
+  ],
+  "wf": [
     [
       8.0,
       1.0
@@ -9,297 +68,265 @@
       2.0
     ]
   ],
-  "control":{
-    "windy":false,
-    "rain":false,
-    "stage":2.0,
-    "daytime":2.0,
-    "mowers":[
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-    ],
-    "limit":1600.0,
-    "graves": 4,
-    "maxgraves": 12
-  },
-  "fog":-1.0,
-  "smog":-1.0,
-  "is_conveyor":false,
-  "cys":true,
-  "conv_code":0.0,
-  "conv_t1":0.0,
-  "conv_t2":0.0,
-  "preplants":[
-  ],
-  "loop":false,
-  "idle_sng":"moongrains_sng",
-  "horde_sng":"music_finalwavenight_snd",
-  "horde_prcnt":0.4,
-  "surprise_enabled":true,
-  "infinite":false,
-  "infinite_loop":3.0,
-  "sprite":"newshop_spr",
-  "progressbar":true,
-  "onlyname":false,
-  "lvl_en":"Level 19",
-  "lvl_es":"Nivel 19",
-  "lvl_zh":"关卡",
-  "arr_row":[
-    [
-      0.0,
-      1.0,
-      2.0,
-      3.0,
-      4.0
-    ]
-  ],
-  "waves":[
+  "waves": [
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_zombie_obj"
+        "row": 0.0,
+        "typ": 1,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_zombie_obj"
+        "row": 0.0,
+        "typ": 1,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_imp_obj"
+        "row": 0.0,
+        "typ": 12,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_conehead_obj"
+        "row": 0.0,
+        "typ": 5,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_zombie_obj"
+        "row": 0.0,
+        "typ": 1,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_zombie_obj"
+        "row": 0.0,
+        "typ": 1,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_torch_obj"
+        "row": 0.0,
+        "typ": 14,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_conehead_obj"
+        "row": 0.0,
+        "typ": 5,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_screendoor_obj"
+        "row": 0.0,
+        "typ": 7,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_flag_obj"
+        "row": 0.0,
+        "typ": 2,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "num":3.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 3.0
       },
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_conehead_obj"
+        "row": 0.0,
+        "typ": 5,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_zombie_obj"
+        "row": 0.0,
+        "typ": 1,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_torch_obj"
+        "row": 0.0,
+        "typ": 14,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_newspaper_obj"
+        "row": 0.0,
+        "typ": 13,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_torch_obj"
+        "row": 0.0,
+        "typ": 14,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_newspaper_obj"
+        "row": 0.0,
+        "typ": 13,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_zombie_obj"
+        "row": 0.0,
+        "typ": 1,
+        "num": 2.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_screendoor_obj"
+        "row": 0.0,
+        "typ": 7,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_conehead_obj"
+        "row": 0.0,
+        "typ": 5,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_imp_obj"
+        "row": 0.0,
+        "typ": 12,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_newspaper_obj"
+        "row": 0.0,
+        "typ": 13,
+        "num": 2.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":3.0,
-        "typ":"z_zombie_obj"
+        "row": 0.0,
+        "typ": 1,
+        "num": 3.0
       },
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_conehead_obj"
+        "row": 0.0,
+        "typ": 5,
+        "num": 2.0
       }
     ],
     [
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_newspaper_obj"
+        "row": 0.0,
+        "typ": 13,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "num":1.0,
-        "typ":"z_flag_obj"
+        "row": 0.0,
+        "typ": 2,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "num":3.0,
-        "typ":"z_statue_obj"
+        "row": 0.0,
+        "typ": 6,
+        "num": 3.0
       },
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_conehead_obj"
+        "row": 0.0,
+        "typ": 5,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "num":2.0,
-        "typ":"z_torch_obj"
+        "row": 0.0,
+        "typ": 14,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "num":3.0,
-        "typ":"z_screendoor_obj"
+        "row": 0.0,
+        "typ": 7,
+        "num": 3.0
       }
     ]
   ],
-  "lvl":20.0,
-  "rw":[
-    166.0,
-    267.0,
-    370.0,
-    472.0,
-    578.0,
-    578.0
-  ],
-  "plantroom":"price_rm",
-  "prizevar":"niveles",
-  "snd":"newplant_snd",
-  "money":100.0,
-  "pt":12.0,
-  "fn":15.0,
-  "objects":[
+  "objects": [
     {
-        "obj_id": 2,
-        "obj_type": 1,
-        
-        "pos": [
-          {"x": 6, "y": 2},
-          {"x": 8, "y": 1},
-          {"x": 8, "y": 3}
-        ],
-
-        "vars": [3]
+      "obj_id": 2,
+      "obj_type": 1,
+      "pos": [
+        {
+          "x": 6,
+          "y": 2
+        },
+        {
+          "x": 8,
+          "y": 1
+        },
+        {
+          "x": 8,
+          "y": 3
+        }
+      ],
+      "vars": [
+        3
+      ]
     },
     {
-        "obj_id": 2,
-        "obj_type": 1,
-        
-        "pos": [
-          {"x": 6, "y": 1},
-          {"x": 8, "y": 2},
-          {"x": 6, "y": 3}
-        ],
-
-        "vars": [1]
+      "obj_id": 2,
+      "obj_type": 1,
+      "pos": [
+        {
+          "x": 6,
+          "y": 1
+        },
+        {
+          "x": 8,
+          "y": 2
+        },
+        {
+          "x": 6,
+          "y": 3
+        }
+      ],
+      "vars": [
+        1
+      ]
     },
     {
-        "obj_id": 2,
-        "obj_type": 1,
-        
-        "pos": [
-          {"x": 6, "y": 0},
-          {"x": 8, "y": 0},
-          {"x": 6, "y": 4},
-          {"x": 8, "y": 4}
-        ],
-
-        "vars": [2]
+      "obj_id": 2,
+      "obj_type": 1,
+      "pos": [
+        {
+          "x": 6,
+          "y": 0
+        },
+        {
+          "x": 8,
+          "y": 0
+        },
+        {
+          "x": 6,
+          "y": 4
+        },
+        {
+          "x": 8,
+          "y": 4
+        }
+      ],
+      "vars": [
+        2
+      ]
     }
   ]
 }

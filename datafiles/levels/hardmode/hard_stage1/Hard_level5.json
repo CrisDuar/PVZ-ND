@@ -1,43 +1,64 @@
 {
-  "rw":[
+  "sprite": "bolsa_monedas_spr",
+  "lvl": 5.0,
+  "prizevar": "levelhard0",
+  "money": 300.0,
+  "snd": 0,
+  "plantroom": "hardmode_day_rm",
+  "limit": 1600.0,
+  "pt": 12.0,
+  "fn": 20.0,
+  "preplants": [
+    1,
+    3,
+    2,
+    12,
+    4,
+    14
+  ],
+  "horde_prcnt": 0.75,
+  "surprise_enabled": true,
+  "infinite": false,
+  "infinite_loop": 3.0,
+  "lvl_type": 1,
+  "mowers": [
+    -1.0,
+    -1.0,
+    1.0
+  ],
+  "cys": false,
+  "is_conveyor": false,
+  "stage": 2.0,
+  "daytime": 1.0,
+  "windy": false,
+  "rain": false,
+  "fog": -1.0,
+  "smog": -1.0,
+  "idle_sng": 10,
+  "horde_sng": 11,
+  "loop": false,
+  "progressbar": true,
+  "onlyname": false,
+  "lvl_en": "Hard level 1-5",
+  "lvl_es": "Nivel difícil 1-5",
+  "lvl_zh": "关卡",
+  "rw": [
     166.0,
     267.0,
     370.0,
     472.0,
     578.0
   ],
-  "lvl_type": 1,
-  "sprite":"bolsa_monedas_spr",
-  "lvl":5.0,
-  "control":{
-    "windy":false,
-    "rain":false,
-    "stage":2.0,
-    "daytime":1.0,
-    "mowers":[
-      -1.0,
-      -1.0,
-      1.0
-    ],
-    "limit":1600.0
-  },
-  "fog":-1.0,
-  "smog":-1.0,
-  "plantroom":"hardmode_day_rm",
-  "prizevar":"levelhard0",
-  "is_conveyor":false,
-  "snd":"newplant_snd",
-  "cys":false,
-  "money":300.0,
-  "pt":12.0,
-  "fn":20.0,
-  "preplants":[
-    1, 3, 2, 12, 4, 14
+  "arr_row": [
+    [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ]
   ],
-  "loop":false,
-  "idle_sng":"music_hardbattle_snd",
-  "horde_sng":"finalhardbattle_sng",
-  "wf":[
+  "wf": [
     [
       10.0,
       1.0
@@ -47,104 +68,246 @@
       2.0
     ]
   ],
-  "horde_prcnt":0.75,
-  "surprise_enabled":true,
-  "infinite":false,
-  "infinite_loop":3.0,
-  "progressbar":true,
-  "onlyname":false,
-  "lvl_en":"Hard level 1-5",
-  "lvl_es":"Nivel difícil 1-5",
-  "lvl_zh":"关卡",
-  "arr_row":[
-    [
-      0.0,
-      1.0,
-      2.0,
-      3.0,
-      4.0
-    ]
-  ],
   "waves": [
     [
-      {"num":1.0, "typ":"z_buckethead_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 1.0
+      }
     ],
     [
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      }
     ],
     [
-      {"num":1.0, "typ":"z_paperthrower_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 4,
+        "num": 1.0
+      }
     ],
     [
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0},
-      {"num":1.0, "typ":"z_paperthrower_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      },
+      {
+        "row": 0.0,
+        "typ": 4,
+        "num": 1.0
+      }
     ],
     [
-      {"num":1.0, "typ":"z_polevaulter_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 10,
+        "num": 1.0
+      }
     ],
     [
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      }
     ],
     [
-      {"num":1.0, "typ":"z_paperthrower_obj", "row":0.0},
-      {"num":1.0, "typ":"z_polevaulter_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 4,
+        "num": 1.0
+      },
+      {
+        "row": 0.0,
+        "typ": 10,
+        "num": 1.0
+      }
     ],
     [
-      {"num":2.0, "typ":"z_paperthrower_obj", "row":0.0},
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 4,
+        "num": 2.0
+      },
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      }
     ],
     [
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0},
-      {"num":1.0, "typ":"z_paperthrower_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      },
+      {
+        "row": 0.0,
+        "typ": 4,
+        "num": 1.0
+      }
     ],
     [
-      {"num":1.0, "typ":"z_polevaulter_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 10,
+        "num": 1.0
+      }
     ],
     [
-      {"num":1.0, "typ":"z_flag_obj", "row":0.0},
-      {"num":2.0, "typ":"z_paperthrower_obj", "row":0.0},
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0},
-      {"num":3.0, "typ":"z_buckethead_obj", "row":0.0},
-      {"num":2.0, "typ":"z_polevaulter_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 2,
+        "num": 1.0
+      },
+      {
+        "row": 0.0,
+        "typ": 4,
+        "num": 2.0
+      },
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      },
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 3.0
+      },
+      {
+        "row": 0.0,
+        "typ": 10,
+        "num": 2.0
+      }
     ],
     [
-      {"num":1.0, "typ":"z_gardener_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 8,
+        "num": 1.0
+      }
     ],
     [
-      {"num":3.0, "typ":"z_buckethead_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 3.0
+      }
     ],
     [
-      {"num":1.0, "typ":"z_buckethead_obj", "row":0.0},
-      {"num":1.0, "typ":"z_paperthrower_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 1.0
+      },
+      {
+        "row": 0.0,
+        "typ": 4,
+        "num": 1.0
+      }
     ],
     [
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0},
-      {"num":1.0, "typ":"z_gardener_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      },
+      {
+        "row": 0.0,
+        "typ": 8,
+        "num": 1.0
+      }
     ],
     [
-      {"num":2.0, "typ":"z_polevaulter_obj", "row":0.0},
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 10,
+        "num": 2.0
+      },
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      }
     ],
     [
-      {"num":2.0, "typ":"z_paperthrower_obj", "row":0.0},
-      {"num":1.0, "typ":"z_buckethead_obj", "row":0.0},
-      {"num":1.0, "typ":"z_gardener_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 4,
+        "num": 2.0
+      },
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 1.0
+      },
+      {
+        "row": 0.0,
+        "typ": 8,
+        "num": 1.0
+      }
     ],
     [
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      }
     ],
     [
-      {"num":1.0, "typ":"z_polevaulter_obj", "row":0.0},
-      {"num":2.0, "typ":"z_paperthrower_obj", "row":0.0},
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 10,
+        "num": 1.0
+      },
+      {
+        "row": 0.0,
+        "typ": 4,
+        "num": 2.0
+      },
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      }
     ],
     [
-      {"num":1.0, "typ":"z_flag_obj", "row":0.0},
-      {"num":2.0, "typ":"z_buckethead_obj", "row":0.0},
-      {"num":3.0, "typ":"z_buckethead_obj", "row":0.0},
-      {"num":3.0, "typ":"z_paperthrower_obj", "row":0.0},
-      {"num":3.0, "typ":"z_polevaulter_obj", "row":0.0},
-      {"num":2.0, "typ":"z_gardener_obj", "row":0.0}
+      {
+        "row": 0.0,
+        "typ": 2,
+        "num": 1.0
+      },
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
+      },
+      {
+        "row": 0.0,
+        "typ": 9,
+        "num": 3.0
+      },
+      {
+        "row": 0.0,
+        "typ": 4,
+        "num": 3.0
+      },
+      {
+        "row": 0.0,
+        "typ": 10,
+        "num": 3.0
+      },
+      {
+        "row": 0.0,
+        "typ": 8,
+        "num": 2.0
+      }
     ]
   ]
 }

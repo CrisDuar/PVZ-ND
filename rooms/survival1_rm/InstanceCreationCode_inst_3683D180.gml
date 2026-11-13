@@ -12,6 +12,24 @@ lvld_en = "Endless zone (player)"
 //-------------------------------------
 
 // zombie, point cost, odds, difficulty
+lst_zombies = [ 
+    zombies_id.ZOMBIE,
+    zombies_id.ZOMBIE_IMP,  
+    zombies_id.ZOMBIE_HEADBOX,  
+    zombies_id.ZOMBIE_CONEHEAD,  
+    zombies_id.ZOMBIE_SCREENDOOR,  
+    zombies_id.ZOMBIE_BUCKETHEAD,  
+    zombies_id.ZOMBIE_ALLSTAR,  
+    zombies_id.ZOMBIE_PAPERTHROWER,  
+    zombies_id.ZOMBIE_GARDENER,
+    zombies_id.ZOMBIE_STATUE,
+    zombies_id.ZOMBIE_POLEVAULTER,
+    zombies_id.ZOMBIE_NEWSPAPER,
+    zombies_id.ZOMBIE_SKELETON,
+    zombies_id.ZOMBIE_TORCH,
+    zombies_id.ZOMBIE_NECROMANCER,              
+];
+/*
 ds_list_add(lst_data
 ,array(z_zombie_obj, 1, 100, 1)
 ,array(z_imp_obj, 1, 90, 1)
@@ -42,9 +60,23 @@ ds_list_add(lst_trick, lst_data[| 7], lst_data[| 8], lst_data[| 9], lst_data[| 1
 bg1 = _state3_bg
 bg2 = afternoon_bg
 bg3 = night_bg
+*/
 
-challenges[0,1] = true
-challenges[1,1] = true
-challenges[2,1] = true
+//Challenges list
+/*
+ * Save our seeds: 0
+ * Sun machine: 1
+ * Limited lawn: 2
+ * Rain: 3
+ * Fog: 4
+ * Wind: 5
+ * Poison puddles: 6
+ * Pollution: 7
+*/
+
+challenges[0][1] = true
+challenges[1][1] = true
+challenges[2][1] = true
+
 
 //-------------------------------------

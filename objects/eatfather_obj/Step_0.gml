@@ -1,3 +1,32 @@
+if (!init){
+    
+    init = true;
+    
+    //Gameplay modifier
+    
+    var _prob = 50;
+    
+    _prob += control_obj.gameplay_modifier[9];
+    _prob -= control_obj.gameplay_modifier[10];
+    
+    _prob += choose(-10, 10) * (control_obj.gameplay_modifier[9] && control_obj.gameplay_modifier[10]);
+
+        
+    if (_prob > 50){
+        walkspeed /= 2;
+        imagespeed2=-walkspeed//walk
+        
+        maxhp *= 2;
+        vida = maxhp;
+    } else if (_prob < 50){
+        walkspeed *= 2;
+        imagespeed2=-walkspeed//walk
+        
+        maxhp = floor(maxhp / 2);
+        vida = maxhp;
+    }
+}
+
 //GAME OVER
 if global.gameover=false{
     if x<=240{
@@ -112,7 +141,7 @@ and !check_zombie_eat(tallnut_obj){
 }
 
 //motivación
-if (instance_exists(z_rally_obj) or control_obj.z_motivated) and object_index!=z_rally_obj and object_index!=z_statue_obj{
+if (instance_exists(z_rally_obj) or control_obj.gameplay_modifier[4]) and object_index!=z_rally_obj and object_index!=z_statue_obj{
     motivated=true
 }else{
     motivated=false
@@ -245,9 +274,18 @@ if (!gameover){
         }
     }
     
-    if (tradie){
-        if vida <= 0 or global.nivelterminado=true{
-            drop(x-25, y-92+30*water, zombiehead_spr, headspr, true, image_blend, y, depth-10)
+    if vida <= 0 or global.nivelterminado=true{
+        
+        if (control_obj.gameplay_modifier[11]){
+            part_particles_create(control_obj.part, x-random_range(-10,12), y-40, control_obj.p1, 40);
+            create_explosion(x,y,1,3,2.6,machineexplosion_obj)
+            
+            event_perform(ev_collision, globalexplosions_obj);
+            exit;
+        }
+        
+        if (tradie){
+            
             with(instance_create(x,y,zombieded_obj)){
                 water=other.water
                 image_blend=other.image_blend;
@@ -255,6 +293,16 @@ if (!gameover){
                 depth=other.depth-10
             }
             zombiedrop(money);
+            
+            if (control_obj.gameplay_modifier[1]){
+                with(instance_create_layer(x, y, "Instances", bowlinghead_obj)){
+                    image_blend = other.image_blend;
+                    
+                }
+            }else{
+                drop(x-25, y-92+30*water, zombiehead_spr, headspr, true, image_blend, y, depth-10)
+            }
+            
             instance_destroy();
         }
     }
@@ -273,7 +321,7 @@ if canhand=true{
 
 ///REMOVE THE HIPNO THING IN THE RELEASE
 
-if caneat=true and y==garlic_yy and stop==false and hipno == false{
+if (caneat and y==garlic_yy and !stop and !hipno && !control_obj.gameplay_modifier[2]){
     if check_zombie_eat(garlicdrone_obj) and eatgarlic=true and water=false{zombie_eat(garlicdrone_obj)}
     else if check_zombie_eat(pumpkin_obj){zombie_eat(pumpkin_obj)}
     else if check_zombie_eat(brain_obj){zombie_eat(brain_obj)}

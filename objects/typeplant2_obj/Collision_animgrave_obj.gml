@@ -1,3 +1,5 @@
+if (vida <= 0) exit;
+
 with(instance_create(x,y,jumpingplant_obj)){
     sprite_index=other.sprite_index
     image_index=other.image_index

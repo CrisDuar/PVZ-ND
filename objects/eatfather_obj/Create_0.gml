@@ -95,9 +95,14 @@ isdoor=false
 xmod = 1
 dpth = 10;
 
-sunmode = false;
+sunmode = 0;
 sun_t = 0;
 sun_tm = 60;
+
+init = false;
+
+//Sunny zombies challenge
+if (control_obj.gameplay_modifier[3]) sunmode = 2;
 
 if object_index!=z_ghost_obj{
     if (point_in_rectangle(x,y,305,284,1100,423) and __background_get( e__BG.Index, 0 )=poolday_bg)

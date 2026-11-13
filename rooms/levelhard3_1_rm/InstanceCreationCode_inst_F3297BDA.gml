@@ -15,12 +15,12 @@ snd=newplant_snd//reward song
 plantroom=hardmode_pool_rm//what room go to after passing the level
 
 //Rows
-f1=152
-f2=236
-f3=339
-f4=422
-f5=527
-f6=615
+    f1=152
+    f2=236
+    f3=339
+    f4=422
+    f5=527
+    f6=615
 
 a=array(f1,f2,f3,f4,f5,f6)
 w=array(f3,f4)

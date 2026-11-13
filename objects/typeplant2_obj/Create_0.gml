@@ -23,6 +23,7 @@ tileyy=0
 
 vida=100
 maxhp=vida
+vidaDif = vida;
 img=0.16
 
 water=false
@@ -62,4 +63,6 @@ inmo = false
 if (global.nivelterminado == false){
     logros_obj.healthy_garden_start = true;
 }
+
+init = false;
 

@@ -1,6 +1,7 @@
 event_inherited();
 
-hspd=-9
-hspd_max=0
-hspd_min=-9
+spd=9
+spd_max=0
+spd_min=9
 
+direction = 180;

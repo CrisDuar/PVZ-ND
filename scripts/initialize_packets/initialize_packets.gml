@@ -539,6 +539,7 @@ function initialize_packets(){
 			timer: 1, //Recharge time in seconds
 			recargstart: true, //Does it recharge when the level starts?
 			
+            wavePoints: 1,   //For endless mode
 			tags: [],
 
 			vs_cost: 0,
@@ -546,7 +547,9 @@ function initialize_packets(){
 			vs_recargstart: true,
 			sd_recharge: true
 			
-			ignore: false //Does it show up in plant selection? (true for special plants)
+			ignore: false //Does it show up in zombie selection? (true for special zombies or obstacles)
+         *  spawn_in_levels: true // Can it be spawned using a level file?
+         * 
 		}
 		*/
 		{ //Zom-gravestone
@@ -561,6 +564,7 @@ function initialize_packets(){
 			timer: 7,
 			
 			recargstart: false,
+            spawn_in_levels: false,
 			
 			tags: [packet_tags.SD_DISABLED, packet_tags.VS_NOBAN]
 		},
@@ -571,6 +575,7 @@ function initialize_packets(){
 			zombie: z_zombie_obj,
 			cost: 25,
 			timer: 8,
+            wavePoints: 1,
 			
 			vs_recargstart: false
 		},
@@ -580,7 +585,8 @@ function initialize_packets(){
 			sprite: abanderado_spr,
 			zombie: z_flag_obj,
 			cost: 300,
-			timer: 90
+			timer: 90,
+            wavePoints: 0
 		},
 		{ //Boxhead
 			packet_sprite: cajaslot1_spr,
@@ -588,7 +594,8 @@ function initialize_packets(){
 			sprite: carecajaquieto_spr,
 			zombie: z_headbox_obj,
 			cost: 50,
-			timer: 15
+			timer: 15,
+            wavePoints: 2
 		},
 		{ //paper thrower
 			packet_sprite: papshoslot1_spr,
@@ -596,7 +603,8 @@ function initialize_packets(){
 			sprite: papsho1_spr,
 			zombie: z_paperthrower_obj,
 			cost: 75,
-			timer: 30
+			timer: 30,
+            wavePoints: 2,
 		},
 		{ //Conehead
 			packet_sprite: conoslot1_spr,
@@ -604,7 +612,8 @@ function initialize_packets(){
 			sprite: conoquiet1_spr,
 			zombie: z_conehead_obj,
 			cost: 75,
-			timer: 15
+			timer: 15,
+            wavePoints: 2
 		},
 		{ //statue
 			packet_sprite: estatuaslot1_spr,
@@ -613,6 +622,7 @@ function initialize_packets(){
 			zombie: z_statue_obj,
 			cost: 50,
 			timer: 40,
+            wavePoints: 4,
 			
 			sd_recharge: false
 		},
@@ -622,7 +632,8 @@ function initialize_packets(){
 			sprite: zombiedoor1_spr,
 			zombie: z_screendoor_obj,
 			cost: 100,
-			timer: 30
+			timer: 30,
+            wavePoints: 4
 		},
 		{ //gardener
 			packet_sprite: gardenerslot1_spr,
@@ -630,7 +641,8 @@ function initialize_packets(){
 			sprite: gardenerquiet1_spr,
 			zombie: z_gardener_obj,
 			cost: 75,
-			timer: 15
+			timer: 15,
+            wavePoints: 2
 		},
 		{ //buckethead
 			packet_sprite: bucketslot1_spr,
@@ -638,7 +650,8 @@ function initialize_packets(){
 			sprite: cuboquiet1_spr,
 			zombie: z_buckethead_obj,
 			cost: 100,
-			timer: 30
+			timer: 30,
+            wavePoints: 4
 		},
 		{ //pole vaulter
 			packet_sprite: pertigaslot1_spr,
@@ -646,7 +659,8 @@ function initialize_packets(){
 			sprite: polequiet_spr,
 			zombie: z_polevaulter_obj,
 			cost: 100,
-			timer: 30
+			timer: 30,
+            wavePoints: 2
 		},
 		{ //rally
 			packet_sprite: bucketflagslot1_spr,
@@ -654,7 +668,8 @@ function initialize_packets(){
 			sprite: rallyeat1_spr,
 			zombie: z_rally_obj,
 			cost: 200,
-			timer: 60
+			timer: 60,
+            wavePoints: 0
 		},
 		{ //imp
 			packet_sprite: impslot1_spr,
@@ -662,7 +677,8 @@ function initialize_packets(){
 			sprite: imp1_spr,
 			zombie: z_imp_obj,
 			cost: 25,
-			timer: 10
+			timer: 10,
+            wavePoints: 1
 		},
 		{ //newspaper
 			packet_sprite: lectorslot1_spr,
@@ -670,7 +686,8 @@ function initialize_packets(){
 			sprite: lectorquiet_spr,
 			zombie: z_newspaper_obj,
 			cost: 150,
-			timer: 20
+			timer: 20,
+            wavePoints: 4
 		},
 		{ //torch
 			packet_sprite: torchslot1_spr,
@@ -678,7 +695,8 @@ function initialize_packets(){
 			sprite: zomtorch0_spr,
 			zombie: z_torch_obj,
 			cost: 125,
-			timer: 30
+			timer: 30,
+            wavePoints: 4
 		},
 		{ //necromancer
 			packet_sprite: graveraiserslot1_spr,
@@ -686,7 +704,8 @@ function initialize_packets(){
 			sprite: sectario1quiet_spr,
 			zombie: z_necromancer_obj,
 			cost: 200,
-			timer: 20
+			timer: 20,
+            wavePoints: 4
 		},
 		{ //skeleton
 			packet_sprite: skeletonslot1_spr,
@@ -694,7 +713,8 @@ function initialize_packets(){
 			sprite: skeleton1_spr,
 			zombie: z_skeleton_obj,
 			cost: 150,
-			timer: 20
+			timer: 20,
+            wavePoints: 4
 		},
 		{ //allstar
 			packet_sprite: futbolslot1_spr,
@@ -702,7 +722,8 @@ function initialize_packets(){
 			sprite: futbolzombi_spr,
 			zombie: z_allstar_oj,
 			cost: 150,
-			timer: 45
+			timer: 45,
+            wavePoints: 7
 		},
 		{ //boss 1
 			packet_sprite: boss1slot_spr,
@@ -711,7 +732,9 @@ function initialize_packets(){
 			zombie: boss1_obj,
 			cost: 800,
 			timer: 99999999,
-            ignore: true
+            ignore: true,
+            wavePoints: 0,
+            spawn_in_levels: false,
 		},
 		{ //grave
             xx: -10,
@@ -722,7 +745,8 @@ function initialize_packets(){
 			zombie: grave3_obj,
 			cost: 25,
 			timer: 30,
-            ignore: true
+            ignore: true,
+            spawn_in_levels: false,
         },
 		{ //grave zombie
             xx: -10,
@@ -733,7 +757,8 @@ function initialize_packets(){
 			zombie: grave1_obj,
 			cost: 50,
 			timer: 30,
-            ignore: true
+            ignore: true,
+            spawn_in_levels: false,
 		},
 		{ //grave sun
             xx: -10,
@@ -744,7 +769,8 @@ function initialize_packets(){
 			zombie: grave2_obj,
 			cost: 0,
 			timer: 30,
-            ignore: true
+            ignore: true,
+            spawn_in_levels: false,
 		},
 		{ //grave shield
             xx: -10,
@@ -755,7 +781,8 @@ function initialize_packets(){
 			zombie: grave4_obj,
 			cost: 200,
 			timer: 30,
-            ignore: true
+            ignore: true,
+            spawn_in_levels: false,
 		},
 		{ //grave explosion
             xx: -10,
@@ -766,7 +793,8 @@ function initialize_packets(){
 			zombie: grave6_obj,
 			cost: 50,
 			timer: 60,
-            ignore: true
+            ignore: true,
+            spawn_in_levels: false,
 		},
 		{ //grave soul
             xx: -10,
@@ -776,7 +804,8 @@ function initialize_packets(){
 			sprite: soulgrave1_spr,
 			zombie: soulgrave_obj,
 			cost: 50,
-			timer: 30
+			timer: 30,
+            spawn_in_levels: false,
 		}
 		
 		

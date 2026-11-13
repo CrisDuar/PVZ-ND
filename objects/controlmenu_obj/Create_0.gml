@@ -3,6 +3,7 @@ show_debug_log(true)
 
 initialize_packets()
 initialize_tile_objs()
+initialize_level_config()
 
 if (os_type != os_android) gamepad_force_focus();
 
@@ -177,7 +178,7 @@ global.battle_diff=0
 global.battle_map=0
 
 //SURVIVAL ENDLESS
-global.survival_ver = 1
+global.survival_ver = 2
 
 //GAMEJOLT
 global.user=""

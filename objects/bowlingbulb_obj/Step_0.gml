@@ -24,10 +24,10 @@ sprite_index=basebulb_spr
 cadencia=0
 }
 
-if sprite_index=basebulb_spr and timer2<room_speed*0.9
+if sprite_index=basebulb_spr and timer2<60*0.9
 {timer2 += 0.1}
 
-if sprite_index=basebulb_spr and timer2>=room_speed*0.9{
+if sprite_index=basebulb_spr and timer2>=60*0.9{
     timer2=0
     image_index=0
     sprite_index=bulbup_spr

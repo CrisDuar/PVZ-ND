@@ -59,6 +59,28 @@ gravesTypes = [
     
 ]
 
+//Brains (Gameplay Modifiers)
+
+/*
+ * Toxic
+ * Rolling heads
+ * Satiated
+ * Sunny zombies
+ * Motivated
+ * Gift
+ * Indecisive (zombies change lanes)
+ * Earthquake
+ * Healthy Veggies
+ * Big Trouble
+ * Explosive
+ * Express delivery
+*/
+
+gameplay_modifier = array_create(13, 0);
+
+gm_indecisive_timer = 0;
+gm_indecisive_timer_max = 15 * 60;
+
 //Backgrounds for levels
 bgs_lvl = [
 	[_state1_bg],

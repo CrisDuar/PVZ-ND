@@ -1,6 +1,6 @@
 /// @description plant_eaten()
 function plant_eaten() {
-
+    
 	if in_danger{
 
 	    audio_stop_all();

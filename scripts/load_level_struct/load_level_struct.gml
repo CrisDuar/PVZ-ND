@@ -1,8 +1,15 @@
 
-function load_level_struct(_struct){
+function load_level_struct(_struct, _online = false){
 	
 	//Set control configuration
-	
+    
+    control_obj.mowers = struct_get_default(_struct, "mowers", control_obj.mowers)
+    control_obj.limit = struct_get_default(_struct, "limit", control_obj.limit)
+    control_obj.windy = struct_get_default(_struct, "windy", control_obj.windy)
+    control_obj.rain = struct_get_default(_struct, "rain", control_obj.rain)
+    control_obj.stage = struct_get_default(_struct, "stage", control_obj.stage)
+    control_obj.daytime = struct_get_default(_struct, "daytime", control_obj.daytime)
+    /*
 	var _ctrl_config = _struct.control;
 	var _ctrl_keys = variable_struct_get_names(_ctrl_config);
 	
@@ -16,6 +23,17 @@ function load_level_struct(_struct){
 			variable_instance_set(control_obj.id, string(_name), _value);
 		}
 	}
+    */
+    //Challenges
+    var _challenges_array = struct_get_default(_struct, "challenges", []);
+    
+    var _len = min(array_length(_challenges_array), array_length(control_obj.gameplay_modifier));
+    
+    for (var i = 0; i < _len; i++){
+        
+        control_obj.gameplay_modifier[i] = _challenges_array[i];
+    }
+    
 	
 	if (struct_get_default(_struct, "fog", 0) > 0){
 		with(instance_create_layer(0, 0, "Instances", fogctrl_obj)){
@@ -60,9 +78,12 @@ function load_level_struct(_struct){
 	
 	//Music
 	with(musicglobalhorde_obj){
-		loop = _struct.loop;
-		idlesong = asset_get_index(_struct.idle_sng);
-		hordesong = asset_get_index(_struct.horde_sng);
+		loop = struct_get_default(_struct, "loop", false)
+        //_struct.loop;
+		//idlesong = asset_get_index(_struct.idle_sng);
+		//hordesong = asset_get_index(_struct.horde_sng);
+        idlesong = global.level_music[struct_get_default(_struct, "idle_sng", 4)]
+        hordesong = global.level_music[struct_get_default(_struct, "horde_sng", 5)]
 	}
 	
 	//Spawner
@@ -75,7 +96,7 @@ function load_level_struct(_struct){
 		pt = _struct.pt;
 		fn = array_length(_struct.waves);
 		infinite = _struct.infinite;
-		infinite_loop = _struct.infinite;
+		infinite_loop = _struct.infinite_loop;
 		
 		progressbar = _struct.progressbar;
 		onlyname = _struct.onlyname;
@@ -84,12 +105,12 @@ function load_level_struct(_struct){
 		lvl_en = _struct.lvl_en;
 		lvl_es = _struct.lvl_es;
 		lvl_zh = _struct.lvl_zh;
-		
+		/*
 		var _id_def = -1;
 		var _digits = string_digits(global.load_level)
 		
-		show_debug_message("LEVEL ID DIGITS")
-		show_debug_message(_digits)
+		//show_debug_message("LEVEL ID DIGITS")
+		//show_debug_message(_digits)
 		
 		if (_digits != ""){
 			_id_def = real(_digits) - 1;
@@ -101,17 +122,47 @@ function load_level_struct(_struct){
 		
 		lvl_id = _id_def//struct_get_default(_struct, "lvl_id", _id_def);
 		lvl_type = _type_def//struct_get_default(_struct, "lvl_type", _type_def);
-		
-		show_debug_message("LEVEL ID")
-		show_debug_message(string(lvl_id))
+		*/
+		//show_debug_message("LEVEL ID")
+		//show_debug_message(string(lvl_id))
 		
 		//Prize
-		sprite = asset_get_index(_struct.sprite);
-		if (struct_exists(_struct, "prizevar")) prizevar = _struct.prizevar;
-		if (struct_exists(_struct, "lvl")) lvl = _struct.lvl;
-		if (struct_exists(_struct, "money")) money = _struct.money;
-		snd = asset_get_index(_struct.snd);
-		if (struct_exists(_struct, "plantroom")) plantroom = asset_get_index(_struct.plantroom);
+        if (_online == false){
+            
+            var _id_def = -1;
+      		var _digits = string_digits(global.load_level)
+      		
+      		if (_digits != ""){
+      			_id_def = real(_digits) - 1;
+      		}
+      		
+      		var _type_def = -1
+      		if (string_pos("Level", global.load_level) > 0) _type_def = 0;
+      		if (string_pos("Hard", global.load_level) > 0) _type_def = 1;
+                
+            lvl_id = _id_def
+            lvl_type = _type_def
+            
+            sprite = asset_get_index(_struct.sprite);
+      		if (struct_exists(_struct, "prizevar")) prizevar = _struct.prizevar;
+      		if (struct_exists(_struct, "lvl")) lvl = _struct.lvl;
+      		if (struct_exists(_struct, "money")) money = _struct.money;
+      		snd = global.level_reward_music[struct_get_default(_struct, "snd", 0)]//asset_get_index(_struct.snd);
+      		if (struct_exists(_struct, "plantroom")) plantroom = asset_get_index(_struct.plantroom);
+                
+        }else{
+            
+            lvl_type = -1; 
+            lvl_id = -1;
+            
+            sprite = trophy1_spr;
+            snd = global.level_reward_music[0];
+            prizevar = ""
+      		lvl = -2
+      		money = 0;
+      		plantroom = customlevels_rm;
+        }
+		
 		
 		wf=array_create(fn);
 		
@@ -132,7 +183,12 @@ function load_level_struct(_struct){
 			for (var j = 0; j < array_length(_waves[i]); j++){
 				
 				var _data = _waves[i][j];
-				var _zombie = asset_get_index(_data.typ);
+				//var _zombie = asset_get_index(_data.typ);
+                var _zombie = z_zombie_obj;
+                if (struct_get_default(global.zombies_packets[_data.typ], "spawn_in_levels", true)){
+                    
+                    _zombie = global.zombies_packets[_data.typ].zombie
+                }
 				
 				//show_debug_message($"{_zombie}: {_data.row}: {_data.num}");
 				
@@ -148,10 +204,10 @@ function load_level_struct(_struct){
 				
 				//Preview add zombies
 				
-				if (_data.typ != "z_flag_obj" and _data.typ != "z_rally_obj"){
-				
+				//if (_data.typ != "z_flag_obj" and _data.typ != "z_rally_obj"){
+				if (_data.typ != zombies_id.ZOMBIE_FLAG and _data.typ != zombies_id.ZOMBIE_RALLY){
 					if !ds_map_exists(_zombie_prev, _data.typ){
-					    ds_map_add(_zombie_prev, _data.typ, _data.num);
+					    ds_map_add(_zombie_prev, _zombie, _data.num);
 					
 					}else{
 						_zombie_prev[? _data.typ] += _data.num;
@@ -174,16 +230,17 @@ function load_level_struct(_struct){
 		
 			//show_message("KEY: " + key)
 		
-			zombie_preview(asset_get_index(key), clamp(round((_zombie_prev[? key] * 15)/_z_total), 1, 5))
+			zombie_preview(key, clamp(round((_zombie_prev[? key] * 15)/_z_total), 1, 5))
 	   
 			key = ds_map_find_next(_zombie_prev, key);
 		}
 	}
     
+    ds_map_destroy(_zombie_prev)
     
     //Multiplayer minigame
     
-    if (struct_get_default(_struct, "versus_minigame", 0)){
+    if (struct_get_default(_struct, "versus_minigame", false)){
 		for (var i = 0; i < array_length(zombispawn_obj.rows_arr); i++){
             instance_create_layer(1120, zombispawn_obj.rows_arr[i], "Instances", zombiediana_obj);	
         }

@@ -3,7 +3,7 @@ survival=true
 record=0
 survprogress=0
 survtimecalc=0
-dificultad=0.75
+dificultad = 6;
 
 diff_incr = 0.75
 
@@ -18,7 +18,29 @@ lvl_en="Endless zone (player)"
 lvld_es = "Zona de infinito (jugador)"
 lvld_en = "Endless zone (player)"
 
-//desafios
+//Challenges list
+/*
+ * Save our seeds: 0
+ * Sun machine: 1
+ * Limited lawn: 2
+ * Rain: 3
+ * Fog: 4
+ * Wind: 5
+ * Poison puddles: 6
+ * Pollution: 7
+*/
+var _challenges_amount = 8;
+
+challenges = array_create(_challenges_amount)
+
+for (var i = 0; i < _challenges_amount; i++){
+    challenges[i] = [false, false];
+}
+
+p1 = 0;
+p2 = 0;
+
+/*
 //0 status; 1 is it available
 challenges[0,0] = false//save our seeds
 challenges[0,1] = false
@@ -44,6 +66,7 @@ challenges[6,1] = false
 
 challenges[7,0] = false//pollution
 challenges[7,1] = false
+*/
 
 /*----------------------------*/
 filename = "player_surv.ini"
@@ -56,11 +79,13 @@ timercheck=false
 flag=false
 
 //ZOMBIES
+lst_zombies = [];
+/*
 lst_data=ds_list_create()
 lst_armor=ds_list_create()
 lst_trick=ds_list_create()
-
-zombie_list = ds_list_create();
+*/
+zombie_list = [];
 
 loaded_zom = false
 
@@ -109,3 +134,5 @@ alarm[1]=5
 
 /* */
 /*  */
+
+is_level_generated = false;

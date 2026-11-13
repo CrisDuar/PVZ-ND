@@ -1,19 +1,19 @@
 {
-  "$GMPath": "",
-  "%Name": "belt_pth",
-  "closed": false,
-  "kind": 1,
-  "name": "belt_pth",
-  "parent": {
-    "name": "Paths",
-    "path": "folders/Paths.yy",
+  "$GMPath":"",
+  "%Name":"belt_pth",
+  "closed":false,
+  "kind":1,
+  "name":"belt_pth",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
   },
-  "points": [
+  "points":[
     {"speed":100.0,"x":112.0,"y":0.0,},
     {"speed":100.0,"x":64.0,"y":16.0,},
     {"speed":100.0,"x":0.0,"y":0.0,},
   ],
-  "precision": 4,
-  "resourceType": "GMPath",
-  "resourceVersion": "2.0",
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
 }

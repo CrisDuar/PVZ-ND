@@ -14,7 +14,7 @@ if (_ev == -1){
 	if (_check) {
 		ds_list_add(hit_zom, other.id)
 		_num_z++;
-	}
+    }
 	
 	if (col_haspar and global.videoq > 0){
 		part_particles_create(col_partsys, x, y, col_part, 4);
@@ -25,7 +25,7 @@ if (_ev == -1){
 		    }
 		}
 	}
-	audio_play_sound(choose(snd1,snd2), 1, false)
+	audio_play_sound(snd[irandom_range(0, array_length(snd) - 1)], 1, false)
 	
 	#region Grave collision
 	

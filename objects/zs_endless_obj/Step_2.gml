@@ -1,5 +1,8 @@
 event_inherited();
 
 //retos
-update_challenges();
+if (is_level_generated == false){
+    update_challenges();
+    is_level_generated = true;
+}
 

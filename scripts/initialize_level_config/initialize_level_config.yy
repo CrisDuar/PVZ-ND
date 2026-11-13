@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"initialize_level_config",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initialize_level_config",
+  "parent":{
+    "name":"Seedpackets",
+    "path":"folders/Scripts/Seedpackets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

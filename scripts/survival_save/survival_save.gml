@@ -1,7 +1,10 @@
 /// @description survival_save(file_name)
 /// @param file_name
-function survival_save(argument0) {
-	var file=argument0
+function survival_save(_file_name) {
+    
+    var _acfolder = "ac" + string(global.acc_id);
+	var _route = _acfolder + "/survival/" + _file_name;
+    
 	var back=0
 	var spawner=0
 	var inst_num,n0,n1,inst
@@ -10,10 +13,10 @@ function survival_save(argument0) {
 	    back=1
 	}
 
-	if file_exists(file){file_delete(file);}
+	if file_exists(_route){file_delete(_route);}
 
 
-	ini_open(file)
+	ini_open(_route)
 	//game values
 	ini_write_real("Game","version", global.survival_ver)
 

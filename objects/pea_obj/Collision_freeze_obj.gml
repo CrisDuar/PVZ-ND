@@ -1,7 +1,5 @@
 with(instance_create(x,y,icepea_obj)){
-    vspd=other.vspd
-    hspd=other.hspd
-    
+   
     spd = other.spd
     spd_max = other.spd_max
     direction = other.direction

@@ -40,7 +40,11 @@ function load_almanac() {
 
 	for (var i = init_y; i < ds_grid_height(global.almanac_data); i++){ 
 	    if (global.almanac_data[# 0, i] != string(argument[1] - 1)){
-        
+            
+            var _plant_id = real(global.almanac_data[# almanac_data.UNIT_ID, i])
+            
+            if (_plant_id == -1) continue;
+            
 	        with(instance_create(112 + 136*xx ,152 + yy*72 + typeyy,almanacselect_obj)){
         
 	            rendery = typeyy
@@ -53,7 +57,7 @@ function load_almanac() {
 				plantsprite= asset_get_index(global.almanac_data[# almanac_data.UNIT_SPR, i])
 	            bg = real(global.almanac_data[# almanac_data.BG, i])
 				
-				var _plant_id = real(global.almanac_data[# almanac_data.UNIT_ID, i])
+				
 				var _recharge = 0;
 				
 				if (_plant_id != -1){

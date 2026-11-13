@@ -1,5 +1,47 @@
 {
-  "rw":[
+  "sprite": "bolsa_monedas_spr",
+  "lvl": 5.0,
+  "prizevar": "levelhard1",
+  "money": 300.0,
+  "snd": 0,
+  "plantroom": "hardmode_night_rm",
+  "limit": 1600.0,
+  "pt": 6.0,
+  "preplants": [],
+  "horde_prcnt": 0.4,
+  "surprise_enabled": true,
+  "infinite": false,
+  "infinite_loop": 3.0,
+  "lvl_type": 1,
+  "mowers": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "graves": 10,
+  "maxgraves": 12,
+  "cys": true,
+  "is_conveyor": false,
+  "conv_t1": 0.0,
+  "conv_t2": 0.0,
+  "conv_code": 0.0,
+  "stage": 2.0,
+  "daytime": 2.0,
+  "windy": false,
+  "rain": false,
+  "fog": -1.0,
+  "smog": -1.0,
+  "idle_sng": 14,
+  "horde_sng": 15,
+  "loop": false,
+  "progressbar": true,
+  "onlyname": false,
+  "lvl_en": "Hard level 2-5",
+  "lvl_es": "Nivel difícil 2-5",
+  "lvl_zh": "关卡",
+  "rw": [
     166.0,
     267.0,
     370.0,
@@ -7,7 +49,16 @@
     578.0,
     578.0
   ],
-  "wf":[
+  "arr_row": [
+    [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ]
+  ],
+  "wf": [
     [
       6.0,
       1.0
@@ -21,454 +72,469 @@
       2.0
     ]
   ],
-  "lvl_type": 1,
-  "control":{
-    "limit":1600.0,
-    "windy":false,
-    "rain":false,
-    "stage":2.0,
-    "daytime":2.0,
-    "mowers":[
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0
-    ],
-    "graves": 10,
-    "maxgraves": 12
-  },
-  "fog":-1.0,
-  "cys":true,
-  "preplants":[
-  ],
-  "sprite":"bolsa_monedas_spr",
-  "loop":false,
-  "idle_sng":"hardbattle2_sng",
-  "horde_sng":"finalhardbattle2_sng",
-  "horde_prcnt":0.40000000000000002,
-  "surprise_enabled":true,
-  "infinite":false,
-  "lvl":5.0,
-  "infinite_loop":3.0,
-  "progressbar":true,
-  "onlyname":false,
-  "lvl_en":"Hard level 2-5",
-  "lvl_es":"Nivel difícil 2-5",
-  "lvl_zh":"关卡",
-  "smog":-1.0,
-  "is_conveyor":false,
-  "conv_code":0.0,
-  "arr_row":[
-    [
-      0.0,
-      1.0,
-      2.0,
-      3.0,
-      4.0
-    ]
-  ],
-  "conv_t1":0.0,
-  "conv_t2":0.0,
-  "plantroom":"hardmode_night_rm",
-  "waves":[
+  "waves": [
     [
       {
-        "row":0.0,
-        "typ":"z_zombie_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 1,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_zombie_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 1,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_conehead_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 5,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_zombie_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 1,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_statue_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 6,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_conehead_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 5,
+        "num": 2.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_zombie_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 1,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_conehead_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 5,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_statue_obj",
-        "num":3.0
+        "row": 0.0,
+        "typ": 6,
+        "num": 3.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_torch_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 14,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_flag_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 2,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_conehead_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 5,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_statue_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 6,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_zombie_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 1,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_torch_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 14,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_paperthrower_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 4,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_buckethead_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 9,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_conehead_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 5,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_allstar_oj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 17,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_buckethead_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 9,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_paperthrower_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 4,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_necromancer_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 15,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_buckethead_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 9,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_allstar_oj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 17,
+        "num": 2.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_necromancer_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 15,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_allstar_oj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 17,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_paperthrower_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 4,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_flag_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 2,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_conehead_obj",
-        "num":3.0
+        "row": 0.0,
+        "typ": 5,
+        "num": 3.0
       },
       {
-        "row":0.0,
-        "typ":"z_buckethead_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_allstar_oj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 17,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_torch_obj",
-        "num":3.0
+        "row": 0.0,
+        "typ": 14,
+        "num": 3.0
       },
       {
-        "row":0.0,
-        "typ":"z_necromancer_obj",
-        "num":3.0
+        "row": 0.0,
+        "typ": 15,
+        "num": 3.0
       },
       {
-        "row":0.0,
-        "typ":"z_statue_obj",
-        "num":4.0
+        "row": 0.0,
+        "typ": 6,
+        "num": 4.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_paperthrower_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 4,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_buckethead_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 9,
+        "num": 1.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_buckethead_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 9,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_torch_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 14,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_conehead_obj",
-        "num":3.0
+        "row": 0.0,
+        "typ": 5,
+        "num": 3.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_buckethead_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_necromancer_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 15,
+        "num": 2.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_statue_obj",
-        "num":4.0
+        "row": 0.0,
+        "typ": 6,
+        "num": 4.0
       },
       {
-        "row":0.0,
-        "typ":"z_torch_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 14,
+        "num": 2.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_allstar_oj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 17,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_buckethead_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 9,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_paperthrower_obj",
-        "num":3.0
+        "row": 0.0,
+        "typ": 4,
+        "num": 3.0
       }
     ],
     [
       {
-        "row":0.0,
-        "typ":"z_rally_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 11,
+        "num": 1.0
       },
       {
-        "row":0.0,
-        "typ":"z_buckethead_obj",
-        "num":3.0
+        "row": 0.0,
+        "typ": 9,
+        "num": 3.0
       },
       {
-        "row":0.0,
-        "typ":"z_paperthrower_obj",
-        "num":3.0
+        "row": 0.0,
+        "typ": 4,
+        "num": 3.0
       },
       {
-        "row":0.0,
-        "typ":"z_conehead_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 5,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_allstar_oj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 17,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_torch_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 14,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_zombie_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 1,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_statue_obj",
-        "num":2.0
+        "row": 0.0,
+        "typ": 6,
+        "num": 2.0
       },
       {
-        "row":0.0,
-        "typ":"z_necromancer_obj",
-        "num":1.0
+        "row": 0.0,
+        "typ": 15,
+        "num": 1.0
       }
     ]
   ],
-  "prizevar":"levelhard1",
-  "snd":"newplant_snd",
-  "money":300.0,
-  "pt":6.0,
-  "objects":[
+  "objects": [
     {
-        "obj_id": 2,
-        "obj_type": 1,
-        
-        "pos": [
-          {"x": 6, "y": 0},
-          {"x": 7, "y": 0},
-          {"x": 8, "y": 0},
-          {"x": 7, "y": 1},
-          {"x": 8, "y": 1},
-          {"x": 6, "y": 2},
-          {"x": 7, "y": 2},
-          {"x": 8, "y": 3},
-          {"x": 5, "y": 4},
-          {"x": 7, "y": 4},
-          {"x": 8, "y": 4}
-        ],
-
-        "vars": [2]
+      "obj_id": 2,
+      "obj_type": 1,
+      "pos": [
+        {
+          "x": 6,
+          "y": 0
+        },
+        {
+          "x": 7,
+          "y": 0
+        },
+        {
+          "x": 8,
+          "y": 0
+        },
+        {
+          "x": 7,
+          "y": 1
+        },
+        {
+          "x": 8,
+          "y": 1
+        },
+        {
+          "x": 6,
+          "y": 2
+        },
+        {
+          "x": 7,
+          "y": 2
+        },
+        {
+          "x": 8,
+          "y": 3
+        },
+        {
+          "x": 5,
+          "y": 4
+        },
+        {
+          "x": 7,
+          "y": 4
+        },
+        {
+          "x": 8,
+          "y": 4
+        }
+      ],
+      "vars": [
+        2
+      ]
     },
     {
-        "obj_id": 2,
-        "obj_type": 1,
-        
-        "pos": [
-          {"x": 5, "y": 0},
-          {"x": 6, "y": 1},
-          {"x": 5, "y": 2},
-          {"x": 5, "y": 3},
-          {"x": 7, "y": 3},
-          {"x": 6, "y": 4}
-        ],
-
-        "vars": [3]
+      "obj_id": 2,
+      "obj_type": 1,
+      "pos": [
+        {
+          "x": 5,
+          "y": 0
+        },
+        {
+          "x": 6,
+          "y": 1
+        },
+        {
+          "x": 5,
+          "y": 2
+        },
+        {
+          "x": 5,
+          "y": 3
+        },
+        {
+          "x": 7,
+          "y": 3
+        },
+        {
+          "x": 6,
+          "y": 4
+        }
+      ],
+      "vars": [
+        3
+      ]
     },
     {
-        "obj_id": 2,
-        "obj_type": 1,
-        
-        "pos": [
-          {"x": 5, "y": 1},
-          {"x": 8, "y": 2},
-          {"x": 6, "y": 3}
-        ],
-
-        "vars": [7]
+      "obj_id": 2,
+      "obj_type": 1,
+      "pos": [
+        {
+          "x": 5,
+          "y": 1
+        },
+        {
+          "x": 8,
+          "y": 2
+        },
+        {
+          "x": 6,
+          "y": 3
+        }
+      ],
+      "vars": [
+        7
+      ]
     },
     {
-        "obj_id": 5,
-        "obj_type": 0,
-        
-        "pos": [
-          {"x": 1, "y": 0}
-        ],
-
-        "vars": [true]
+      "obj_id": 5,
+      "obj_type": 0,
+      "pos": [
+        {
+          "x": 1,
+          "y": 0
+        }
+      ],
+      "vars": [
+        true
+      ]
     },
     {
-        "obj_id": 0,
-        "obj_type": 0,
-        
-        "pos": [
-          {"x": 1, "y": 4}
-        ],
-
-        "vars": [true]
+      "obj_id": 0,
+      "obj_type": 0,
+      "pos": [
+        {
+          "x": 1,
+          "y": 4
+        }
+      ],
+      "vars": [
+        true
+      ]
     },
     {
-        "obj_id": 21,
-        "obj_type": 0,
-        
-        "pos": [
-          {"x": 2, "y": 2}
-        ],
-
-        "vars": [true]
+      "obj_id": 21,
+      "obj_type": 0,
+      "pos": [
+        {
+          "x": 2,
+          "y": 2
+        }
+      ],
+      "vars": [
+        true
+      ]
     }
   ]
 }

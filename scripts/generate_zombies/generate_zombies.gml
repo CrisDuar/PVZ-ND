@@ -1,9 +1,36 @@
-function generate_zombies() {
-	var temp_list;
-	var pts;
-	var diff = floor(dificultad)
-	var _list = ds_list_create();
-
+function generate_zombies(_lst_zombies, _difficulty) {
+    
+    var _list = [];
+    var _max_zombies = 5 + 0.5 * floor(_difficulty);
+    var i = 0;
+    var _prob_addition = 0;
+    _lst_zombies = array_shuffle(_lst_zombies);
+    
+    while(array_length(_list) < _max_zombies){
+        var _zombie = _lst_zombies[i];//global.zombies_packets[_lst_zombies[i]].zombie;
+        
+        if (array_contains(_list, _zombie)) continue;
+        
+        var _pts = global.zombies_packets[_lst_zombies[i]].wavePoints;
+        var _prob = 100 - (10 * _pts) + _prob_addition;
+        
+        if (irandom(100) <= _prob){
+            
+            show_debug_message("ADDED");
+            show_debug_message(global.zombies_packets[_lst_zombies[i]].zombie)
+            
+            array_push(_list, _zombie);
+        }
+        
+        i++
+        if (i >= array_length(_lst_zombies)) {
+            i = 0;
+            _prob_addition += 10;
+        }
+    }
+    
+    
+    /*
 	///BASIC
 
 	pts = choose(1, floor(1 + diff/2))
@@ -18,7 +45,7 @@ function generate_zombies() {
 	///ARMOR
 
 	pts = round(4 + diff)
-	temp_list = pick_zombies(/*clamp(pts/4, 2 , 3)*/2, pts, lst_armor)
+	temp_list = pick_zombies(clamp(pts/4, 2 , 3)2, pts, lst_armor)
 
 	for(var i = 0; i < ds_list_size(temp_list); i++){
 	    ds_list_add(_list, temp_list[| i])
@@ -34,64 +61,12 @@ function generate_zombies() {
 	    ds_list_add(_list, temp_list[| i])
 	    show_debug_message(get_zombie_type(_list[| i]))
 	}
-
+    */
 	show_debug_message("generating zombies:")
 
-	for(var i = 0; i < ds_list_size(_list); i++){
-	    show_debug_message(get_zombie_type(_list[| i]))
+	for(var i = 0; i < array_length(_list); i++){
+	    show_debug_message(global.zombies_packets[_list[i]].zombie)
 	}
 
 	return _list;
-
-	/*var top;
-	var zom;
-	var avoid;
-
-	//zombi básico
-	var _basic;
-
-	//zombi armadura
-	var _armor1;
-	var _armor2;
-
-	//zombi truco
-	var _trick1;
-	var _trick2;
-
-	top = ds_list_size(lst_armor)-1
-
-	//basic
-	zom = min(floor(dificultad/2), top)
-	_basic = lst_basic[| zom]
-
-	//armor 1
-	zom = min(floor(dificultad/2), top)
-	_armor1= lst_armor[| zom]
-
-	avoid = 0
-	//armor 2
-	do{
-	    zom = min(floor(dificultad/2)+irandom_range(1,3), top)
-	    _armor2 = lst_armor[| zom]
-	    avoid++;
-	}until(armor1 != armor2 or avoid>10)
-
-	//trick 1
-	zom = irandom_range(0, clamp((dificultad/2),0, top))
-	_trick1 = lst_trick[| zom]
-
-	avoid = 0
-
-	do{
-	    zom = irandom_range(0, clamp((dificultad/2)+irandom_range(1,3),0, top))
-	    _trick2 = lst_trick[| zom]
-    
-	    avoid++
-	}until(trick1 != trick2 or avoid>10)
-	*/
-
-
-
-
-
 }

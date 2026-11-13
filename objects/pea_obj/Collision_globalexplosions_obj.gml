@@ -1,6 +1,4 @@
 with(instance_create(x,y,fireball_obj)){
-    vspd=other.vspd
-    hspd=other.hspd
     
     spd = other.spd
     spd_max = other.spd_max

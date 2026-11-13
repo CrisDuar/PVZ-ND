@@ -46,3 +46,5 @@ vs_set = false;
 tags = [];
 
 xmod = 1;
+
+gm_set = false;

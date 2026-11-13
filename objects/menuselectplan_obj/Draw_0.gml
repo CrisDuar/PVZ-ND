@@ -62,6 +62,8 @@ if (sprite_index != menuselectmult_spr){
 		draw_text_colour(x - 80 + (40*i),y-35, _crt_pag + 1, _c, _c, _c, _c,opacidad)
 	}
 }
+
+
 /*
 if sprite_index==menuselectplant_spr{
     var check_hp1 = point_in_rectangle(mouse_x,mouse_y,x-80-15,y-55,x-80+15,y-20)

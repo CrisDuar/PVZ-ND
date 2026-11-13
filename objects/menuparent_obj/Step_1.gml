@@ -18,3 +18,15 @@ if (control_obj.multijugador){
 		timer = vs_recharge;
 	}
 }
+
+if (control_obj.gameplay_modifier[12]){
+    
+    if (!gm_set){
+        
+        gm_set = true;
+        
+        cost += (cost/2) + (cost/2 % 5);
+        if (cost == 0) cost = 15;
+		timer /= 2;
+    }
+}

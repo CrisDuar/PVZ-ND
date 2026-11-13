@@ -7,6 +7,18 @@ function update_info() {
 	menuselectplan_obj.unitname_en=name_en
 	menuselectplan_obj.islock = lock
 	
+    
+    if (control_obj.gameplay_modifier[12]){
+        
+        var _cost = cost;
+        
+        _cost += (cost/2) + (cost/2 % 5);
+        
+        if (_cost == 0) cost = 15;
+            
+        menuselectplan_obj.unitcost=_cost; 
+    }
+    
 	
 	var p_id = menuselectplan_obj.plant;
 	var p_data = global.plants_packets[p_id]

@@ -15,13 +15,3 @@ if version==1{
 }else{
     zombie_list = generate_zombies();
 }*/
-if (loaded_zom == false){
-    zombie_list = generate_zombies();
-}else{
-    loaded_zom = false
-}
-
-create_level(pt, numwaves, flagnum, flag, zombie_list, a, 1 + dificultad)
-
-/* */
-/*  */

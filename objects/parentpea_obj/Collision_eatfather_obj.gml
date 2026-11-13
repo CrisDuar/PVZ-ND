@@ -68,7 +68,6 @@ if (_ev == -1){
 	#endregion
 	
 	#region Destroy
-	show_debug_message(_num_z)
 	if (_num_z >= maxhit_zom){
 		
 		if broke != -1{

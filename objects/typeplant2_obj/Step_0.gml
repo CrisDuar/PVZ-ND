@@ -1,8 +1,29 @@
+
+if (!init){
+    
+    maxhp = vida;
+    vidaDif = vida;
+    
+    init = true;
+}
+
+
 tilexx=x-instance_nearest(x,y,pastoinv_obj).x
 tileyy=y-instance_nearest(x,y,pastoinv_obj).y
 
 //vida
 if vida>maxhp vida=maxhp;
+    
+if (vidaDif > vida){
+    
+    vidaDif = vida;
+    
+    if (control_obj.gameplay_modifier[0] && poison <= 0){
+        if poison<=0 audio_sound_pitch(audio_play_sound(poison1_snd,1,false),random_range(1,1.4))
+        poison = 60 * 4;
+        image_alpha=0.5
+    }
+}
 
 //profundidad
 depth=-y+20

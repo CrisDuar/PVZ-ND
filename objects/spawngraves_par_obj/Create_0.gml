@@ -7,6 +7,8 @@ time=0//tiempo real para spawnear una tumba
 breaktime=0//tiempo de descanso por comepiedras
 can_necro = true//puede aparecer en la siguiente bandera
 
+disabled = false;
+
 //tiempo para spawnear la tumba
 
 var a = irandom(100)

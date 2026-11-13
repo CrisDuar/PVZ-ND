@@ -1,3 +1,5 @@
+if (gameplay_modifier[3]) cansun = false;
+
 soles = clamp(soles,0,9975)
 zomes = clamp(zomes,0,9975)
 
@@ -12,15 +14,38 @@ if drawzomes<zomes drawzomes+=5
 if drawzomes>zomes drawzomes-=5
 
 
-if (global.iniciogame and !start_sun and !instance_exists(ctrlcinta1_obj)){
+if (global.iniciogame){
 	
-	start_sun = true;
+    if (gameplay_modifier[6]){
+    
+        if (gm_indecisive_timer <= gm_indecisive_timer_max){
+            
+            gm_indecisive_timer++;
+        }else{
+            gm_indecisive_timer = 0;
+            
+            with(eatfather_obj){
+                if y = zombispawn_obj.f6{
+                    garlic_yy = get_closest_row(y-90)
+                }else if y = zombispawn_obj.f1{
+                    garlic_yy = get_closest_row(y+90)
+                }else{
+                    garlic_yy = get_closest_row(y+choose(-90,90))
+                }
+            }
+        }
+    }
+    
+    
+    if (!start_sun && !instance_exists(ctrlcinta1_obj)){
+        start_sun = true;
 	
-	//Sun
-	alarm[0]=60*5;
-	
-	//Wind
-	alarm[2]=60*30;
+       	//Sun
+       	alarm[0]=60*5;
+       	
+       	//Wind
+       	alarm[2]=60*30;
+    }
 }
 
 if audio_is_playing(newplant_snd)

@@ -11,6 +11,7 @@ function cheats(){
     show_debug_message("setLang <lang>");
     show_debug_message("toggleHitboxes");
     show_debug_message("getAchievement");
+    show_debug_message("survivalSkip");
 }
 
 function setAdventure(_progress){
@@ -99,5 +100,13 @@ function toggleHitboxes(){
 function getAchievement(_ac){
     with(logros_obj){
         get_achievement(_ac)
+    }
+}
+
+function survivalSkip(){
+    if (instance_exists(zs_endless_obj)){
+        with(zs_endless_obj){
+            timer = 0;
+        }
     }
 }
