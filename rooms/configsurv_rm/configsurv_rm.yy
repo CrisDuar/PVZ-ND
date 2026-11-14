@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"configsurv_rm",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/configsurv_rm/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,

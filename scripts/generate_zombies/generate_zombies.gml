@@ -64,8 +64,8 @@ function generate_zombies(_lst_zombies, _difficulty) {
     */
 	show_debug_message("generating zombies:")
 
-	for(var i = 0; i < array_length(_list); i++){
-	    show_debug_message(global.zombies_packets[_list[i]].zombie)
+	for(var j = 0; j < array_length(_list); j++){
+	    show_debug_message(global.zombies_packets[_list[j]].zombie)
 	}
 
 	return _list;

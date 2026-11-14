@@ -1,7 +1,58 @@
 /// @description survival_load(file_name)
 /// @param file_name
-function survival_load(argument0) {
-	var file = argument0
+function survival_load(_file_name) {
+    
+    var _acfolder = "ac" + string(global.acc_id);
+	var _route = _acfolder + "/survival/" + _file_name + ".json";
+	var _txt = "";
+    
+    if (!file_exists(_route)) return false;
+    
+	var _file = file_text_open_read(_route);
+	
+	//Read the json
+	while (!file_text_eof(_file)) {
+	    _txt += file_text_read_string(_file);
+	    file_text_readln(_file);
+	}
+	
+	file_text_close(_file);
+
+	// Json to struct
+	var _survival_data = json_parse(_txt);
+    
+    zs_endless_obj.record = struct_get_default(_survival_data, "record", zs_endless_obj.record)
+    zs_endless_obj.survprogress = struct_get_default(_survival_data, "current_progress", zs_endless_obj.survprogress)
+    zs_endless_obj.dificultad = struct_get_default(_survival_data, "difficulty", zs_endless_obj.dificultad)
+    zs_endless_obj.zombie_list = struct_get_default(_survival_data, "zombies", zs_endless_obj.zombie_list)
+    control_obj.gameplay_modifier = struct_get_default(_survival_data, "modifiers", control_obj.gameplay_modifier)
+    
+    var _danger_plants = struct_get_default(_survival_data, "danger_plants", [0, 0])
+    
+    zs_endless_obj.p1 = _danger_plants[0];
+    zs_endless_obj.p2 = _danger_plants[1];
+    
+    var _challenges = struct_get_default(_survival_data, "challenges", [])
+    
+    for(var i = 0; i < array_length(_challenges); i++){
+        
+        zs_endless_obj.challenges[i][0] = _challenges[i]
+	}
+    
+    control_obj.daytime = survprogress % 3;
+    
+    with(control_obj){
+        var _bg = bgs_lvl[stage][daytime<array_length(bgs_lvl[stage]) ? daytime : (array_length(bgs_lvl[stage]) - 1)] 
+        layer_background_sprite(layer_background_get_id(layer_get_id("BG_stage")), _bg)	
+    }
+    
+    return true
+    /*
+
+	//Read the struct
+	return _json;
+    
+	var file = _file_name//argument0
 	var spawner = 0
 	var back = 0
 	var n0,n1,inst,xx,yy;
@@ -147,7 +198,7 @@ function survival_load(argument0) {
 	    }
 	    ini_close();
 	}
-
+*/
 
 
 }

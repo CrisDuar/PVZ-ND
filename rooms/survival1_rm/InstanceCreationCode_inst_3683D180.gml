@@ -1,7 +1,7 @@
 /// @description TO EDIT
 //-------------------------------------
 
-filename = "player_surv.ini"
+filename = "player_surv"
 surv_type = 0
 
 //-------------------------------------

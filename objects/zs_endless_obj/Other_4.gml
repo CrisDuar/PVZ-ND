@@ -1,9 +1,26 @@
-if (loaded_zom == false){
+/*if (loaded_zom == false){
+    
+    var _status = survival_load(filename)
+    
+    if (_status == false){
+        survival_set_modifiers();
+        survival_set_challenges();
+        zombie_list = generate_zombies(lst_zombies, floor(dificultad));
+    }
+    
+}else{
+    loaded_zom = false
+}
+*/
+survival_load(filename)
+    
+if (survprogress == 0){
+    
+    show_debug_message("NO ENCONTRÉ EL ARCHIVO - GENERANDO NIVEL")
+    
     survival_set_modifiers();
     survival_set_challenges();
     zombie_list = generate_zombies(lst_zombies, floor(dificultad));
-}else{
-    loaded_zom = false
 }
 
 create_level(zombie_list, floor(dificultad));

@@ -489,7 +489,7 @@
   "kerningPairs":[],
   "last":0,
   "lineHeight":0,
-  "maintainGms1Font":true,
+  "maintainGms1Font":false,
   "name":"almanac_fnt",
   "parent":{
     "name":"Fonts",

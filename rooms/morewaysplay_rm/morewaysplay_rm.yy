@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"morewaysplay_rm",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/morewaysplay_rm/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,

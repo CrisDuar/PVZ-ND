@@ -1,10 +1,49 @@
 /// @description survival_save(file_name)
 /// @param file_name
-function survival_save(_file_name) {
+function survival_save(
+    _file_name,
+    _record,
+    _progress,
+    _difficulty,
+    _zombies,
+    _challenges,
+    _modifiers,
+    _danger_plants
+    
+) {
+    
+    var _challenge_status = array_create(array_length(_challenges), false)
+    
+    for(var i = 0; i < array_length(_challenges); i++){
+        
+        _challenge_status[i] = _challenges[i][0]
+	}
+    
+    
+    var _data = {
+        version: global.survival_ver,
+        record: _record,
+        current_progress: _progress,
+        difficulty: _difficulty,
+        zombies: _zombies,
+        challenges: _challenge_status,
+        modifiers: control_obj.gameplay_modifier,
+        danger_plants: _danger_plants
+    }
+    
+    var _data_json = json_stringify(_data, true);
     
     var _acfolder = "ac" + string(global.acc_id);
-	var _route = _acfolder + "/survival/" + _file_name;
+	var _route = _acfolder + "/survival/" + _file_name + ".json";
     
+    var _file = file_text_open_write(_route);
+    file_text_write_string(_file, _data_json);
+    file_text_close(_file);
+    
+    
+    //var _acfolder = "ac" + string(global.acc_id);
+	//var _route = _acfolder + "/survival/" + _file_name;
+    /*
 	var back=0
 	var spawner=0
 	var inst_num,n0,n1,inst
@@ -52,7 +91,7 @@ function survival_save(_file_name) {
 
 	ini_write_string("Zombies","trick1",object_get_name(get_zombie_type(zombispawn_obj.trick1, zombispawn_obj.lst_data)))
 	ini_write_string("Zombies","trick2",object_get_name(get_zombie_type(zombispawn_obj.trick2, zombispawn_obj.lst_data)))
-	*/
+	
 	//save graves anims
 	inst_num=instance_number(animgrave_obj)
 	n0=0;
@@ -112,5 +151,5 @@ function survival_save(_file_name) {
 	ini_close();
 
 
-
+*/
 }

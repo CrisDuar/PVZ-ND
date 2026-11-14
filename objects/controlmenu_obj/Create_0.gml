@@ -178,7 +178,7 @@ global.battle_diff=0
 global.battle_map=0
 
 //SURVIVAL ENDLESS
-global.survival_ver = 2
+global.survival_ver = 3
 
 //GAMEJOLT
 global.user=""

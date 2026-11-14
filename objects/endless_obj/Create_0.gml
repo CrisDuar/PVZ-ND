@@ -12,7 +12,7 @@ timer=0
 _room=survival1_rm
 name_en="Player's house"
 name_es="Casa del jugador"
-file="player_surv.ini"
+file="player_surv"
 
 version = global.survival_ver;
 lvl = 30;

@@ -3,7 +3,7 @@ survival=true
 record=0
 survprogress=0
 survtimecalc=0
-dificultad = 6;
+dificultad = 0;
 
 diff_incr = 0.75
 

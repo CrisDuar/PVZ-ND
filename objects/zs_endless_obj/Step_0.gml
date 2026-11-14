@@ -4,7 +4,7 @@ lvl_en = lvld_en + " - Flags: " + string(survprogress);
 
 if timer<=0{
     survival_next_game()
-    //survival_save(filename)
+    survival_save(filename, record, survprogress, dificultad, zombie_list, challenges, control_obj.gameplay_modifier, [p1, p2])
     timercheck=false
     timer=60*5
 }
