@@ -200,7 +200,7 @@
   "hinting":0,
   "includeTTF":false,
   "interpreter":0,
-  "italic":false,
+  "italic":true,
   "kerningPairs":[],
   "last":0,
   "lineHeight":27,
@@ -220,7 +220,7 @@
   "sampleText":"abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: ▯ (9647)",
   "sdfSpread":8,
   "size":20.0,
-  "styleName":"Regular",
+  "styleName":"Bold",
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

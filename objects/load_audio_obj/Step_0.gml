@@ -41,6 +41,7 @@ if (!load_data and t = t_max){
 		    ///LOAD ALMANAC & DIALOG
 		    global.almanac_data = csv_to_grid("almanac.csv", true)
 		    global.dialog_data = csv_to_grid("dialog.csv", true)
+            global.challenges_desc = csv_to_grid("challenges.csv", true)
 			create_almanac_map();
 			
 			state++;

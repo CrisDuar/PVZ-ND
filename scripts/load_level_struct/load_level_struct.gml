@@ -43,7 +43,7 @@ function load_level_struct(_struct, _online = false){
 	
 	if (struct_get_default(_struct, "smog", 0) > 0){
 		with(instance_create_layer(0, 0, "Instances", pollutionctrl_obj)){
-			xfinal = _struct.fog;
+			xfinal = _struct.smog;
 		}
 	}
     
@@ -60,7 +60,7 @@ function load_level_struct(_struct, _online = false){
 			p_packets = struct_get_default(_struct, "conv_p_packets", p_packets);
 			z_packets = struct_get_default(_struct, "conv_z_packets", z_packets);
 			t1 = struct_get_default(_struct, "conv_t1", t1);
-			t2 = struct_get_default(_struct, "conv_t1", t2);
+			t2 = struct_get_default(_struct, "conv_t2", t2);
 			limit_num = struct_get_default(_struct, "conv_limit", limit_num);
 		}
 		
