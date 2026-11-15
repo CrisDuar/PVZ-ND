@@ -72,7 +72,7 @@ ds_map_add(global.progress, "levelhard", array_create(4, 0));
 //SHOP
 ds_map_add(global.progress, "plant", array_create(5, 0));
 ds_map_add(global.progress, "costume", array_create(8, 0));
-ds_map_add(global.progress, "upgrade", array_create(5, 0));
+ds_map_add(global.progress, "upgrade", array_create(6, 0));
 
 //plantas
 global.plant0=false

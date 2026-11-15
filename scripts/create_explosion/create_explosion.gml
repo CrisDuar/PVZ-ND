@@ -91,8 +91,8 @@ function create_explosion() {
 	                if mask_index==nocol_spr mask_index=sprite_index
 	                if collision_rectangle(other.xx-(83*(other.xsize/2)),other.yy-(88*(other.ysize/2)),other.xx+(83*(other.xsize/2)),other.yy+(88*(other.ysize/2)),self,true,false){
 	                    vida-=10
-	                    if gooptime<room_speed*12{gooptime=room_speed*12}
-	                    if (goopstun<room_speed*8) goopstun=room_speed*8
+	                    if gooptime<60*12{gooptime=60*12}
+	                    if (goopstun<60*8) goopstun=60*8
 	                }
 	            }
             

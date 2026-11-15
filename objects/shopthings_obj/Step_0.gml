@@ -1,5 +1,5 @@
-if variable_global_exists(cond){
-    if variable_global_get(cond)==true{
+if progress_exists(cond){
+    if read_progress(cond)==true{
         image_index=1
         confirm=false
         color2=c_dkgray
@@ -54,15 +54,15 @@ switch(type){
 }
 
 if point_in_rectangle(mouse_x,mouse_y,0,640+640*type,1088,1280+640*type){
-if (mouse_check_button_pressed(mb_left)){
-    dx = mouse_x
-    drag=scroll
-    draggin=true
-}
-//scroll with mouse
-
-if mouse_wheel_up() scroll=clamp(scroll-15,0,limit) x=xstart-scroll;
-if mouse_wheel_down() scroll=clamp(scroll+15,0,limit) x=xstart-scroll;
+    if (mouse_check_button_pressed(mb_left)){
+        dx = mouse_x
+        drag=scroll
+        draggin=true
+    }
+    //scroll with mouse
+    
+    if mouse_wheel_up() scroll=clamp(scroll-15,0,limit) x=xstart-scroll;
+    if mouse_wheel_down() scroll=clamp(scroll+15,0,limit) x=xstart-scroll;
 }
 
 if (mouse_check_button_released(mb_left)) {draggin=false}
@@ -73,6 +73,14 @@ if (mouse_check_button(mb_left)) and draggin=true{
     x=xstart-scroll
 }
 
+if (read_progress(locked_cond) <= locked_value){
+    color2=c_dkgray;
+    image_alpha = 0;
+    confirm = false;
+}else{
+    image_alpha = 1;
+}
+/*
 switch(thing){
 case 0:
 entext="Ice-Shroom"; estext="Seta congelada"; cond="plant0"; cost=5000

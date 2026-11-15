@@ -15,6 +15,9 @@ type=0;
 no=0
 lock=""
 
+locked_cond = "niveles"
+locked_value = 0
+
 text=""
 image_speed=0
 color = make_colour_rgb(135, 83, 39);

@@ -1,0 +1,20 @@
+sprite_index,type,cond,name_en,desc_en,name_es,desc_es
+1,0,plant0,Ice-Shroom,Ice-Shroom freezes all zombies on the screen.,Seta Congelada,Seta congelada congela a todos los zombis de la pantalla.
+2,0,plant1,Frijol Solar,Sun Beans infect zombies with sun points.,Sun Bean,Frijol Solar carga a los zombis con soles.
+3,1,costume0,Elegant costume,Grave buster will destroy gravestones faster.,Traje elegante,Comepiedras destruirá tumbas más rápido.
+4,2,upgrade0,Sun boost (1),Start with 25 extra sun in the bank!,Mejora de sol (1),¡Comienza con 25 soles extra!
+4,2,upgrade1,Sun boost (2),Start with 25 extra sun in the bank!,Mejora de sol (2),¡Comienza con 25 soles extra!
+5,2,upgrade2,Extra slot,Lets you choose another plant type every level!,Casillero extra,¡Te permite escoger otra planta en cada nivel!
+6,1,costume1,Hard-Nut costume,Wall-nut will have a bit more health and shorter recharge.,Traje de constructor,La Nuez tendrá un poco más de vida y una recarga más rápida.
+7,1,costume2,Headband costume,"Repeater will shoot one pea instead of two, but way faster.",Accesorio Bandana,"Repetidora disparará sólo un guisante, pero mucho más rápido."
+8,0,plant2,Squash,Squash is a single use plant that destroys one tile of zombies.,Apisonaflor,Apisonaflor es una planta de uso instantáneo que acaba con una casilla de zombis.
+9,0,plant3,Torchwood,Torchwood turns peas that pass through him into fireballs.,Plantorcha,Plantorcha transforma los guisantes que lo atraviesan en bolas de fuego.
+10,1,costume3,Pickled Pepper costume,Jalapeno will destroy a column of zombies instead of row.,Disfraz de Pimiento,Jalapeño destruirá una columna de zombis en lugar de una fila.
+11,1,costume4,Fire pea costume,Peashooter will shoot fire peas.,Disfraz de Quemaguisantes,Lanzaguisantes disparará bolas de fuego.
+12,2,upgrade3,Wall-nut first aid,Fully repair damaged defensive plants by planting on top of them!,Botiquín de nueces,¡Repara completamente plantas defensivas plantando encima de ellas!
+13,2,upgrade4,Shovel boost (1),Get an additional 20% of sun cost back when shoveling up plants!,Mejora de pala (1),¡Obten un 20% adicional de sol de vuelta cuando quites una planta!
+14,2,upgrade5,Shovel boost (2),Get an additional 20% of sun cost back when shoveling up plants!,Mejora de pala (2),¡Obten un 20% adicional de sol de vuelta cuando quites una planta!
+15,1,costume5,Snow king costume,Snow Pea will shoot icy spikes that will pierce up to four zombies.,Disfraz de Rey nevado,Hielaguisantes disparará picos de hielo que atrevasarán hasta cuatro zombis.
+16,1,costume6,TF2 medic costume,Healer-Shroom will passively heal the plants around it.,Disfraz de médico TF2,Seta Curandera curará a las plantas de alrededor de forma pasiva.
+17,1,costume7,Golden Magnet costume,Magnet-Shroom won't need coffee bean at day and will have more range.,Disfraz de Magneto dorado,Magnetoseta no necesitará grano de café en el día y tendrá más rango.
+18,0,plant4,Pumpkin,Pumpkins can be planted on top of other plants to provide a tough additional layer of armor.,Calabaza,Calabaza se puede plantar sobre otras plantas para proveer una capa adicional de protección.

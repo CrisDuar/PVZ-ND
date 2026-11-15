@@ -813,20 +813,134 @@ function initialize_packets(){
 }
 
 function initialize_shop(){
-	
-	global.shopItems = [
+    
+    //Contains descriptions, names and sprites.
+    global.shopText = csv_to_grid("shop.csv", true, chr(44), chr(34))
+    
+    //Contains costs and conditions.
+    /*
+     * 
+     * locked_cond: noone, 
+     * locked_value: 0,
+     * cost: 1000
+     * 
+    */
+    
+	global.shopValues = [
 		{//Ice-Shroom
-			spr: global.plants_packets[plants_id.ICE_SHROOM].sprite,
-			
-			name_en:"Ice-Shroom",
-			name_es:"Seta congelada",
-			key: "plant0",
-			cond: "NO_COND",
+			cost: 4000
+		},
+        {//Sun-Bean
+			cost: 3000
+		},
+        {//Elegant costume
+			cost: 2000
+		},
+        {//Sun boost 1
+			cost: 5000
+		},
+        {//Sun boos 2
+			cost: 7500,
+            //if global.upgrade0==false{color2=c_dkgray; image_alpha=0; confirm=false}else{image_alpha=1}
+            locked_cond: ["upgrade0"], 
+            locked_value: 0,
+        },
+        {//Extra slot
+			cost: 10000
+		},
+        {//hard nut
+			cost: 2000
+		},
+        {//Head band
+			cost: 4000
+		},
+        {//squash
 			cost: 5000,
-			desc_en: "Ice-Shroom freezes all zombies on the screen.",
-			desc_es: "Seta congelada congela a todos los zombis de la pantalla.",
-			
-			lock_msg: 0
-		}
+            locked_cond: "niveles", 
+            locked_value: 30,
+		},
+        {//torchwood
+			cost: 6000,
+            locked_cond: "niveles", 
+            locked_value: 30,
+		},
+        {//pickled pepper
+			cost: 4000,
+            locked_cond: "niveles", 
+            locked_value: 46,
+            
+		},
+        {//fire pea
+			cost: 4000,
+            locked_cond: "niveles", 
+            locked_value: 30,
+		},
+        {//wallnut first aid
+			cost: 3000,
+            locked_cond: "niveles", 
+            locked_value: 30,
+		},
+        {//shovel boost 1
+			cost: 5000,
+            locked_cond: "niveles", 
+            locked_value: 51,
+		},
+        {//shovel boost 2
+			cost: 5000,
+            locked_cond: "upgrade4", 
+            locked_value: 0,
+		},
+        {//snow king
+			cost: 5000,
+            locked_cond: "niveles", 
+            locked_value: 51,
+		},
+        {//tf2 medic
+			cost: 3000,
+            locked_cond: "niveles", 
+            locked_value: 30,
+		},
+        {//golden magnet
+			cost: 5000,
+            locked_cond: "niveles", 
+            locked_value: 65,
+		},
+        {//pumpkin
+			cost: 6000,
+            locked_cond: "niveles", 
+            locked_value: 61,
+		},
+        
 	]
+}
+
+function shop_get_lock_message(_cond, _type, _value, _lang){
+    
+    var _key_ltr = string_letters(_cond);
+    
+    var _types_en = ["plant", "costume", "upgrade"];
+    var _types_es = ["planta", "disfraz", "mejora"];
+    
+    if (_key_ltr == "niveles"){
+        
+        if (_lang == "es"){
+            
+            return $"Supera el nivel {_value} para desbloquear esta planta."
+        }else{
+            
+            return $"Beat level {_value} to unlock this plant."
+        }
+    }else{
+        
+        if (_lang == "es"){
+            
+            return $"Quizás tengas que comprar otro elemento para desbloquear esta {_types_es[_type]}."
+            
+        }else{
+            
+            return $"You may have to buy another item to unlock this {_types_en[_type]}."
+        }
+    }
+    
+    return ""
 }

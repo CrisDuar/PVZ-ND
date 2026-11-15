@@ -53,6 +53,7 @@ if (!load_data and t = t_max){
 			
 			load_rewards_data();
 			load_notes_data();
+            initialize_shop()
 			
 			state++;
 		break;

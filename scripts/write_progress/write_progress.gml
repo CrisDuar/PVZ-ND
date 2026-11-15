@@ -16,3 +16,11 @@ function write_progress(_key, _value){
 	}
 
 }
+
+function progress_exists(_key){
+    var _key_ltr = string_letters(_key);
+    
+    if ds_map_exists(global.progress, _key_ltr) return true;
+        
+    return false;
+}
