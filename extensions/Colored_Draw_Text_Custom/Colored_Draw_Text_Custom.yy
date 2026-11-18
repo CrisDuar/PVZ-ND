@@ -1,5 +1,5 @@
 {
-  "$GMExtension":"",
+  "$GMExtension":"v1",
   "%Name":"Colored_Draw_Text_Custom",
   "androidactivityinject":"",
   "androidclassname":"",
@@ -34,8 +34,10 @@
   "iosSystemFrameworkEntries":[],
   "iosThirdPartyFrameworkEntries":[],
   "license":"Free to use, also for commercial games.",
+  "maccodeinjection":"",
   "maccompilerflags":"",
   "maclinkerflags":"",
+  "macProps":false,
   "macsourcedir":"",
   "name":"Colored_Draw_Text_Custom",
   "options":[],

@@ -1,5 +1,5 @@
 {
-  "$GMExtension":"",
+  "$GMExtension":"v1",
   "%Name":"NekoPresence",
   "androidactivityinject":"",
   "androidclassname":"",
@@ -67,8 +67,10 @@
   "iosSystemFrameworkEntries":[],
   "iosThirdPartyFrameworkEntries":[],
   "license":"Free to use, also for commercial games.",
+  "maccodeinjection":"",
   "maccompilerflags":"",
   "maclinkerflags":"",
+  "macProps":false,
   "macsourcedir":"",
   "name":"NekoPresence",
   "options":[],

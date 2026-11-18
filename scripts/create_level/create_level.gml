@@ -18,17 +18,26 @@ function create_level(_lst_zombies, _difficulty) {
     
     //Number of waves && flags
     fn = 9 + 3 * _difficulty;
-    var _flags = 1 + 0.5 * _difficulty;
+    var _flags = floor(1 + 0.5 * _difficulty);
     wf=array_create(fn);
     
-    var _points_multiplier = floor(1 + _difficulty * 0.5);
-    var _points_addition = _difficulty
+    var _adjusted_difficulty = floor(_difficulty * 0.35)
+    //var _points_multiplier = floor(1 + _difficulty * 0.5);
+    //var _points_addition = _difficulty
+    var _points_multiplier = (1 + _adjusted_difficulty) / 3;
+    var _points_addition = _difficulty / 2
+    
+    show_debug_message("WAVES " + string(fn))
+    show_debug_message("FLAGS " + string(_flags))
     
     for (var i = 0; i < _flags; i++){
         
-        var _offset = (fn / _flags)
+        var _offset = floor(fn / _flags)
         
         wf[fn - 1 - _offset * i] = 1;
+        
+        var _pos = fn - 1 - _offset * i
+        show_debug_message("FLAG " + string(_pos))
     }
     
     wf[fn - 1] = 2;
@@ -53,15 +62,18 @@ function create_level(_lst_zombies, _difficulty) {
     show_debug_message("CHEAPEST ZOMBIE: " + string(_cheapest_zombie_value));
     
     for (var i = 0; i < fn; i++){   
-        show_debug_message("WAVE: " + string(i + 1));
+        show_debug_message("--------------------WAVE: " + string(i + 1));
         var _is_flag = 0;
         if (wf[i] == 1 || wf[i] == 2) _is_flag = 1;
         
         //Pick zombies
-        var _points = max((_points_multiplier * i) + _points_addition, _cheapest_zombie_value)
+        //var _points = max((_points_multiplier * i) + _points_addition, _cheapest_zombie_value)
+        var _points = floor(_cheapest_zombie_value + ((i + _points_addition) * _points_multiplier))
+        //var _points = max(_target_points, _cheapest_zombie_value)
+        
         _points *= _is_flag ? 4 : 1;
         
-        show_debug_message("TOTAL POINTS: " + string(_points));
+        show_debug_message("---TOTAL POINTS: " + string(_points));
         
         var _zombies_to_pick = array_shuffle(_lst_zombies);
         var _zombie_index = 0;

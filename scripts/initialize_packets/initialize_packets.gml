@@ -446,7 +446,16 @@ function initialize_packets(){
 			plant: healershroom_obj, //Plant object
 			sprite: healershroom1_spr, //Plant sprite
 			cost: 100,
-			timer: 20 //Recharge time
+			timer: 40, //Recharge time
+			
+			costume: [
+				{
+					cost: 75,
+					timer: 20,
+					sprite: healershroom4_spr,
+					packet_sprite: menuhealer2_spr
+				}
+			]
 		},
 		{ //Plasma Shroom
 			packet_sprite: menusetaplasma1_spr,
@@ -660,7 +669,7 @@ function initialize_packets(){
 			zombie: z_polevaulter_obj,
 			cost: 100,
 			timer: 30,
-            wavePoints: 2
+            wavePoints: 3
 		},
 		{ //rally
 			packet_sprite: bucketflagslot1_spr,
@@ -925,10 +934,10 @@ function shop_get_lock_message(_cond, _type, _value, _lang){
         
         if (_lang == "es"){
             
-            return $"Supera el nivel {_value} para desbloquear esta planta."
+            return $"Supera el nivel {_value} para desbloquear esta {_types_es[_type]}."
         }else{
             
-            return $"Beat level {_value} to unlock this plant."
+            return $"Beat level {_value} to unlock this {_types_en[_type]}."
         }
     }else{
         

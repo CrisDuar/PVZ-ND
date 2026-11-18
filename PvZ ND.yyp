@@ -300,7 +300,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2026.1.0.27",
   },
   "name":"PvZ ND",
   "resources":[
@@ -2282,6 +2282,8 @@
     {"id":{"name":"handsctrl_spr","path":"sprites/handsctrl_spr/handsctrl_spr.yy",},},
     {"id":{"name":"headtorch_spr","path":"sprites/headtorch_spr/headtorch_spr.yy",},},
     {"id":{"name":"healdrop_spr","path":"sprites/healdrop_spr/healdrop_spr.yy",},},
+    {"id":{"name":"healer_bloom_spr","path":"sprites/healer_bloom_spr/healer_bloom_spr.yy",},},
+    {"id":{"name":"healershroom_explo_spr","path":"sprites/healershroom_explo_spr/healershroom_explo_spr.yy",},},
     {"id":{"name":"healershroom1_spr","path":"sprites/healershroom1_spr/healershroom1_spr.yy",},},
     {"id":{"name":"healershroom2_spr","path":"sprites/healershroom2_spr/healershroom2_spr.yy",},},
     {"id":{"name":"healershroom3_spr","path":"sprites/healershroom3_spr/healershroom3_spr.yy",},},

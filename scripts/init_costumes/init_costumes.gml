@@ -34,7 +34,10 @@ function init_costumes() {
 		
 	    if (global.almanac_data[# 0, i] != "-2"){
 			
-			if (global.almanac_data[# almanac_data.UNIT_ID, i] == "-1") break;
+            show_debug_message("checkin " +  global.almanac_data[# almanac_data.NAME_ES, i])
+            show_debug_message("ID: " + global.almanac_data[# almanac_data.UNIT_ID, i])
+            
+			if (global.almanac_data[# almanac_data.UNIT_ID, i] == "-1") continue;
 			
 			_cos_c++;
 			

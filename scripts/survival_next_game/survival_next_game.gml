@@ -182,7 +182,7 @@ function survival_next_game() {
     
         
     dificultad += 1
-    if (dificultad > 6) dificultad = irandom_range(3, 6);
+    if (dificultad > 7) dificultad = irandom_range(3, 7);
         
      // TODO:   Pool needs special lawnmower treatment.
     if (dificultad <= 4){

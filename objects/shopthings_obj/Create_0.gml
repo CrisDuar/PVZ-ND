@@ -39,14 +39,3 @@ limit=200
 draggin=false
 
 alpha = 1
-
-
-locked_msg_en = [
-	function lck1() {return string("Beat level {0} to unlock this item.", lvl)},
-	"You may have to buy another item to unlock this."
-]
-
-locked_msg_es = [
-	function lck2() {return string("Supera el nivel {0} para desbloquear este objeto", lvl)},
-	"Quizás tengas que comprar otro objeto para desbloquear este."
-]
