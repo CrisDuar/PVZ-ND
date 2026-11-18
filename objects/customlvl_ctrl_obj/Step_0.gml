@@ -56,6 +56,7 @@ if (show_menu and global.popup_open < 2){
 
 			global.load_level = level_file;
 			global.is_customlvl = true;
+            global.popup_open--;
 			room_goto(generic_level_rm);
 		}
 		

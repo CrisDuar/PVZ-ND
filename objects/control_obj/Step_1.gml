@@ -49,7 +49,9 @@ if (!init_stage){
                 
                 load_level_struct(_lvl_str);
 			}
-		}
+		}else{
+            init_row_and_tiles()
+        }
 		
 		instance_create_layer(limit, 80, "Instances", trazo_obj)
 		set_lawnmowers(mowers);
@@ -60,27 +62,6 @@ if (!init_stage){
 		var _bg = bgs_lvl[stage][daytime<array_length(bgs_lvl[stage]) ? daytime : (array_length(bgs_lvl[stage]) - 1)]
 		layer_background_sprite(layer_background_get_id(layer_get_id("BG_stage")), _bg)	
 	}
-	
-	
-	switch(stage){
-        case 0:
-            spawn_tiles(pastoinv_obj,"","","","",2,3)
-        break
-        
-        case 1:
-            spawn_tiles(pastoinv_obj,"","","","",1,4)
-        break
-		
-		default:
-            spawn_tiles(pastoinv_obj)
-        break
-        
-        case 3:
-            spawn_tiles(pastoinv_obj,"","",0.85,"",0,2,70,0.99)
-            spawn_tiles(pastoinv_obj,"","",0.85,true,0,2,252,0.99)
-            spawn_tiles(pastoinv_obj,"","",0.85,"",0,2,448,0.99)
-        break
-    }
     
     //Load objects after creating the tiles
     if (do_load_level) load_objects_id_struct(_obj_str);
