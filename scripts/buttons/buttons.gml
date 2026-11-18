@@ -1,3 +1,10 @@
+/*
+ * Use draw functions in DRAW GUI event
+ * 
+ */
+
+
+
 function add_button(_x, _y, _xsz, _ysz){
 	
 	return [_x - _xsz/2, _y - _ysz/2, _x + _xsz/2, _y + _ysz/2, _xsz, _ysz];
@@ -9,8 +16,12 @@ function add_button_graph(_spr, _default, _hover, _press, _locked){
 }
 
 function check_button(_bt){
-	
-	return (point_in_rectangle(mouse_x, mouse_y, _bt[0], _bt[1], _bt[2], _bt[3]));
+    
+    var _cam = view_camera[0];
+    var _vx = camera_get_view_x(_cam);
+    var _vy = camera_get_view_x(_cam);
+    
+	return (point_in_rectangle(mouse_x, mouse_y, _bt[0] + _vx, _bt[1] + _vy, _bt[2] + _vx, _bt[3] + _vy));
 }
 
 function draw_button_bounds(_bt){
