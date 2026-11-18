@@ -9,7 +9,7 @@ switch (async_load[?"event_type"]) {
 		var _x = async_load[?"x"] - window_get_x();
 		var _y = async_load[?"y"] - window_get_y();
 		file_dropper_set_allow(has_valid_files && point_in_rectangle(_x, _y,
-			0, 0, window_get_width() div 2, window_get_height()
+			0, 0, window_get_width(), window_get_height()
 		));
 		break;
 	case "file_drop":
@@ -19,6 +19,17 @@ switch (async_load[?"event_type"]) {
 		
 		// creates a new copy of the dropped file
 		if (file_is_valid(_path)) {
+            
+            if (file_exists(destination)){
+                
+                destination = string_trim(destination, [".json"])
+                
+                var i = 1;
+                while (file_exists($"{destination} ({i}).json")) i++
+                    
+                destination += $" ({i}).json"
+            }
+            
 			file_copy(_path, destination)
 		}
 		highlight = false;
@@ -34,11 +45,14 @@ switch (async_load[?"event_type"]) {
 	
 		    ds_list_add(levels, string_replace(_file_name, ".json", ""))
 		    _file_name = file_find_next();
-		}
-		break;
+		} 
+        
+    break;
+
 	case "file_drag_enter_start":
 		has_valid_files = false;
 		break;
+    
 	case "file_drag_enter_file":
 		var _path = async_load[?"filename"];
 		if (file_is_valid(_path)) {

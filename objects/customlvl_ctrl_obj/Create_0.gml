@@ -1,7 +1,5 @@
 global.is_customlvl = false;
 
-
-
 // starts the file dropper extension
 file_dropper_init();
 
@@ -11,7 +9,7 @@ highlight = false;
 has_valid_files = true;
 file_is_valid = function(_path) {
 	// except for ZIP files
-	return string_lower(filename_ext(_path)) != ".zip";
+	return string_lower(filename_ext(_path)) == ".json";
 }
 file_dropper_set_default_allow(false);
 
@@ -26,7 +24,6 @@ dir = working_directory + _acfolder + "/custom_levels"
 
 
 if (!directory_exists(dir)){
-	
 	directory_create(dir);
 }
 

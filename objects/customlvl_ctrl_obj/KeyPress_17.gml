@@ -1,3 +1,5 @@
+// Reload levels
+
 ds_list_clear(levels);
 var path = game_save_id + ("ac" + string(global.acc_id)) + "/" + "custom_levels"
 var _file_name = file_find_first(path + "/*.json", fa_none);
