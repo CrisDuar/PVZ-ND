@@ -6,8 +6,8 @@ if (spawngui){
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_bottom)
 	
-	var _txt = "Challenges"
-	if (global.lang == "es") _txt = "Retos"
+	var _txt = "Brain#Busters"
+	if (global.lang == "es") _txt = "Rompe#Cerebros"
 	
 	var _c1 = c_white;
 	var _c2 = c_dkgray;
@@ -33,7 +33,7 @@ if (spawngui){
     _y = y - sprite_yoffset;
     
     draw_set_halign(fa_center)
-    draw_text_colour_outline(_x + 60, _y - 10, _txt, _c1, _c1, opacidad, _c2,_c2, opacidad,3,10,1,1,0)
+    draw_text_colour_outline(_x + 60, _y - 5, _txt, _c1, _c1, opacidad, _c2,_c2, opacidad,3,10,1,1,0)
     
     //draw_sprite_ext(brains_bg_spr, 0, _x, _y, _w, _h, 0, c_white, 1);
     

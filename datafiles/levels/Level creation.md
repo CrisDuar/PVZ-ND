@@ -40,7 +40,7 @@ If a variable is written in *italic*, it means that the property is not availabl
 
 **pt**: Grace time at the start of the level. It's expressed in `seconds`.  
 
-**fn**: Number of waves that a level has.  
+**fn [deprecated]**: Number of waves that a level has.  
 
 preplants": `array` of plants IDs. Indicates the plants in a locked and loaded level.  
 
@@ -146,7 +146,7 @@ Note: If a stage does not have a daytime background, the game will use an availa
 ---
 ## Zombie spawning and rows coordinates
 
-**rw:** Coordinates of the available rows. These are the default values for 5 and 6 rows levels.
+**rw [deprecated]:** Coordinates of the available rows. These are the default values for 5 and 6 rows levels.
 
 - Five rows: `[166.0, 267.0, 370.0, 472.0, 578.0]`  
 - Six rows: `[152.0, 236.0, 339.0, 422.0, 527.0, 615.0]`  
