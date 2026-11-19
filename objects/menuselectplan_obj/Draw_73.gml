@@ -77,10 +77,10 @@ if (spawngui){
         draw_set_valign(fa_top)
         draw_set_color(make_colour_rgb(71, 46, 29))
         draw_set_font(plants_fnt)
-        draw_text(_xt - 25, _yt - 115, _name)
+        draw_text(_xt - 20, _yt - 115, _name)
         
         draw_set_font(soles_fnt)
-        draw_text_ext(_xt - 25, _yt - 80, _desc, 20, 320)
+        draw_text_ext(_xt - 20, _yt - 80, _desc, 20, 320)
     }
     
 }
