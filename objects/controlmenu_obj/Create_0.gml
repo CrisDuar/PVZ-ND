@@ -1,5 +1,5 @@
 device_mouse_dbclick_enable(false);
-show_debug_log(true)
+//show_debug_log(true)
 
 initialize_packets()
 initialize_tile_objs()
