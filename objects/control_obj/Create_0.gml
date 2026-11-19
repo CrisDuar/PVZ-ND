@@ -83,8 +83,8 @@ gm_indecisive_timer_max = 15 * 60;
 
 //Backgrounds for levels
 bgs_lvl = [
-	[_state1_bg],
-	[_state2_bg],
+	[_state1_bg, _state1_sunset_bg, _state1_night_bg],
+	[_state2_bg, _state2_sunset_bg, _state2_night_bg],
 	[_state3_bg, afternoon_bg, night_bg],
 	[poolday_bg, poolsunset_bg, poolnight_bg],
 	[claire2_bg, claire3_bg, claire_bg],

@@ -6,26 +6,23 @@ function init_row_and_tiles(){
     if (!instance_exists(zombispawn_obj)) exit;
     
     
-    var _ref_five_rows = [166, 267, 370, 472, 578];
-    var _ref_six_rows = [152, 236, 339, 422, 527, 615];
+    //var _ref_five_rows = [166, 267, 370, 472, 578];
+    //var _ref_six_rows = [152, 236, 339, 422, 527, 615];
+    
+    zombispawn_obj.rows_arr = [166, 267, 370, 472, 578];
+    zombispawn_obj.ref_list = [166, 267, 370, 472, 578];
     
     switch(control_obj.stage){
         case 0:
             spawn_tiles(pastoinv_obj,"","","","",2,3)
-            zombispawn_obj.rows_arr = [_ref_five_rows[2]]
-            zombispawn_obj.ref_list = [_ref_five_rows[2]]
         break
         
         case 1:
             spawn_tiles(pastoinv_obj,"","","","",1,4)
-            zombispawn_obj.rows_arr = [_ref_five_rows[1], _ref_five_rows[2], _ref_five_rows[3]]
-            zombispawn_obj.ref_list = [_ref_five_rows[1], _ref_five_rows[2], _ref_five_rows[3]]
         break
 		
 		default:
             spawn_tiles(pastoinv_obj)
-            zombispawn_obj.rows_arr = [_ref_five_rows[0], _ref_five_rows[1], _ref_five_rows[2], _ref_five_rows[3], _ref_five_rows[4]]
-            zombispawn_obj.ref_list =  [_ref_five_rows[0], _ref_five_rows[1], _ref_five_rows[2], _ref_five_rows[3], _ref_five_rows[4]]
         break
         
         case 3:
@@ -33,8 +30,8 @@ function init_row_and_tiles(){
             spawn_tiles(pastoinv_obj,"","",0.85,true,0,2,252,0.99)
             spawn_tiles(pastoinv_obj,"","",0.85,"",0,2,448,0.99)
             
-            zombispawn_obj.rows_arr = [_ref_six_rows[0], _ref_six_rows[1], _ref_six_rows[2], _ref_six_rows[3], _ref_six_rows[4], _ref_six_rows[5]]
-            zombispawn_obj.ref_list =  [_ref_six_rows[0], _ref_six_rows[1], _ref_six_rows[2], _ref_six_rows[3], _ref_six_rows[4], _ref_six_rows[5]]
+            zombispawn_obj.rows_arr = [152, 236, 339, 422, 527, 615];
+            zombispawn_obj.ref_list = [152, 236, 339, 422, 527, 615];
         break
     }
 }
