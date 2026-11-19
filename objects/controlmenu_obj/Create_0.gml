@@ -14,7 +14,7 @@ mouse_sprites = [
 [cursor4_spr, cursorb4_spr],
 [cursor5_spr, cursorb5_spr],
 [cursor6_spr, cursorb6_spr],
-[cursor7_spr, cursorb7_spr],
+[cursor7_spr, cursorb7_spr]
 ]
 
 
