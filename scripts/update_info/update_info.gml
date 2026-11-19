@@ -14,7 +14,7 @@ function update_info() {
         
         _cost += (cost/2) + (cost/2 % 5);
         
-        if (_cost == 0) cost = 15;
+        if (_cost == 0) _cost = 15;
             
         menuselectplan_obj.unitcost=_cost; 
     }
