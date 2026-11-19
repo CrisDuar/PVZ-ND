@@ -111,7 +111,7 @@
   "hinting":0,
   "includeTTF":false,
   "interpreter":0,
-  "italic":true,
+  "italic":false,
   "kerningPairs":[
     {"amount":-1,"first":40,"second":54,},
     {"amount":-1,"first":40,"second":88,},
@@ -1686,7 +1686,7 @@
   ],
   "last":0,
   "lineHeight":19,
-  "maintainGms1Font":true,
+  "maintainGms1Font":false,
   "name":"niveles_fnt",
   "parent":{
     "name":"Fonts",
@@ -1702,7 +1702,7 @@
   "sampleText":"abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: ▯ (9647)",
   "sdfSpread":8,
   "size":15.0,
-  "styleName":"Regular",
+  "styleName":"HouseofTerror",
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",
