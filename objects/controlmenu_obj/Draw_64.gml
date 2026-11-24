@@ -16,3 +16,12 @@ if keyboard_check_pressed(vk_f2){
     with(instance_create_depth(x,y,-900000,fadeout_obj)){color=c_white}
 }
 
+draw_set_font(f3_fnt)
+draw_set_halign(fa_left)
+draw_set_valign(fa_bottom)
+var _cam = view_camera[0]
+var _h = camera_get_view_height(_cam)
+
+draw_text_colour_outline(0, _h, $"BUILD: {GM_build_date}",c_white,c_white,1,c_black,c_black,1,1,10,1,1,0)
+
+//draw_text_colour(0, _h, $"BUILD: {GM_build_date}",c_white,c_white,c_white,c_white,0.5)
