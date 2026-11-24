@@ -1,6 +1,6 @@
 event_inherited();
-hspd=15
-hspd_max=15
+spd=15
+spd_max=15
 spr = icepea2_spr
 broke=icepeabroke_spr
 particle=choose(snpeaparticle_spr,snpeaparticle2_spr,snpeaparticle3_spr)
