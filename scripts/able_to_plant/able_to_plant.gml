@@ -41,7 +41,7 @@ function able_to_plant(plant_id) {
 			
 			var _c = global.costumes[? plant_id - 1][| 0];
 			
-			_p_type = struct_get_default(plant_data.costume[_c], "place_type", _p_type);
+			_p_type = struct_get_default(plant_data.costume[_c - 1], "place_type", _p_type);
 		}
 		
 		switch(_p_type){
