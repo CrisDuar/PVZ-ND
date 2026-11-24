@@ -6,18 +6,6 @@ function update_info() {
 	menuselectplan_obj.unitname_es=name_es
 	menuselectplan_obj.unitname_en=name_en
 	menuselectplan_obj.islock = lock
-	
-    
-    if (control_obj.gameplay_modifier[12]){
-        
-        var _cost = cost;
-        
-        _cost += (cost/2) + (cost/2 % 5);
-        
-        if (_cost == 0) _cost = 15;
-            
-        menuselectplan_obj.unitcost=_cost; 
-    }
     
 	
 	var p_id = menuselectplan_obj.plant;
@@ -35,8 +23,11 @@ function update_info() {
 			show_debug_message("ARRAY LENGTH: " + string(array_length(pc_data)));
 			show_debug_message("COSTUME to check: " + string(p_costume - 1));
 
-			menuselectplan_obj.unitcost = struct_get_default(pc_data[p_costume - 1], "cost", p_data.cost);
-			
+			//menuselectplan_obj.unitcost = struct_get_default(pc_data[p_costume - 1], "cost", p_data.cost);
+            
+			cost = struct_get_default(pc_data[p_costume - 1], "cost", p_data.cost);
+	        sprite_index = struct_get_default(pc_data[p_costume - 1], "packet_sprite", p_data.packet_sprite)
+            
 			//Getting the unit sprite (the one to display in CYS) from the almanac
 			var init_y = 0;
 			
@@ -71,6 +62,17 @@ function update_info() {
 			}
 			
 			//menuselectplan_obj.unitsprite = struct_get_default(pc_data[p_costume - 1], "sprite", p_data.sprite);
-		}
+		}else{
+            cost = p_data.cost;
+	        sprite_index = p_data.packet_sprite;
+        }
 	}
+    var _cost = cost;
+    
+    if (control_obj.gameplay_modifier[12]){
+        
+        _cost += (cost/2) + (cost/2 % 5);
+        if (_cost == 0) _cost = 15;
+    }
+    menuselectplan_obj.unitcost=_cost; 
 }

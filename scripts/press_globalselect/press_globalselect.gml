@@ -13,7 +13,7 @@ function press_globalselect(resel) {
 
 	if (visible==true or resel>=0){
 	    if vspeed=0 and menuselectplan_obj.zomplant=type{
-	        if sprite_index=sprite and ban==false{
+	        if (sprite_index != locked and ban == false){
 	        /*and variable_instance_exists(objetive, "ocupied"){*/
 	            if resel<0{
 	                audio_play_sound(seleccionarplantas_snd, 1, false);
